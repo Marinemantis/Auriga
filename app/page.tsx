@@ -145,23 +145,23 @@ function Hero({ onVisibilityChange }: { onVisibilityChange: (v: boolean) => void
 
       {/* Centered content */}
       <motion.div style={{ y: txtY, opacity: op }} className="relative z-10 px-6 max-w-4xl mx-auto">
+        <motion.h1
+          initial={{ opacity:0, y:32 }} animate={ready?{opacity:1,y:0}:{}} transition={{ delay:0.3, duration:1, ease:[0.22,1,0.36,1] }}
+          className="text-[56px] sm:text-[72px] md:text-[88px] lg:text-[100px] font-light text-white leading-[0.95] mb-6"
+          style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}
+        >The luxury<br />travel experts</motion.h1>
+
         <motion.p
-          initial={{ opacity:0, y:16 }} animate={ready?{opacity:1,y:0}:{}} transition={{ delay:0.3, duration:0.8 }}
+          initial={{ opacity:0, y:16 }} animate={ready?{opacity:1,y:0}:{}} transition={{ delay:0.45, duration:0.8 }}
           className="text-[11px] tracking-[0.5em] uppercase text-[#C8903A] mb-7"
           style={{ fontFamily:"var(--font-inter),sans-serif" }}
         >Bespoke luxury travel · Pakistan</motion.p>
-
-        <motion.h1
-          initial={{ opacity:0, y:32 }} animate={ready?{opacity:1,y:0}:{}} transition={{ delay:0.45, duration:1, ease:[0.22,1,0.36,1] }}
-          className="text-[56px] sm:text-[72px] md:text-[88px] lg:text-[100px] font-light text-white leading-[0.95] mb-8"
-          style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}
-        >The luxury<br />travel experts</motion.h1>
 
         <motion.p
           initial={{ opacity:0, y:16 }} animate={ready?{opacity:1,y:0}:{}} transition={{ delay:0.6, duration:0.8 }}
           className="text-white/65 text-base md:text-lg mb-10 max-w-md mx-auto"
           style={{ fontFamily:"var(--font-inter),sans-serif" }}
-        >Tailor-made journeys through Pakistan's north. Award-winning service. Est.&nbsp;2014.</motion.p>
+        >Tailor-made journeys through Pakistan's north. Award-winning service.</motion.p>
 
         <motion.div
           initial={{ opacity:0, y:14 }} animate={ready?{opacity:1,y:0}:{}} transition={{ delay:0.75, duration:0.8 }}
@@ -248,10 +248,6 @@ function Philosophy() {
             <div className="flex flex-col gap-3 pt-10">
               <div className="relative overflow-hidden flex-1">
                 <Image src="https://aurigaventure.com/wp-content/uploads/2026/01/Glamping-at-Deosai-scaled-e1771302772481.jpg" alt="Glamping" fill className="object-cover" unoptimized />
-              </div>
-              <div className="bg-[#C8903A] p-6">
-                <p className="text-white text-3xl font-light mb-1" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>2014</p>
-                <p className="text-white/70 text-[10px] tracking-[0.25em] uppercase" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Est. in Pakistan</p>
               </div>
             </div>
           </motion.div>
@@ -472,7 +468,7 @@ function WhyUs() {
           ))}
         </div>
         <div className="mt-20 pt-12 border-t border-[#e8e4de] grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {[{n:"12+",l:"Routes mapped"},{n:"500+",l:"Journeys completed"},{n:"4,700m",l:"Highest camp"},{n:"2014",l:"Est. in Pakistan"}].map(({n,l})=>(
+          {[{n:"12+",l:"Routes mapped"},{n:"500+",l:"Journeys completed"},{n:"4,700m",l:"Highest camp"}].map(({n,l})=>(
             <div key={l}>
               <p className="text-[42px] font-light text-[#111] leading-none mb-2" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>{n}</p>
               <p className="text-[11px] tracking-[0.18em] uppercase text-[#aaa]" style={{ fontFamily:"var(--font-inter),sans-serif" }}>{l}</p>
@@ -648,7 +644,7 @@ function Footer() {
               <span className="text-[22px] font-light text-[#C8903A]"  style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>Ventures</span>
             </div>
             <p className="text-white/25 text-sm italic mb-4 max-w-xs" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>Beyond Travel. We Curate Dreams.</p>
-            <p className="text-white/20 text-xs leading-relaxed max-w-xs" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Bespoke luxury journeys through Pakistan's northern mountains. Est. 2014.</p>
+            <p className="text-white/20 text-xs leading-relaxed max-w-xs" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Bespoke luxury journeys through Pakistan's northern mountains.</p>
           </div>
           <div>
             <p className="text-[10px] tracking-[0.3em] uppercase text-white/25 mb-5" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Explore</p>

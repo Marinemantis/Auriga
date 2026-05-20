@@ -40,7 +40,7 @@ export default function Hero() {
             opacity: 0.6,
             filter: `blur(${videoBlur}px)` as unknown as string,
           }}
-          poster="https://aurigaventure.com/wp-content/uploads/2026/01/DSC_3514-HDR-1024x683.jpg"
+          poster="/hero-attabad.jpg"
         >
           <source
             src="https://aurigaventure.com/wp-content/uploads/2014/10/Gilgit-Baltistan-copy-2.mov"
