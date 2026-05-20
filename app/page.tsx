@@ -16,10 +16,11 @@ const DESTINATIONS = [
 ];
 
 const HERO_SLIDES = [
-  "https://aurigaventure.com/wp-content/uploads/2026/01/DSC_3514-HDR-1024x683.jpg",
-  "https://aurigaventure.com/wp-content/uploads/2026/01/Nanga-Parbat-and-Sheosar-Lake-scaled.jpg",
-  "https://aurigaventure.com/wp-content/uploads/2026/01/Glamping-at-Deosai-scaled-e1771302772481.jpg",
-  "https://aurigaventure.com/wp-content/uploads/2014/10/DJI_0122-scaled.jpg",
+  "/slide-ghizer-valley.jpg",
+  "/slide-sheosar-lake.jpg",
+  "/slide-katpana-desert.jpg",
+  "/slide-deosai-glamping.jpg",
+  "/slide-deosai-jeep.jpg",
 ];
 
 const TESTIMONIALS = [
