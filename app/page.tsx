@@ -354,7 +354,7 @@ function DestCarousel() {
               {/* Bottom content */}
               <div className="absolute bottom-0 left-0 right-0 p-5">
                 <p className="text-[10px] tracking-[0.3em] uppercase text-[#C8903A] mb-2" style={{ fontFamily:"var(--font-inter),sans-serif" }}>{d.region}</p>
-                <h3 className="text-[17px] font-bold text-white leading-tight mb-4 uppercase tracking-wide" style={{ fontFamily:"var(--font-inter),sans-serif" }}>{d.tripName}</h3>
+                <h3 className="text-[22px] font-light text-white leading-tight mb-4" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>{d.name}</h3>
 
                 {/* EXPLORE TRIP button */}
                 <div className="inline-flex items-center gap-2 border border-white/50 px-4 py-2.5 group-hover:bg-white group-hover:border-white transition-all duration-300">
