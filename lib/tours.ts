@@ -29,7 +29,7 @@ export const TOURS: Tour[] = [
     name: "The Last Paradise",
     region: "Hunza & Skardu",
     tagline: "Twelve days across Pakistan's most iconic mountain realms — Skardu, Deosai, Gilgit, and Hunza.",
-    heroImage: "/hero-attabad.jpg",
+    heroImage: "/hunza-lady-finger.jpg",
     galleryImages: [
       "/lp-camping-deosai.jpg",
       "/lp-foggy-skardu.jpg",
