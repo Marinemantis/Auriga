@@ -243,11 +243,11 @@ function Philosophy() {
 
           <motion.div initial={{ opacity:0, x:30 }} whileInView={{ opacity:1, x:0 }} viewport={{ once:true, margin:"-80px" }} transition={{ duration:0.9, ease:[0.22,1,0.36,1], delay:0.1 }} className="grid grid-cols-2 gap-3">
             <div className="relative overflow-hidden" style={{ aspectRatio:"3/4" }}>
-              <Image src="https://aurigaventure.com/wp-content/uploads/2026/01/IMG_6386-scaled.jpeg" alt="Journey" fill className="object-cover" unoptimized />
+              <Image src="/feeling-altit-village.jpg" alt="Altit village and fort, Hunza" fill className="object-cover" unoptimized />
             </div>
             <div className="flex flex-col gap-3 pt-10">
               <div className="relative overflow-hidden flex-1">
-                <Image src="https://aurigaventure.com/wp-content/uploads/2026/01/Glamping-at-Deosai-scaled-e1771302772481.jpg" alt="Glamping" fill className="object-cover" unoptimized />
+                <Image src="/feeling-altit-fort.jpg" alt="Altit Fort on rock, Hunza" fill className="object-cover" unoptimized />
               </div>
             </div>
           </motion.div>
