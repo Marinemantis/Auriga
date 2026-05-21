@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getTour, TOURS } from "@/lib/tours";
+import PriceDisplay from "@/components/PriceDisplay";
 
 export default function TourPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = use(params);
@@ -61,7 +62,7 @@ export default function TourPage({ params }: { params: Promise<{ slug: string }>
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-[#e8e4de]">
             {[
               { label: "When",     val: tour.when     },
-              { label: "Price",    val: tour.price    },
+              { label: "Price",    val: <PriceDisplay usd={tour.priceUSD} /> },
               { label: "Duration", val: tour.duration },
               { label: tour.difficulty ? "Difficulty" : "Max altitude",
                 val:   tour.difficulty ?? tour.maxAltitude ?? "Varies" },
@@ -203,7 +204,7 @@ export default function TourPage({ params }: { params: Promise<{ slug: string }>
               <div className="bg-[#F7F5F2] p-6">
                 <div className="flex justify-between items-center mb-3">
                   <span className="text-[11px] tracking-[0.25em] uppercase text-[#aaa]" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Starting price</span>
-                  <span className="text-[20px] font-light text-[#C8903A]" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>{tour.price}</span>
+                  <PriceDisplay usd={tour.priceUSD} className="text-[20px] font-light text-[#C8903A]" />
                 </div>
                 <p className="text-[11px] text-[#bbb] leading-relaxed" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
                   Price is per person and excludes international flights. Final price depends on group size, dates, and your chosen properties.
@@ -252,7 +253,7 @@ export default function TourPage({ params }: { params: Promise<{ slug: string }>
                     </div>
                     <p className="text-[10px] tracking-[0.3em] uppercase text-[#C8903A] mb-1" style={{ fontFamily:"var(--font-inter),sans-serif" }}>{t.region}</p>
                     <h3 className="text-[22px] font-light text-[#111] mb-1 group-hover:text-[#C8903A] transition-colors" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>{t.name}</h3>
-                    <p className="text-[#aaa] text-[11px]" style={{ fontFamily:"var(--font-inter),sans-serif" }}>{t.price} · {t.duration}</p>
+                    <p className="text-[#aaa] text-[11px]" style={{ fontFamily:"var(--font-inter),sans-serif" }}><PriceDisplay usd={t.priceUSD} /> · {t.duration}</p>
                   </Link>
                 </motion.div>
               ))}

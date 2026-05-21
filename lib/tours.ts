@@ -13,6 +13,7 @@ export interface Tour {
   galleryImages: string[];
   when: string;
   price: string;
+  priceUSD: number;
   duration: string;
   difficulty?: string;
   maxAltitude?: string;
@@ -37,7 +38,8 @@ export const TOURS: Tour[] = [
       "/lp-indus-river.jpg",
     ],
     when: "May – October",
-    price: "From $2,800 pp",
+    price: "From $3,100 pp",
+    priceUSD: 3100,
     duration: "12 days",
     intro:
       "This is our most iconic journey — a masterpiece of design, discovery, and emotion crafted for travellers who seek the world's last great frontiers without compromise. Over twelve extraordinary days, the expedition unfolds across Pakistan's most spellbinding mountain realms: the turquoise lakes and royal valleys of Skardu, the vast golden silence of Deosai, the ancient forts and shimmering horizons of Hunza. Every detail is considered. Every moment is earned.",
@@ -101,7 +103,8 @@ export const TOURS: Tour[] = [
       "/mms-deosai-storm.jpg",
     ],
     when: "April – October",
-    price: "From $2,200 pp",
+    price: "From $2,100 pp",
+    priceUSD: 2100,
     duration: "8 days",
     intro:
       "Designed for discerning travellers who seek immersive beauty, elevated comfort, and authentic adventure, this curated eight-day journey unfolds across the breathtaking realms of Astore, Deosai, and Skardu, revealing northern Pakistan at its most spectacular. Beginning in Gilgit, your expedition moves through lush sanctuaries, boundless high-altitude plateaus, and royal mountain valleys — each transition as cinematic as the last.",
@@ -160,7 +163,8 @@ export const TOURS: Tour[] = [
       "https://aurigaventure.com/wp-content/uploads/2026/01/DSC_3514-HDR-1024x683.jpg",
     ],
     when: "June – September",
-    price: "From $1,800 pp",
+    price: "From $1,850 pp",
+    priceUSD: 1850,
     duration: "7 days",
     intro:
       "This immersive seven-day journey blends refined comfort with raw alpine exploration, guiding travellers through dramatic landscapes, hidden valleys, and pristine high-altitude wilderness. Beginning in Gilgit, we acclimatise gently at the turquoise oasis of Khalti Lake before moving deeper into the enchanting Phunder Valley — and finally ascending to the secluded sanctuary of Khukush Lake, where civilisation fades and nature commands complete attention.",
@@ -219,7 +223,8 @@ export const TOURS: Tour[] = [
       "https://aurigaventure.com/wp-content/uploads/2026/01/DSC_3514-HDR-1024x683.jpg",
     ],
     when: "May – September",
-    price: "From $2,600 pp",
+    price: "From $3,100 pp",
+    priceUSD: 3100,
     duration: "12 nights",
     intro:
       "This twelve-night tailored journey invites you into one of Pakistan's most enchanting and least explored regions — a land of towering peaks, emerald valleys, crystalline rivers, and timeless culture. From the cultural heart of Chitral Valley to the serene alpine beauty of Phunder, Ghizer, and Yaseen, this expedition is an ode to slow travel, indulgent living, and nature at its most pristine. Every detail has been thoughtfully designed to ensure you experience the region not as a visitor, but as a privileged guest.",
@@ -278,7 +283,8 @@ export const TOURS: Tour[] = [
       "/rof-kkh-aerial.jpg",
     ],
     when: "May – October",
-    price: "From $2,400 pp",
+    price: "From $2,600 pp",
+    priceUSD: 2600,
     duration: "10 days",
     intro:
       "This extraordinary ten-day luxury expedition across Gilgit, Fairy Meadows, and Hunza is a masterfully curated journey through Pakistan's most spellbinding landscapes. Designed for travellers who seek rare beauty, elevated comfort, and profound emotional connection, the experience flows seamlessly from raw wilderness into refined mountain elegance — delivering moments of wonder that linger for a lifetime.",
@@ -337,7 +343,8 @@ export const TOURS: Tour[] = [
       "https://aurigaventure.com/wp-content/uploads/2026/01/Lower-Kachura-Lake-and-Shangrila-Resort-560x460.jpg",
     ],
     when: "June – September",
-    price: "From $1,900 pp",
+    price: "From $2,100 pp",
+    priceUSD: 2100,
     duration: "8 days",
     difficulty: "Moderate",
     intro:
@@ -397,7 +404,8 @@ export const TOURS: Tour[] = [
       "https://aurigaventure.com/wp-content/uploads/2026/01/DSC_3514-HDR-1024x683.jpg",
     ],
     when: "June – September",
-    price: "From $2,000 pp",
+    price: "From $1,850 pp",
+    priceUSD: 1850,
     duration: "7 days",
     intro:
       "Unfolding across the majestic landscapes of Astore Valley, Rupal Valley, Rama Lake, and Minimarg, this meticulously curated seven-day luxury adventure begins and concludes in Gilgit, guiding travellers through some of northern Pakistan's most awe-inspiring alpine frontiers. Designed for explorers seeking refined comfort, breathtaking scenery, and immersive cultural encounters, this journey reveals the untouched elegance of the Himalayan and Karakoram realms.",

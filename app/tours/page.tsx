@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { TOURS } from "@/lib/tours";
+import PriceDisplay from "@/components/PriceDisplay";
 
 const FILTERS = ["All", "Trekking", "Cultural", "Luxury Stays", "Off the Beaten Path"];
 
@@ -82,7 +83,7 @@ export default function ToursPage() {
                 <h2 className="text-[26px] font-light text-[#111] mb-2 group-hover:text-[#C8903A] transition-colors duration-300" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>{tour.name}</h2>
                 <p className="text-[#888] text-sm leading-relaxed mb-3 line-clamp-2" style={{ fontFamily:"var(--font-inter),sans-serif" }}>{tour.tagline}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-[13px] text-[#C8903A]" style={{ fontFamily:"var(--font-inter),sans-serif" }}>{tour.price}</span>
+                  <PriceDisplay usd={tour.priceUSD} className="text-[13px] text-[#C8903A]" />
                   <span className="text-[11px] tracking-[0.18em] uppercase text-[#888] group-hover:text-[#C8903A] flex items-center gap-2 transition-colors duration-300" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
                     View trip
                     <svg width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M0 4h12M8 1l4 3-4 3" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round"/></svg>
