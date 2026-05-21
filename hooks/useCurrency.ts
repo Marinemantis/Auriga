@@ -36,21 +36,17 @@ export function useCurrency(): CurrencyState {
     let cancelled = false;
     async function detect() {
       try {
-        const geo = await fetch("https://ipwho.is/").then(r => r.json());
+        const [geo, fx] = await Promise.all([
+          fetch("https://ipwho.is/").then(r => r.json()),
+          fetch("https://open.er-api.com/v6/latest/USD").then(r => r.json()),
+        ]);
         const currency = COUNTRY_CURRENCY[geo.country_code] ?? "USD";
-        if (currency === "USD") {
-          setState({ currency: "USD", rate: 1, symbol: "$", ready: true });
-          return;
-        }
-        const fx = await fetch(
-          `https://api.frankfurter.app/latest?from=USD&to=${currency}`
-        ).then(r => r.json());
         const rate = fx.rates?.[currency] ?? 1;
         if (!cancelled) {
           setState({ currency, rate, symbol: SYMBOL[currency] ?? currency + " ", ready: true });
         }
       } catch {
-        if (!cancelled) setState(s => ({ ...s, ready: true }));
+        if (!cancelled) setState(s => ({ ...s, ready: true } as CurrencyState));
       }
     }
     detect();
