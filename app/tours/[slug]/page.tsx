@@ -44,7 +44,7 @@ export default function TourPage({ params }: { params: Promise<{ slug: string }>
       {/* ── HERO — full-bleed, no text overlay ── */}
       <section ref={heroRef} className="relative pt-[72px] h-[82vh] min-h-[560px] overflow-hidden">
         <motion.div style={{ y: heroY }} className="absolute inset-0 scale-110 will-change-transform">
-          <Image src={tour.heroImage} alt={tour.name} fill className="object-cover" unoptimized priority />
+          <Image src={tour.heroImage} alt={tour.name} fill className="object-cover" priority sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/50" />
         </motion.div>
 
@@ -97,7 +97,7 @@ export default function TourPage({ params }: { params: Promise<{ slug: string }>
             {/* Gallery row */}
             <div className="mb-14">
               <div className="relative overflow-hidden mb-2" style={{ aspectRatio:"16/9" }}>
-                <Image src={tour.galleryImages[imgIdx]} alt={`Gallery ${imgIdx + 1}`} fill className="object-cover transition-opacity duration-500" unoptimized />
+                <Image src={tour.galleryImages[imgIdx]} alt={`Gallery ${imgIdx + 1}`} fill className="object-cover transition-opacity duration-500" sizes="(max-width: 768px) 100vw, 66vw" />
               </div>
               <div className="flex gap-2">
                 {tour.galleryImages.map((src, i) => (
@@ -105,7 +105,7 @@ export default function TourPage({ params }: { params: Promise<{ slug: string }>
                     className={`relative overflow-hidden flex-1 transition-all duration-300 ${i===imgIdx ? "ring-2 ring-[#C8903A]" : "opacity-60 hover:opacity-90"}`}
                     style={{ aspectRatio:"4/3" }}
                   >
-                    <Image src={src} alt="" fill className="object-cover" unoptimized />
+                    <Image src={src} alt="" fill className="object-cover" sizes="25vw" />
                   </button>
                 ))}
               </div>
@@ -149,7 +149,7 @@ export default function TourPage({ params }: { params: Promise<{ slug: string }>
                     className="group border border-[#e8e4de] overflow-hidden hover:border-[#C8903A]/40 transition-colors duration-300"
                   >
                     <div className="relative overflow-hidden" style={{ aspectRatio:"16/10" }}>
-                      <Image src={hotel.image} alt={hotel.name} fill className="object-cover transition-transform duration-500 group-hover:scale-[1.04]" unoptimized />
+                      <Image src={hotel.image} alt={hotel.name} fill className="object-cover transition-transform duration-500 group-hover:scale-[1.04]" sizes="(max-width: 768px) 100vw, 33vw" />
                     </div>
                     <div className="p-5">
                       <h4 className="text-[18px] font-light text-[#111] mb-2" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>{hotel.name}</h4>
@@ -248,7 +248,7 @@ export default function TourPage({ params }: { params: Promise<{ slug: string }>
                 >
                   <Link href={`/tours/${t.slug}`} className="group block">
                     <div className="relative overflow-hidden mb-4" style={{ aspectRatio:"4/3" }}>
-                      <Image src={t.heroImage} alt={t.name} fill className="object-cover transition-transform duration-600 group-hover:scale-[1.04]" unoptimized />
+                      <Image src={t.heroImage} alt={t.name} fill className="object-cover transition-transform duration-600 group-hover:scale-[1.04]" sizes="(max-width: 768px) 100vw, 33vw" />
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-400"/>
                     </div>
                     <p className="text-[10px] tracking-[0.3em] uppercase text-[#C8903A] mb-1" style={{ fontFamily:"var(--font-inter),sans-serif" }}>{t.region}</p>

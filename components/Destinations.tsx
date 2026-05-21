@@ -73,7 +73,7 @@ function DestCard({ dest, index }: { dest: typeof destinations[0]; index: number
           alt={dest.name}
           fill
           className="object-cover transition-transform duration-700 ease-out group-hover:scale-110 will-change-transform"
-          unoptimized
+          sizes="(max-width: 768px) 50vw, 20vw"
           loading="lazy"
         />
 

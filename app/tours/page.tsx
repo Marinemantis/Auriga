@@ -30,7 +30,7 @@ export default function ToursPage() {
 
       {/* Hero banner */}
       <div className="relative pt-[72px] h-[52vh] min-h-[380px] overflow-hidden">
-        <Image src="https://aurigaventure.com/wp-content/uploads/2014/10/DJI_0122-scaled.jpg" alt="Destinations" fill className="object-cover" unoptimized priority />
+        <Image src="https://aurigaventure.com/wp-content/uploads/2014/10/DJI_0122-scaled.jpg" alt="Destinations" fill className="object-cover" priority sizes="100vw" />
         <div className="absolute inset-0 bg-black/45" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
           <motion.p initial={{ opacity:0, y:14 }} animate={{ opacity:1, y:0 }} transition={{ delay:0.2, duration:0.7 }}
@@ -67,7 +67,7 @@ export default function ToursPage() {
               <Link href={`/tours/${tour.slug}`} className="group block">
                 {/* Image */}
                 <div className="relative overflow-hidden mb-4" style={{ aspectRatio:"4/3" }}>
-                  <Image src={tour.heroImage} alt={tour.name} fill className="object-cover transition-transform duration-700 group-hover:scale-[1.05] will-change-transform" unoptimized />
+                  <Image src={tour.heroImage} alt={tour.name} fill className="object-cover transition-transform duration-700 group-hover:scale-[1.05] will-change-transform" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
                   {/* Nights */}
                   <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm px-3 py-1.5">
