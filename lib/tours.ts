@@ -95,7 +95,7 @@ export const TOURS: Tour[] = [
     name: "Where Mountains Meet the Stars",
     region: "Astore & Skardu Valley",
     tagline: "Eight days through epic mountain landscapes, vast golden plateaus, and glacial valleys — the Auriga way.",
-    heroImage: "https://aurigaventure.com/wp-content/uploads/2026/01/Nanga-Parbat-and-Sheosar-Lake-scaled.jpg",
+    heroImage: "/mms-katpana-lake-skardu.jpg",
     galleryImages: [
       "/mms-deosai-national-park.jpg",
       "/mms-dunsa-valley-tormik.jpg",
