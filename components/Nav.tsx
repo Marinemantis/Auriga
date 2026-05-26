@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const links = [
-  { label: "About Us", href: "/about" },
+  { label: "About", href: "/about" },
   { label: "Destinations", href: "#destinations" },
   { label: "Philosophy", href: "#philosophy" },
   { label: "Contact", href: "#contact" },
