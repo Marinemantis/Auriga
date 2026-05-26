@@ -97,10 +97,6 @@ export const TOURS: Tour[] = [
     tagline: "Eight days through epic mountain landscapes, vast golden plateaus, and glacial valleys — the Auriga way.",
     heroImage: "https://aurigaventure.com/wp-content/uploads/2026/01/Nanga-Parbat-and-Sheosar-Lake-scaled.jpg",
     galleryImages: [
-      "/mms-astore-meadow1.jpg",
-      "/mms-astore-meadow2.jpg",
-      "/mms-minimarg-valley.jpg",
-      "/mms-deosai-storm.jpg",
       "/mms-deosai-national-park.jpg",
       "/mms-dunsa-valley-tormik.jpg",
       "/mms-glamping-deosai.jpg",
