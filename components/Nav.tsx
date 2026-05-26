@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const links = [
   { label: "About Us", href: "/about" },
@@ -50,16 +51,27 @@ export default function Nav() {
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm tracking-widest uppercase text-[#F5F0E8]/70 hover:text-[#C8903A] transition-colors duration-300"
-              style={{ fontFamily: "var(--font-inter), sans-serif" }}
-            >
-              {link.label}
-            </a>
-          ))}
+          {links.map((link) =>
+            link.href.startsWith("/") ? (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-sm tracking-widest uppercase text-[#F5F0E8]/70 hover:text-[#C8903A] transition-colors duration-300"
+                style={{ fontFamily: "var(--font-inter), sans-serif" }}
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-sm tracking-widest uppercase text-[#F5F0E8]/70 hover:text-[#C8903A] transition-colors duration-300"
+                style={{ fontFamily: "var(--font-inter), sans-serif" }}
+              >
+                {link.label}
+              </a>
+            )
+          )}
           <a
             href="#contact"
             className="ml-4 px-5 py-2.5 border border-[#C8903A] text-[#C8903A] text-sm tracking-widest uppercase hover:bg-[#C8903A] hover:text-[#080808] transition-all duration-300"
@@ -90,17 +102,29 @@ export default function Nav() {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden bg-[#080808]/98 border-t border-[#222222] px-6 py-6 flex flex-col gap-5">
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setMenuOpen(false)}
-              className="text-sm tracking-widest uppercase text-[#F5F0E8]/70 hover:text-[#C8903A] transition-colors"
-              style={{ fontFamily: "var(--font-inter), sans-serif" }}
-            >
-              {link.label}
-            </a>
-          ))}
+          {links.map((link) =>
+            link.href.startsWith("/") ? (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className="text-sm tracking-widest uppercase text-[#F5F0E8]/70 hover:text-[#C8903A] transition-colors"
+                style={{ fontFamily: "var(--font-inter), sans-serif" }}
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className="text-sm tracking-widest uppercase text-[#F5F0E8]/70 hover:text-[#C8903A] transition-colors"
+                style={{ fontFamily: "var(--font-inter), sans-serif" }}
+              >
+                {link.label}
+              </a>
+            )
+          )}
           <a
             href="#contact"
             onClick={() => setMenuOpen(false)}
