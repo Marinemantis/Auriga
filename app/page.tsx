@@ -379,8 +379,8 @@ function FullBleed() {
   return (
     <section ref={ref} className="relative h-[65vh] overflow-hidden flex items-center justify-center">
       <motion.div style={{ y }} className="absolute inset-[-10%] will-change-transform">
-        <Image src="https://aurigaventure.com/wp-content/uploads/2014/10/DJI_0122-scaled.jpg" alt="Aerial" fill className="object-cover" unoptimized />
-        <div className="absolute inset-0 bg-black/35" />
+        <Image src="/fullbleed-golden-mountains.jpg" alt="Golden sunset over northern Pakistan mountains" fill className="object-cover" sizes="100vw" priority />
+        <div className="absolute inset-0 bg-black/45" />
       </motion.div>
       <div className="relative z-10 text-center px-6">
         <p className="text-[11px] tracking-[0.5em] uppercase text-white/50 mb-6" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Their future is out there</p>
