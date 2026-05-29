@@ -6,13 +6,13 @@ import Link from "next/link";
 
 /* ─── DATA ─── */
 const DESTINATIONS = [
-  { name: "The Last Paradise",            slug: "last-paradise",       region: "Hunza & Skardu",      nights: "12 days",  image: "/hero-attabad.jpg",                                                                                             price: "From $2,800", tripName: "HUNZA, DEOSAI & SKARDU GRAND EXPEDITION"   },
-  { name: "Where Mountains Meet the Stars", slug: "mountains-meet-stars", region: "Astore & Skardu",   nights: "8 days",   image: "https://aurigaventure.com/wp-content/uploads/2026/01/Nanga-Parbat-and-Sheosar-Lake-scaled.jpg",               price: "From $2,200", tripName: "CELESTIAL EXPEDITION THROUGH THE HIMALAYA"  },
-  { name: "The Realm of Fairies",         slug: "realm-of-fairies",    region: "Fairy Meadows & Hunza", nights: "10 days", image: "https://aurigaventure.com/wp-content/uploads/2014/10/DJI_0122-scaled.jpg",                                   price: "From $2,400", tripName: "IN THE SHADOW OF NANGA PARBAT"              },
-  { name: "Wilderness of Chitral & Phunder", slug: "chitral-phunder",  region: "Chitral · Ghizer",    nights: "12 nights", image: "https://aurigaventure.com/wp-content/uploads/2026/01/org_364545bcd22687ac_1592367926000-2048x1536.jpg",      price: "From $2,600", tripName: "KALASH VALLEYS, SHANDUR & PHUNDER LAKE"    },
-  { name: "Khukush Lake & Phunder",       slug: "khukush-lake-phunder", region: "Ghizer Valley",      nights: "7 days",   image: "https://aurigaventure.com/wp-content/uploads/2019/01/Dunsa-Valley-Tormik-scaled-e1772014273230-560x460.jpg",  price: "From $1,800", tripName: "SEVEN-DAY ALPINE ODYSSEY"                  },
-  { name: "Nagma Valley Trek",            slug: "nagma-valley",        region: "Baltistan",           nights: "8 days",   image: "https://aurigaventure.com/wp-content/uploads/2026/01/Glamping-at-Deosai-scaled-e1771302772481.jpg",           price: "From $1,900", tripName: "INTO PAKISTAN'S BEST-KEPT SECRET"          },
-  { name: "Seven Day Himalayan Dream",    slug: "himalayan-dream",     region: "Astore to Minimarg",  nights: "7 days",   image: "https://aurigaventure.com/wp-content/uploads/2026/01/Glamp-Pakistan-at-Deosai-scaled-e1769679760930.jpg",     price: "From $2,000", tripName: "RAMA LAKE, RUPAL VALLEY & MINIMARG"        },
+  { name: "The Last Paradise",              slug: "last-paradise",        region: "Hunza & Skardu",        nights: "12 days",   image: "/hunza-lady-finger.jpg",          price: "From $2,800", tripName: "HUNZA, DEOSAI & SKARDU GRAND EXPEDITION"  },
+  { name: "Where Mountains Meet the Stars", slug: "mountains-meet-stars", region: "Astore & Skardu",       nights: "8 days",    image: "/mms-katpana-lake-skardu.jpg",    price: "From $2,200", tripName: "CELESTIAL EXPEDITION THROUGH THE HIMALAYA" },
+  { name: "The Realm of Fairies",           slug: "realm-of-fairies",     region: "Fairy Meadows & Hunza", nights: "10 days",   image: "/rof-passu-cones.jpg",            price: "From $2,400", tripName: "IN THE SHADOW OF NANGA PARBAT"             },
+  { name: "Wilderness of Chitral & Phunder",slug: "chitral-phunder",      region: "Chitral · Ghizer",      nights: "12 nights", image: "/slide-ghizer-valley.jpg",        price: "From $2,600", tripName: "KALASH VALLEYS, SHANDUR & PHUNDER LAKE"   },
+  { name: "Khukush Lake & Phunder",         slug: "khukush-lake-phunder", region: "Ghizer Valley",         nights: "7 days",    image: "/mms-dunsa-valley-tormik.jpg",    price: "From $1,800", tripName: "SEVEN-DAY ALPINE ODYSSEY"                 },
+  { name: "Nagma Valley Trek",              slug: "nagma-valley",         region: "Baltistan",             nights: "8 days",    image: "/mms-glamping-deosai.jpg",        price: "From $1,900", tripName: "INTO PAKISTAN'S BEST-KEPT SECRET"         },
+  { name: "Seven Day Himalayan Dream",      slug: "himalayan-dream",      region: "Astore to Minimarg",    nights: "7 days",    image: "/mms-minimarg-astore.jpg",        price: "From $2,000", tripName: "RAMA LAKE, RUPAL VALLEY & MINIMARG"       },
 ];
 
 const HERO_SLIDES = [
