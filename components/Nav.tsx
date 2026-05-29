@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const links = [
-  { label: "About", href: "/about" },
-  { label: "Destinations", href: "#destinations" },
-  { label: "Philosophy", href: "#philosophy" },
-  { label: "Contact", href: "#contact" },
+  { label: "Destinations", href: "/tours"        },
+  { label: "Experiences",  href: "/experiences"  },
+  { label: "About",        href: "/about"        },
+  { label: "Contact",      href: "#contact"      },
 ];
 
 export default function Nav() {
