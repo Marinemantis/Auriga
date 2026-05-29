@@ -492,11 +492,18 @@ function GuideSection() {
       <div className="max-w-[1320px] mx-auto px-6 lg:px-10">
         <div className="grid lg:grid-cols-2 gap-14 lg:gap-24 items-center">
           <motion.div initial={{ opacity:0, x:-20 }} whileInView={{ opacity:1, x:0 }} viewport={{ once:true, margin:"-80px" }} transition={{ duration:0.9, ease:[0.22,1,0.36,1] }}
-            className="relative overflow-hidden" style={{ aspectRatio:"4/5" }}
+            className="relative" style={{ aspectRatio:"4/5" }}
           >
-            <motion.div style={{ y:imgY }} className="absolute inset-[-10%] will-change-transform">
-              <Image src="https://aurigaventure.com/wp-content/uploads/2026/01/Nanga-Parbat-and-Sheosar-Lake-scaled.jpg" alt="Landscape" fill className="object-cover" unoptimized />
-            </motion.div>
+            {/* Primary portrait image with parallax */}
+            <div className="absolute inset-0 overflow-hidden">
+              <motion.div style={{ y:imgY }} className="absolute inset-[-10%] will-change-transform">
+                <Image src="/guide-fort-portrait.jpg" alt="Historic fort in northern Pakistan" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+              </motion.div>
+            </div>
+            {/* Inset landscape photo overlapping bottom-left */}
+            <div className="absolute bottom-8 -left-8 w-[56%] z-10 overflow-hidden border-4 border-white shadow-2xl" style={{ aspectRatio:"4/3" }}>
+              <Image src="/guide-meadow-landscape.jpg" alt="Alpine meadow in northern Pakistan" fill className="object-cover" sizes="(max-width: 768px) 50vw, 30vw" />
+            </div>
           </motion.div>
           <motion.div initial={{ opacity:0, x:20 }} whileInView={{ opacity:1, x:0 }} viewport={{ once:true, margin:"-80px" }} transition={{ duration:0.9, ease:[0.22,1,0.36,1], delay:0.1 }}>
             <p className="text-[11px] tracking-[0.45em] uppercase text-[#C8903A] mb-6" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Our guide to luxury travel</p>
