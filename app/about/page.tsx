@@ -91,7 +91,7 @@ export default function AboutPage() {
               </Link>
             ))}
           </nav>
-          <Link href="/#contact"
+          <Link href="/enquire" target="_blank" rel="noopener noreferrer"
             className="px-5 py-2.5 border border-[#C8903A] text-[#C8903A] text-[11px] tracking-[0.2em] uppercase hover:bg-[#C8903A] hover:text-[#080808] transition-all duration-300"
             style={{ fontFamily: "var(--font-inter),sans-serif" }}
           >
@@ -155,14 +155,14 @@ export default function AboutPage() {
       </section>
 
       {/* ── BRAND STORY ── */}
-      <section className="py-32 lg:py-44 bg-[#0A0A0A]">
+      <section className="py-20 lg:py-28 bg-[#0A0A0A]">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-28 items-center">
 
             {/* Left — large quote and body */}
             <div>
               <FadeUp delay={0}>
-                <div className="flex items-center gap-3 mb-8">
+                <div className="flex items-center gap-3 mb-5">
                   <DrawLine />
                   <span className="text-[10px] tracking-[0.3em] uppercase text-[#C8903A]" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
                     Who We Are
@@ -170,7 +170,7 @@ export default function AboutPage() {
                 </div>
               </FadeUp>
 
-              <div className="font-cormorant text-5xl md:text-6xl font-light text-[#F5F0E8] leading-[1.05] mb-8" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
+              <div className="font-cormorant text-[52px] md:text-[68px] font-light text-[#F5F0E8] leading-[1.05] mb-5" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
                 <div className="overflow-hidden">
                   <motion.div
                     initial={{ y: "105%" }}
@@ -258,7 +258,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── WHY THE NAME ── */}
-      <section className="relative py-32 lg:py-44 overflow-hidden bg-[#080808]">
+      <section className="relative py-20 lg:py-28 overflow-hidden bg-[#080808]">
         {/* Dim background texture */}
         <div className="absolute inset-0 pointer-events-none">
           <Image
@@ -277,7 +277,7 @@ export default function AboutPage() {
             {/* Text — spans 3 cols */}
             <div className="lg:col-span-3">
               <FadeUp delay={0}>
-                <div className="flex items-center gap-3 mb-8">
+                <div className="flex items-center gap-3 mb-5">
                   <DrawLine />
                   <span className="text-[10px] tracking-[0.3em] uppercase text-[#C8903A]" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
                     Why the Name
@@ -285,7 +285,7 @@ export default function AboutPage() {
                 </div>
               </FadeUp>
 
-              <div className="font-cormorant text-5xl md:text-6xl font-light text-[#F5F0E8] leading-[1.05] mb-10" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
+              <div className="font-cormorant text-[52px] md:text-[68px] font-light text-[#F5F0E8] leading-[1.05] mb-5" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
                 <div className="overflow-hidden">
                   <motion.div
                     initial={{ y: "105%" }}
@@ -381,20 +381,20 @@ export default function AboutPage() {
       </section>
 
       {/* ── TEAM ── */}
-      <section className="py-32 lg:py-44 bg-[#0A0A0A]">
+      <section className="py-20 lg:py-28 bg-[#0A0A0A]">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
           {/* Header */}
-          <div className="mb-20 lg:mb-28 max-w-2xl">
+          <div className="mb-12 lg:mb-16 max-w-2xl">
             <FadeUp delay={0}>
-              <div className="flex items-center gap-3 mb-6">
+              <div className="flex items-center gap-3 mb-5">
                 <DrawLine />
                 <span className="text-[10px] tracking-[0.3em] uppercase text-[#C8903A]" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
                   Our Team
                 </span>
               </div>
             </FadeUp>
-            <div className="font-cormorant text-5xl md:text-6xl font-light text-[#F5F0E8] leading-[1.05]" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
+            <div className="font-cormorant text-[52px] md:text-[68px] font-light text-[#F5F0E8] leading-[1.05]" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
               <div className="overflow-hidden">
                 <motion.div
                   initial={{ y: "105%" }}
@@ -418,7 +418,7 @@ export default function AboutPage() {
               </div>
             </div>
             <FadeUp delay={0.35}>
-              <p className="text-[#F5F0E8]/40 text-base leading-relaxed mt-6" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
+              <p className="text-[#F5F0E8]/40 text-lg leading-relaxed mt-4" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
                 Auriga Ventures is powered by a vibrant team, united by their
                 boundless passion for adventure and a shared dream of crafting
                 extraordinary journeys.
@@ -487,7 +487,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── MISSION ── */}
-      <section className="relative py-36 lg:py-52 overflow-hidden bg-[#080808]">
+      <section className="relative py-20 lg:py-28 overflow-hidden bg-[#080808]">
         {/* Background image — very dim */}
         <div className="absolute inset-0 pointer-events-none">
           <Image
@@ -566,7 +566,9 @@ export default function AboutPage() {
           <FadeUp delay={0.65}>
             <div className="mt-16">
               <Link
-                href="/#contact"
+                href="/enquire"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block px-10 py-4 border border-[#C8903A] text-[#C8903A] text-[11px] tracking-[0.25em] uppercase hover:bg-[#C8903A] hover:text-[#080808] transition-all duration-400"
                 style={{ fontFamily: "var(--font-inter),sans-serif" }}
               >
