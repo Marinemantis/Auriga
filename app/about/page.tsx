@@ -155,7 +155,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── BRAND STORY ── */}
-      <section className="py-20 lg:py-28 bg-[#0A0A0A]">
+      <section className="py-12 lg:py-16 bg-[#0A0A0A]">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-28 items-center">
 
@@ -170,7 +170,7 @@ export default function AboutPage() {
                 </div>
               </FadeUp>
 
-              <div className="font-cormorant text-[52px] md:text-[68px] font-light text-[#F5F0E8] leading-[1.05] mb-5" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
+              <div className="font-cormorant text-[60px] md:text-[80px] lg:text-[96px] font-light text-[#F5F0E8] leading-[1.05] mb-5" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
                 <div className="overflow-hidden">
                   <motion.div
                     initial={{ y: "105%" }}
@@ -258,7 +258,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── WHY THE NAME ── */}
-      <section className="relative py-20 lg:py-28 overflow-hidden bg-[#080808]">
+      <section className="relative py-12 lg:py-16 overflow-hidden bg-[#080808]">
         {/* Dim background texture */}
         <div className="absolute inset-0 pointer-events-none">
           <Image
@@ -285,7 +285,7 @@ export default function AboutPage() {
                 </div>
               </FadeUp>
 
-              <div className="font-cormorant text-[52px] md:text-[68px] font-light text-[#F5F0E8] leading-[1.05] mb-5" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
+              <div className="font-cormorant text-[60px] md:text-[80px] lg:text-[96px] font-light text-[#F5F0E8] leading-[1.05] mb-5" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
                 <div className="overflow-hidden">
                   <motion.div
                     initial={{ y: "105%" }}
@@ -381,7 +381,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── TEAM ── */}
-      <section className="py-20 lg:py-28 bg-[#0A0A0A]">
+      <section className="py-12 lg:py-16 bg-[#0A0A0A]">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
           {/* Header */}
@@ -394,7 +394,7 @@ export default function AboutPage() {
                 </span>
               </div>
             </FadeUp>
-            <div className="font-cormorant text-[52px] md:text-[68px] font-light text-[#F5F0E8] leading-[1.05]" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
+            <div className="font-cormorant text-[60px] md:text-[80px] lg:text-[96px] font-light text-[#F5F0E8] leading-[1.05]" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
               <div className="overflow-hidden">
                 <motion.div
                   initial={{ y: "105%" }}
@@ -487,7 +487,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── MISSION ── */}
-      <section className="relative py-20 lg:py-28 overflow-hidden bg-[#080808]">
+      <section className="relative py-12 lg:py-16 overflow-hidden bg-[#080808]">
         {/* Background image — very dim */}
         <div className="absolute inset-0 pointer-events-none">
           <Image
