@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, FormEvent } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -550,6 +550,34 @@ function Press() {
    CONTACT
 ══════════════════════════════════════════ */
 function Contact() {
+  const [firstName, setFirstName] = useState("");
+  const [lastName,  setLastName]  = useState("");
+  const [email,     setEmail]     = useState("");
+  const [destination, setDestination] = useState("");
+  const [message,   setMessage]   = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [done,      setDone]      = useState(false);
+  const [error,     setError]     = useState(false);
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    setSubmitting(true);
+    setError(false);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ firstName, lastName, email, destination, message }),
+      });
+      if (!res.ok) throw new Error("Failed");
+      setDone(true);
+    } catch {
+      setError(true);
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="bg-white py-28 lg:py-36">
       <div className="max-w-[1320px] mx-auto px-6 lg:px-10">
@@ -559,7 +587,7 @@ function Contact() {
             <h2 className="text-[44px] md:text-[54px] font-light text-[#111] leading-[1.06] mb-8" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>Tell us about<br /><em>your journey.</em></h2>
             <p className="text-[#666] text-[15px] leading-relaxed mb-12" style={{ fontFamily:"var(--font-inter),sans-serif" }}>No obligation. No planning fees. Just a conversation about where you want to go and how you want to feel when you get there.</p>
             <div className="flex flex-col gap-6">
-              {[{label:"Email",val:"hello@aurigaventure.com"},{label:"Phone",val:"+92 300 000 0000"},{label:"Based in",val:"Islamabad, Pakistan"}].map(({label,val})=>(
+              {[{label:"Email",val:"venturesauriga@gmail.com"},{label:"Phone",val:"+92 333 9555 682"},{label:"Based in",val:"Islamabad, Pakistan"}].map(({label,val})=>(
                 <div key={label} className="flex items-start gap-4 pb-6 border-b border-[#f0ece6]">
                   <p className="text-[10px] tracking-[0.25em] uppercase text-[#bbb] w-16 shrink-0 mt-0.5" style={{ fontFamily:"var(--font-inter),sans-serif" }}>{label}</p>
                   <p className="text-[#333] text-sm" style={{ fontFamily:"var(--font-inter),sans-serif" }}>{val}</p>
@@ -567,35 +595,46 @@ function Contact() {
               ))}
             </div>
           </div>
-          <form onSubmit={e=>e.preventDefault()} className="flex flex-col gap-5">
-            <div className="grid grid-cols-2 gap-4">
-              {["First name","Last name"].map(p=>(
-                <div key={p}>
-                  <label className="block text-[10px] tracking-[0.2em] uppercase text-[#aaa] mb-2" style={{ fontFamily:"var(--font-inter),sans-serif" }}>{p}</label>
-                  <input type="text" className="w-full border border-[#ddd] px-4 py-3 text-sm text-[#333] focus:outline-none focus:border-[#C8903A] transition-colors duration-300" style={{ fontFamily:"var(--font-inter),sans-serif" }} />
+          {done ? (
+            <div className="flex flex-col justify-center py-10">
+              <p className="text-[11px] tracking-[0.4em] uppercase text-[#C8903A] mb-4" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Message received</p>
+              <h3 className="text-[32px] font-light text-[#111] mb-4" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>Thank you, {firstName}.</h3>
+              <p className="text-[#666] text-sm leading-relaxed" style={{ fontFamily:"var(--font-inter),sans-serif" }}>We'll be in touch shortly to start planning your journey.</p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-[10px] tracking-[0.2em] uppercase text-[#aaa] mb-2" style={{ fontFamily:"var(--font-inter),sans-serif" }}>First name</label>
+                  <input type="text" value={firstName} onChange={e=>setFirstName(e.target.value)} required className="w-full border border-[#ddd] px-4 py-3 text-sm text-[#333] focus:outline-none focus:border-[#C8903A] transition-colors duration-300" style={{ fontFamily:"var(--font-inter),sans-serif" }} />
                 </div>
-              ))}
-            </div>
-            <div>
-              <label className="block text-[10px] tracking-[0.2em] uppercase text-[#aaa] mb-2" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Email</label>
-              <input type="email" className="w-full border border-[#ddd] px-4 py-3 text-sm text-[#333] focus:outline-none focus:border-[#C8903A] transition-colors" style={{ fontFamily:"var(--font-inter),sans-serif" }} />
-            </div>
-            <div>
-              <label className="block text-[10px] tracking-[0.2em] uppercase text-[#aaa] mb-2" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Where do you want to go?</label>
-              <select className="w-full border border-[#ddd] px-4 py-3 text-sm text-[#555] focus:outline-none focus:border-[#C8903A] transition-colors bg-white" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
-                <option value="">Select a destination</option>
-                {DESTINATIONS.map(d=><option key={d.name}>{d.name}</option>)}
-                <option value="unsure">Not sure yet — help me decide</option>
-              </select>
-            </div>
-            <div>
-              <label className="block text-[10px] tracking-[0.2em] uppercase text-[#aaa] mb-2" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Tell us more</label>
-              <textarea rows={4} placeholder="Group size, dates, special requests…" className="w-full border border-[#ddd] px-4 py-3 text-sm text-[#333] placeholder-[#ccc] focus:outline-none focus:border-[#C8903A] transition-colors resize-none" style={{ fontFamily:"var(--font-inter),sans-serif" }} />
-            </div>
-            <button type="submit" className="mt-1 w-full py-4 bg-[#111] text-white text-[11px] tracking-[0.22em] uppercase font-medium hover:bg-[#C8903A] transition-colors duration-300" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
-              Start Planning →
-            </button>
-          </form>
+                <div>
+                  <label className="block text-[10px] tracking-[0.2em] uppercase text-[#aaa] mb-2" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Last name</label>
+                  <input type="text" value={lastName} onChange={e=>setLastName(e.target.value)} className="w-full border border-[#ddd] px-4 py-3 text-sm text-[#333] focus:outline-none focus:border-[#C8903A] transition-colors duration-300" style={{ fontFamily:"var(--font-inter),sans-serif" }} />
+                </div>
+              </div>
+              <div>
+                <label className="block text-[10px] tracking-[0.2em] uppercase text-[#aaa] mb-2" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Email</label>
+                <input type="email" value={email} onChange={e=>setEmail(e.target.value)} required className="w-full border border-[#ddd] px-4 py-3 text-sm text-[#333] focus:outline-none focus:border-[#C8903A] transition-colors" style={{ fontFamily:"var(--font-inter),sans-serif" }} />
+              </div>
+              <div>
+                <label className="block text-[10px] tracking-[0.2em] uppercase text-[#aaa] mb-2" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Where do you want to go?</label>
+                <select value={destination} onChange={e=>setDestination(e.target.value)} className="w-full border border-[#ddd] px-4 py-3 text-sm text-[#555] focus:outline-none focus:border-[#C8903A] transition-colors bg-white" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
+                  <option value="">Select a destination</option>
+                  {DESTINATIONS.map(d=><option key={d.name}>{d.name}</option>)}
+                  <option value="unsure">Not sure yet — help me decide</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-[10px] tracking-[0.2em] uppercase text-[#aaa] mb-2" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Tell us more</label>
+                <textarea rows={4} value={message} onChange={e=>setMessage(e.target.value)} placeholder="Group size, dates, special requests…" className="w-full border border-[#ddd] px-4 py-3 text-sm text-[#333] placeholder-[#ccc] focus:outline-none focus:border-[#C8903A] transition-colors resize-none" style={{ fontFamily:"var(--font-inter),sans-serif" }} />
+              </div>
+              {error && <p className="text-red-500 text-xs" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Something went wrong. Please try again.</p>}
+              <button type="submit" disabled={submitting} className="mt-1 w-full py-4 bg-[#111] text-white text-[11px] tracking-[0.22em] uppercase font-medium hover:bg-[#C8903A] transition-colors duration-300 disabled:opacity-60 disabled:cursor-not-allowed" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
+                {submitting ? "Sending…" : "Start Planning →"}
+              </button>
+            </form>
+          )}
         </div>
       </div>
     </section>
