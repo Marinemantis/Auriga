@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
@@ -10,27 +12,19 @@ export async function POST(request: Request) {
       duration, budget, contact, unforgettable, moment,
     } = data;
 
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: "venturesauriga@gmail.com",
-        pass: process.env.GMAIL_APP_PASSWORD,
-      },
-    });
-
     const rows = [
-      ["Heard about us",      heard],
-      ["Destination",         destination],
-      ["Travelling with",     travelling],
-      ["Experience sought",   experience],
-      ["Duration",            duration],
-      ["Investment range",    budget],
+      ["Heard about us",        heard],
+      ["Destination",           destination],
+      ["Travelling with",       travelling],
+      ["Experience sought",     experience],
+      ["Duration",              duration],
+      ["Investment range",      budget],
       ["Unforgettable because", unforgettable],
-      ["Special moment",      moment],
+      ["Special moment",        moment],
     ];
 
-    await transporter.sendMail({
-      from: '"Auriga Ventures" <venturesauriga@gmail.com>',
+    await resend.emails.send({
+      from: "Auriga Ventures <onboarding@resend.dev>",
       to: "venturesauriga@gmail.com",
       replyTo: email,
       subject: `New Journey Discovery — ${name}`,
