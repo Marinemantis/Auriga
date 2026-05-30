@@ -162,7 +162,7 @@ export default function AboutPage() {
             {/* Left — large quote and body */}
             <div>
               <FadeUp delay={0}>
-                <div className="flex items-center gap-3 mb-5">
+                <div className="flex items-center gap-3 mb-3">
                   <DrawLine />
                   <span className="text-[10px] tracking-[0.3em] uppercase text-[#C8903A]" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
                     Who We Are
@@ -170,7 +170,7 @@ export default function AboutPage() {
                 </div>
               </FadeUp>
 
-              <div className="font-cormorant text-[60px] md:text-[80px] lg:text-[96px] font-light text-[#F5F0E8] leading-[1.05] mb-5" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
+              <div className="font-cormorant text-[72px] md:text-[96px] lg:text-[112px] font-light text-[#F5F0E8] leading-[1.0] mb-3" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
                 <div className="overflow-hidden">
                   <motion.div
                     initial={{ y: "105%" }}
@@ -277,7 +277,7 @@ export default function AboutPage() {
             {/* Text — spans 3 cols */}
             <div className="lg:col-span-3">
               <FadeUp delay={0}>
-                <div className="flex items-center gap-3 mb-5">
+                <div className="flex items-center gap-3 mb-3">
                   <DrawLine />
                   <span className="text-[10px] tracking-[0.3em] uppercase text-[#C8903A]" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
                     Why the Name
@@ -285,7 +285,7 @@ export default function AboutPage() {
                 </div>
               </FadeUp>
 
-              <div className="font-cormorant text-[60px] md:text-[80px] lg:text-[96px] font-light text-[#F5F0E8] leading-[1.05] mb-5" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
+              <div className="font-cormorant text-[72px] md:text-[96px] lg:text-[112px] font-light text-[#F5F0E8] leading-[1.0] mb-3" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
                 <div className="overflow-hidden">
                   <motion.div
                     initial={{ y: "105%" }}
@@ -387,7 +387,7 @@ export default function AboutPage() {
           {/* Header */}
           <div className="mb-12 lg:mb-16 max-w-2xl">
             <FadeUp delay={0}>
-              <div className="flex items-center gap-3 mb-5">
+              <div className="flex items-center gap-3 mb-3">
                 <DrawLine />
                 <span className="text-[10px] tracking-[0.3em] uppercase text-[#C8903A]" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
                   Our Team
