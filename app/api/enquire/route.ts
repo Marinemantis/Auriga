@@ -26,7 +26,7 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from: "Auriga Ventures <onboarding@resend.dev>",
       to: "venturesauriga@gmail.com",
-      replyTo: email,
+      reply_to: email,
       subject: `New Journey Discovery — ${name}`,
       html: `
         <!DOCTYPE html>
