@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
@@ -89,6 +89,8 @@ function SelectGroup({ field, label, options, value, onChange }: {
 export default function EnquirePage() {
   const [form, setForm] = useState<FormState>(INITIAL);
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, boolean>>>({});
 
   const set = (key: keyof FormState) => (val: string) => {
@@ -96,7 +98,7 @@ export default function EnquirePage() {
     setErrors((e) => ({ ...e, [key]: false }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     const required: (keyof FormState)[] = [
       "name", "email", "phone",
@@ -117,8 +119,22 @@ export default function EnquirePage() {
       firstError?.scrollIntoView({ behavior: "smooth", block: "center" });
       return;
     }
-    setSubmitted(true);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    setSubmitting(true);
+    setSubmitError(false);
+    try {
+      const res = await fetch("/api/enquire", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("Failed");
+      setSubmitted(true);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } catch {
+      setSubmitError(true);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -434,12 +450,18 @@ export default function EnquirePage() {
                   <p className="text-[#F5F0E8]/25 text-[12px] leading-relaxed mb-8" style={{ fontFamily: "var(--font-inter), sans-serif" }}>
                     No obligation. No planning fees. Just a conversation about where you want to go and how you want to feel when you get there.
                   </p>
+                  {submitError && (
+                    <p className="text-red-400/70 text-[11px] mb-4 tracking-wider" style={{ fontFamily: "var(--font-inter), sans-serif" }}>
+                      Something went wrong. Please try again or email us directly at venturesauriga@gmail.com
+                    </p>
+                  )}
                   <button
                     type="submit"
-                    className="w-full py-5 bg-[#C8903A] text-[#080808] text-[11px] tracking-[0.3em] uppercase font-semibold hover:bg-[#d4a34d] active:scale-[0.99] transition-all duration-300"
+                    disabled={submitting}
+                    className="w-full py-5 bg-[#C8903A] text-[#080808] text-[11px] tracking-[0.3em] uppercase font-semibold hover:bg-[#d4a34d] active:scale-[0.99] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
                     style={{ fontFamily: "var(--font-inter), sans-serif" }}
                   >
-                    Submit My Journey Discovery
+                    {submitting ? "Sending…" : "Submit My Journey Discovery"}
                   </button>
                 </motion.div>
 
