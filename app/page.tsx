@@ -388,9 +388,9 @@ function FullBleed() {
       <div className="relative z-10 text-center px-6">
         <p className="text-[11px] tracking-[0.5em] uppercase text-white/50 mb-6" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Their future is out there</p>
         <h2 className="text-[56px] md:text-[80px] lg:text-[96px] font-light text-white leading-[0.95] mb-10" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>Find <em>it.</em></h2>
-        <a href="#contact" className="inline-flex items-center gap-3 px-8 py-4 border border-white/40 text-white text-[11px] tracking-[0.25em] uppercase hover:bg-white hover:text-[#111] transition-all duration-300" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
+        <Link href="/enquire" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-8 py-4 border border-white/40 text-white text-[11px] tracking-[0.25em] uppercase hover:bg-white hover:text-[#111] transition-all duration-300" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
           Start planning
-        </a>
+        </Link>
       </div>
     </section>
   );
