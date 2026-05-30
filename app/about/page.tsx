@@ -155,14 +155,14 @@ export default function AboutPage() {
       </section>
 
       {/* ── BRAND STORY ── */}
-      <section className="py-8 lg:py-10 bg-[#0A0A0A]">
+      <section className="py-32 lg:py-44 bg-[#0A0A0A]">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-28 items-center">
 
             {/* Left — large quote and body */}
             <div>
               <FadeUp delay={0}>
-                <div className="flex items-center gap-3 mb-3">
+                <div className="flex items-center gap-3 mb-8">
                   <DrawLine />
                   <span className="text-[10px] tracking-[0.3em] uppercase text-[#C8903A]" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
                     Who We Are
@@ -170,7 +170,7 @@ export default function AboutPage() {
                 </div>
               </FadeUp>
 
-              <div className="font-cormorant text-[72px] md:text-[96px] lg:text-[112px] font-light text-[#F5F0E8] leading-[1.0] mb-3" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
+              <div className="font-cormorant text-5xl md:text-6xl font-light text-[#F5F0E8] leading-[1.05] mb-8" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
                 <div className="overflow-hidden">
                   <motion.div
                     initial={{ y: "105%" }}
@@ -195,7 +195,7 @@ export default function AboutPage() {
               </div>
 
               <FadeUp delay={0.3}>
-                <p className="text-[#F5F0E8]/55 text-lg leading-relaxed mb-3" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
+                <p className="text-[#F5F0E8]/55 text-lg leading-relaxed mb-8" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
                   At Auriga Ventures, we help our travellers embark on the trips
                   closest to their hearts — cutting clean through the noise.
                   Whenever you plan a journey with us, you&apos;re getting the
@@ -213,7 +213,7 @@ export default function AboutPage() {
 
               {/* Value pillars */}
               <FadeUp delay={0.45}>
-                <div className="flex gap-0 divide-x divide-[#222] mt-4 pt-4 border-t border-[#222]">
+                <div className="flex gap-0 divide-x divide-[#222] mt-12 pt-10 border-t border-[#222]">
                   {VALUES.map((v) => (
                     <div key={v.label} className="px-8 first:pl-0 last:pr-0">
                       <p className="font-cormorant text-3xl text-[#C8903A] font-light mb-1" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>{v.label}</p>
@@ -258,7 +258,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── WHY THE NAME ── */}
-      <section className="relative py-8 lg:py-10 overflow-hidden bg-[#080808]">
+      <section className="relative py-32 lg:py-44 overflow-hidden bg-[#080808]">
         {/* Dim background texture */}
         <div className="absolute inset-0 pointer-events-none">
           <Image
@@ -272,12 +272,12 @@ export default function AboutPage() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="grid lg:grid-cols-5 gap-8 items-center">
+          <div className="grid lg:grid-cols-5 gap-16 items-center">
 
             {/* Text — spans 3 cols */}
             <div className="lg:col-span-3">
               <FadeUp delay={0}>
-                <div className="flex items-center gap-3 mb-3">
+                <div className="flex items-center gap-3 mb-8">
                   <DrawLine />
                   <span className="text-[10px] tracking-[0.3em] uppercase text-[#C8903A]" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
                     Why the Name
@@ -285,7 +285,7 @@ export default function AboutPage() {
                 </div>
               </FadeUp>
 
-              <div className="font-cormorant text-[72px] md:text-[96px] lg:text-[112px] font-light text-[#F5F0E8] leading-[1.0] mb-3" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
+              <div className="font-cormorant text-5xl md:text-6xl font-light text-[#F5F0E8] leading-[1.05] mb-10" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
                 <div className="overflow-hidden">
                   <motion.div
                     initial={{ y: "105%" }}
@@ -310,7 +310,7 @@ export default function AboutPage() {
               </div>
 
               <FadeUp delay={0.3}>
-                <p className="text-[#F5F0E8]/55 text-lg leading-relaxed mb-3" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
+                <p className="text-[#F5F0E8]/55 text-lg leading-relaxed mb-8" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
                   In Roman culture, an <em>auriga</em> was a skilled and disciplined
                   chariot driver — someone trusted with direction and control.
                   Auriga is also the name of a prominent constellation, home to one
@@ -381,20 +381,20 @@ export default function AboutPage() {
       </section>
 
       {/* ── TEAM ── */}
-      <section className="py-8 lg:py-10 bg-[#0A0A0A]">
+      <section className="py-32 lg:py-44 bg-[#0A0A0A]">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
           {/* Header */}
-          <div className="mb-6 lg:mb-8 max-w-2xl">
+          <div className="mb-20 lg:mb-28 max-w-2xl">
             <FadeUp delay={0}>
-              <div className="flex items-center gap-3 mb-3">
+              <div className="flex items-center gap-3 mb-6">
                 <DrawLine />
                 <span className="text-[10px] tracking-[0.3em] uppercase text-[#C8903A]" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
                   Our Team
                 </span>
               </div>
             </FadeUp>
-            <div className="font-cormorant text-[60px] md:text-[80px] lg:text-[96px] font-light text-[#F5F0E8] leading-[1.05]" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
+            <div className="font-cormorant text-5xl md:text-6xl font-light text-[#F5F0E8] leading-[1.05]" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
               <div className="overflow-hidden">
                 <motion.div
                   initial={{ y: "105%" }}
@@ -418,7 +418,7 @@ export default function AboutPage() {
               </div>
             </div>
             <FadeUp delay={0.35}>
-              <p className="text-[#F5F0E8]/40 text-lg leading-relaxed mt-4" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
+              <p className="text-[#F5F0E8]/40 text-base leading-relaxed mt-6" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
                 Auriga Ventures is powered by a vibrant team, united by their
                 boundless passion for adventure and a shared dream of crafting
                 extraordinary journeys.
@@ -487,7 +487,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── MISSION ── */}
-      <section className="relative py-8 lg:py-10 overflow-hidden bg-[#080808]">
+      <section className="relative py-36 lg:py-52 overflow-hidden bg-[#080808]">
         {/* Background image — very dim */}
         <div className="absolute inset-0 pointer-events-none">
           <Image
