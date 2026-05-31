@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { pushToGHL } from "@/lib/ghl";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -87,6 +88,13 @@ export async function POST(request: Request) {
         </body>
         </html>
       `,
+    });
+
+    await pushToGHL({
+      name:             name,
+      email:            email,
+      opportunityTitle: `Tour Inquiry — ${tourName}`,
+      notes:            `Tour: ${tourName} | Travel dates: ${dates || "Not specified"} | Message: ${message || "None"}`,
     });
 
     return NextResponse.json({ success: true });
