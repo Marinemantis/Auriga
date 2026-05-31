@@ -58,8 +58,8 @@ function Nav({ heroVisible }: { heroVisible: boolean }) {
         </a>
 
         <nav className="hidden md:flex items-center gap-7">
-          {["Destinations", "Experiences", "Inspiration", "About"].map(l => (
-            <Link key={l} href={l === "Destinations" ? "/tours" : l === "Experiences" ? "/experiences" : l === "About" ? "/about" : "#"}
+          {["Destinations", "Experiences", "Inspiration", "About", "Contact"].map(l => (
+            <Link key={l} href={l === "Destinations" ? "/tours" : l === "Experiences" ? "/experiences" : l === "About" ? "/about" : l === "Contact" ? "/contact" : "#"}
               className={`text-[11px] tracking-[0.12em] uppercase transition-colors duration-300 ${dark ? "text-[#333]/60 hover:text-[#111]" : "text-white/70 hover:text-white"}`}
               style={{ fontFamily: "var(--font-inter), sans-serif" }}
             >{l}</Link>
@@ -90,7 +90,7 @@ function Nav({ heroVisible }: { heroVisible: boolean }) {
             className="md:hidden bg-white border-t border-[#eee] px-6 pb-8 pt-6 flex flex-col gap-5"
           >
             {["Destinations","Experiences","Inspiration","About","Contact"].map(l=>(
-              <Link key={l} href={l === "Destinations" ? "/tours" : l === "Experiences" ? "/experiences" : l === "About" ? "/about" : "#"} onClick={()=>setMenuOpen(false)} className="text-sm tracking-[0.12em] uppercase text-[#333] hover:text-[#C8903A]" style={{ fontFamily:"var(--font-inter),sans-serif" }}>{l}</Link>
+              <Link key={l} href={l === "Destinations" ? "/tours" : l === "Experiences" ? "/experiences" : l === "About" ? "/about" : l === "Contact" ? "/contact" : "#"} onClick={()=>setMenuOpen(false)} className="text-sm tracking-[0.12em] uppercase text-[#333] hover:text-[#C8903A]" style={{ fontFamily:"var(--font-inter),sans-serif" }}>{l}</Link>
             ))}
             <Link href="/enquire" target="_blank" rel="noopener noreferrer" onClick={()=>setMenuOpen(false)} className="mt-2 text-center px-5 py-3 bg-[#111] text-white text-xs tracking-[0.12em] uppercase" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Enquire Now</Link>
           </motion.div>
