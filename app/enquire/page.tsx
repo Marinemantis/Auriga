@@ -3,6 +3,7 @@
 import { useState, FormEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Footer from "@/components/Footer";
 
 const FORM_FIELDS = {
   heard: ["Instagram", "A Friend / Referral", "Facebook", "Other"],
@@ -468,15 +469,10 @@ export default function EnquirePage() {
               </div>
             </form>
 
-            {/* Footer strip */}
-            <div className="border-t border-[#111] py-10 px-6 text-center">
-              <p className="text-[#F5F0E8]/15 text-[11px] tracking-[0.2em]" style={{ fontFamily: "var(--font-inter), sans-serif" }}>
-                © 2026 Auriga Ventures · Beyond Travel. We Curate Dreams.
-              </p>
-            </div>
           </motion.div>
         )}
       </AnimatePresence>
+      <Footer />
     </div>
   );
 }

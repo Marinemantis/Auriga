@@ -6,6 +6,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getTour, TOURS } from "@/lib/tours";
 import PriceDisplay from "@/components/PriceDisplay";
+import Footer from "@/components/Footer";
 
 export default function TourPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = use(params);
@@ -262,21 +263,7 @@ export default function TourPage({ params }: { params: Promise<{ slug: string }>
         </section>
       )}
 
-      {/* ── FOOTER ── */}
-      <footer className="bg-[#111] py-12 px-6 lg:px-10">
-        <div className="max-w-[1320px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-baseline gap-1">
-            <span className="text-[20px] font-semibold text-white" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>Auriga</span>
-            <span className="text-[20px] font-light text-[#C8903A]"  style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>Ventures</span>
-          </div>
-          <div className="flex gap-6">
-            {["All Trips","/tours","About","/","Contact","/#contact"].reduce<{l:string,h:string}[]>((acc,_,i,arr)=>i%2===0?[...acc,{l:arr[i],h:arr[i+1]}]:acc,[]).map(({l,h})=>(
-              <Link key={l} href={h} className="text-[11px] tracking-[0.12em] uppercase text-white/30 hover:text-white/60 transition-colors" style={{ fontFamily:"var(--font-inter),sans-serif" }}>{l}</Link>
-            ))}
-          </div>
-          <p className="text-white/20 text-xs" style={{ fontFamily:"var(--font-inter),sans-serif" }}>© 2026 Auriga Ventures</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
