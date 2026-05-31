@@ -75,7 +75,7 @@ export default function ContactPage() {
       {/* ── HERO ── */}
       <section className="relative h-[70vh] min-h-[520px] flex items-end overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/slide-sheosar-lake.jpg" alt="" fill className="object-cover" priority sizes="100vw" />
+          <Image src="/shangri-la.jpg" alt="Shangri-La lake at night, Pakistan" fill className="object-cover object-center" priority sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#080808]/40 via-[#080808]/30 to-[#080808]/90" />
         </div>
         <div className="relative w-full max-w-7xl mx-auto px-6 lg:px-10 pb-16 lg:pb-20">
