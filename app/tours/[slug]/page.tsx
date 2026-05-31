@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState, use } from "react";
+import { useRef, useState, use, FormEvent } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,6 +20,39 @@ export default function TourPage({ params }: { params: Promise<{ slug: string }>
   const heroOp = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
   const related = TOURS.filter(t => tour.relatedSlugs.includes(t.slug));
+
+  const [formName,    setFormName]    = useState("");
+  const [formEmail,   setFormEmail]   = useState("");
+  const [formDates,   setFormDates]   = useState("");
+  const [formMessage, setFormMessage] = useState("");
+  const [submitting,  setSubmitting]  = useState(false);
+  const [done,        setDone]        = useState(false);
+  const [formError,   setFormError]   = useState(false);
+
+  const handleEnquire = async (e: FormEvent) => {
+    e.preventDefault();
+    setSubmitting(true);
+    setFormError(false);
+    try {
+      const res = await fetch("/api/tour-enquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formName,
+          email: formEmail,
+          dates: formDates,
+          message: formMessage,
+          tourName: tour!.name,
+        }),
+      });
+      if (!res.ok) throw new Error("Failed");
+      setDone(true);
+    } catch {
+      setFormError(true);
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   return (
     <div className="bg-white">
@@ -175,30 +208,38 @@ export default function TourPage({ params }: { params: Promise<{ slug: string }>
                 </h3>
                 <p className="text-[#777] text-sm leading-relaxed mb-6" style={{ fontFamily:"var(--font-inter),sans-serif" }}>No planning fees. No obligation. We'll design your itinerary around your dates, group, and interests.</p>
 
-                <form onSubmit={e => e.preventDefault()} className="flex flex-col gap-3.5">
-                  <input type="text" placeholder="Your name"
-                    className="w-full border border-[#ddd] px-4 py-3 text-sm text-[#333] placeholder-[#bbb] focus:outline-none focus:border-[#C8903A] transition-colors"
-                    style={{ fontFamily:"var(--font-inter),sans-serif" }}
-                  />
-                  <input type="email" placeholder="Email address"
-                    className="w-full border border-[#ddd] px-4 py-3 text-sm text-[#333] placeholder-[#bbb] focus:outline-none focus:border-[#C8903A] transition-colors"
-                    style={{ fontFamily:"var(--font-inter),sans-serif" }}
-                  />
-                  <select className="w-full border border-[#ddd] px-4 py-3 text-sm text-[#555] focus:outline-none focus:border-[#C8903A] transition-colors bg-white" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
-                    <option value="">Approx. travel dates</option>
-                    {["May–June 2025","July–August 2025","September–October 2025","2026 (flexible)"].map(o=><option key={o}>{o}</option>)}
-                  </select>
-                  <textarea rows={3} placeholder="Tell us more (group size, interests…)"
-                    className="w-full border border-[#ddd] px-4 py-3 text-sm text-[#333] placeholder-[#bbb] focus:outline-none focus:border-[#C8903A] transition-colors resize-none"
-                    style={{ fontFamily:"var(--font-inter),sans-serif" }}
-                  />
-                  <button type="submit"
-                    className="w-full py-3.5 bg-[#111] text-white text-[11px] tracking-[0.2em] uppercase font-medium hover:bg-[#C8903A] transition-colors duration-300"
-                    style={{ fontFamily:"var(--font-inter),sans-serif" }}
-                  >Enquire About This Trip →</button>
-                </form>
+                {done ? (
+                  <div className="py-6 text-center">
+                    <p className="text-[#C8903A] text-[11px] tracking-[0.25em] uppercase mb-2" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Enquiry sent</p>
+                    <p className="text-[#555] text-sm" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Thank you! We'll be in touch within 24 hours.</p>
+                  </div>
+                ) : (
+                  <form onSubmit={handleEnquire} className="flex flex-col gap-3.5">
+                    <input type="text" required placeholder="Your name" value={formName} onChange={e=>setFormName(e.target.value)}
+                      className="w-full border border-[#ddd] px-4 py-3 text-sm text-[#333] placeholder-[#bbb] focus:outline-none focus:border-[#C8903A] transition-colors"
+                      style={{ fontFamily:"var(--font-inter),sans-serif" }}
+                    />
+                    <input type="email" required placeholder="Email address" value={formEmail} onChange={e=>setFormEmail(e.target.value)}
+                      className="w-full border border-[#ddd] px-4 py-3 text-sm text-[#333] placeholder-[#bbb] focus:outline-none focus:border-[#C8903A] transition-colors"
+                      style={{ fontFamily:"var(--font-inter),sans-serif" }}
+                    />
+                    <select value={formDates} onChange={e=>setFormDates(e.target.value)} className="w-full border border-[#ddd] px-4 py-3 text-sm text-[#555] focus:outline-none focus:border-[#C8903A] transition-colors bg-white" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
+                      <option value="">Approx. travel dates</option>
+                      {["May–June 2025","July–August 2025","September–October 2025","2026 (flexible)"].map(o=><option key={o}>{o}</option>)}
+                    </select>
+                    <textarea rows={3} placeholder="Tell us more (group size, interests…)" value={formMessage} onChange={e=>setFormMessage(e.target.value)}
+                      className="w-full border border-[#ddd] px-4 py-3 text-sm text-[#333] placeholder-[#bbb] focus:outline-none focus:border-[#C8903A] transition-colors resize-none"
+                      style={{ fontFamily:"var(--font-inter),sans-serif" }}
+                    />
+                    {formError && <p className="text-red-500 text-xs" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Something went wrong. Please try again.</p>}
+                    <button type="submit" disabled={submitting}
+                      className="w-full py-3.5 bg-[#111] text-white text-[11px] tracking-[0.2em] uppercase font-medium hover:bg-[#C8903A] transition-colors duration-300 disabled:opacity-60"
+                      style={{ fontFamily:"var(--font-inter),sans-serif" }}
+                    >{submitting ? "Sending…" : "Enquire About This Trip →"}</button>
+                  </form>
+                )}
 
-                <p className="text-[11px] text-[#bbb] text-center mt-4" style={{ fontFamily:"var(--font-inter),sans-serif" }}>No planning fees. We'll be in touch within 24 hours.</p>
+                {!done && <p className="text-[11px] text-[#bbb] text-center mt-4" style={{ fontFamily:"var(--font-inter),sans-serif" }}>No planning fees. We'll be in touch within 24 hours.</p>}
               </div>
 
               {/* Price box */}
@@ -221,12 +262,20 @@ export default function TourPage({ params }: { params: Promise<{ slug: string }>
         <div className="border border-[#e8e4de] p-7" id="enquire">
           <p className="text-[11px] tracking-[0.3em] uppercase text-[#C8903A] mb-3" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Plan this trip</p>
           <h3 className="text-[28px] font-light text-[#111] mb-5" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>Ready to go?</h3>
-          <form onSubmit={e=>e.preventDefault()} className="flex flex-col gap-3.5">
-            <input type="text" placeholder="Your name" className="w-full border border-[#ddd] px-4 py-3 text-sm focus:outline-none focus:border-[#C8903A] transition-colors" style={{ fontFamily:"var(--font-inter),sans-serif" }} />
-            <input type="email" placeholder="Email address" className="w-full border border-[#ddd] px-4 py-3 text-sm focus:outline-none focus:border-[#C8903A] transition-colors" style={{ fontFamily:"var(--font-inter),sans-serif" }} />
-            <textarea rows={3} placeholder="Tell us more…" className="w-full border border-[#ddd] px-4 py-3 text-sm focus:outline-none focus:border-[#C8903A] transition-colors resize-none" style={{ fontFamily:"var(--font-inter),sans-serif" }} />
-            <button type="submit" className="w-full py-4 bg-[#111] text-white text-[11px] tracking-[0.2em] uppercase font-medium hover:bg-[#C8903A] transition-colors" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Enquire Now →</button>
-          </form>
+          {done ? (
+            <div className="py-4 text-center">
+              <p className="text-[#C8903A] text-[11px] tracking-[0.25em] uppercase mb-2" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Enquiry sent</p>
+              <p className="text-[#555] text-sm" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Thank you! We'll be in touch within 24 hours.</p>
+            </div>
+          ) : (
+            <form onSubmit={handleEnquire} className="flex flex-col gap-3.5">
+              <input type="text" required placeholder="Your name" value={formName} onChange={e=>setFormName(e.target.value)} className="w-full border border-[#ddd] px-4 py-3 text-sm focus:outline-none focus:border-[#C8903A] transition-colors" style={{ fontFamily:"var(--font-inter),sans-serif" }} />
+              <input type="email" required placeholder="Email address" value={formEmail} onChange={e=>setFormEmail(e.target.value)} className="w-full border border-[#ddd] px-4 py-3 text-sm focus:outline-none focus:border-[#C8903A] transition-colors" style={{ fontFamily:"var(--font-inter),sans-serif" }} />
+              <textarea rows={3} placeholder="Tell us more…" value={formMessage} onChange={e=>setFormMessage(e.target.value)} className="w-full border border-[#ddd] px-4 py-3 text-sm focus:outline-none focus:border-[#C8903A] transition-colors resize-none" style={{ fontFamily:"var(--font-inter),sans-serif" }} />
+              {formError && <p className="text-red-500 text-xs" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Something went wrong. Please try again.</p>}
+              <button type="submit" disabled={submitting} className="w-full py-4 bg-[#111] text-white text-[11px] tracking-[0.2em] uppercase font-medium hover:bg-[#C8903A] transition-colors disabled:opacity-60" style={{ fontFamily:"var(--font-inter),sans-serif" }}>{submitting ? "Sending…" : "Enquire Now →"}</button>
+            </form>
+          )}
         </div>
       </div>
 
