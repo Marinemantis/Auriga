@@ -428,10 +428,9 @@ export default function DestinationsPage() {
           </div>
         </div>
 
-        {/* Row 2: Skardu + Chitral + Astore — equal thirds */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4">
+        {/* Row 2: Skardu + Chitral + Astore + Nagar — equal quarters */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
 
-          {/* Skardu */}
           {[
             {
               id: "skardu",
@@ -462,6 +461,16 @@ export default function DestinationsPage() {
               excerpt: "Beneath Nanga Parbat (8,126m), pine forests and wildflower plateaus define Pakistan's most secret valley.",
               tags: ["Rama Lake", "Rupal Valley", "Minimarg Plateau"],
               label: "Discover Astore",
+            },
+            {
+              id: "nagar",
+              src: "/hunza-lady-finger.jpg",
+              region: "Nagar · Karakoram",
+              subtitle: "The Karakoram's Hidden Giant",
+              name: "Nagar Valley",
+              excerpt: "Beneath Rakaposhi and Diran Peak — glacier treks, alpine basecamps, and Karakoram wilderness at its most raw.",
+              tags: ["Rakaposhi Basecamp", "Hoper Glacier", "Michar Kho Valley"],
+              label: "Discover Nagar",
             },
           ].map((dest, i) => (
             <motion.div
