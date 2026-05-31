@@ -14,7 +14,7 @@ const PASSES = [
     difficulty: "Easy (paved road)",
     description: "The crown of the Karakoram Highway — the highest paved international border crossing on Earth. Where Pakistan meets China at the edge of the sky. Standing here, between two mountain ranges, two nations, and two civilisations, is an experience of profound, almost surreal scale. The plateau at the top is vast and windswept, home to grazing Marco Polo sheep and a silence broken only by the wind.",
     highlights: ["Highest paved border crossing on Earth", "Marco Polo sheep in their natural habitat", "Karakoram Highway's greatest landmark", "Dramatic drive from Sost through the Hunza Valley"],
-    image: "/rof-passu-cones.jpg",
+    image: "/pass-khunjerab.jpg",
     slug: "khunjerab",
   },
   {
@@ -25,7 +25,7 @@ const PASSES = [
     difficulty: "Moderate (partly unpaved)",
     description: "The dramatic gateway between Naran Valley and Chilas, connecting the lush valleys of Kaghan with the stark grandeur of the Karakoram. The road spirals upward through meadows carpeted in wildflowers before cresting a ridge that offers one of the most breathtaking panoramas in all of Pakistan — an ocean of mountains in every direction, with Nanga Parbat dominating the northern horizon.",
     highlights: ["Gateway between Kaghan Valley and Gilgit", "Wildflower meadows below the pass", "Nanga Parbat views from the summit plateau", "Seasonal closure due to snow — confirm before travelling"],
-    image: "/mms-deosai-national-park.jpg",
+    image: "/pass-babusar.jpg",
     slug: "babusar",
   },
   {
@@ -36,7 +36,7 @@ const PASSES = [
     difficulty: "Easy (mostly paved)",
     description: "Known as the Roof of the World — not for its altitude, but for its extraordinary setting. A vast, flat plateau ringed by snow-capped peaks, home to the world's highest polo ground. Every July, the Shandur Polo Festival ignites this remote highland with tribal competition, music, and centuries of tradition. Even without the festival, the plateau's scale and silence are unlike anything else in Pakistan.",
     highlights: ["World's highest polo ground at 3,734m", "Annual Shandur Polo Festival (July)", "Connects Chitral to Ghizer Valley", "Gateway to Phunder and Yasin beyond"],
-    image: "/slide-deosai-glamping.jpg",
+    image: "/pass-shandur.jpg",
     slug: "shandur",
   },
   {
@@ -47,7 +47,7 @@ const PASSES = [
     difficulty: "Easy (tunnel available)",
     description: "The historic gateway between Dir and the mystical Chitral Valley. For decades, Lowari Pass was one of Pakistan's most challenging road crossings — snowbound for six months a year, accessible only on foot or by jeep when conditions allowed. The Lowari Tunnel now provides year-round access, but the original pass road remains open in summer for those who seek the old-fashioned way into Chitral.",
     highlights: ["Gateway to Chitral and the Kalash Valleys", "Lowari Tunnel provides year-round access", "Historic route on the ancient trade road to Central Asia", "Dramatic views over Dir Valley on the descent"],
-    image: "/dest-chitral.jpg",
+    image: "/pass-lowari.jpg",
     slug: "lowari",
   },
   {
@@ -58,7 +58,7 @@ const PASSES = [
     difficulty: "Challenging (remote, 4WD required)",
     description: "One of the most remote and least-visited high passes in all of Pakistan, Broghil sits at the ancient junction of three countries — Pakistan, Afghanistan, and Tajikistan — in the wild Wakhan Corridor. An ancient Silk Road pass used for centuries by caravans connecting China with Central Asia, it remains today exactly as it has been for millennia: a windswept, sky-touching wilderness of extraordinary beauty.",
     highlights: ["Ancient Silk Road crossing point", "Access to the Wakhan Corridor", "Extreme remoteness — very few visitors", "Spectacular high-altitude wetlands and wildlife"],
-    image: "/mms-minimarg-astore.jpg",
+    image: "/pass-broghil.jpg",
     slug: "broghil",
   },
   {
@@ -69,7 +69,7 @@ const PASSES = [
     difficulty: "Easy (jeep road)",
     description: "Not a mountain pass in the traditional sense, but a passage through the sky. Deosai — Land of the Giants — is the world's second-highest plateau, a vast golden expanse of rolling meadows, crystal rivers, and sweeping silence. The road crosses the plateau at over 4,000 metres, connecting Skardu to Astore across a landscape so vast and open it rewires your sense of scale entirely. The Himalayan brown bear roams these plains freely.",
     highlights: ["World's second highest plateau", "Himalayan brown bears in the wild", "Sheosar Lake — a turquoise jewel at 4,114m", "Overnight glamping on the plateau available"],
-    image: "/slide-sheosar-lake.jpg",
+    image: "/pass-deosai.jpg",
     slug: "deosai",
   },
   {
@@ -80,7 +80,7 @@ const PASSES = [
     difficulty: "Strenuous (trekking only)",
     description: "One of the oldest trade passes on the Silk Road, Mintaka was the ancient commercial link between Hunza and the Chinese province of Xinjiang. Marco Polo may have crossed near here. Today it is accessible only by trekking — a demanding multi-day route through spectacular Karakoram terrain — but for those who make the effort, it offers a journey through layers of history and into a landscape unchanged for centuries.",
     highlights: ["Ancient Silk Road crossing", "Possible route of Marco Polo (1273 AD)", "Exceptional Karakoram wilderness trekking", "Very few visitors — genuine frontier exploration"],
-    image: "/hunza-lady-finger.jpg",
+    image: "/pass-mintaka.jpg",
     slug: "mintaka",
   },
   {
@@ -91,7 +91,7 @@ const PASSES = [
     difficulty: "Very strenuous (high altitude trek)",
     description: "A dramatic high-altitude traverse connecting remote valleys of Gilgit-Baltistan at 5,000 metres, the Zagar An Pass rewards experienced trekkers with sweeping views over the Karakoram that few people ever see. This is true mountain wilderness — technically demanding, altitude-challenged, and utterly spectacular. A route for the serious explorer.",
     highlights: ["5,000m — serious altitude acclimatisation required", "Remote Karakoram wilderness", "Outstanding mountain panoramas", "Part of multi-day trekking circuits"],
-    image: "/mms-skardu-mountain-cliff.jpg",
+    image: "/pass-zagar.jpg",
     slug: "zagar-an",
   },
 ];
@@ -125,7 +125,7 @@ export default function MountainPassesPage() {
       {/* Hero */}
       <section className="relative h-[75vh] min-h-[540px] flex items-end overflow-hidden pt-[72px]">
         <div className="absolute inset-0">
-          <Image src="/fullbleed-golden-mountains.jpg" alt="Mountain passes of Pakistan — golden peaks at sunset" fill className="object-cover object-center" priority sizes="100vw" />
+          <Image src="/pass-hero.jpg" alt="Mountain pass in Gilgit-Baltistan, Pakistan — Khunjerab National Park" fill className="object-cover object-center" priority sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#080808]/20 via-[#080808]/30 to-[#080808]/90" />
         </div>
         <div className="relative max-w-7xl mx-auto px-6 lg:px-10 pb-16 w-full">
