@@ -72,13 +72,18 @@ function Nav({ heroVisible }: { heroVisible: boolean }) {
             </span>
             <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className={`w-52 border shadow-xl py-1.5 ${dark ? "bg-white border-[#e8e4de]" : "bg-[#0d0d0d] border-[#222]"}`}>
-                {["About Pakistan", "Pakistan Visa Help", "Mountain Passes", "Festivals of Pakistan"].map(item => (
-                  <a key={item} href="#"
+                {[
+                  ["About Pakistan",       "/pakistan/about"],
+                  ["Pakistan Visa Help",   "/pakistan/visa"],
+                  ["Mountain Passes",      "/pakistan/mountain-passes"],
+                  ["Festivals of Pakistan","/pakistan/festivals"],
+                ].map(([label, href]) => (
+                  <Link key={href} href={href}
                     className={`block px-5 py-2.5 text-[10px] tracking-[0.15em] uppercase transition-colors duration-200 ${dark ? "text-[#444] hover:text-[#C8903A] hover:bg-[#f9f7f5]" : "text-[#F5F0E8]/60 hover:text-[#C8903A] hover:bg-[#161616]"}`}
                     style={{ fontFamily: "var(--font-inter), sans-serif" }}
                   >
-                    {item}
-                  </a>
+                    {label}
+                  </Link>
                 ))}
               </div>
             </div>
