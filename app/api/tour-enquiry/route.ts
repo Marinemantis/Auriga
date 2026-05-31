@@ -93,7 +93,7 @@ export async function POST(request: Request) {
     await pushToGHL({
       name:             name,
       email:            email,
-      opportunityTitle: `Tour Inquiry — ${tourName}`,
+      opportunityTitle: `${tourName} — Tour Inquiry`,
       notes:            `Tour: ${tourName} | Travel dates: ${dates || "Not specified"} | Message: ${message || "None"}`,
     });
 
