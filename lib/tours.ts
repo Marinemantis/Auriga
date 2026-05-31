@@ -87,7 +87,69 @@ export const TOURS: Tour[] = [
         image: "https://aurigaventure.com/wp-content/uploads/2026/01/Lower-Kachura-Lake-and-Shangrila-Resort-560x460.jpg",
       },
     ],
-    relatedSlugs: ["realm-of-fairies", "mountains-meet-stars", "nagma-valley"],
+    relatedSlugs: ["nagar-valley", "realm-of-fairies", "mountains-meet-stars"],
+  },
+
+  {
+    slug: "nagar-valley",
+    name: "Nagar Valley",
+    region: "Nagar, Karakoram",
+    tagline: "Eight days into the Karakoram's hidden giant — trekking to glacier basecamps beneath Rakaposhi, Diran, and the Golden Peak.",
+    heroImage: "/hunza-lady-finger.jpg",
+    galleryImages: [
+      "/rof-hunza-bridge.jpg",
+      "/rof-borith-lake.jpg",
+      "/mms-skardu-mountain-cliff.jpg",
+      "/rof-nanga-parbat-camp.jpg",
+      "/rof-passu-cones.jpg",
+      "/rof-hunza-apricots.jpg",
+    ],
+    when: "May – October",
+    price: "From $2,400 pp",
+    priceUSD: 2400,
+    duration: "8 days",
+    intro:
+      "Carved into the heart of the Karakoram and shadowed by some of the world's mightiest peaks, Nagar Valley is one of northern Pakistan's most spectacular and least-celebrated regions. While Hunza draws the crowds, Nagar — its ancient rival across the river — offers a rawer, more intimate encounter with the mountains. Over eight extraordinary days, this curated journey leads you beneath the colossal faces of Rakaposhi and Diran, along the vast white expanse of Hoper Glacier, deep into the secluded splendour of Michar Kho Valley, and to the high-altitude basecamps of legendary climbs. Every step reveals a landscape of breathtaking scale — and every evening returns you to the warmth of curated mountain hospitality.",
+    sections: [
+      {
+        heading: "Rakaposhi & Diran Peak Basecamp Trek",
+        body:
+          "The journey begins with one of the Karakoram's most iconic approaches — the trail to the Rakaposhi and Diran Peak basecamp. Rising to over 7,788 metres, Rakaposhi is among the most visually dominant mountains in Pakistan, its vast snow pyramid visible for hundreds of kilometres in every direction. The ascent to basecamp weaves through pine forest, alpine meadow, and moraine terrain, each hour revealing closer, more overwhelming views of the mountain's southern face. Diran Peak, its slightly smaller neighbour, adds another dimension of drama to a landscape that rewards those willing to look up.",
+      },
+      {
+        heading: "Golden Peak Basecamp Trek",
+        body:
+          "From Nagar, we push deeper into the Karakoram toward the basecamp of Spantik — known locally as Golden Peak — a stunning 7,027-metre pyramid of ice and rock that earned its name from the golden glow it radiates at sunset. The approach to its basecamp is a journey of progressive revelation: winding river valleys give way to open moraines, and the peak itself emerges dramatically above a glacier-carved landscape. This is among the region's finest high-altitude walks, combining genuine Karakoram wilderness with the quiet thrill of standing at the base of a serious expedition mountain.",
+      },
+      {
+        heading: "Hoper Glacier & Michar Kho Valley",
+        body:
+          "The final chapters of the journey take you into two of Nagar's most treasured natural wonders. Hoper Glacier — one of the most accessible and visually striking glaciers in the Karakoram — is a vast river of ice that flows dramatically between towering valley walls. Walking its moraine-edged margin is an experience of raw, ancient scale. From here, the route ventures into the serene sanctuary of Michar Kho Valley, a hidden side valley of wildflower meadows, glacial streams, and towering rock walls where silence is absolute and the mountains feel impossibly close. These final days are an ode to pure wilderness — unhurried, uncrowded, and unforgettable.",
+      },
+    ],
+    highlights: [
+      "Rakaposhi & Diran Peak Basecamp Trek (7,788m)",
+      "Golden Peak (Spantik) Basecamp Trek (7,027m)",
+      "Hoper Glacier walk on the Karakoram ice",
+      "Michar Kho Valley — secluded alpine sanctuary",
+      "Private expert guide fluent in Burushaski and English",
+      "Hand-selected mountain lodges and wilderness camps",
+      "Curated wilderness dining and open-fire evenings",
+      "Nagar Valley village cultural encounters",
+    ],
+    hotels: [
+      {
+        name: "Nagar Valley Lodge",
+        description: "A thoughtfully appointed mountain retreat in the heart of Nagar Valley, with Rakaposhi visible from every window and genuine Nagari hospitality at every turn.",
+        image: "/hunza-lady-finger.jpg",
+      },
+      {
+        name: "Hoper Glacier Base Camp",
+        description: "Our private wilderness camp at the glacier edge — proper beds, gas heating, a camp cook, and one of the most dramatic overnight settings in all of Pakistan.",
+        image: "/rof-nanga-parbat-camp.jpg",
+      },
+    ],
+    relatedSlugs: ["last-paradise", "realm-of-fairies", "nagma-valley"],
   },
 
   {
