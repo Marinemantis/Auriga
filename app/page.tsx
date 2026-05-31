@@ -59,13 +59,6 @@ function Nav({ heroVisible }: { heroVisible: boolean }) {
         </a>
 
         <nav className="hidden md:flex items-center gap-7">
-          {["Destinations", "Experiences", "Inspiration", "About", "Contact"].map(l => (
-            <Link key={l} href={l === "Destinations" ? "/tours" : l === "Experiences" ? "/experiences" : l === "About" ? "/about" : l === "Contact" ? "/contact" : "#"}
-              className={`text-[11px] tracking-[0.12em] uppercase transition-colors duration-300 ${dark ? "text-[#333]/60 hover:text-[#111]" : "text-white/70 hover:text-white"}`}
-              style={{ fontFamily: "var(--font-inter), sans-serif" }}
-            >{l}</Link>
-          ))}
-
           {/* Pakistan dropdown */}
           <div className="relative group">
             <span
@@ -90,6 +83,13 @@ function Nav({ heroVisible }: { heroVisible: boolean }) {
               </div>
             </div>
           </div>
+
+          {["Destinations", "Experiences", "Inspiration", "About", "Contact"].map(l => (
+            <Link key={l} href={l === "Destinations" ? "/tours" : l === "Experiences" ? "/experiences" : l === "About" ? "/about" : l === "Contact" ? "/contact" : "#"}
+              className={`text-[11px] tracking-[0.12em] uppercase transition-colors duration-300 ${dark ? "text-[#333]/60 hover:text-[#111]" : "text-white/70 hover:text-white"}`}
+              style={{ fontFamily: "var(--font-inter), sans-serif" }}
+            >{l}</Link>
+          ))}
         </nav>
 
         <div className="hidden md:flex items-center gap-5">
