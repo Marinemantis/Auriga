@@ -587,7 +587,7 @@ function Contact() {
             <h2 className="text-[44px] md:text-[54px] font-light text-[#111] leading-[1.06] mb-8" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>Tell us about<br /><em>your journey.</em></h2>
             <p className="text-[#666] text-[15px] leading-relaxed mb-12" style={{ fontFamily:"var(--font-inter),sans-serif" }}>No obligation. No planning fees. Just a conversation about where you want to go and how you want to feel when you get there.</p>
             <div className="flex flex-col gap-6">
-              {[{label:"Email",val:"venturesauriga@gmail.com"},{label:"Phone",val:"+92 333 9555 682"},{label:"Based in",val:"Islamabad, Pakistan"}].map(({label,val})=>(
+              {[{label:"Email",val:"venturesauriga@gmail.com"},{label:"Phone",val:"+92 333 9555 682"},{label:"Address",val:"River View Road, Chinar Bagh, Gilgit-Baltistan, Pakistan — 15100"}].map(({label,val})=>(
                 <div key={label} className="flex items-start gap-4 pb-6 border-b border-[#f0ece6]">
                   <p className="text-[10px] tracking-[0.25em] uppercase text-[#bbb] w-16 shrink-0 mt-0.5" style={{ fontFamily:"var(--font-inter),sans-serif" }}>{label}</p>
                   <p className="text-[#333] text-sm" style={{ fontFamily:"var(--font-inter),sans-serif" }}>{val}</p>
