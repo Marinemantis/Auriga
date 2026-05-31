@@ -95,9 +95,9 @@ export const TOURS: Tour[] = [
     name: "Nagar Valley",
     region: "Nagar, Karakoram",
     tagline: "Eight days into the Karakoram's hidden giant — trekking to glacier basecamps beneath Rakaposhi, Diran, and the Golden Peak.",
-    heroImage: "/hunza-lady-finger.jpg",
+    heroImage: "/rakaposhi-moon.jpg",
     galleryImages: [
-      "/rof-hunza-bridge.jpg",
+      "/rakaposhi-moon.jpg",
       "/rof-borith-lake.jpg",
       "/mms-skardu-mountain-cliff.jpg",
       "/rof-nanga-parbat-camp.jpg",
@@ -141,7 +141,7 @@ export const TOURS: Tour[] = [
       {
         name: "Nagar Valley Lodge",
         description: "A thoughtfully appointed mountain retreat in the heart of Nagar Valley, with Rakaposhi visible from every window and genuine Nagari hospitality at every turn.",
-        image: "/hunza-lady-finger.jpg",
+        image: "/rakaposhi-moon.jpg",
       },
       {
         name: "Hoper Glacier Base Camp",

@@ -464,7 +464,7 @@ export default function DestinationsPage() {
             },
             {
               id: "nagar",
-              src: "/hunza-lady-finger.jpg",
+              src: "/rakaposhi-moon.jpg",
               region: "Nagar · Karakoram",
               subtitle: "The Karakoram's Hidden Giant",
               name: "Nagar Valley",
