@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -9,8 +8,9 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="mb-4">
-              <Image src="/auriga-logo.png" alt="Auriga Ventures" height={60} width={69} className="object-contain" />
+            <div className="flex items-baseline gap-1 mb-4">
+              <span className="text-[22px] font-semibold text-white" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>Auriga</span>
+              <span className="text-[22px] font-light text-[#C8903A]"  style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>Ventures</span>
             </div>
             <p className="text-white/25 text-sm italic mb-4 max-w-xs" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>Beyond Travel. We Curate Dreams.</p>
             <p className="text-white/20 text-xs leading-relaxed max-w-xs" style={{ fontFamily: "var(--font-inter),sans-serif" }}>Bespoke luxury journeys through Pakistan&apos;s northern mountains.</p>

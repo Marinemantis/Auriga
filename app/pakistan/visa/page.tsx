@@ -72,9 +72,10 @@ function Nav() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#080808]/95 backdrop-blur-md border-b border-[#1A1A1A]">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 h-[72px] flex items-center justify-between">
-                  <Link href="/" className="flex items-center">
-            <Image src="/auriga-logo.png" alt="Auriga Ventures" height={60} width={69} className="object-contain" />
-          </Link>
+        <Link href="/" className="flex items-baseline gap-1">
+          <span className="text-[22px] font-semibold text-[#F5F0E8]" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>Auriga</span>
+          <span className="text-[22px] font-light text-[#C8903A]" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>Ventures</span>
+        </Link>
         <nav className="hidden md:flex items-center gap-7">
           {[["Destinations", "/tours"], ["About", "/about"], ["Contact", "/contact"]].map(([l, h]) => (
             <Link key={l} href={h} className="text-[11px] tracking-[0.25em] uppercase text-[#F5F0E8]/60 hover:text-[#C8903A] transition-colors duration-300" style={{ fontFamily: "var(--font-inter),sans-serif" }}>{l}</Link>
