@@ -60,9 +60,8 @@ export default function TourPage({ params }: { params: Promise<{ slug: string }>
       {/* ── NAV ── */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#e8e4de] h-[72px] flex items-center px-6 lg:px-10">
         <div className="max-w-[1320px] mx-auto w-full flex items-center justify-between">
-          <Link href="/" className="flex items-baseline gap-1">
-            <span className="text-[22px] font-semibold text-[#111]" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>Auriga</span>
-            <span className="text-[22px] font-light text-[#C8903A]"  style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>Ventures</span>
+                    <Link href="/" className="flex items-center">
+            <Image src="/auriga-logo.jpeg" alt="Auriga Ventures" height={44} width={51} className="object-contain" />
           </Link>
           <nav className="hidden md:flex items-center gap-7">
             <Link href="/tours" className="text-[11px] tracking-[0.12em] uppercase text-[#555] hover:text-[#111] transition-colors" style={{ fontFamily:"var(--font-inter),sans-serif" }}>All Trips</Link>

@@ -91,9 +91,8 @@ export default function ExperiencesPage() {
       {/* ── NAV ── */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#080808]/90 backdrop-blur-md border-b border-[#1A1A1A] h-20 flex items-center">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 w-full flex items-center justify-between">
-          <Link href="/" className="flex items-baseline gap-1">
-            <span className="text-2xl font-semibold text-[#F5F0E8]" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>Auriga</span>
-            <span className="text-2xl font-light text-[#C8903A]"    style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>Ventures</span>
+                    <Link href="/" className="flex items-center">
+            <Image src="/auriga-logo.jpeg" alt="Auriga Ventures" height={44} width={51} className="object-contain" />
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
