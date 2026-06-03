@@ -54,7 +54,7 @@ function Nav({ heroVisible }: { heroVisible: boolean }) {
       <div className="max-w-[1320px] mx-auto px-6 lg:px-10 h-[72px] flex items-center justify-between">
 
         <a href="/" className="flex items-center shrink-0">
-          <Image src="/auriga-logo.jpeg" alt="Auriga Ventures" height={44} width={51} className="object-contain" />
+          <Image src="/auriga-logo.png" alt="Auriga Ventures" height={60} width={69} className="object-contain" />
         </a>
 
         <nav className="hidden md:flex items-center gap-7">

@@ -145,7 +145,7 @@ export default function EnquirePage() {
       <div className="fixed top-0 left-0 right-0 z-50 bg-[#080808]/95 backdrop-blur-md border-b border-[#1a1a1a]">
         <div className="max-w-6xl mx-auto px-6 lg:px-10 h-[68px] flex items-center justify-between">
           <Link href="/" className="flex items-center">
-            <Image src="/auriga-logo.jpeg" alt="Auriga Ventures" height={44} width={51} className="object-contain" />
+            <Image src="/auriga-logo.png" alt="Auriga Ventures" height={60} width={69} className="object-contain" />
           </Link>
           <Link
             href="/"

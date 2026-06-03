@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="mb-4">
-              <Image src="/auriga-logo.jpeg" alt="Auriga Ventures" height={44} width={51} className="object-contain" />
+              <Image src="/auriga-logo.png" alt="Auriga Ventures" height={60} width={69} className="object-contain" />
             </div>
             <p className="text-white/25 text-sm italic mb-4 max-w-xs" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>Beyond Travel. We Curate Dreams.</p>
             <p className="text-white/20 text-xs leading-relaxed max-w-xs" style={{ fontFamily: "var(--font-inter),sans-serif" }}>Bespoke luxury journeys through Pakistan&apos;s northern mountains.</p>
