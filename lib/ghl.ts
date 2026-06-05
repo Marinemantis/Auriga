@@ -35,22 +35,25 @@ async function upsertContact(input: ContactInput): Promise<string> {
   return data.contact?.id || data.id;
 }
 
-async function createOpportunity(contactId: string, title: string, notes: string) {
-  await fetch(`${GHL_API}/opportunities/`, {
+async function createOpportunity(contactId: string, name: string) {
+  const res = await fetch(`${GHL_API}/opportunities/`, {
     method: "POST",
     headers: headers(),
     body: JSON.stringify({
-      title,
+      name,
       pipelineId:      PIPELINE_ID,
       pipelineStageId: STAGE_ID,
       locationId:      LOCATION_ID,
       contactId,
       status:          "open",
       monetaryValue:   0,
-      customFields:    [],
-      ...(notes ? { notes } : {}),
     }),
   });
+  const data = await res.json();
+  if (!res.ok) {
+    console.error("GHL opportunity error:", JSON.stringify(data));
+  }
+  return data;
 }
 
 export async function pushToGHL(params: {
@@ -74,7 +77,7 @@ export async function pushToGHL(params: {
     });
 
     if (contactId) {
-      await createOpportunity(contactId, params.opportunityTitle, params.notes);
+      await createOpportunity(contactId, params.opportunityTitle);
     }
   } catch (err) {
     console.error("GHL push error:", err);
