@@ -14,7 +14,7 @@ const FESTIVALS = [
     duration: "3 days",
     description: "The most celebrated of the Kalash festivals, Chilam Joshi marks the arrival of spring with three days of dancing, music, ritual purification, and offerings of milk to the gods. Women in their spectacular hand-embroidered black robes and elaborate headdresses fill the valley with colour and song. This is one of the most extraordinary cultural spectacles anywhere in South Asia — and one of the rarest, preserved by a community of just a few thousand people.",
     highlights: ["Traditional Kalash dance and music", "Ritual purification ceremonies", "Intricate traditional dress and jewellery", "Community feasting and offerings"],
-    image: "/dest-chitral.jpg",
+    image: "/fest-chilam-joshi.jpg",
     tag: "Cultural",
   },
   {
@@ -25,7 +25,7 @@ const FESTIVALS = [
     duration: "3 days",
     description: "Every July, two teams from Gilgit and Chitral take to the world's highest polo ground at 3,734 metres, continuing a rivalry that stretches back centuries. This is polo in its original, untamed form — no helmets, no rules, just horsemanship at its rawest and most spectacular. The festival also features music, folk dancing, and the chance to experience one of Pakistan's most remote high plateaus alive with celebration.",
     highlights: ["Free-style traditional polo matches", "Gilgit vs Chitral rivalry — centuries old", "Folk music and traditional dance", "3,734m — spectacular mountain setting"],
-    image: "/slide-deosai-glamping.jpg",
+    image: "/fest-shandur-polo.jpg",
     tag: "Sport & Culture",
   },
   {
@@ -36,7 +36,7 @@ const FESTIVALS = [
     duration: "Multiple weeks",
     description: "For a few magical weeks each spring, the entire Hunza Valley transforms into a canvas of pink and white as cherry, apricot, and peach orchards burst into blossom against the backdrop of snow-capped Karakoram peaks. Local festivals, cultural programmes, and guided blossom walks celebrate the season's arrival. This is one of the most photographed spectacles in Pakistan — and one of the most emotionally affecting.",
     highlights: ["Cherry and apricot orchards in full bloom", "Cultural programmes and local music", "Guided orchard walks with local families", "Dramatic backdrop of Rakaposhi and Ultar Sar"],
-    image: "/rof-hunza-apricots.jpg",
+    image: "/fest-hunza-blossom.jpg",
     tag: "Nature & Culture",
   },
   {
@@ -47,7 +47,7 @@ const FESTIVALS = [
     duration: "15 days",
     description: "The grandest of all Kalash festivals, Choimus is a two-week winter celebration involving elaborate purification rituals, the slaughter of goats as offerings, ceremonial bonfires, dancing through the night, and the welcoming of ancestral spirits back into the community. It is a festival of extraordinary spiritual depth, celebrated by one of the world's most unique indigenous communities — and increasingly recognised as a precious piece of living human heritage.",
     highlights: ["15-day festival — longest Kalash celebration", "Ceremonial bonfires and night dancing", "Ancestral spirit welcoming rituals", "Community feasting and sacrifice"],
-    image: "/dest-chitral.jpg",
+    image: "/fest-choimus.jpg",
     tag: "Cultural",
   },
   {
@@ -58,7 +58,7 @@ const FESTIVALS = [
     duration: "1 day",
     description: "A dramatic mid-winter celebration unique to the Baltistan region, the Mayfung Fire Festival sees communities light ceremonial fires across hillsides and village squares, illuminating the dark winter mountains with a thousand points of flame. The festival marks the passage of winter and the coming warmth, celebrated with traditional Balti music, storytelling, and communal gathering.",
     highlights: ["Ceremonial fires lit across mountainsides", "Traditional Balti music and dance", "Mid-winter celebration unique to Baltistan", "Spectacular visual spectacle after dark"],
-    image: "/dest-skardu.jpg",
+    image: "/fest-mayfung.jpg",
     tag: "Cultural",
   },
   {
@@ -69,7 +69,7 @@ const FESTIVALS = [
     duration: "3 days",
     description: "Set against the backdrop of the Hindu Kush in the remote Madaklasht Valley near Chitral, this winter festival celebrates the season's harshest months with ski competitions, snow sports, traditional music, and cultural programmes. It brings together the mountain communities of Chitral in one of the most scenically dramatic winter settings in Pakistan.",
     highlights: ["Snow sports and ski competitions", "Traditional Chitrali music and dance", "Madaklasht Valley — dramatic Hindu Kush setting", "February — deep winter atmosphere"],
-    image: "/mms-minimarg-astore.jpg",
+    image: "/fest-hindukush.jpg",
     tag: "Sport & Culture",
   },
   {
@@ -80,7 +80,7 @@ const FESTIVALS = [
     duration: "2 days",
     description: "One of Pakistan's most remote and authentic cultural festivals, the Shimshal Kuch celebrates the return of herders and their yaks from the high summer pastures. The valley erupts in music, dancing, and communal celebration as the animals are brought back down from some of the highest grazing grounds in the world. Reaching Shimshal requires a dedicated journey — which only adds to the festival's rare, unspoiled character.",
     highlights: ["Return of yak herds from high-altitude pastures", "Traditional Wakhi music and dance", "Remote valley — genuine community festival", "One of Pakistan's most authentic cultural events"],
-    image: "/rof-borith-lake.jpg",
+    image: "/fest-shimshal.jpg",
     tag: "Cultural",
   },
   {
@@ -91,7 +91,7 @@ const FESTIVALS = [
     duration: "5 days",
     description: "Pakistan's premier national folk festival, held annually in Islamabad, brings together artisans, musicians, dancers, and storytellers from every province and community. It is the most accessible and comprehensive window into Pakistan's extraordinary cultural diversity — a single location where the embroidery of Sindh, the woodcarving of Swat, the truck art of Punjab, and the music of Balochistan all exist in one glorious, loud, and joyful celebration.",
     highlights: ["All-Pakistan cultural representation", "Traditional crafts, textiles, and food", "Music and dance from every province", "Accessible from Islamabad — ideal for new visitors"],
-    image: "/slide-sheosar-lake.jpg",
+    image: "/fest-lok-mela.jpg",
     tag: "National Festival",
   },
 ];
