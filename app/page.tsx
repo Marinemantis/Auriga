@@ -348,7 +348,7 @@ function DestCarousel() {
       <div className="max-w-[1320px] mx-auto px-6 lg:px-10 pt-16 pb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div>
           <p className="text-[11px] tracking-[0.45em] uppercase text-[#C8903A] mb-4" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Start your journey</p>
-          <h2 className="text-[44px] md:text-[54px] font-light text-white" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>Where do you want to go?</h2>
+          <h2 className="text-[44px] md:text-[54px] font-light text-white" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>Our Signature Experiences</h2>
         </div>
         <div className="flex gap-3 shrink-0">
           <button onClick={()=>scroll("l")} disabled={!canLeft}
