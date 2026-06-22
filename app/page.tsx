@@ -413,8 +413,8 @@ function FullBleed() {
   return (
     <section ref={ref} className="relative h-[75vh] overflow-hidden flex items-center justify-center">
       <motion.div style={{ y }} className="absolute inset-[-10%] will-change-transform">
-        <Image src="/fullbleed-hunza-aerial.jpg" alt="Aerial view of the Karakoram Highway and Hunza River" fill className="object-cover object-center" sizes="100vw" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#080808]/60 via-black/25 to-[#080808]/65" />
+        <Image src="/fullbleed-sunset-road.jpg" alt="Golden sunset over the mountains of northern Pakistan" fill className="object-cover object-top" sizes="100vw" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#080808]/50 via-black/15 to-[#080808]/70" />
       </motion.div>
       <div className="relative z-10 text-center px-6">
         <p className="text-[11px] tracking-[0.5em] uppercase text-white/50 mb-6" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Their future is out there</p>
