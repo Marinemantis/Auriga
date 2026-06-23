@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import NavDark from "@/components/NavDark";
 import { FadeUp, DrawLine } from "@/components/Reveal";
 
 /* ─── DESTINATION DATA (from Auriga destination guide) ─── */
@@ -175,42 +176,7 @@ export default function DestinationsPage() {
     <div className="bg-[#080808] text-[#F5F0E8] overflow-x-hidden">
 
       {/* ── NAV ── */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#080808]/90 backdrop-blur-md border-b border-[#1A1A1A] h-20 flex items-center">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 w-full flex items-center justify-between">
-          <Link href="/" className="flex items-baseline gap-1">
-            <span className="text-2xl font-semibold text-[#F5F0E8]" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>Auriga</span>
-            <span className="text-2xl font-light text-[#C8903A]"    style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>Ventures</span>
-          </Link>
-          <nav className="hidden md:flex items-center gap-8">
-            {[
-              { label: "Destinations", href: "/tours"       },
-              { label: "Experiences",  href: "/experiences" },
-              { label: "About",        href: "/about"       },
-              { label: "Contact",      href: "/#contact"    },
-            ].map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                className={`text-[11px] tracking-[0.25em] uppercase transition-colors duration-300 ${
-                  l.href === "/tours"
-                    ? "text-[#C8903A]"
-                    : "text-[#F5F0E8]/55 hover:text-[#C8903A]"
-                }`}
-                style={{ fontFamily: "var(--font-inter),sans-serif" }}
-              >
-                {l.label}
-              </Link>
-            ))}
-          </nav>
-          <Link
-            href="/#contact"
-            className="hidden md:inline-flex px-5 py-2.5 border border-[#C8903A] text-[#C8903A] text-[11px] tracking-[0.2em] uppercase hover:bg-[#C8903A] hover:text-[#080808] transition-all duration-300"
-            style={{ fontFamily: "var(--font-inter),sans-serif" }}
-          >
-            Plan Your Journey
-          </Link>
-        </div>
-      </header>
+      <NavDark />
 
       {/* ── HERO ── */}
       <section ref={heroRef} className="relative h-[80vh] min-h-[580px] flex items-end overflow-hidden">

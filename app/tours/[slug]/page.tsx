@@ -21,6 +21,8 @@ export default function TourPage({ params }: { params: Promise<{ slug: string }>
 
   const related = TOURS.filter(t => tour.relatedSlugs.includes(t.slug));
 
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const [formName,    setFormName]    = useState("");
   const [formEmail,   setFormEmail]   = useState("");
   const [formDates,   setFormDates]   = useState("");
@@ -58,21 +60,48 @@ export default function TourPage({ params }: { params: Promise<{ slug: string }>
     <div className="bg-white">
 
       {/* ── NAV ── */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#e8e4de] h-[72px] flex items-center px-6 lg:px-10">
-        <div className="max-w-[1320px] mx-auto w-full flex items-center justify-between">
-          <Link href="/" className="flex items-baseline gap-1">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#e8e4de]">
+        <div className="max-w-[1320px] mx-auto px-6 lg:px-10 h-[72px] flex items-center justify-between">
+          <Link href="/" className="flex items-baseline gap-1 shrink-0">
             <span className="text-[22px] font-semibold text-[#111]" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>Auriga</span>
-            <span className="text-[22px] font-light text-[#C8903A]"  style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>Ventures</span>
+            <span className="text-[22px] font-light text-[#C8903A]" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>Ventures</span>
           </Link>
           <nav className="hidden md:flex items-center gap-7">
-            <Link href="/tours" className="text-[11px] tracking-[0.12em] uppercase text-[#555] hover:text-[#111] transition-colors" style={{ fontFamily:"var(--font-inter),sans-serif" }}>All Trips</Link>
-            <Link href="/#contact" className="text-[11px] tracking-[0.12em] uppercase text-[#555] hover:text-[#111] transition-colors" style={{ fontFamily:"var(--font-inter),sans-serif" }}>About</Link>
+            <Link href="/tours"       className="text-[11px] tracking-[0.12em] uppercase text-[#555] hover:text-[#111] transition-colors" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Destinations</Link>
+            <Link href="/experiences" className="text-[11px] tracking-[0.12em] uppercase text-[#555] hover:text-[#111] transition-colors" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Experiences</Link>
+            <Link href="/about"       className="text-[11px] tracking-[0.12em] uppercase text-[#555] hover:text-[#111] transition-colors" style={{ fontFamily:"var(--font-inter),sans-serif" }}>About</Link>
           </nav>
-          <Link href="#enquire"
-            className="px-5 py-2.5 bg-[#111] text-white text-[11px] tracking-[0.12em] uppercase font-medium hover:bg-[#C8903A] transition-colors duration-300"
-            style={{ fontFamily:"var(--font-inter),sans-serif" }}
-          >Enquire Now</Link>
+          <div className="flex items-center gap-3">
+            <Link href="#enquire"
+              className="px-5 py-2.5 bg-[#111] text-white text-[11px] tracking-[0.12em] uppercase font-medium hover:bg-[#C8903A] transition-colors duration-300"
+              style={{ fontFamily:"var(--font-inter),sans-serif" }}
+            >Enquire Now</Link>
+            <button className="md:hidden p-2 flex flex-col gap-1.5" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
+              <span className={`block w-5 h-px bg-[#111] transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-[7px]" : ""}`} />
+              <span className={`block w-5 h-px bg-[#111] transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
+              <span className={`block w-5 h-px bg-[#111] transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-[7px]" : ""}`} />
+            </button>
+          </div>
         </div>
+        {menuOpen && (
+          <div className="md:hidden bg-white border-t border-[#eee] px-6 py-6 flex flex-col gap-5">
+            {[
+              { label: "Destinations", href: "/tours"       },
+              { label: "Experiences",  href: "/experiences" },
+              { label: "About",        href: "/about"       },
+              { label: "Contact",      href: "/#contact"    },
+            ].map((l) => (
+              <Link key={l.href} href={l.href} onClick={() => setMenuOpen(false)}
+                className="text-sm tracking-[0.15em] uppercase text-[#444] hover:text-[#C8903A] transition-colors"
+                style={{ fontFamily:"var(--font-inter),sans-serif" }}
+              >{l.label}</Link>
+            ))}
+            <Link href="#enquire" onClick={() => setMenuOpen(false)}
+              className="mt-1 text-center px-5 py-3 bg-[#111] text-white text-sm tracking-[0.15em] uppercase hover:bg-[#C8903A] transition-colors duration-300"
+              style={{ fontFamily:"var(--font-inter),sans-serif" }}
+            >Enquire Now</Link>
+          </div>
+        )}
       </header>
 
       {/* ── HERO — full-bleed, no text overlay ── */}
