@@ -531,7 +531,7 @@ function GuideSection() {
             {/* Primary portrait image with parallax */}
             <div className="absolute inset-0 overflow-hidden">
               <motion.div style={{ y:imgY }} className="absolute inset-[-10%] will-change-transform">
-                <Image src="/guide-shigar-fort.jpg" alt="Serena Shigar Fort heritage hotel, Baltistan" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+                <Image src="/guide-fort-portrait.jpg" alt="Historic fort in northern Pakistan" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
               </motion.div>
             </div>
             {/* Inset landscape photo overlapping bottom-left */}
