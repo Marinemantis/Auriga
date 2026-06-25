@@ -308,7 +308,7 @@ export default function DestinationsPage() {
         {/* Row 1: Hunza (wide) + Phunder (tall portrait) */}
         <div id="hunza" className="grid lg:grid-cols-3 gap-3 lg:gap-4 mb-3 lg:mb-4">
           {/* Hunza — spans 2 cols, landscape */}
-          <div className="lg:col-span-2 relative overflow-hidden group bg-[#0D0D0D]"
+          <Link href="/destinations/hunza" className="lg:col-span-2 relative overflow-hidden group bg-[#0D0D0D] block"
             style={{ height: "clamp(320px, 45vw, 580px)" }}>
             <motion.div
               initial={{ opacity: 0, scale: 1.04 }}
@@ -365,10 +365,10 @@ export default function DestinationsPage() {
                 </svg>
               </span>
             </div>
-          </div>
+          </Link>
 
           {/* Phunder — tall portrait */}
-          <div id="phunder" className="relative overflow-hidden group bg-[#0D0D0D]"
+          <Link href="/destinations/phunder" id="phunder" className="relative overflow-hidden group bg-[#0D0D0D] block"
             style={{ height: "clamp(320px, 45vw, 580px)" }}>
             <motion.div
               initial={{ opacity: 0, scale: 1.04 }}
@@ -421,7 +421,7 @@ export default function DestinationsPage() {
                 </svg>
               </span>
             </div>
-          </div>
+          </Link>
         </div>
 
         {/* Row 2: Skardu + Chitral + Astore + Nagar — equal quarters */}
@@ -476,7 +476,10 @@ export default function DestinationsPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.85, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="relative overflow-hidden group bg-[#0D0D0D]"
+            >
+            <Link
+              href={`/destinations/${dest.id}`}
+              className="relative overflow-hidden group bg-[#0D0D0D] block"
               style={{ height: "clamp(300px, 35vw, 480px)" }}
             >
               <div className="absolute inset-0">
@@ -524,6 +527,7 @@ export default function DestinationsPage() {
                   </svg>
                 </span>
               </div>
+            </Link>
             </motion.div>
           ))}
         </div>
