@@ -254,7 +254,7 @@ export default function TourPage({ params }: { params: Promise<{ slug: string }>
                     />
                     <select value={formDates} onChange={e=>setFormDates(e.target.value)} className="w-full border border-[#ddd] px-4 py-3 text-sm text-[#555] focus:outline-none focus:border-[#C8903A] transition-colors bg-white" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
                       <option value="">Approx. travel dates</option>
-                      {["May–June 2025","July–August 2025","September–October 2025","2026 (flexible)"].map(o=><option key={o}>{o}</option>)}
+                      {["July–August 2026","September–October 2026","November–December 2026","2027 (flexible)"].map(o=><option key={o}>{o}</option>)}
                     </select>
                     <textarea rows={3} placeholder="Tell us more (group size, interests…)" value={formMessage} onChange={e=>setFormMessage(e.target.value)}
                       className="w-full border border-[#ddd] px-4 py-3 text-sm text-[#333] placeholder-[#bbb] focus:outline-none focus:border-[#C8903A] transition-colors resize-none"
