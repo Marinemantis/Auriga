@@ -7,6 +7,7 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import NavDark from "@/components/NavDark";
 import { FadeUp, DrawLine } from "@/components/Reveal";
+import RegionMap from "@/components/RegionMap";
 
 /* ─── DESTINATION DATA (from Auriga destination guide) ─── */
 const DESTINATIONS = [
@@ -248,6 +249,35 @@ export default function DestinationsPage() {
           ))}
         </div>
       </div>
+
+      {/* ── REGION MAP ── */}
+      <section className="border-b border-[#1A1A1A] py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <FadeUp>
+            <div className="text-center mb-10 lg:mb-12">
+              <p
+                className="text-[10px] tracking-[0.38em] uppercase text-[#C8903A] mb-4"
+                style={{ fontFamily: "var(--font-inter),sans-serif" }}
+              >
+                Find Your Bearings
+              </p>
+              <h2
+                className="text-[34px] md:text-[46px] font-light text-[#F5F0E8] leading-tight mb-4"
+                style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}
+              >
+                Where These Places Are
+              </h2>
+              <p
+                className="text-[#F5F0E8]/45 text-[14px] max-w-md mx-auto leading-relaxed"
+                style={{ fontFamily: "var(--font-inter),sans-serif" }}
+              >
+                A simple guide to Gilgit-Baltistan and Khyber Pakhtunkhwa — the mountain region where every Auriga journey unfolds.
+              </p>
+            </div>
+          </FadeUp>
+          <RegionMap />
+        </div>
+      </section>
 
       {/* ── DESTINATIONS GRID ── */}
       <section className="max-w-7xl mx-auto px-6 lg:px-10 py-16 lg:py-20">
