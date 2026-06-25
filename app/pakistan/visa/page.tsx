@@ -83,7 +83,7 @@ function Nav() {
         </nav>
         <Link href="/enquire" target="_blank" rel="noopener noreferrer"
           className="hidden md:block px-5 py-2.5 border border-[#C8903A] text-[#C8903A] text-[11px] tracking-[0.2em] uppercase hover:bg-[#C8903A] hover:text-[#080808] transition-all duration-300"
-          style={{ fontFamily: "var(--font-inter),sans-serif" }}>Enquire Now</Link>
+          style={{ fontFamily: "var(--font-inter),sans-serif" }}>Plan Your Journey</Link>
       </div>
     </header>
   );

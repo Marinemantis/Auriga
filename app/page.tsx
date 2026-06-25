@@ -105,7 +105,7 @@ function Nav({ heroVisible }: { heroVisible: boolean }) {
           <Link href="/enquire" target="_blank" rel="noopener noreferrer"
             className="px-5 py-2.5 bg-[#111] text-white text-[11px] tracking-[0.12em] uppercase font-medium hover:bg-[#C8903A] transition-colors duration-300"
             style={{ fontFamily: "var(--font-inter), sans-serif" }}
-          >Enquire Now</Link>
+          >Plan Your Journey</Link>
         </div>
 
         <button className="md:hidden p-2 flex flex-col gap-1.5" onClick={() => setMenuOpen(!menuOpen)}>
@@ -123,7 +123,7 @@ function Nav({ heroVisible }: { heroVisible: boolean }) {
             {["Destinations","Experiences","About","Contact"].map(l=>(
               <Link key={l} href={l === "Destinations" ? "/tours" : l === "Experiences" ? "/experiences" : l === "About" ? "/about" : "/contact"} onClick={()=>setMenuOpen(false)} className="text-sm tracking-[0.12em] uppercase text-[#333] hover:text-[#C8903A]" style={{ fontFamily:"var(--font-inter),sans-serif" }}>{l}</Link>
             ))}
-            <Link href="/enquire" target="_blank" rel="noopener noreferrer" onClick={()=>setMenuOpen(false)} className="mt-2 text-center px-5 py-3 bg-[#111] text-white text-xs tracking-[0.12em] uppercase" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Enquire Now</Link>
+            <Link href="/enquire" target="_blank" rel="noopener noreferrer" onClick={()=>setMenuOpen(false)} className="mt-2 text-center px-5 py-3 bg-[#111] text-white text-xs tracking-[0.12em] uppercase" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Plan Your Journey</Link>
           </motion.div>
         )}
       </AnimatePresence>
@@ -205,7 +205,7 @@ function Hero({ onVisibilityChange }: { onVisibilityChange: (v: boolean) => void
             Explore Our Trips
           </a>
           <a href="#contact" className="px-8 py-4 border border-white/50 text-white text-[11px] tracking-[0.18em] uppercase hover:border-white hover:bg-white/10 transition-all duration-300" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
-            Plan My Trip
+            Plan Your Journey
           </a>
         </motion.div>
       </motion.div>
@@ -662,7 +662,7 @@ function Contact() {
               </div>
               {error && <p className="text-red-500 text-xs" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Something went wrong. Please try again.</p>}
               <button type="submit" disabled={submitting} className="mt-1 w-full py-4 bg-[#111] text-white text-[11px] tracking-[0.22em] uppercase font-medium hover:bg-[#C8903A] transition-colors duration-300 disabled:opacity-60 disabled:cursor-not-allowed" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
-                {submitting ? "Sending…" : "Start Planning →"}
+                {submitting ? "Sending…" : "Plan Your Journey →"}
               </button>
             </form>
           )}

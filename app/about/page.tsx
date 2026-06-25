@@ -545,7 +545,7 @@ export default function AboutPage() {
                 className="inline-block px-10 py-4 border border-[#C8903A] text-[#C8903A] text-[11px] tracking-[0.25em] uppercase hover:bg-[#C8903A] hover:text-[#080808] transition-all duration-400"
                 style={{ fontFamily: "var(--font-inter),sans-serif" }}
               >
-                Plan Your Journey with Us
+                Plan Your Journey
               </Link>
             </div>
           </FadeUp>

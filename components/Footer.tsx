@@ -19,7 +19,7 @@ export default function Footer() {
           {/* Explore */}
           <div>
             <p className="text-[10px] tracking-[0.3em] uppercase text-white/25 mb-5" style={{ fontFamily: "var(--font-inter),sans-serif" }}>Explore</p>
-            {([["Destinations", "/tours"], ["Experiences", "/experiences"], ["About Us", "/about"], ["Contact", "/contact"], ["Enquire Now", "/enquire"]] as [string, string][]).map(([l, h]) => (
+            {([["Destinations", "/tours"], ["Experiences", "/experiences"], ["About Us", "/about"], ["Contact", "/contact"], ["Plan Your Journey", "/enquire"]] as [string, string][]).map(([l, h]) => (
               <Link key={l} href={h} className="block text-sm text-white/35 hover:text-white/70 mb-2.5 transition-colors" style={{ fontFamily: "var(--font-inter),sans-serif" }}>{l}</Link>
             ))}
           </div>

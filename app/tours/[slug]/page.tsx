@@ -75,7 +75,7 @@ export default function TourPage({ params }: { params: Promise<{ slug: string }>
             <Link href="#enquire"
               className="px-5 py-2.5 bg-[#111] text-white text-[11px] tracking-[0.12em] uppercase font-medium hover:bg-[#C8903A] transition-colors duration-300"
               style={{ fontFamily:"var(--font-inter),sans-serif" }}
-            >Enquire Now</Link>
+            >Plan Your Journey</Link>
             <button className="md:hidden p-2 flex flex-col gap-1.5" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
               <span className={`block w-5 h-px bg-[#111] transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-[7px]" : ""}`} />
               <span className={`block w-5 h-px bg-[#111] transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
@@ -99,7 +99,7 @@ export default function TourPage({ params }: { params: Promise<{ slug: string }>
             <Link href="#enquire" onClick={() => setMenuOpen(false)}
               className="mt-1 text-center px-5 py-3 bg-[#111] text-white text-sm tracking-[0.15em] uppercase hover:bg-[#C8903A] transition-colors duration-300"
               style={{ fontFamily:"var(--font-inter),sans-serif" }}
-            >Enquire Now</Link>
+            >Plan Your Journey</Link>
           </div>
         )}
       </header>
@@ -302,7 +302,7 @@ export default function TourPage({ params }: { params: Promise<{ slug: string }>
               <input type="email" required placeholder="Email address" value={formEmail} onChange={e=>setFormEmail(e.target.value)} className="w-full border border-[#ddd] px-4 py-3 text-sm focus:outline-none focus:border-[#C8903A] transition-colors" style={{ fontFamily:"var(--font-inter),sans-serif" }} />
               <textarea rows={3} placeholder="Tell us more…" value={formMessage} onChange={e=>setFormMessage(e.target.value)} className="w-full border border-[#ddd] px-4 py-3 text-sm focus:outline-none focus:border-[#C8903A] transition-colors resize-none" style={{ fontFamily:"var(--font-inter),sans-serif" }} />
               {formError && <p className="text-red-500 text-xs" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Something went wrong. Please try again.</p>}
-              <button type="submit" disabled={submitting} className="w-full py-4 bg-[#111] text-white text-[11px] tracking-[0.2em] uppercase font-medium hover:bg-[#C8903A] transition-colors disabled:opacity-60" style={{ fontFamily:"var(--font-inter),sans-serif" }}>{submitting ? "Sending…" : "Enquire Now →"}</button>
+              <button type="submit" disabled={submitting} className="w-full py-4 bg-[#111] text-white text-[11px] tracking-[0.2em] uppercase font-medium hover:bg-[#C8903A] transition-colors disabled:opacity-60" style={{ fontFamily:"var(--font-inter),sans-serif" }}>{submitting ? "Sending…" : "Plan Your Journey →"}</button>
             </form>
           )}
         </div>
