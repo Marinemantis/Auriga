@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Logo from "@/components/Logo";
 
 export default function Footer() {
   return (
@@ -8,9 +9,8 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="flex items-baseline gap-1 mb-4">
-              <span className="text-[22px] font-semibold text-white" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>Auriga</span>
-              <span className="text-[22px] font-light text-[#C8903A]"  style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>Ventures</span>
+            <div className="mb-4">
+              <Logo variant="light" className="h-7 w-auto" />
             </div>
             <p className="text-white/25 text-sm italic mb-4 max-w-xs" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>Beyond Travel. We Curate Dreams.</p>
             <p className="text-white/20 text-xs leading-relaxed max-w-xs" style={{ fontFamily: "var(--font-inter),sans-serif" }}>Bespoke luxury journeys through Pakistan&apos;s northern mountains.</p>

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "@/components/Footer";
+import Logo from "@/components/Logo";
 
 const SUBJECTS = [
   "Plan a bespoke journey",
@@ -50,9 +51,8 @@ export default function ContactPage() {
       {/* ── NAV ── */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#080808]/95 backdrop-blur-md border-b border-[#1A1A1A]">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 h-[72px] flex items-center justify-between">
-          <Link href="/" className="flex items-baseline gap-1">
-            <span className="text-[22px] font-semibold text-[#F5F0E8]" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>Auriga</span>
-            <span className="text-[22px] font-light text-[#C8903A]"    style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>Ventures</span>
+          <Link href="/" className="flex items-center">
+            <Logo variant="light" className="h-7 w-auto" />
           </Link>
           <nav className="hidden md:flex items-center gap-8">
             {[

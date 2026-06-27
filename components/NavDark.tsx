@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import Logo from "@/components/Logo";
 
 const LINKS = [
   { label: "Destinations", href: "/tours"       },
@@ -20,9 +21,8 @@ export default function NavDark() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#080808]/90 backdrop-blur-md border-b border-[#1A1A1A]">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
 
-        <Link href="/" className="flex items-baseline gap-1 shrink-0">
-          <span className="text-2xl font-semibold text-[#F5F0E8]" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>Auriga</span>
-          <span className="text-2xl font-light text-[#C8903A]"    style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>Ventures</span>
+        <Link href="/" className="flex items-center shrink-0">
+          <Logo variant="light" className="h-7 w-auto" />
         </Link>
 
         {/* Desktop links */}

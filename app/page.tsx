@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import Image from "next/image";
 import Link from "next/link";
 import FooterComponent from "@/components/Footer";
+import Logo from "@/components/Logo";
 
 /* ─── DATA ─── */
 const DESTINATIONS = [
@@ -53,9 +54,8 @@ function Nav({ heroVisible }: { heroVisible: boolean }) {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${dark ? "bg-white shadow-[0_1px_0_0_#e8e4de]" : "bg-transparent"}`}>
       <div className="max-w-[1320px] mx-auto px-6 lg:px-10 h-[72px] flex items-center justify-between">
 
-        <a href="/" className="flex items-baseline gap-1 shrink-0">
-          <span className={`text-[22px] font-semibold tracking-wide transition-colors duration-500 ${dark ? "text-[#111]" : "text-white"}`} style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>Auriga</span>
-          <span className="text-[22px] font-light text-[#C8903A]" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>Ventures</span>
+        <a href="/" className="flex items-center shrink-0">
+          <Logo variant={dark ? "dark" : "light"} className="h-7 w-auto" />
         </a>
 
         <nav className="hidden md:flex items-center gap-7">

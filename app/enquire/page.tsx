@@ -4,6 +4,7 @@ import { useState, FormEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import Logo from "@/components/Logo";
 
 const FORM_FIELDS = {
   heard: ["Instagram", "A Friend / Referral", "Facebook", "Other"],
@@ -143,9 +144,8 @@ export default function EnquirePage() {
       {/* ── Top bar ── */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-[#080808]/95 backdrop-blur-md border-b border-[#1a1a1a]">
         <div className="max-w-6xl mx-auto px-6 lg:px-10 h-[68px] flex items-center justify-between">
-          <Link href="/" className="flex items-baseline gap-1">
-            <span className="text-[22px] font-semibold text-[#F5F0E8] tracking-wide" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>Auriga</span>
-            <span className="text-[22px] font-light text-[#C8903A]" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>Ventures</span>
+          <Link href="/" className="flex items-center">
+            <Logo variant="light" className="h-6 w-auto" />
           </Link>
           <Link
             href="/"
