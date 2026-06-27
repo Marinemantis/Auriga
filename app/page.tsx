@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef, useEffect, FormEvent } from "react";
+import { useState, useRef, useEffect, FormEvent, PointerEvent as ReactPointerEvent, MouseEvent as ReactMouseEvent } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -295,25 +295,65 @@ function Philosophy() {
    TESTIMONIALS
 ══════════════════════════════════════════ */
 function Testimonials() {
+  const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  useEffect(() => {
+    if (paused) return;
+    const id = setInterval(() => setIndex(i => (i + 1) % TESTIMONIALS.length), 6000);
+    return () => clearInterval(id);
+  }, [paused]);
+
+  const goTo = (i: number) => setIndex(((i % TESTIMONIALS.length) + TESTIMONIALS.length) % TESTIMONIALS.length);
+  const t = TESTIMONIALS[index];
+
   return (
-    <section className="bg-[#0d0d0d] py-24 overflow-hidden">
-      <div className="max-w-[1320px] mx-auto px-6 lg:px-10 mb-12">
+    <section className="bg-[#0d0d0d] py-24 lg:py-32">
+      <div className="max-w-3xl mx-auto px-6 lg:px-10 text-center">
         <p className="text-[11px] tracking-[0.45em] uppercase text-[#C8903A] mb-4" style={{ fontFamily:"var(--font-inter),sans-serif" }}>What our travellers say</p>
-        <h2 className="text-[40px] md:text-[48px] font-light text-[#F5F0E8]" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>Real journeys. Real stories.</h2>
-      </div>
-      <div className="flex gap-5 overflow-x-auto pb-4 px-6 lg:px-10 [&::-webkit-scrollbar]:hidden snap-x snap-mandatory">
-        {TESTIMONIALS.map((t, i) => (
-          <div key={i} className="shrink-0 w-[300px] md:w-[340px] bg-[#161616] border border-[#222] p-7 flex flex-col snap-start">
-            <svg width="24" height="18" viewBox="0 0 24 18" fill="none" className="mb-5">
-              <path d="M0 18V11C0 4.8 3.4 1.2 10.2 0l1.2 2.2C8 3.1 6.5 5 6.1 8H11V18H0ZM13 18V11C13 4.8 16.4 1.2 23.2 0l1.2 2.2C21 3.1 19.5 5 19.1 8H24V18H13Z" fill="#C8903A" fillOpacity="0.25"/>
-            </svg>
-            <p className="text-[#F5F0E8]/65 text-[15px] leading-relaxed mb-6 italic flex-1" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>"{t.quote}"</p>
-            <div className="pt-5 border-t border-[#222]">
+        <h2 className="text-[40px] md:text-[48px] font-light text-[#F5F0E8] mb-14" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>Real journeys. Real stories.</h2>
+
+        <div
+          className="relative min-h-[220px] md:min-h-[200px] flex flex-col items-center justify-center"
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+        >
+          <svg width="28" height="21" viewBox="0 0 24 18" fill="none" className="mb-6 shrink-0">
+            <path d="M0 18V11C0 4.8 3.4 1.2 10.2 0l1.2 2.2C8 3.1 6.5 5 6.1 8H11V18H0ZM13 18V11C13 4.8 16.4 1.2 23.2 0l1.2 2.2C21 3.1 19.5 5 19.1 8H24V18H13Z" fill="#C8903A" fillOpacity="0.35"/>
+          </svg>
+
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -14 }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <p className="text-[22px] md:text-[28px] font-light italic text-[#F5F0E8]/85 leading-relaxed mb-7" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>
+                "{t.quote}"
+              </p>
               <p className="text-[#F5F0E8] text-sm font-medium" style={{ fontFamily:"var(--font-inter),sans-serif" }}>{t.name}</p>
               <p className="text-[#C8903A] text-[11px] tracking-wider mt-0.5" style={{ fontFamily:"var(--font-inter),sans-serif" }}>{t.origin}</p>
-            </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        <div className="flex items-center justify-center gap-6 mt-12">
+          <button onClick={() => goTo(index - 1)} aria-label="Previous testimonial" className="text-[#F5F0E8]/35 hover:text-[#C8903A] transition-colors duration-300">
+            <svg width="18" height="13" viewBox="0 0 20 14" fill="none"><path d="M19 7H2M7 1L1 7l6 6" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/></svg>
+          </button>
+          <div className="flex gap-2">
+            {TESTIMONIALS.map((_, i) => (
+              <button key={i} onClick={() => goTo(i)} aria-label={`Go to testimonial ${i + 1}`}
+                className={`h-px transition-all duration-400 ${i === index ? "w-8 bg-[#C8903A]" : "w-3 bg-[#F5F0E8]/20 hover:bg-[#F5F0E8]/40"}`}
+              />
+            ))}
           </div>
-        ))}
+          <button onClick={() => goTo(index + 1)} aria-label="Next testimonial" className="text-[#F5F0E8]/35 hover:text-[#C8903A] transition-colors duration-300">
+            <svg width="18" height="13" viewBox="0 0 20 14" fill="none"><path d="M1 7h17M13 1l6 6-6 6" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/></svg>
+          </button>
+        </div>
       </div>
     </section>
   );
@@ -328,6 +368,8 @@ function DestCarousel() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canLeft,  setCanLeft]  = useState(false);
   const [canRight, setCanRight] = useState(true);
+  const [dragging, setDragging] = useState(false);
+  const drag = useRef({ startX: 0, startScrollLeft: 0, moved: false });
 
   const scroll = (dir: "l"|"r") => {
     const el = scrollRef.current;
@@ -340,6 +382,38 @@ function DestCarousel() {
     if (!el) return;
     setCanLeft(el.scrollLeft > 10);
     setCanRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 10);
+  };
+
+  // Mouse drag-to-scroll — touch already scrolls natively, so only engage for mouse input
+  const onPointerDown = (e: ReactPointerEvent<HTMLDivElement>) => {
+    if (e.pointerType !== "mouse") return;
+    const el = scrollRef.current;
+    if (!el) return;
+    drag.current = { startX: e.clientX, startScrollLeft: el.scrollLeft, moved: false };
+    setDragging(true);
+    el.setPointerCapture(e.pointerId);
+  };
+
+  const onPointerMove = (e: ReactPointerEvent<HTMLDivElement>) => {
+    if (!dragging) return;
+    const el = scrollRef.current;
+    if (!el) return;
+    const dx = e.clientX - drag.current.startX;
+    if (Math.abs(dx) > 4) drag.current.moved = true;
+    el.scrollLeft = drag.current.startScrollLeft - dx;
+  };
+
+  const endDrag = (e: ReactPointerEvent<HTMLDivElement>) => {
+    setDragging(false);
+    scrollRef.current?.releasePointerCapture(e.pointerId);
+  };
+
+  // Suppress the card's Link navigation if the pointer actually dragged
+  const onClickCapture = (e: ReactMouseEvent<HTMLDivElement>) => {
+    if (drag.current.moved) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
   };
 
   return (
@@ -366,7 +440,9 @@ function DestCarousel() {
 
       {/* Cards strip */}
       <div ref={scrollRef} onScroll={onScroll}
-        className="flex gap-3 overflow-x-auto px-6 lg:px-10 pb-16 [&::-webkit-scrollbar]:hidden snap-x snap-mandatory"
+        onPointerDown={onPointerDown} onPointerMove={onPointerMove} onPointerUp={endDrag} onPointerLeave={endDrag}
+        onClickCapture={onClickCapture}
+        className={`flex gap-3 overflow-x-auto px-6 lg:px-10 pb-16 [&::-webkit-scrollbar]:hidden select-none ${dragging ? "cursor-grabbing snap-none" : "cursor-grab snap-x snap-mandatory"}`}
       >
         {DESTINATIONS.map((d, i) => (
           <motion.div key={d.name}
