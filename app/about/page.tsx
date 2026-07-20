@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/Footer";
-import NavDark from "@/components/NavDark";
+import NavMain from "@/components/NavMain";
 import { FadeUp, DrawLine, RevealPhoto } from "@/components/Reveal";
 
 /* ─── TEAM DATA ─── */
@@ -71,7 +71,7 @@ export default function AboutPage() {
     <div className="bg-[#080808] text-[#F5F0E8] overflow-x-hidden">
 
       {/* ── NAV ── */}
-      <NavDark />
+      <NavMain darkPage />
 
       {/* ── HERO ── */}
       <section ref={heroRef} className="relative h-screen min-h-[640px] flex items-end overflow-hidden">

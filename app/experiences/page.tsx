@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/Footer";
-import NavDark from "@/components/NavDark";
+import NavMain from "@/components/NavMain";
 import { FadeUp, DrawLine } from "@/components/Reveal";
 
 const EXPERIENCES = [
@@ -90,7 +90,7 @@ export default function ExperiencesPage() {
     <div className="bg-[#080808] text-[#F5F0E8] overflow-x-hidden">
 
       {/* ── NAV ── */}
-      <NavDark />
+      <NavMain darkPage />
 
       {/* ── HERO ── */}
       <section ref={heroRef} className="relative h-[80vh] min-h-[560px] flex items-end overflow-hidden">

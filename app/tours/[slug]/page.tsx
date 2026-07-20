@@ -7,7 +7,7 @@ import { notFound } from "next/navigation";
 import { getTour, TOURS } from "@/lib/tours";
 import PriceDisplay from "@/components/PriceDisplay";
 import Footer from "@/components/Footer";
-import Logo from "@/components/Logo";
+import NavMain from "@/components/NavMain";
 
 export default function TourPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = use(params);
@@ -21,8 +21,6 @@ export default function TourPage({ params }: { params: Promise<{ slug: string }>
   const heroOp = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
   const related = TOURS.filter(t => tour.relatedSlugs.includes(t.slug));
-
-  const [menuOpen, setMenuOpen] = useState(false);
 
   const [formName,    setFormName]    = useState("");
   const [formEmail,   setFormEmail]   = useState("");
@@ -61,48 +59,7 @@ export default function TourPage({ params }: { params: Promise<{ slug: string }>
     <div className="bg-[#080808]">
 
       {/* ── NAV ── */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#080808]/95 backdrop-blur-md border-b border-[#1A1A1A]">
-        <div className="max-w-[1320px] mx-auto px-6 lg:px-10 h-[72px] flex items-center justify-between">
-          <Link href="/" className="flex items-center shrink-0">
-            <Logo variant="light" className="h-6 w-auto" />
-          </Link>
-          <nav className="hidden md:flex items-center gap-7">
-            <Link href="/tours"       className="text-[11px] tracking-[0.12em] uppercase text-[#F5F0E8]/55 hover:text-[#C8903A] transition-colors" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Destinations</Link>
-            <Link href="/experiences" className="text-[11px] tracking-[0.12em] uppercase text-[#F5F0E8]/55 hover:text-[#C8903A] transition-colors" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Experiences</Link>
-            <Link href="/about"       className="text-[11px] tracking-[0.12em] uppercase text-[#F5F0E8]/55 hover:text-[#C8903A] transition-colors" style={{ fontFamily:"var(--font-inter),sans-serif" }}>About</Link>
-          </nav>
-          <div className="flex items-center gap-3">
-            <Link href="#enquire"
-              className="px-5 py-2.5 border border-[#C8903A] text-[#C8903A] text-[11px] tracking-[0.12em] uppercase font-medium hover:bg-[#C8903A] hover:text-[#080808] transition-all duration-300"
-              style={{ fontFamily:"var(--font-inter),sans-serif" }}
-            >Plan Your Journey</Link>
-            <button className="md:hidden p-2 flex flex-col gap-1.5" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
-              <span className={`block w-5 h-px bg-[#F5F0E8] transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-[7px]" : ""}`} />
-              <span className={`block w-5 h-px bg-[#F5F0E8] transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
-              <span className={`block w-5 h-px bg-[#F5F0E8] transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-[7px]" : ""}`} />
-            </button>
-          </div>
-        </div>
-        {menuOpen && (
-          <div className="md:hidden bg-[#080808] border-t border-[#1A1A1A] px-6 py-6 flex flex-col gap-5">
-            {[
-              { label: "Destinations", href: "/tours"       },
-              { label: "Experiences",  href: "/experiences" },
-              { label: "About",        href: "/about"       },
-              { label: "Contact",      href: "/#contact"    },
-            ].map((l) => (
-              <Link key={l.href} href={l.href} onClick={() => setMenuOpen(false)}
-                className="text-sm tracking-[0.15em] uppercase text-[#F5F0E8]/60 hover:text-[#C8903A] transition-colors"
-                style={{ fontFamily:"var(--font-inter),sans-serif" }}
-              >{l.label}</Link>
-            ))}
-            <Link href="#enquire" onClick={() => setMenuOpen(false)}
-              className="mt-1 text-center px-5 py-3 border border-[#C8903A] text-[#C8903A] text-sm tracking-[0.15em] uppercase hover:bg-[#C8903A] hover:text-[#080808] transition-all duration-300"
-              style={{ fontFamily:"var(--font-inter),sans-serif" }}
-            >Plan Your Journey</Link>
-          </div>
-        )}
-      </header>
+      <NavMain darkPage />
 
       {/* ── HERO — full-bleed, no text overlay ── */}
       <section ref={heroRef} className="relative pt-[72px] h-[82vh] min-h-[560px] overflow-hidden">
