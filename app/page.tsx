@@ -467,47 +467,97 @@ function FullBleed() {
    WHAT WE DO — text left, image right, "Watch the film" CTA
 ══════════════════════════════════════════ */
 function WhatWeDo() {
-  return (
-    <section className="bg-[#080808] overflow-hidden">
-      <div className="grid lg:grid-cols-2 min-h-[560px]">
-        {/* Left — vertically centered text */}
-        <motion.div
-          initial={{ opacity:0, x:-24 }} whileInView={{ opacity:1, x:0 }}
-          viewport={{ once:true, margin:"-80px" }} transition={{ duration:0.8, ease:[0.22,1,0.36,1] }}
-          className="flex flex-col justify-center px-10 md:px-16 lg:px-20 py-20"
-        >
-          <h2 className="text-[36px] md:text-[44px] font-bold text-[#F5F0E8] leading-tight mb-6 uppercase tracking-tight" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
-            WHAT WE DO<br />AND WHY WE DO IT
-          </h2>
-          <p className="text-[#F5F0E8]/55 text-[15px] leading-relaxed mb-8 max-w-sm" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
-            Since our founding in 2014, Auriga Ventures has always been about crafting remarkable, tailor-made trips for families, couples, and private groups through Pakistan's extraordinary north. Our founders know this better than anyone.
-          </p>
-          <a href="#contact"
-            className="inline-flex items-center justify-center w-fit px-7 py-3.5 border border-[#C8903A] text-[#C8903A] text-[11px] tracking-[0.18em] uppercase font-semibold hover:bg-[#C8903A] hover:text-[#080808] transition-all duration-300"
-            style={{ fontFamily:"var(--font-inter),sans-serif" }}
-          >Watch the Film</a>
-        </motion.div>
+  const [videoOpen, setVideoOpen] = useState(false);
 
-        {/* Right — full-bleed image */}
-        <motion.div
-          initial={{ opacity:0, scale:1.04 }} whileInView={{ opacity:1, scale:1 }}
-          viewport={{ once:true, margin:"-80px" }} transition={{ duration:1, ease:[0.22,1,0.36,1] }}
-          className="relative min-h-[420px] lg:min-h-0 overflow-hidden"
-        >
-          <Image
-            src="https://aurigaventure.com/wp-content/uploads/2026/01/DSC_3514-HDR-1024x683.jpg"
-            alt="Auriga founders" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw"
-          />
-          <div className="absolute inset-0 bg-black/10" />
-          {/* Play button overlay */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="rounded-full bg-white/20 backdrop-blur-sm border border-white/40 flex items-center justify-center hover:bg-white/30 cursor-pointer transition-all duration-300 w-16 h-16">
-              <svg width="18" height="22" viewBox="0 0 18 22" fill="none"><path d="M1 1l16 10L1 21V1z" fill="white" fillOpacity="0.9"/></svg>
+  return (
+    <>
+      <section className="bg-[#080808] overflow-hidden">
+        <div className="grid lg:grid-cols-2 min-h-[560px]">
+          {/* Left — vertically centered text */}
+          <motion.div
+            initial={{ opacity:0, x:-24 }} whileInView={{ opacity:1, x:0 }}
+            viewport={{ once:true, margin:"-80px" }} transition={{ duration:0.8, ease:[0.22,1,0.36,1] }}
+            className="flex flex-col justify-center px-10 md:px-16 lg:px-20 py-20"
+          >
+            <h2 className="text-[36px] md:text-[44px] font-bold text-[#F5F0E8] leading-tight mb-6 uppercase tracking-tight" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
+              WHAT WE DO<br />AND WHY WE DO IT
+            </h2>
+            <p className="text-[#F5F0E8]/55 text-[15px] leading-relaxed mb-8 max-w-sm" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
+              Since our founding in 2014, Auriga Ventures has always been about crafting remarkable, tailor-made trips for families, couples, and private groups through Pakistan's extraordinary north. Our founders know this better than anyone.
+            </p>
+            <button
+              onClick={() => setVideoOpen(true)}
+              className="inline-flex items-center gap-3 w-fit px-7 py-3.5 border border-[#C8903A] text-[#C8903A] text-[11px] tracking-[0.18em] uppercase font-semibold hover:bg-[#C8903A] hover:text-[#080808] transition-all duration-300"
+              style={{ fontFamily:"var(--font-inter),sans-serif" }}
+            >
+              <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M1 1l10 6L1 13V1z" fill="currentColor"/></svg>
+              Watch the Film
+            </button>
+          </motion.div>
+
+          {/* Right — full-bleed image with play button */}
+          <motion.div
+            initial={{ opacity:0, scale:1.04 }} whileInView={{ opacity:1, scale:1 }}
+            viewport={{ once:true, margin:"-80px" }} transition={{ duration:1, ease:[0.22,1,0.36,1] }}
+            className="relative min-h-[420px] lg:min-h-0 overflow-hidden cursor-pointer group"
+            onClick={() => setVideoOpen(true)}
+          >
+            <Image
+              src="https://aurigaventure.com/wp-content/uploads/2026/01/DSC_3514-HDR-1024x683.jpg"
+              alt="Auriga Ventures — Gilgit-Baltistan" fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 1024px) 100vw, 50vw" unoptimized
+            />
+            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300" />
+            {/* Play button */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-20 h-20 rounded-full bg-white/15 backdrop-blur-sm border border-white/40 flex items-center justify-center group-hover:bg-white/25 group-hover:scale-110 transition-all duration-300">
+                <svg width="22" height="26" viewBox="0 0 22 26" fill="none"><path d="M1 1l20 12L1 25V1z" fill="white" fillOpacity="0.95"/></svg>
+              </div>
             </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── VIDEO LIGHTBOX ── */}
+      <AnimatePresence>
+        {videoOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4 md:p-10"
+            onClick={() => setVideoOpen(false)}
+          >
+            {/* Close button */}
+            <button
+              className="absolute top-6 right-6 text-white/60 hover:text-white transition-colors text-[11px] tracking-[0.2em] uppercase flex items-center gap-2"
+              style={{ fontFamily:"var(--font-inter),sans-serif" }}
+              onClick={() => setVideoOpen(false)}
+            >
+              Close
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
+            </button>
+
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              className="w-full max-w-5xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <video
+                src="/gilgit-baltistan.mp4"
+                controls
+                autoPlay
+                className="w-full rounded-sm shadow-2xl"
+                style={{ maxHeight: "80vh" }}
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 }
 
