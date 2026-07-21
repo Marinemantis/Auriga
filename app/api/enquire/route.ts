@@ -4,29 +4,30 @@ import { pushToGHL } from "@/lib/ghl";
 
 export async function POST(request: Request) {
   const resend = new Resend(process.env.RESEND_API_KEY);
+
+  const data = await request.json();
+  const {
+    name, email, phone,
+    heard, destination, travelling, experience,
+    duration, budget, contact, unforgettable, moment,
+  } = data;
+
+  const rows = [
+    ["Heard about us",        heard],
+    ["Destination",           destination],
+    ["Travelling with",       travelling],
+    ["Experience sought",     experience],
+    ["Duration",              duration],
+    ["Investment range",      budget],
+    ["Unforgettable because", unforgettable],
+    ["Special moment",        moment],
+  ];
+
+  // Send email — best effort, never blocks the response
   try {
-    const data = await request.json();
-    const {
-      name, email, phone,
-      heard, destination, travelling, experience,
-      duration, budget, contact, unforgettable, moment,
-    } = data;
-
-    const rows = [
-      ["Heard about us",        heard],
-      ["Destination",           destination],
-      ["Travelling with",       travelling],
-      ["Experience sought",     experience],
-      ["Duration",              duration],
-      ["Investment range",      budget],
-      ["Unforgettable because", unforgettable],
-      ["Special moment",        moment],
-    ];
-
-    const { error: emailError } = await resend.emails.send({
-      from: "Auriga Ventures <onboarding@resend.dev>",
-      to: "venturesauriga@gmail.com",
-      replyTo: email,
+    await resend.emails.send({
+      from:    "Auriga Ventures <onboarding@resend.dev>",
+      to:      "venturesauriga@gmail.com",
       subject: `New Journey Discovery — ${name}`,
       html: `
         <!DOCTYPE html>
@@ -123,19 +124,18 @@ export async function POST(request: Request) {
         </html>
       `,
     });
-    if (emailError) console.error("[Email] Resend error:", emailError);
-
-    await pushToGHL({
-      name:             name,
-      email:            email,
-      phone:            phone,
-      opportunityTitle: `Journey Discovery — ${name}`,
-      notes:            `Destination: ${destination} | Travelling: ${travelling} | Duration: ${duration} | Budget: ${budget} | Experience: ${experience} | Contact via: ${contact}`,
-    });
-
-    return NextResponse.json({ success: true });
-  } catch (error) {
-    console.error("Email send error:", error);
-    return NextResponse.json({ success: false, error: "Failed to send email" }, { status: 500 });
+  } catch (emailErr) {
+    console.error("[Email] send failed:", emailErr);
   }
+
+  // Push to GHL — has its own internal error handling
+  await pushToGHL({
+    name,
+    email,
+    phone,
+    opportunityTitle: `Journey Discovery — ${name}`,
+    notes: `Destination: ${destination} | Travelling: ${travelling} | Duration: ${duration} | Budget: ${budget} | Experience: ${experience} | Contact via: ${contact}`,
+  });
+
+  return NextResponse.json({ success: true });
 }
