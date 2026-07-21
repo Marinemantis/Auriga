@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Footer from "@/components/Footer";
-import NavDark from "@/components/NavDark";
+import NavMain from "@/components/NavMain";
 
 const FAQS: { q: string; a: string }[] = [
   {
@@ -49,7 +49,7 @@ export default function FAQsPage() {
 
   return (
     <div className="min-h-screen bg-[#080808] text-[#F5F0E8]">
-      <NavDark />
+      <NavMain darkPage />
 
       <section className="pt-[160px] pb-16 px-6 lg:px-10 max-w-3xl mx-auto">
         <motion.p

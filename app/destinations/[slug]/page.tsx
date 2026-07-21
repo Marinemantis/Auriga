@@ -8,7 +8,7 @@ import { notFound } from "next/navigation";
 import { getDestination, DESTINATIONS } from "@/lib/destinations";
 import { getTour } from "@/lib/tours";
 import Footer from "@/components/Footer";
-import NavDark from "@/components/NavDark";
+import NavMain from "@/components/NavMain";
 import { FadeUp, DrawLine, RevealPhoto } from "@/components/Reveal";
 import PriceDisplay from "@/components/PriceDisplay";
 
@@ -22,7 +22,7 @@ export default function DestinationPage({ params }: { params: Promise<{ slug: st
 
   return (
     <div className="bg-[#080808] text-[#F5F0E8] overflow-x-hidden">
-      <NavDark />
+      <NavMain darkPage />
 
       {/* ── HERO ── */}
       <section className="relative h-[78vh] min-h-[540px] flex items-end overflow-hidden">
