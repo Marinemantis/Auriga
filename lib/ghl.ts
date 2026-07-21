@@ -2,7 +2,7 @@ const GHL_API     = "https://services.leadconnectorhq.com";
 const API_KEY     = process.env.GHL_API_KEY!;
 const LOCATION_ID = process.env.GHL_LOCATION_ID!;
 
-const PIPELINE_NAME = "Sales Pipeline";
+const PIPELINE_NAME = "Sales pipeline";
 const STAGE_NAME    = "New Enquiry";
 
 // Cached per serverless instance lifetime
