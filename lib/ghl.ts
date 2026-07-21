@@ -32,10 +32,16 @@ async function upsertContact(input: ContactInput): Promise<string> {
     }),
   });
   const data = await res.json();
-  return data.contact?.id || data.id;
+  if (!res.ok) {
+    console.error("[GHL] upsertContact failed:", res.status, JSON.stringify(data));
+    throw new Error(`GHL contact upsert failed: ${res.status}`);
+  }
+  const contactId = data.contact?.id || data.id;
+  console.log("[GHL] upsertContact success, contactId:", contactId);
+  return contactId;
 }
 
-async function createOpportunity(contactId: string, name: string) {
+async function createOpportunity(contactId: string, name: string, notes: string) {
   const res = await fetch(`${GHL_API}/opportunities/`, {
     method: "POST",
     headers: headers(),
@@ -51,8 +57,27 @@ async function createOpportunity(contactId: string, name: string) {
   });
   const data = await res.json();
   if (!res.ok) {
-    console.error("GHL opportunity error:", JSON.stringify(data));
+    console.error("[GHL] createOpportunity failed:", res.status, JSON.stringify(data));
+    throw new Error(`GHL opportunity creation failed: ${res.status}`);
   }
+  console.log("[GHL] createOpportunity success, id:", data.opportunity?.id || data.id);
+
+  // Add notes as a conversation note if provided
+  if (notes) {
+    const oppId = data.opportunity?.id || data.id;
+    if (oppId) {
+      const noteRes = await fetch(`${GHL_API}/opportunities/${oppId}/notes`, {
+        method: "POST",
+        headers: headers(),
+        body: JSON.stringify({ body: notes }),
+      });
+      if (!noteRes.ok) {
+        const noteData = await noteRes.json();
+        console.error("[GHL] addNote failed:", noteRes.status, JSON.stringify(noteData));
+      }
+    }
+  }
+
   return data;
 }
 
@@ -63,6 +88,9 @@ export async function pushToGHL(params: {
   opportunityTitle: string;
   notes: string;
 }) {
+  // Log env var presence (not values) to help diagnose missing config
+  console.log("[GHL] env check — API_KEY:", !!API_KEY, "LOCATION_ID:", !!LOCATION_ID, "PIPELINE_ID:", !!PIPELINE_ID, "STAGE_ID:", !!STAGE_ID);
+
   try {
     const parts     = params.name.trim().split(" ");
     const firstName = parts[0];
@@ -77,9 +105,11 @@ export async function pushToGHL(params: {
     });
 
     if (contactId) {
-      await createOpportunity(contactId, params.opportunityTitle);
+      await createOpportunity(contactId, params.opportunityTitle, params.notes);
+    } else {
+      console.error("[GHL] No contactId returned — opportunity not created");
     }
   } catch (err) {
-    console.error("GHL push error:", err);
+    console.error("[GHL] pushToGHL error:", err);
   }
 }
