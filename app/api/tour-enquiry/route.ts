@@ -10,7 +10,7 @@ export async function POST(request: Request) {
     const { error: emailError } = await resend.emails.send({
       from: "Auriga Ventures <onboarding@resend.dev>",
       to: "venturesauriga@gmail.com",
-      reply_to: email,
+      replyTo: email,
       subject: `Tour Inquiry - ${tourName}`,
       html: `
         <!DOCTYPE html>
@@ -88,7 +88,7 @@ export async function POST(request: Request) {
         </html>
       `,
     });
-    if (emailError) throw new Error(`Resend error: ${JSON.stringify(emailError)}`);
+    if (emailError) console.error("[Email] Resend error:", emailError);
 
     await pushToGHL({
       name:             name,
