@@ -237,7 +237,7 @@ export default function EnquirePage() {
                   <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45, duration: 0.7 }}
                     className="text-[#F5F0E8]/35 text-[15px] max-w-lg mx-auto leading-relaxed"
                     style={{ fontFamily: "var(--font-inter), sans-serif" }}>
-                    Tell us your preferences and we will create the ideal journey for you. The more you share, the better we can tailor your experience.
+                    Share your preferences, and we'll craft a journey that's uniquely yours.
                   </motion.p>
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C8903A]/20 to-transparent" />
