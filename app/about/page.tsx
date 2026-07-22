@@ -19,12 +19,12 @@ const TEAM = [
       "Raised in Gilgit and Nagar, Sheryar has been navigating the North long before it was on anyone's itinerary. If a road exists — or doesn't yet — he knows how to get you there. Speaks English, Urdu, Shina and Burushaski.",
   },
   {
-    name: "Fatima Amin",
-    role: "Travel Advisor",
+    name: "Sidra Zeb",
+    role: "Travel Advisor / Co-Founder",
     tagline: "Listening First. Designing Second.",
-    initials: "FA",
+    initials: "SZ",
     description:
-      "Patient, intuitive, and deeply knowledgeable, Fatima listens first and designs second. Every itinerary she touches is shaped around the traveller, not the other way around.",
+      "Born with the North in her blood and Pashto on her tongue, Sidra has been talking people into — and through — these mountains her entire life. As co-founder, she's the first voice you'll hear: taking your call, reading your email, and building your itinerary line by line until it's exactly what you imagined and a little more. Speaks English, Urdu and Pashto.",
   },
   {
     name: "Faizan Khan",
