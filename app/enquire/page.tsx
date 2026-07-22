@@ -6,14 +6,19 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import Logo from "@/components/Logo";
 
-const DESTINATIONS   = ["Hunza Valley", "Skardu & Baltistan", "Astore Valley", "Ghizer & Phunder Valley", "Multiple Destinations", "Not sure — surprise me"];
-const GROUP_TYPES    = ["Solo escape", "Couple", "Family", "Friends & group"];
 const HOTEL_TYPES    = ["Best available", "Luxury resort", "Boutique & heritage", "Budget-friendly", "Leave it to Auriga"];
 const ROOM_TYPES     = ["Standard", "Deluxe", "Suite", "Leave it to Auriga"];
 const TRANSPORT_OPTS = ["Private vehicle", "Leave it to Auriga", "I'll arrange my own"];
 
+const TRAVELLING_OPTIONS = [
+  "Family", "Friends", "Couple", "Colleagues",
+  "Corporate", "School/College/University", "Solo",
+  "Other (mention in other information)",
+];
+
 interface FormState {
-  name: string; email: string; phone: string; country: string;
+  name: string; email: string; confirmEmail: string; phone: string;
+  country: string; countryPassport: string;
   destination: string; departureDate: string; returnDate: string; departureCity: string;
   adults: number; children: number; infants: number; groupType: string;
   hotelType: string; roomType: string; rooms: number; accommodationNotes: string;
@@ -22,7 +27,8 @@ interface FormState {
 }
 
 const INITIAL: FormState = {
-  name: "", email: "", phone: "", country: "",
+  name: "", email: "", confirmEmail: "", phone: "",
+  country: "", countryPassport: "",
   destination: "", departureDate: "", returnDate: "", departureCity: "",
   adults: 1, children: 0, infants: 0, groupType: "",
   hotelType: "", roomType: "", rooms: 1, accommodationNotes: "",
@@ -30,15 +36,15 @@ const INITIAL: FormState = {
   comments: "",
 };
 
-function SelectGroup({ label, options, value, onChange, error }: {
+function SelectGroup({ label, options, value, onChange, error, required = true }: {
   label: string; options: string[]; value: string;
-  onChange: (v: string) => void; error?: boolean;
+  onChange: (v: string) => void; error?: boolean; required?: boolean;
 }) {
   return (
     <div>
       <label className="block text-[10px] tracking-[0.3em] uppercase text-[#C8903A] mb-4"
         style={{ fontFamily: "var(--font-inter), sans-serif" }}>
-        {label} <span className="text-[#C8903A]/50">*</span>
+        {label} {required && <span className="text-[#C8903A]/50">*</span>}
       </label>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
         {options.map((opt) => (
@@ -79,13 +85,16 @@ function TextInput({ label, value, onChange, placeholder, type = "text", require
   );
 }
 
-function Stepper({ label, sublabel, value, onChange, min = 0, max = 20 }: {
-  label: string; sublabel?: string; value: number; onChange: (v: number) => void; min?: number; max?: number;
+function Stepper({ label, sublabel, value, onChange, min = 0, max = 20, required = false }: {
+  label: string; sublabel?: string; value: number; onChange: (v: number) => void;
+  min?: number; max?: number; required?: boolean;
 }) {
   return (
     <div className="flex flex-col gap-2">
       <p className="text-[10px] tracking-[0.3em] uppercase text-[#C8903A]"
-        style={{ fontFamily: "var(--font-inter), sans-serif" }}>{label}</p>
+        style={{ fontFamily: "var(--font-inter), sans-serif" }}>
+        {label} {required && <span className="text-[#C8903A]/50">*</span>}
+      </p>
       {sublabel && <p className="text-[10px] text-[#F5F0E8]/30" style={{ fontFamily: "var(--font-inter), sans-serif" }}>{sublabel}</p>}
       <div className="flex items-center border border-[#2a2a2a] w-fit">
         <button type="button" onClick={() => onChange(Math.max(min, value - 1))}
@@ -121,10 +130,12 @@ export default function EnquirePage() {
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState(false);
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, boolean>>>({});
+  const [emailMismatch, setEmailMismatch] = useState(false);
 
   const setStr = (key: keyof FormState) => (val: string) => {
     setForm((f) => ({ ...f, [key]: val }));
     setErrors((e) => ({ ...e, [key]: false }));
+    if (key === "email" || key === "confirmEmail") setEmailMismatch(false);
   };
   const setNum = (key: keyof FormState) => (val: number) =>
     setForm((f) => ({ ...f, [key]: val }));
@@ -132,14 +143,19 @@ export default function EnquirePage() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     const required: (keyof FormState)[] = [
-      "name", "email", "phone",
+      "name", "email", "confirmEmail", "phone", "countryPassport",
       "destination", "departureDate", "returnDate",
-      "groupType", "hotelType", "roomType", "transport",
+      "hotelType", "roomType",
     ];
     const newErrors: Partial<Record<keyof FormState, boolean>> = {};
     let hasError = false;
     for (const key of required) {
       if (!(form[key] as string).trim()) { newErrors[key] = true; hasError = true; }
+    }
+    if (form.email && form.confirmEmail && form.email !== form.confirmEmail) {
+      newErrors.confirmEmail = true;
+      setEmailMismatch(true);
+      hasError = true;
     }
     if (hasError) {
       setErrors(newErrors);
@@ -149,10 +165,11 @@ export default function EnquirePage() {
     setSubmitting(true);
     setSubmitError(false);
     try {
+      const { confirmEmail: _, ...apiData } = form;
       const res = await fetch("/api/enquire", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify(apiData),
       });
       if (!res.ok) throw new Error("Failed");
       setSubmitted(true);
@@ -247,18 +264,48 @@ export default function EnquirePage() {
                     <TextInput label="Full Name" value={form.name} onChange={setStr("name")}
                       placeholder="e.g. Danial Adam" error={errors.name} />
                   </div>
+
+                  <div data-error={errors.phone ? "true" : "false"}>
+                    <TextInput label="Phone (include country code)" value={form.phone} onChange={setStr("phone")}
+                      placeholder="e.g. +92 300 1234 567" type="tel" error={errors.phone} />
+                  </div>
+
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div data-error={errors.phone ? "true" : "false"}>
-                      <TextInput label="Phone (include country code)" value={form.phone} onChange={setStr("phone")}
-                        placeholder="+92 300 1234 567" type="tel" error={errors.phone} />
-                    </div>
                     <div data-error={errors.email ? "true" : "false"}>
                       <TextInput label="Email Address" value={form.email} onChange={setStr("email")}
                         placeholder="you@example.com" type="email" error={errors.email} />
                     </div>
+                    <div data-error={errors.confirmEmail ? "true" : "false"}>
+                      <label className="block text-[10px] tracking-[0.3em] uppercase text-[#C8903A] mb-3"
+                        style={{ fontFamily: "var(--font-inter), sans-serif" }}>
+                        Retype Email Address <span className="text-[#C8903A]/50">*</span>
+                      </label>
+                      <input
+                        type="email"
+                        value={form.confirmEmail}
+                        onChange={(e) => setStr("confirmEmail")(e.target.value)}
+                        placeholder="you@example.com"
+                        className={`w-full bg-transparent border-b py-3 text-[#F5F0E8] text-[15px] placeholder-[#F5F0E8]/15 focus:outline-none transition-colors duration-300 ${
+                          errors.confirmEmail ? "border-red-500/60" : "border-[#2a2a2a] focus:border-[#C8903A]"
+                        }`}
+                        style={{ fontFamily: "var(--font-inter), sans-serif" }}
+                      />
+                      {errors.confirmEmail && (
+                        <p className="text-red-400/70 text-[10px] mt-2 tracking-wider" style={{ fontFamily: "var(--font-inter), sans-serif" }}>
+                          {emailMismatch ? "Emails do not match" : "Required"}
+                        </p>
+                      )}
+                    </div>
                   </div>
-                  <TextInput label="Country of Residence" value={form.country} onChange={setStr("country")}
-                    placeholder="e.g. Pakistan" required={false} />
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <TextInput label="Country of Residence" value={form.country} onChange={setStr("country")}
+                      placeholder="e.g. Pakistan" required={false} />
+                    <div data-error={errors.countryPassport ? "true" : "false"}>
+                      <TextInput label="Country of Passport" value={form.countryPassport} onChange={setStr("countryPassport")}
+                        placeholder="e.g. Pakistan" error={errors.countryPassport} />
+                    </div>
+                  </div>
                 </motion.section>
 
                 {/* 02 — Your Journey */}
@@ -267,11 +314,23 @@ export default function EnquirePage() {
                   className="flex flex-col gap-10">
                   <SectionHeader num="02" title="Your Journey" />
 
+                  {/* Destination — free text */}
                   <div data-error={errors.destination ? "true" : "false"}>
-                    <SelectGroup
-                      label="Which destinations would you like to visit?"
-                      options={DESTINATIONS} value={form.destination}
-                      onChange={setStr("destination")} error={errors.destination} />
+                    <label className="block text-[10px] tracking-[0.3em] uppercase text-[#C8903A] mb-3"
+                      style={{ fontFamily: "var(--font-inter), sans-serif" }}>
+                      Which destinations would you like to visit? <span className="text-[#C8903A]/50">*</span>
+                    </label>
+                    <textarea
+                      value={form.destination}
+                      onChange={(e) => setStr("destination")(e.target.value)}
+                      placeholder="Tell us which regions, valleys or places you'd like to explore…"
+                      rows={4}
+                      className={`w-full bg-transparent border p-4 text-[#F5F0E8] text-[14px] placeholder-[#F5F0E8]/15 focus:outline-none transition-colors duration-300 resize-none ${
+                        errors.destination ? "border-red-500/60" : "border-[#2a2a2a] focus:border-[#C8903A]"
+                      }`}
+                      style={{ fontFamily: "var(--font-inter), sans-serif" }}
+                    />
+                    {errors.destination && <p className="text-red-400/70 text-[10px] mt-2 tracking-wider" style={{ fontFamily: "var(--font-inter), sans-serif" }}>Required</p>}
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -296,14 +355,39 @@ export default function EnquirePage() {
                   <SectionHeader num="03" title="Your Group" />
 
                   <div className="grid grid-cols-3 gap-4">
-                    <Stepper label="Adults" value={form.adults} onChange={setNum("adults")} min={1} />
+                    <Stepper label="Adults" value={form.adults} onChange={setNum("adults")} min={1} required />
                     <Stepper label="Children" sublabel="2 – 11 yrs" value={form.children} onChange={setNum("children")} />
                     <Stepper label="Infants" sublabel="0 – 1 yr" value={form.infants} onChange={setNum("infants")} />
                   </div>
 
-                  <div data-error={errors.groupType ? "true" : "false"}>
-                    <SelectGroup label="Travelling as" options={GROUP_TYPES} value={form.groupType}
-                      onChange={setStr("groupType")} error={errors.groupType} />
+                  {/* Travelling As — dropdown, not mandatory */}
+                  <div>
+                    <label className="block text-[10px] tracking-[0.3em] uppercase text-[#C8903A] mb-3"
+                      style={{ fontFamily: "var(--font-inter), sans-serif" }}>
+                      Travelling As{" "}
+                      <span className="text-[#C8903A]/30 text-[9px] normal-case tracking-normal">optional</span>
+                    </label>
+                    <div className="relative">
+                      <select
+                        value={form.groupType}
+                        onChange={(e) => setStr("groupType")(e.target.value)}
+                        className="w-full bg-[#111] border border-[#2a2a2a] px-4 py-3 text-[13px] focus:outline-none focus:border-[#C8903A] transition-colors duration-300 appearance-none cursor-pointer pr-10"
+                        style={{
+                          fontFamily: "var(--font-inter), sans-serif",
+                          color: form.groupType ? "#F5F0E8" : "rgba(245,240,232,0.3)",
+                        }}
+                      >
+                        <option value="" disabled style={{ color: "#888", background: "#111" }}>Select…</option>
+                        {TRAVELLING_OPTIONS.map((opt) => (
+                          <option key={opt} value={opt} style={{ color: "#F5F0E8", background: "#111" }}>{opt}</option>
+                        ))}
+                      </select>
+                      <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+                          <path d="M1 1l4 4 4-4" stroke="#C8903A" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </div>
+                    </div>
                   </div>
                 </motion.section>
 
@@ -335,10 +419,10 @@ export default function EnquirePage() {
                   className="flex flex-col gap-10">
                   <SectionHeader num="05" title="Transport" />
 
-                  <div data-error={errors.transport ? "true" : "false"}>
-                    <SelectGroup label="Transport preference" options={TRANSPORT_OPTS} value={form.transport}
-                      onChange={setStr("transport")} error={errors.transport} />
-                  </div>
+                  <SelectGroup
+                    label="Transport preference"
+                    options={TRANSPORT_OPTS} value={form.transport}
+                    onChange={setStr("transport")} required={false} />
 
                   <TextInput label="Other transport preferences" value={form.transportNotes}
                     onChange={setStr("transportNotes")} placeholder="Any specific requirements…" required={false} />
