@@ -100,7 +100,7 @@ export default function NavMain({ darkPage = false }: { darkPage?: boolean }) {
           <Link href="/enquire" target="_blank" rel="noopener noreferrer"
             className="px-5 py-2.5 bg-[#111] text-white text-[11px] tracking-[0.12em] uppercase font-medium hover:bg-[#C8903A] transition-colors duration-300"
             style={{ fontFamily: "var(--font-inter), sans-serif" }}
-          >Enquire Now</Link>
+          >Customise My Tour</Link>
         </div>
 
         {/* Mobile hamburger */}
@@ -136,7 +136,7 @@ export default function NavMain({ darkPage = false }: { darkPage?: boolean }) {
             <Link href="/enquire" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}
               className="mt-2 text-center px-5 py-3 bg-[#111] text-white text-xs tracking-[0.12em] uppercase hover:bg-[#C8903A] transition-colors duration-300"
               style={{ fontFamily: "var(--font-inter), sans-serif" }}
-            >Enquire Now</Link>
+            >Customise My Tour</Link>
           </motion.div>
         )}
       </AnimatePresence>
