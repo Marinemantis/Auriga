@@ -106,10 +106,10 @@ function Hero() {
           initial={{ opacity:0, y:14 }} animate={ready?{opacity:1,y:0}:{}} transition={{ delay:0.75, duration:0.8 }}
           className="flex flex-col sm:flex-row gap-3 justify-center"
         >
-          <a href="#destinations" className="px-8 py-4 bg-[#C8903A] text-[#080808] text-[11px] tracking-[0.18em] uppercase font-semibold hover:opacity-85 transition-opacity duration-300" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
+          <a href="#destinations" className="px-8 py-4 border border-white/50 text-white text-[11px] tracking-[0.18em] uppercase font-semibold hover:border-white hover:bg-white/10 transition-all duration-300" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
             Explore Our Trips
           </a>
-          <a href="#contact" className="px-8 py-4 border border-white/50 text-white text-[11px] tracking-[0.18em] uppercase hover:border-white hover:bg-white/10 transition-all duration-300" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
+          <a href="#contact" className="px-8 py-4 bg-[#C8903A] text-[#080808] text-[11px] tracking-[0.18em] uppercase font-semibold hover:opacity-85 transition-opacity duration-300" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
             Plan Your Journey
           </a>
         </motion.div>
