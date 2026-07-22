@@ -229,15 +229,10 @@ export default function EnquirePage() {
                 <div className="absolute inset-0 opacity-20"
                   style={{ backgroundImage: "radial-gradient(ellipse 80% 60% at 50% 0%, #C8903A22 0%, transparent 70%)" }} />
                 <div className="max-w-6xl mx-auto px-6 lg:px-10 py-20 md:py-28 text-center relative z-10">
-                  <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.6 }}
-                    className="text-[11px] tracking-[0.5em] uppercase text-[#C8903A] mb-6"
-                    style={{ fontFamily: "var(--font-inter), sans-serif" }}>
-                    Plan Your Journey
-                  </motion.p>
                   <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                     className="text-[52px] md:text-[72px] font-light text-[#F5F0E8] leading-[1.0] mb-6"
                     style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>
-                    Customise<br /><em>your journey.</em>
+                    Plan Your<br /><em className="text-[#C8903A]">Journey.</em>
                   </motion.h1>
                   <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45, duration: 0.7 }}
                     className="text-[#F5F0E8]/35 text-[15px] max-w-lg mx-auto leading-relaxed"
