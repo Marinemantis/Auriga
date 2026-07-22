@@ -75,11 +75,7 @@ export default function AboutPage() {
       {/* ── HERO ── */}
       <section ref={heroRef} className="relative h-screen min-h-[640px] flex items-end overflow-hidden">
         <motion.div style={{ y: heroY }} className="absolute inset-0 scale-110 will-change-transform">
-          <Image
-            src="/slide-sheosar-lake.jpg"
-            alt="Sheosar Lake, Deosai"
-            fill className="object-cover" priority sizes="100vw"
-          />
+          <Image src="/slide-sheosar-lake.jpg" alt="Sheosar Lake, Deosai" fill className="object-cover" priority sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#080808]/30 via-[#080808]/20 to-[#080808]/85" />
         </motion.div>
 
@@ -114,7 +110,7 @@ export default function AboutPage() {
         </motion.div>
       </section>
 
-      {/* ── SECTION 1: WHO WE ARE ── */}
+      {/* ── WHO WE ARE ── */}
       <section className="py-20 lg:py-28 bg-[#0A0A0A]">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-28 items-center">
@@ -163,7 +159,6 @@ export default function AboutPage() {
               </FadeUp>
             </div>
 
-            {/* Right — image */}
             <div className="relative hidden lg:block">
               <RevealPhoto delay={0.15}>
                 <div className="relative" style={{ aspectRatio: "4/5" }}>
@@ -187,45 +182,98 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── SECTION 2: THE AURIGA DIFFERENCE ── */}
+      {/* ── OUR TEAM ── */}
       <section className="py-20 lg:py-28 bg-[#080808]">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="max-w-3xl">
+
+          <div className="mb-14 lg:mb-20 max-w-2xl">
             <FadeUp delay={0}>
               <div className="flex items-center gap-3 mb-4">
                 <DrawLine />
                 <span className="text-[10px] tracking-[0.3em] uppercase text-[#C8903A]" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-                  The Auriga Difference
+                  Our Team
                 </span>
               </div>
             </FadeUp>
-
-            <div className="text-5xl md:text-6xl font-light text-[#F5F0E8] leading-[1.05] mb-6" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
+            <div className="text-5xl md:text-6xl font-light text-[#F5F0E8] leading-[1.05]" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
               <div className="overflow-hidden">
                 <motion.div initial={{ y: "105%" }} whileInView={{ y: "0%" }} viewport={{ once: true, margin: "-60px" }} transition={{ duration: 0.9, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}>
-                  Local Isn&apos;t a Feature.
+                  United by Friendship.
                 </motion.div>
               </div>
               <div className="overflow-hidden">
                 <motion.div initial={{ y: "105%" }} whileInView={{ y: "0%" }} viewport={{ once: true, margin: "-60px" }} transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }} className="text-[#C8903A]">
-                  It&apos;s the Whole Point.
+                  Fluent in the North.
                 </motion.div>
               </div>
             </div>
-
-            <FadeUp delay={0.3}>
-              <p className="text-[#F5F0E8]/55 text-lg leading-relaxed mb-5" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-                When your guide grew up in the valley you&apos;re visiting, knowledge stops being information and becomes instinct. We don&apos;t plan routes from maps — we walk them from memory. Every road condition we know, every lodge we trust, every chef we call by name is the result of decades living here, not months researching it.
-              </p>
-              <p className="text-[#F5F0E8]/40 text-base leading-relaxed" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-                That&apos;s what no outside operator can replicate — and what every Auriga journey is built on.
+            <FadeUp delay={0.35}>
+              <p className="text-[#F5F0E8]/40 text-base leading-relaxed mt-5" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
+                Auriga Ventures is powered by a team of people who grew up in these mountains — united by friendship, driven by a shared belief that the North deserves to be shown properly.
               </p>
             </FadeUp>
           </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+            {TEAM.map((member, i) => (
+              <motion.div key={member.name}
+                initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.8, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
+                className="group bg-[#0E0E0E] border border-[#1A1A1A] hover:border-[#C8903A]/30 transition-colors duration-500 p-8"
+              >
+                <div className="relative w-16 h-16 mb-6">
+                  <div className="w-16 h-16 bg-[#161616] border border-[#C8903A]/25 flex items-center justify-center group-hover:border-[#C8903A]/60 transition-colors duration-500">
+                    <span className="text-xl text-[#C8903A] font-light" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>{member.initials}</span>
+                  </div>
+                  <div className="absolute -bottom-1 -right-1 w-4 h-4 border-b border-r border-[#C8903A]/40 group-hover:border-[#C8903A]/80 transition-colors duration-500" />
+                </div>
+
+                <h3 className="text-2xl text-[#F5F0E8] font-light mb-1 group-hover:text-[#C8903A] transition-colors duration-400" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
+                  {member.name}
+                </h3>
+                <p className="text-[10px] tracking-[0.25em] uppercase text-[#C8903A]/60 mb-1" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
+                  {member.role}
+                </p>
+                <p className="text-[#F5F0E8]/30 text-xs italic mb-5" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
+                  &ldquo;{member.tagline}&rdquo;
+                </p>
+
+                <div className="w-8 h-px bg-[#C8903A]/30 mb-5 group-hover:w-16 group-hover:bg-[#C8903A]/60 transition-all duration-500" />
+
+                <p className="text-[#F5F0E8]/40 text-sm leading-relaxed" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
+                  {member.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
         </div>
       </section>
 
-      {/* ── SECTION 3: WHY THE NAME ── */}
+      {/* ── QUIET CTA — emotional high point after Team ── */}
+      <FadeUp delay={0}>
+        <div className="border-t border-[#1a1a1a] bg-[#080808]">
+          <div className="max-w-7xl mx-auto px-6 lg:px-10 py-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+            <div>
+              <p className="text-2xl font-light text-[#F5F0E8]/70 italic mb-1" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
+                Ready to meet us on your journey?
+              </p>
+              <p className="text-[10px] tracking-[0.25em] uppercase text-[#F5F0E8]/25" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
+                Every trip starts with a single conversation.
+              </p>
+            </div>
+            <Link
+              href="/enquire"
+              className="shrink-0 px-8 py-3 border border-[#C8903A]/50 text-[#C8903A] text-[11px] tracking-[0.22em] uppercase hover:bg-[#C8903A] hover:text-[#080808] transition-all duration-300 whitespace-nowrap"
+              style={{ fontFamily: "var(--font-inter),sans-serif" }}
+            >
+              Plan Your Journey
+            </Link>
+          </div>
+        </div>
+      </FadeUp>
+
+      {/* ── WHY THE NAME ── */}
       <section className="relative py-20 lg:py-28 overflow-hidden bg-[#0A0A0A]">
         <div className="absolute inset-0 pointer-events-none">
           <Image src="/slide-deosai-glamping.jpg" alt="" fill className="object-cover opacity-[0.06]" sizes="100vw" />
@@ -310,79 +358,11 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── SECTION 4: OUR TEAM ── */}
-      <section className="py-20 lg:py-28 bg-[#080808]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-
-          <div className="mb-14 lg:mb-20 max-w-2xl">
-            <FadeUp delay={0}>
-              <div className="flex items-center gap-3 mb-4">
-                <DrawLine />
-                <span className="text-[10px] tracking-[0.3em] uppercase text-[#C8903A]" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-                  Our Team
-                </span>
-              </div>
-            </FadeUp>
-            <div className="text-5xl md:text-6xl font-light text-[#F5F0E8] leading-[1.05]" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
-              <div className="overflow-hidden">
-                <motion.div initial={{ y: "105%" }} whileInView={{ y: "0%" }} viewport={{ once: true, margin: "-60px" }} transition={{ duration: 0.9, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}>
-                  United by Friendship.
-                </motion.div>
-              </div>
-              <div className="overflow-hidden">
-                <motion.div initial={{ y: "105%" }} whileInView={{ y: "0%" }} viewport={{ once: true, margin: "-60px" }} transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }} className="text-[#C8903A]">
-                  Fluent in the North.
-                </motion.div>
-              </div>
-            </div>
-            <FadeUp delay={0.35}>
-              <p className="text-[#F5F0E8]/40 text-base leading-relaxed mt-5" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-                Auriga Ventures is powered by a team of people who grew up in these mountains — united by friendship, driven by a shared belief that the North deserves to be shown properly.
-              </p>
-            </FadeUp>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-            {TEAM.map((member, i) => (
-              <motion.div key={member.name}
-                initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.8, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
-                className="group bg-[#0E0E0E] border border-[#1A1A1A] hover:border-[#C8903A]/30 transition-colors duration-500 p-8"
-              >
-                <div className="relative w-16 h-16 mb-6">
-                  <div className="w-16 h-16 bg-[#161616] border border-[#C8903A]/25 flex items-center justify-center group-hover:border-[#C8903A]/60 transition-colors duration-500">
-                    <span className="text-xl text-[#C8903A] font-light" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>{member.initials}</span>
-                  </div>
-                  <div className="absolute -bottom-1 -right-1 w-4 h-4 border-b border-r border-[#C8903A]/40 group-hover:border-[#C8903A]/80 transition-colors duration-500" />
-                </div>
-
-                <h3 className="text-2xl text-[#F5F0E8] font-light mb-1 group-hover:text-[#C8903A] transition-colors duration-400" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
-                  {member.name}
-                </h3>
-                <p className="text-[10px] tracking-[0.25em] uppercase text-[#C8903A]/60 mb-1" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-                  {member.role}
-                </p>
-                <p className="text-[#F5F0E8]/30 text-xs italic mb-5" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
-                  &ldquo;{member.tagline}&rdquo;
-                </p>
-
-                <div className="w-8 h-px bg-[#C8903A]/30 mb-5 group-hover:w-16 group-hover:bg-[#C8903A]/60 transition-all duration-500" />
-
-                <p className="text-[#F5F0E8]/40 text-sm leading-relaxed" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-                  {member.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-
-        </div>
-      </section>
-
-      {/* ── MISSION ── */}
-      <section className="relative py-28 lg:py-40 overflow-hidden bg-[#0A0A0A]">
+      {/* ── MISSION / PROMISE ── */}
+      <section className="relative py-28 lg:py-40 overflow-hidden bg-[#080808]">
         <div className="absolute inset-0 pointer-events-none">
           <Image src="/slide-ghizer-valley.jpg" alt="" fill className="object-cover opacity-[0.08]" sizes="100vw" />
-          <div className="absolute inset-0 bg-[#0A0A0A]/75" />
+          <div className="absolute inset-0 bg-[#080808]/75" />
         </div>
 
         <div className="relative max-w-4xl mx-auto px-6 lg:px-10 text-center">
@@ -410,31 +390,22 @@ export default function AboutPage() {
           </div>
 
           <FadeUp delay={0.35}>
-            <p className="text-[#F5F0E8]/50 text-xl leading-relaxed max-w-2xl mx-auto mb-14 italic" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
+            <p className="text-[#F5F0E8]/50 text-xl leading-relaxed max-w-2xl mx-auto mb-8 italic" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
               &ldquo;Our mission is to create remarkable experiences that thoughtfully connect our clients to the world, inspiring them to explore it with curiosity, humility, and a sense of wonder.&rdquo;
+            </p>
+            <p className="text-[#F5F0E8]/40 text-base leading-relaxed max-w-xl mx-auto mb-12" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
+              We show you our home the way we&apos;d show a friend — with candour about what&apos;s worth the detour, honesty about the rough patches, and genuine pride in what we know is extraordinary. If that&apos;s the kind of journey you&apos;re looking for, you&apos;re already in the right place.
             </p>
           </FadeUp>
 
           <FadeUp delay={0.5}>
-            <div className="flex items-center justify-center gap-6 md:gap-10">
-              {["Thoughtful", "Curious", "Humble"].map((word, i) => (
-                <motion.div key={word} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.55 + i * 0.1 }}
-                  className="flex flex-col items-center gap-2">
-                  <span className="w-1 h-1 rounded-full bg-[#C8903A]" />
-                  <span className="text-2xl md:text-3xl text-[#F5F0E8]/60 font-light" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>{word}</span>
-                </motion.div>
-              ))}
-            </div>
-          </FadeUp>
-
-          <FadeUp delay={0.65}>
-            <div className="mt-14">
-              <Link href="/enquire" target="_blank" rel="noopener noreferrer"
-                className="inline-block px-10 py-4 border border-[#C8903A] text-[#C8903A] text-[11px] tracking-[0.25em] uppercase hover:bg-[#C8903A] hover:text-[#080808] transition-all duration-400"
-                style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-                Plan Your Journey
-              </Link>
-            </div>
+            <Link
+              href="/enquire"
+              className="inline-block px-10 py-4 bg-[#C8903A] text-[#080808] text-[11px] tracking-[0.28em] uppercase font-semibold hover:bg-[#d4a34d] transition-all duration-300"
+              style={{ fontFamily: "var(--font-inter),sans-serif" }}
+            >
+              Plan Your Journey
+            </Link>
           </FadeUp>
         </div>
       </section>
