@@ -20,7 +20,7 @@ interface FormState {
   name: string; email: string; confirmEmail: string; phone: string;
   country: string; countryPassport: string;
   destination: string; departureDate: string; returnDate: string; departureCity: string;
-  adults: number; children: number; infants: number; groupType: string;
+  adults: number; children: number; infants: number; groupType: string; groupTypeOther: string;
   hotelType: string; roomType: string; rooms: number; accommodationNotes: string;
   transport: string; transportNotes: string;
   comments: string;
@@ -30,7 +30,7 @@ const INITIAL: FormState = {
   name: "", email: "", confirmEmail: "", phone: "",
   country: "", countryPassport: "",
   destination: "", departureDate: "", returnDate: "", departureCity: "",
-  adults: 1, children: 0, infants: 0, groupType: "",
+  adults: 1, children: 0, infants: 0, groupType: "", groupTypeOther: "",
   hotelType: "", roomType: "", rooms: 1, accommodationNotes: "",
   transport: "", transportNotes: "",
   comments: "",
@@ -144,8 +144,7 @@ export default function EnquirePage() {
     e.preventDefault();
     const required: (keyof FormState)[] = [
       "name", "email", "confirmEmail", "phone", "countryPassport",
-      "destination", "departureDate", "returnDate",
-      "hotelType", "roomType",
+      "destination",
     ];
     const newErrors: Partial<Record<keyof FormState, boolean>> = {};
     let hasError = false;
@@ -388,6 +387,18 @@ export default function EnquirePage() {
                         </svg>
                       </div>
                     </div>
+                    {form.groupType === "Other (mention in other information)" && (
+                      <div className="mt-4">
+                        <input
+                          type="text"
+                          value={form.groupTypeOther}
+                          onChange={(e) => setStr("groupTypeOther")(e.target.value)}
+                          placeholder="Please describe…"
+                          className="w-full bg-transparent border-b border-[#2a2a2a] py-3 text-[#F5F0E8] text-[15px] placeholder-[#F5F0E8]/15 focus:outline-none focus:border-[#C8903A] transition-colors duration-300"
+                          style={{ fontFamily: "var(--font-inter), sans-serif" }}
+                        />
+                      </div>
+                    )}
                   </div>
                 </motion.section>
 
@@ -397,15 +408,11 @@ export default function EnquirePage() {
                   className="flex flex-col gap-10">
                   <SectionHeader num="04" title="Accommodation" />
 
-                  <div data-error={errors.hotelType ? "true" : "false"}>
-                    <SelectGroup label="Preferred hotel type" options={HOTEL_TYPES} value={form.hotelType}
-                      onChange={setStr("hotelType")} error={errors.hotelType} />
-                  </div>
+                  <SelectGroup label="Preferred hotel type" options={HOTEL_TYPES} value={form.hotelType}
+                    onChange={setStr("hotelType")} required={false} />
 
-                  <div data-error={errors.roomType ? "true" : "false"}>
-                    <SelectGroup label="Preferred room type" options={ROOM_TYPES} value={form.roomType}
-                      onChange={setStr("roomType")} error={errors.roomType} />
-                  </div>
+                  <SelectGroup label="Preferred room type" options={ROOM_TYPES} value={form.roomType}
+                    onChange={setStr("roomType")} required={false} />
 
                   <Stepper label="No. of Rooms" value={form.rooms} onChange={setNum("rooms")} min={1} />
 

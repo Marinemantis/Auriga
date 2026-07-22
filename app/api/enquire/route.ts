@@ -8,11 +8,15 @@ export async function POST(request: Request) {
   const {
     name, email, phone, country,
     destination, departureDate, returnDate, departureCity,
-    adults, children, infants, groupType,
+    adults, children, infants, groupType, groupTypeOther,
     hotelType, roomType, rooms, accommodationNotes,
     transport, transportNotes,
     comments,
   } = await request.json();
+
+  const travellingAs = groupType === "Other (mention in other information)" && groupTypeOther
+    ? `Other — ${groupTypeOther}`
+    : groupType || "Not specified";
 
   const row = (label: string, value: string) =>
     `<p style="margin:0 0 6px;font-family:Arial,sans-serif;font-size:13px;color:#F5F0E8;"><span style="color:#888;display:inline-block;width:160px;">${label}</span>${value}</p>`;
@@ -63,7 +67,7 @@ export async function POST(request: Request) {
                 `)}
 
                 ${section("Group", `
-                  ${row("Travelling as", groupType)}
+                  ${row("Travelling as", travellingAs)}
                   ${row("Adults", String(adults))}
                   ${row("Children (2–11 yrs)", String(children))}
                   ${row("Infants (0–1 yr)", String(infants))}
@@ -116,7 +120,7 @@ export async function POST(request: Request) {
       `Destination: ${destination}`,
       `Travel: ${departureDate} → ${returnDate}`,
       `From: ${departureCity || "Not specified"}`,
-      `Group: ${groupType} | Adults: ${adults} | Children: ${children} | Infants: ${infants}`,
+      `Group: ${travellingAs} | Adults: ${adults} | Children: ${children} | Infants: ${infants}`,
       `Hotel: ${hotelType} | Room: ${roomType} | Rooms: ${rooms}`,
       `Transport: ${transport}`,
       accommodationNotes ? `Accommodation notes: ${accommodationNotes}` : "",
