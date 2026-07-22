@@ -15,6 +15,7 @@ const TEAM = [
     role: "Ground Operations Manager",
     tagline: "Boots On The Ground.",
     initials: "SK",
+    photo: "/team-sheryar.jpg",
     description:
       "Raised in Gilgit and Nagar, Sheryar has been navigating the North long before it was on anyone's itinerary. If a road exists — or doesn't yet — he knows how to get you there. Speaks English, Urdu, Shina and Burushaski.",
   },
@@ -23,6 +24,7 @@ const TEAM = [
     role: "Travel Advisor / Co-Founder",
     tagline: "Listening First. Designing Second.",
     initials: "SZ",
+    photo: "/team-sidra.jpg",
     description:
       "Born with the North in her blood and Pashto on her tongue, Sidra has been talking people into — and through — these mountains her entire life. As co-founder, she's the first voice you'll hear: taking your call, reading your email, and building your itinerary line by line until it's exactly what you imagined and a little more. Speaks English, Urdu and Pashto.",
   },
@@ -31,6 +33,7 @@ const TEAM = [
     role: "Digital Marketing Manager",
     tagline: "Telling the Auriga Story.",
     initials: "FK",
+    photo: "/team-faizan.jpg",
     description:
       "Creative and curious, Faizan translates Pakistan's beauty into narratives that resonate. He ensures the world sees what northern Pakistan truly is — not what it's assumed to be.",
   },
@@ -39,6 +42,7 @@ const TEAM = [
     role: "Marketing Manager",
     tagline: "The Voice of Auriga.",
     initials: "CH",
+    photo: null,
     description:
       "With a background in global luxury travel, Christina brings an international perspective that keeps Auriga positioned at the very front of the premium travel conversation.",
   },
@@ -47,6 +51,7 @@ const TEAM = [
     role: "Travel Advisor",
     tagline: "Where Others Find a Wall, He Finds a Way.",
     initials: "KA",
+    photo: null,
     description:
       "Detail-obsessed and deeply empathetic, Karamat turns the most complex travel requests into seamless journeys. He finds a way where others find a wall.",
   },
@@ -219,30 +224,48 @@ export default function AboutPage() {
               <motion.div key={member.name}
                 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.8, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
-                className="group bg-[#0E0E0E] border border-[#1A1A1A] hover:border-[#C8903A]/30 transition-colors duration-500 p-8"
+                className="group bg-[#0E0E0E] border border-[#1A1A1A] hover:border-[#C8903A]/30 transition-colors duration-500 overflow-hidden"
               >
-                <div className="relative w-16 h-16 mb-6">
-                  <div className="w-16 h-16 bg-[#161616] border border-[#C8903A]/25 flex items-center justify-center group-hover:border-[#C8903A]/60 transition-colors duration-500">
-                    <span className="text-xl text-[#C8903A] font-light" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>{member.initials}</span>
+                {member.photo ? (
+                  <div className="relative w-full aspect-[4/5] overflow-hidden">
+                    <Image
+                      src={member.photo}
+                      alt={member.name}
+                      fill
+                      className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E0E] via-[#0E0E0E]/20 to-transparent" />
+                    <div className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-[#C8903A]/50 group-hover:border-[#C8903A] transition-colors duration-500" />
                   </div>
-                  <div className="absolute -bottom-1 -right-1 w-4 h-4 border-b border-r border-[#C8903A]/40 group-hover:border-[#C8903A]/80 transition-colors duration-500" />
+                ) : null}
+
+                <div className="p-8">
+                  {!member.photo && (
+                    <div className="relative w-16 h-16 mb-6">
+                      <div className="w-16 h-16 bg-[#161616] border border-[#C8903A]/25 flex items-center justify-center group-hover:border-[#C8903A]/60 transition-colors duration-500">
+                        <span className="text-xl text-[#C8903A] font-light" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>{member.initials}</span>
+                      </div>
+                      <div className="absolute -bottom-1 -right-1 w-4 h-4 border-b border-r border-[#C8903A]/40 group-hover:border-[#C8903A]/80 transition-colors duration-500" />
+                    </div>
+                  )}
+
+                  <h3 className="text-2xl text-[#F5F0E8] font-light mb-1 group-hover:text-[#C8903A] transition-colors duration-400" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
+                    {member.name}
+                  </h3>
+                  <p className="text-[10px] tracking-[0.25em] uppercase text-[#C8903A]/60 mb-1" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
+                    {member.role}
+                  </p>
+                  <p className="text-[#F5F0E8]/30 text-xs italic mb-5" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
+                    &ldquo;{member.tagline}&rdquo;
+                  </p>
+
+                  <div className="w-8 h-px bg-[#C8903A]/30 mb-5 group-hover:w-16 group-hover:bg-[#C8903A]/60 transition-all duration-500" />
+
+                  <p className="text-[#F5F0E8]/40 text-sm leading-relaxed" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
+                    {member.description}
+                  </p>
                 </div>
-
-                <h3 className="text-2xl text-[#F5F0E8] font-light mb-1 group-hover:text-[#C8903A] transition-colors duration-400" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
-                  {member.name}
-                </h3>
-                <p className="text-[10px] tracking-[0.25em] uppercase text-[#C8903A]/60 mb-1" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-                  {member.role}
-                </p>
-                <p className="text-[#F5F0E8]/30 text-xs italic mb-5" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
-                  &ldquo;{member.tagline}&rdquo;
-                </p>
-
-                <div className="w-8 h-px bg-[#C8903A]/30 mb-5 group-hover:w-16 group-hover:bg-[#C8903A]/60 transition-all duration-500" />
-
-                <p className="text-[#F5F0E8]/40 text-sm leading-relaxed" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-                  {member.description}
-                </p>
               </motion.div>
             ))}
           </div>
