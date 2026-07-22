@@ -421,16 +421,53 @@ export default function AboutPage() {
             </p>
           </FadeUp>
 
-          <FadeUp delay={0.5}>
-            <Link
-              href="/enquire"
-              className="inline-block px-10 py-4 bg-[#C8903A] text-[#080808] text-[11px] tracking-[0.28em] uppercase font-semibold hover:bg-[#d4a34d] transition-all duration-300"
-              style={{ fontFamily: "var(--font-inter),sans-serif" }}
-            >
-              Plan Your Journey
-            </Link>
+        </div>
+      </section>
+
+      {/* ── LICENCES & MEMBERSHIPS ── */}
+      <section className="py-16 border-t border-[#1A1A1A]">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+          <FadeUp delay={0}>
+            <p className="text-[10px] tracking-[0.3em] uppercase text-[#C8903A]/60 mb-3" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
+              Licensed &amp; Registered
+            </p>
+            <p className="text-[#F5F0E8]/30 text-sm mb-12 max-w-xl mx-auto" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
+              Auriga Ventures is a registered Pakistani company, licensed and recognised by the country&apos;s regulatory and tourism authorities.
+            </p>
+          </FadeUp>
+          <FadeUp delay={0.15}>
+            <div className="flex flex-wrap items-center justify-center gap-10 lg:gap-16">
+              {[
+                { src: "/logos/secp.png",    alt: "SECP — Securities and Exchange Commission of Pakistan",  h: 56 },
+                { src: "/logos/fbr.png",     alt: "FBR — Federal Board of Revenue",                        h: 36 },
+                { src: "/logos/dots.png",    alt: "Department of Tourist Services — Government of Pakistan", h: 60 },
+                { src: "/logos/visitgb.png", alt: "Visit Gilgit-Baltistan",                                 h: 60 },
+                { src: "/logos/pato.png",    alt: "PATO — Pakistan Association of Tour Operators",          h: 40 },
+              ].map((logo) => (
+                <img
+                  key={logo.src}
+                  src={logo.src}
+                  alt={logo.alt}
+                  style={{ height: logo.h, width: "auto", objectFit: "contain" }}
+                  className="grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-default"
+                />
+              ))}
+            </div>
           </FadeUp>
         </div>
+      </section>
+
+      {/* ── FINAL CTA ── */}
+      <section className="py-20 border-t border-[#1A1A1A] text-center">
+        <FadeUp delay={0}>
+          <Link
+            href="/enquire"
+            className="inline-block px-10 py-4 bg-[#C8903A] text-[#080808] text-[11px] tracking-[0.28em] uppercase font-semibold hover:bg-[#d4a34d] transition-all duration-300"
+            style={{ fontFamily: "var(--font-inter),sans-serif" }}
+          >
+            Plan Your Journey
+          </Link>
+        </FadeUp>
       </section>
 
       <Footer />
