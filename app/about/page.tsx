@@ -26,7 +26,7 @@ const TEAM = [
     initials: "SZ",
     photo: "/team-sidra.jpg",
     description:
-      "Born with the North in her blood and Pashto on her tongue, Sidra has been talking people into — and through — these mountains her entire life. As co-founder, she's the first voice you'll hear: taking your call, reading your email, and building your itinerary line by line until it's exactly what you imagined and a little more. Speaks English, Urdu and Pashto.",
+      "Raised in the North, exploring it since childhood, Sidra turns first conversations into finished journeys. Whatever you're hoping for from a trip — even if you can't quite describe it yet — it's her job to hear it, and her craft to build it. If it's on your itinerary, she's thought it through. Speaks English, Urdu and Pashto.",
   },
   {
     name: "Faizan Khan",
@@ -35,7 +35,7 @@ const TEAM = [
     initials: "FK",
     photo: "/team-faizan.jpg",
     description:
-      "Creative and curious, Faizan translates Pakistan's beauty into narratives that resonate. He ensures the world sees what northern Pakistan truly is — not what it's assumed to be.",
+      "Creative and curious, Faizan translates Pakistan's beauty into narratives that resonate. He ensures the world sees what northern Pakistan truly is — not what it's assumed to be. Speaks English, Urdu, Burushaski and Shina.",
   },
   {
     name: "Christina Hardy",
@@ -232,7 +232,7 @@ export default function AboutPage() {
                       src={member.photo}
                       alt={member.name}
                       fill
-                      className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+                      className="object-cover object-top transition-all duration-700 scale-105 group-hover:scale-100"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E0E] via-[#0E0E0E]/20 to-transparent" />
