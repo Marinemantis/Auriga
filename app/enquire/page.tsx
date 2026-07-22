@@ -232,7 +232,7 @@ export default function EnquirePage() {
                   <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.6 }}
                     className="text-[11px] tracking-[0.5em] uppercase text-[#C8903A] mb-6"
                     style={{ fontFamily: "var(--font-inter), sans-serif" }}>
-                    Journey planning
+                    Plan Your Journey
                   </motion.p>
                   <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                     className="text-[52px] md:text-[72px] font-light text-[#F5F0E8] leading-[1.0] mb-6"
