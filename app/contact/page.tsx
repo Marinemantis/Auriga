@@ -7,26 +7,26 @@ import Image from "next/image";
 import Footer from "@/components/Footer";
 import Logo from "@/components/Logo";
 
-const SUBJECTS = [
-  "Plan a bespoke journey",
-  "Group or private tour enquiry",
-  "Pricing & availability",
-  "Partnership or collaboration",
-  "General question",
-];
 
 export default function ContactPage() {
-  const [name,       setName]       = useState("");
-  const [email,      setEmail]      = useState("");
-  const [phone,      setPhone]      = useState("");
-  const [subject,    setSubject]    = useState("");
-  const [message,    setMessage]    = useState("");
-  const [submitting, setSubmitting] = useState(false);
-  const [done,       setDone]       = useState(false);
-  const [error,      setError]      = useState(false);
+  const [name,          setName]          = useState("");
+  const [email,         setEmail]         = useState("");
+  const [confirmEmail,  setConfirmEmail]  = useState("");
+  const [phone,         setPhone]         = useState("");
+  const [subject,       setSubject]       = useState("");
+  const [message,       setMessage]       = useState("");
+  const [submitting,    setSubmitting]    = useState(false);
+  const [done,          setDone]          = useState(false);
+  const [error,         setError]         = useState(false);
+  const [emailMismatch, setEmailMismatch] = useState(false);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    setEmailMismatch(false);
+    if (email !== confirmEmail) {
+      setEmailMismatch(true);
+      return;
+    }
     setSubmitting(true);
     setError(false);
     try {
@@ -178,7 +178,7 @@ export default function ContactPage() {
 
                   {/* Location */}
                   <div className="py-6">
-                    <p className="text-[10px] tracking-[0.25em] uppercase text-[#F5F0E8]/30 mb-2" style={{ fontFamily: "var(--font-inter),sans-serif" }}>Based In</p>
+                    <p className="text-[10px] tracking-[0.25em] uppercase text-[#F5F0E8]/30 mb-2" style={{ fontFamily: "var(--font-inter),sans-serif" }}>Address</p>
                     <p className="text-[#F5F0E8]/80 text-[15px] leading-relaxed" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
                       Auriga Ventures (Pvt) Limited<br />
                       River View Road, Chinar Bagh<br />
@@ -188,7 +188,7 @@ export default function ContactPage() {
 
                   {/* Social */}
                   <div className="py-6">
-                    <p className="text-[10px] tracking-[0.25em] uppercase text-[#F5F0E8]/30 mb-4" style={{ fontFamily: "var(--font-inter),sans-serif" }}>Follow Us</p>
+                    <p className="text-[10px] tracking-[0.25em] uppercase text-[#F5F0E8]/30 mb-4" style={{ fontFamily: "var(--font-inter),sans-serif" }}>Connect With Us</p>
                     <div className="flex gap-4">
                       <a href="https://www.instagram.com/aurigaventures/" target="_blank" rel="noopener noreferrer"
                         className="text-[#F5F0E8]/40 hover:text-[#C8903A] transition-colors duration-300" aria-label="Instagram">
@@ -230,8 +230,11 @@ export default function ContactPage() {
               initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             >
-              <p className="text-[11px] tracking-[0.4em] uppercase text-[#C8903A] mb-8" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
+              <p className="text-[11px] tracking-[0.4em] uppercase text-[#C8903A] mb-4" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
                 Send Us A Message
+              </p>
+              <p className="text-[#F5F0E8]/40 text-[14px] leading-relaxed mb-8" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
+                Complete the form below to tell us about your trip. We'll review your preferences and be in touch shortly to help you start planning your journey.
               </p>
 
               <form onSubmit={handleSubmit} className="flex flex-col gap-7">
@@ -243,20 +246,20 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="text" required value={name} onChange={e => setName(e.target.value)}
-                    placeholder="Your full name"
+                    placeholder="e.g. Danial Adam"
                     className="w-full bg-transparent border-b border-[#2a2a2a] py-3 text-[#F5F0E8] text-[15px] placeholder-[#F5F0E8]/15 focus:outline-none focus:border-[#C8903A] transition-colors duration-300"
                     style={{ fontFamily: "var(--font-inter),sans-serif" }}
                   />
                 </div>
 
-                {/* Email + Phone */}
+                {/* Email + Retype Email */}
                 <div className="grid sm:grid-cols-2 gap-7">
                   <div>
                     <label className="block text-[10px] tracking-[0.25em] uppercase text-[#F5F0E8]/35 mb-3" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-                      Email <span className="text-[#C8903A]/60">*</span>
+                      Email Address <span className="text-[#C8903A]/60">*</span>
                     </label>
                     <input
-                      type="email" required value={email} onChange={e => setEmail(e.target.value)}
+                      type="email" required value={email} onChange={e => { setEmail(e.target.value); setEmailMismatch(false); }}
                       placeholder="you@example.com"
                       className="w-full bg-transparent border-b border-[#2a2a2a] py-3 text-[#F5F0E8] text-[15px] placeholder-[#F5F0E8]/15 focus:outline-none focus:border-[#C8903A] transition-colors duration-300"
                       style={{ fontFamily: "var(--font-inter),sans-serif" }}
@@ -264,15 +267,31 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <label className="block text-[10px] tracking-[0.25em] uppercase text-[#F5F0E8]/35 mb-3" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-                      Phone / WhatsApp
+                      Retype Email Address <span className="text-[#C8903A]/60">*</span>
                     </label>
                     <input
-                      type="tel" value={phone} onChange={e => setPhone(e.target.value)}
-                      placeholder="+92 000 000 0000"
-                      className="w-full bg-transparent border-b border-[#2a2a2a] py-3 text-[#F5F0E8] text-[15px] placeholder-[#F5F0E8]/15 focus:outline-none focus:border-[#C8903A] transition-colors duration-300"
+                      type="email" required value={confirmEmail} onChange={e => { setConfirmEmail(e.target.value); setEmailMismatch(false); }}
+                      placeholder="you@example.com"
+                      className={`w-full bg-transparent border-b py-3 text-[#F5F0E8] text-[15px] placeholder-[#F5F0E8]/15 focus:outline-none transition-colors duration-300 ${emailMismatch ? "border-red-500/60" : "border-[#2a2a2a] focus:border-[#C8903A]"}`}
                       style={{ fontFamily: "var(--font-inter),sans-serif" }}
                     />
+                    {emailMismatch && (
+                      <p className="text-red-400/70 text-[10px] mt-2 tracking-wider" style={{ fontFamily: "var(--font-inter),sans-serif" }}>Emails do not match</p>
+                    )}
                   </div>
+                </div>
+
+                {/* Phone */}
+                <div>
+                  <label className="block text-[10px] tracking-[0.25em] uppercase text-[#F5F0E8]/35 mb-3" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
+                    Phone / WhatsApp
+                  </label>
+                  <input
+                    type="tel" value={phone} onChange={e => setPhone(e.target.value)}
+                    placeholder="e.g. +92 000 000 0000"
+                    className="w-full bg-transparent border-b border-[#2a2a2a] py-3 text-[#F5F0E8] text-[15px] placeholder-[#F5F0E8]/15 focus:outline-none focus:border-[#C8903A] transition-colors duration-300"
+                    style={{ fontFamily: "var(--font-inter),sans-serif" }}
+                  />
                 </div>
 
                 {/* Subject */}
@@ -280,23 +299,12 @@ export default function ContactPage() {
                   <label className="block text-[10px] tracking-[0.25em] uppercase text-[#F5F0E8]/35 mb-3" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
                     Subject
                   </label>
-                  <div className="grid sm:grid-cols-2 gap-2">
-                    {SUBJECTS.map(s => (
-                      <button
-                        key={s} type="button"
-                        onClick={() => setSubject(s)}
-                        className={`text-left px-4 py-3 border text-[12px] tracking-[0.05em] transition-all duration-200 ${
-                          subject === s
-                            ? "border-[#C8903A] bg-[#C8903A]/10 text-[#F5F0E8]"
-                            : "border-[#222] text-[#F5F0E8]/40 hover:border-[#C8903A]/40 hover:text-[#F5F0E8]/70"
-                        }`}
-                        style={{ fontFamily: "var(--font-inter),sans-serif" }}
-                      >
-                        {subject === s && <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#C8903A] mr-2 align-middle" />}
-                        {s}
-                      </button>
-                    ))}
-                  </div>
+                  <input
+                    type="text" value={subject} onChange={e => setSubject(e.target.value)}
+                    placeholder="What is your enquiry about?"
+                    className="w-full bg-transparent border-b border-[#2a2a2a] py-3 text-[#F5F0E8] text-[15px] placeholder-[#F5F0E8]/15 focus:outline-none focus:border-[#C8903A] transition-colors duration-300"
+                    style={{ fontFamily: "var(--font-inter),sans-serif" }}
+                  />
                 </div>
 
                 {/* Message */}
