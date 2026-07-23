@@ -12,7 +12,7 @@ import { FadeUp, DrawLine, RevealPhoto } from "@/components/Reveal";
 const TEAM = [
   {
     name: "Sheryar Khan",
-    role: "Ground Operations Manager",
+    role: "Ground Operations Manager / Co-Founder",
     tagline: "Boots On The Ground.",
     initials: "SK",
     photo: "/team-sheryar.jpg",
@@ -21,7 +21,7 @@ const TEAM = [
   },
   {
     name: "Sidra Zeb",
-    role: "Travel Advisor / Co-Founder",
+    role: "Travel Advisor",
     tagline: "Listening First. Designing Second.",
     initials: "SZ",
     photo: "/team-sidra.jpg",
@@ -36,24 +36,6 @@ const TEAM = [
     photo: "/team-faizan.jpg",
     description:
       "Creative and curious, Faizan translates Pakistan's beauty into narratives that resonate. He ensures the world sees what northern Pakistan truly is — not what it's assumed to be. Speaks English, Urdu, Burushaski and Shina.",
-  },
-  {
-    name: "Christina Hardy",
-    role: "Marketing Manager",
-    tagline: "The Voice of Auriga.",
-    initials: "CH",
-    photo: null,
-    description:
-      "With a background in global luxury travel, Christina brings an international perspective that keeps Auriga positioned at the very front of the premium travel conversation.",
-  },
-  {
-    name: "Karamat Ali",
-    role: "Travel Advisor",
-    tagline: "Where Others Find a Wall, He Finds a Way.",
-    initials: "KA",
-    photo: null,
-    description:
-      "Detail-obsessed and deeply empathetic, Karamat turns the most complex travel requests into seamless journeys. He finds a way where others find a wall.",
   },
 ];
 
