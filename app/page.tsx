@@ -27,9 +27,9 @@ const HERO_SLIDES = [
 ];
 
 const TESTIMONIALS = [
-  { quote: "Auriga made our trip completely stress free. Everything was planned beautifully — we could just relax and enjoy the journey.", name: "Grace A.",        origin: "Lahore → Hunza"            },
-  { quote: "Auriga Ventures understands that luxury travel is emotional. Every moment felt intentional, serene, exclusive, and effortless.", name: "Sarah Ibrahim",   origin: "Karachi → Skardu"          },
-  { quote: "Auriga didn't just plan a trip — they curated an experience. Every detail reflected precision and passion.", name: "Zerish Zahra",    origin: "Dubai → Chitral"           },
+  { quote: "Our trip was completely stress free. Everything was planned beautifully — we could just relax and enjoy the journey.", name: "Grace A.",        origin: "Lahore → Hunza"            },
+  { quote: "Few people truly understand that luxury travel is emotional. Every moment felt intentional, serene, exclusive, and effortless.", name: "Sarah Ibrahim",   origin: "Karachi → Skardu"          },
+  { quote: "This wasn't just a trip — it was a curated experience. Every detail reflected precision and passion.", name: "Zerish Zahra",    origin: "Dubai → Chitral"           },
   { quote: "I've traveled all over the world but nothing prepared me for the raw beauty of Pakistan's north. Auriga showed me why.", name: "James Whitfield", origin: "London → Gilgit-Baltistan" },
   { quote: "From our private glamping in Deosai to the sunrise over Nanga Parbat — every single moment was extraordinary.", name: "Amina Tariq",     origin: "Islamabad → Astore"        },
   { quote: "The team's knowledge of the region is unmatched. We felt safe, looked after, and constantly amazed. We'll be back.", name: "Raza & Farah",    origin: "Karachi → Hunza"           },
