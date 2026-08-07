@@ -354,7 +354,7 @@ function FullBleed() {
   return (
     <section ref={ref} className="relative h-[75vh] overflow-hidden flex items-center justify-center">
       <motion.div style={{ y }} className="absolute inset-[-10%] will-change-transform">
-        <Image src="/fullbleed-sunset-road.jpg" alt="Golden sunset over the mountains of northern Pakistan" fill className="object-cover object-top" sizes="100vw" />
+        <Image src="/fullbleed-golden-mountains.jpg" alt="Golden light over the mountains of northern Pakistan" fill className="object-cover object-center" sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#080808]/50 via-black/15 to-[#080808]/70" />
       </motion.div>
       <div className="relative z-10 text-center px-6">
