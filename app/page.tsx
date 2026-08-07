@@ -411,7 +411,7 @@ function WhyUs() {
       <div className="max-w-[1320px] mx-auto px-6 lg:px-10">
         <div className="text-center mb-16">
           <p className="text-[11px] tracking-[0.45em] uppercase text-[#C8903A] mb-4" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Why Auriga</p>
-          <h2 className="text-[44px] md:text-[54px] font-light text-[#F5F0E8] max-w-2xl mx-auto leading-tight" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>What we do and why we do it.</h2>
+          <p className="text-[#F5F0E8]/55 text-lg max-w-2xl mx-auto leading-relaxed" style={{ fontFamily:"var(--font-inter),sans-serif" }}>We've spent over a decade refining every part of the journey — so when you travel with us, everything simply works. Here's what sets us apart.</p>
         </div>
         <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
           {WHY_US.map((item, i) => (
