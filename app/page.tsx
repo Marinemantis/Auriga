@@ -428,13 +428,6 @@ function WhyUs() {
             </motion.div>
           ))}
         </div>
-        {/* Stats band — add verified stats here when available */}
-        <div className="mt-20 pt-12 border-t border-[#1A1A1A] flex justify-center text-center">
-          <div>
-            <p className="text-[42px] font-light text-[#F5F0E8] leading-none mb-2" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>4,700m</p>
-            <p className="text-[11px] tracking-[0.18em] uppercase text-[#F5F0E8]/30" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Highest camp</p>
-          </div>
-        </div>
       </div>
     </section>
   );
