@@ -486,23 +486,6 @@ function GuideSection() {
   );
 }
 
-/* ══════════════════════════════════════════
-   PRESS
-══════════════════════════════════════════ */
-function Press() {
-  return (
-    <div className="bg-[#0d0d0d] border-y border-[#1A1A1A] py-14 px-6">
-      <div className="max-w-[1320px] mx-auto">
-        <p className="text-center text-[10px] tracking-[0.45em] uppercase text-[#F5F0E8]/25 mb-10" style={{ fontFamily:"var(--font-inter),sans-serif" }}>As featured in</p>
-        <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16">
-          {["Forbes","Travel + Leisure","Condé Nast","Vogue Pakistan","Dawn"].map(p=>(
-            <span key={p} className="text-[#F5F0E8]/20 text-xl font-light tracking-widest hover:text-[#F5F0E8]/45 transition-colors duration-300 cursor-default" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>{p}</span>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
 
 /* ══════════════════════════════════════════
    CONTACT
@@ -652,7 +635,6 @@ export default function NewHomePage() {
       <WhatWeDo />
       <WhyUs />
       <GuideSection />
-      <Press />
       <Contact />
       <FooterComponent />
       <Newsletter />
