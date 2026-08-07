@@ -9,69 +9,13 @@ import NavMain from "@/components/NavMain";
 import { FadeUp, DrawLine } from "@/components/Reveal";
 
 const EXPERIENCES = [
-  {
-    slug: "last-paradise",
-    name: "The Last Paradise",
-    region: "Hunza & Skardu",
-    duration: "12 days",
-    price: "From $2,800",
-    tagline: "Hunza, Deosai & Skardu Grand Expedition",
-    image: "/hunza-lady-finger.jpg",
-  },
-  {
-    slug: "mountains-meet-stars",
-    name: "Where Mountains Meet the Stars",
-    region: "Astore & Skardu",
-    duration: "8 days",
-    price: "From $2,200",
-    tagline: "Celestial Expedition through the Himalaya",
-    image: "/mms-katpana-lake-skardu.jpg",
-  },
-  {
-    slug: "realm-of-fairies",
-    name: "The Realm of Fairies",
-    region: "Fairy Meadows & Hunza",
-    duration: "10 days",
-    price: "From $2,400",
-    tagline: "In the Shadow of Nanga Parbat",
-    image: "/rof-hunza-village-drying.jpg",
-  },
-  {
-    slug: "chitral-phunder",
-    name: "Wilderness of Chitral & Phunder",
-    region: "Chitral · Ghizer",
-    duration: "12 nights",
-    price: "From $2,600",
-    tagline: "Kalash Valleys, Shandur & Phunder Lake",
-    image: "/slide-ghizer-valley.jpg",
-  },
-  {
-    slug: "khukush-lake-phunder",
-    name: "Khukush Lake & Phunder",
-    region: "Ghizer Valley",
-    duration: "7 days",
-    price: "From $1,800",
-    tagline: "Seven-Day Alpine Odyssey",
-    image: "/mms-dunsa-valley-tormik.jpg",
-  },
-  {
-    slug: "nagma-valley",
-    name: "Nagma Valley Trek",
-    region: "Baltistan",
-    duration: "8 days",
-    price: "From $1,900",
-    tagline: "Into Pakistan's Best-Kept Secret",
-    image: "/mms-glamping-deosai.jpg",
-  },
-  {
-    slug: "himalayan-dream",
-    name: "Seven Day Himalayan Dream",
-    region: "Astore to Minimarg",
-    duration: "7 days",
-    price: "From $2,000",
-    tagline: "Rama Lake, Rupal Valley & Minimarg",
-    image: "/mms-minimarg-astore.jpg",
-  },
+  { slug: "last-paradise",        name: "The Last Paradise",               region: "Hunza & Skardu",        duration: "12 days",   durationDays: 12, price: "From $2,800", tagline: "Hunza, Deosai & Skardu Grand Expedition",      image: "/hunza-lady-finger.jpg"          },
+  { slug: "mountains-meet-stars", name: "Where Mountains Meet the Stars",   region: "Astore & Skardu",       duration: "8 days",    durationDays: 8,  price: "From $2,200", tagline: "Celestial Expedition through the Himalaya",    image: "/mms-katpana-lake-skardu.jpg"    },
+  { slug: "realm-of-fairies",     name: "The Realm of Fairies",            region: "Fairy Meadows & Hunza", duration: "10 days",   durationDays: 10, price: "From $2,400", tagline: "In the Shadow of Nanga Parbat",                image: "/rof-hunza-village-drying.jpg"   },
+  { slug: "chitral-phunder",      name: "Wilderness of Chitral & Phunder", region: "Chitral · Ghizer",      duration: "12 nights", durationDays: 13, price: "From $2,600", tagline: "Kalash Valleys, Shandur & Phunder Lake",       image: "/slide-ghizer-valley.jpg"        },
+  { slug: "khukush-lake-phunder", name: "Khukush Lake & Phunder",          region: "Ghizer Valley",         duration: "7 days",    durationDays: 7,  price: "From $1,800", tagline: "Seven-Day Alpine Odyssey",                     image: "/mms-dunsa-valley-tormik.jpg"    },
+  { slug: "nagma-valley",         name: "Nagma Valley Trek",               region: "Baltistan",             duration: "8 days",    durationDays: 8,  price: "From $1,900", tagline: "Into Pakistan's Best-Kept Secret",             image: "/mms-glamping-deosai.jpg"        },
+  { slug: "himalayan-dream",      name: "Seven Day Himalayan Dream",       region: "Astore to Minimarg",    duration: "7 days",    durationDays: 7,  price: "From $2,000", tagline: "Rama Lake, Rupal Valley & Minimarg",           image: "/mms-minimarg-astore.jpg"        },
 ];
 
 export default function ExperiencesPage() {
@@ -83,8 +27,9 @@ export default function ExperiencesPage() {
   const heroY  = useTransform(heroScroll, [0, 1], ["0%", "30%"]);
   const heroOp = useTransform(heroScroll, [0, 0.7], [1, 0]);
 
-  const featured = EXPERIENCES[0];
-  const rest      = EXPERIENCES.slice(1);
+  const sorted    = [...EXPERIENCES].sort((a, b) => a.durationDays - b.durationDays);
+  const featured  = sorted[0];
+  const rest      = sorted.slice(1);
 
   return (
     <div className="bg-[#080808] text-[#F5F0E8] overflow-x-hidden">

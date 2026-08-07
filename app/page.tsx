@@ -9,13 +9,13 @@ import NavMain from "@/components/NavMain";
 
 /* ─── DATA ─── */
 const DESTINATIONS = [
-  { name: "The Last Paradise",              slug: "last-paradise",        region: "Hunza & Skardu",        nights: "12 days",   image: "/hunza-lady-finger.jpg",          price: "From $2,800", tripName: "HUNZA, DEOSAI & SKARDU GRAND EXPEDITION"  },
-  { name: "Where Mountains Meet the Stars", slug: "mountains-meet-stars", region: "Astore & Skardu",       nights: "8 days",    image: "/mms-katpana-lake-skardu.jpg",    price: "From $2,200", tripName: "CELESTIAL EXPEDITION THROUGH THE HIMALAYA" },
-  { name: "The Realm of Fairies",           slug: "realm-of-fairies",     region: "Fairy Meadows & Hunza", nights: "10 days",   image: "/rof-hunza-village-drying.jpg",            price: "From $2,400", tripName: "IN THE SHADOW OF NANGA PARBAT"             },
-  { name: "Wilderness of Chitral & Phunder",slug: "chitral-phunder",      region: "Chitral · Ghizer",      nights: "12 nights", image: "/slide-ghizer-valley.jpg",        price: "From $2,600", tripName: "KALASH VALLEYS, SHANDUR & PHUNDER LAKE"   },
-  { name: "Khukush Lake & Phunder",         slug: "khukush-lake-phunder", region: "Ghizer Valley",         nights: "7 days",    image: "/mms-dunsa-valley-tormik.jpg",    price: "From $1,800", tripName: "SEVEN-DAY ALPINE ODYSSEY"                 },
-  { name: "Nagma Valley Trek",              slug: "nagma-valley",         region: "Baltistan",             nights: "8 days",    image: "/mms-glamping-deosai.jpg",        price: "From $1,900", tripName: "INTO PAKISTAN'S BEST-KEPT SECRET"         },
-  { name: "Seven Day Himalayan Dream",      slug: "himalayan-dream",      region: "Astore to Minimarg",    nights: "7 days",    image: "/mms-minimarg-astore.jpg",        price: "From $2,000", tripName: "RAMA LAKE, RUPAL VALLEY & MINIMARG"       },
+  { name: "The Last Paradise",              slug: "last-paradise",        region: "Hunza & Skardu",        nights: "12 days",   durationDays: 12, image: "/hunza-lady-finger.jpg",          price: "From $2,800", tripName: "HUNZA, DEOSAI & SKARDU GRAND EXPEDITION"  },
+  { name: "Where Mountains Meet the Stars", slug: "mountains-meet-stars", region: "Astore & Skardu",       nights: "8 days",    durationDays: 8,  image: "/mms-katpana-lake-skardu.jpg",    price: "From $2,200", tripName: "CELESTIAL EXPEDITION THROUGH THE HIMALAYA" },
+  { name: "The Realm of Fairies",           slug: "realm-of-fairies",     region: "Fairy Meadows & Hunza", nights: "10 days",   durationDays: 10, image: "/rof-hunza-village-drying.jpg",   price: "From $2,400", tripName: "IN THE SHADOW OF NANGA PARBAT"             },
+  { name: "Wilderness of Chitral & Phunder",slug: "chitral-phunder",      region: "Chitral · Ghizer",      nights: "12 nights", durationDays: 13, image: "/slide-ghizer-valley.jpg",        price: "From $2,600", tripName: "KALASH VALLEYS, SHANDUR & PHUNDER LAKE"   },
+  { name: "Khukush Lake & Phunder",         slug: "khukush-lake-phunder", region: "Ghizer Valley",         nights: "7 days",    durationDays: 7,  image: "/mms-dunsa-valley-tormik.jpg",    price: "From $1,800", tripName: "SEVEN-DAY ALPINE ODYSSEY"                 },
+  { name: "Nagma Valley Trek",              slug: "nagma-valley",         region: "Baltistan",             nights: "8 days",    durationDays: 8,  image: "/mms-glamping-deosai.jpg",        price: "From $1,900", tripName: "INTO PAKISTAN'S BEST-KEPT SECRET"         },
+  { name: "Seven Day Himalayan Dream",      slug: "himalayan-dream",      region: "Astore to Minimarg",    nights: "7 days",    durationDays: 7,  image: "/mms-minimarg-astore.jpg",        price: "From $2,000", tripName: "RAMA LAKE, RUPAL VALLEY & MINIMARG"       },
 ];
 
 const HERO_SLIDES = [
@@ -86,9 +86,9 @@ function Hero() {
       <motion.div style={{ y: txtY, opacity: op }} className="relative z-10 px-6 max-w-4xl mx-auto">
         <motion.h1
           initial={{ opacity:0, y:32 }} animate={ready?{opacity:1,y:0}:{}} transition={{ delay:0.3, duration:1, ease:[0.22,1,0.36,1] }}
-          className="text-[56px] sm:text-[72px] md:text-[88px] lg:text-[100px] font-light text-white leading-[0.95] mb-6"
+          className="text-[56px] sm:text-[68px] md:text-[80px] lg:text-[90px] font-light text-white leading-[0.95] mb-6"
           style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}
-        >Tailor-made journeys<br />through Pakistan's north</motion.h1>
+        >The luxury<br />travel experts</motion.h1>
 
         <motion.p
           initial={{ opacity:0, y:16 }} animate={ready?{opacity:1,y:0}:{}} transition={{ delay:0.45, duration:0.8 }}
@@ -100,7 +100,7 @@ function Hero() {
           initial={{ opacity:0, y:16 }} animate={ready?{opacity:1,y:0}:{}} transition={{ delay:0.6, duration:0.8 }}
           className="text-white/65 text-base md:text-lg mb-10 max-w-md mx-auto"
           style={{ fontFamily:"var(--font-inter),sans-serif" }}
-        >Hunza, Skardu, Chitral, Deosai — planned around you.</motion.p>
+        >Tailor-made journeys through Pakistan's north.</motion.p>
 
         <motion.div
           initial={{ opacity:0, y:14 }} animate={ready?{opacity:1,y:0}:{}} transition={{ delay:0.75, duration:0.8 }}
@@ -309,7 +309,7 @@ function DestCarousel() {
         onClickCapture={onClickCapture}
         className={`flex gap-3 overflow-x-auto px-6 lg:px-10 pb-16 [&::-webkit-scrollbar]:hidden select-none ${dragging ? "cursor-grabbing snap-none" : "cursor-grab snap-x snap-mandatory"}`}
       >
-        {DESTINATIONS.map((d, i) => (
+        {[...DESTINATIONS].sort((a, b) => a.durationDays - b.durationDays).map((d, i) => (
           <motion.div key={d.name}
             initial={{ opacity:0, y:20 }}
             whileInView={{ opacity:1, y:0 }}
@@ -413,6 +413,22 @@ function WhyUs() {
           <p className="text-[11px] tracking-[0.45em] uppercase text-[#C8903A] mb-4" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Why Auriga</p>
           <p className="text-[#F5F0E8]/55 text-lg max-w-2xl mx-auto leading-relaxed" style={{ fontFamily:"var(--font-inter),sans-serif" }}>We've spent over a decade refining every part of the journey — so when you travel with us, everything simply works. Here's what sets us apart.</p>
         </div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-16 text-center border-b border-[#1A1A1A] pb-16">
+          <motion.div initial={{ opacity:0, y:24 }} whileInView={{ opacity:1, y:0 }} viewport={{ once:true, margin:"-40px" }} transition={{ delay:0, duration:0.6, ease:[0.22,1,0.36,1] }}>
+            <p className="text-[42px] font-light text-[#F5F0E8] leading-none mb-2" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>{DESTINATIONS.length}</p>
+            <p className="text-[11px] tracking-[0.18em] uppercase text-[#F5F0E8]/30" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Signature routes</p>
+          </motion.div>
+          {/* TODO: verify region count against live tour list before launch */}
+          <motion.div initial={{ opacity:0, y:24 }} whileInView={{ opacity:1, y:0 }} viewport={{ once:true, margin:"-40px" }} transition={{ delay:0.1, duration:0.6, ease:[0.22,1,0.36,1] }}>
+            <p className="text-[42px] font-light text-[#F5F0E8] leading-none mb-2" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>6</p>
+            <p className="text-[11px] tracking-[0.18em] uppercase text-[#F5F0E8]/30" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Regions</p>
+          </motion.div>
+          <motion.div initial={{ opacity:0, y:24 }} whileInView={{ opacity:1, y:0 }} viewport={{ once:true, margin:"-40px" }} transition={{ delay:0.2, duration:0.6, ease:[0.22,1,0.36,1] }}>
+            <p className="text-[42px] font-light text-[#F5F0E8] leading-none mb-2" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>4,700m</p>
+            <p className="text-[11px] tracking-[0.18em] uppercase text-[#F5F0E8]/30" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Highest camp</p>
+          </motion.div>
+        </div>
+
         <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
           {WHY_US.map((item, i) => (
             <motion.div key={item.title}
