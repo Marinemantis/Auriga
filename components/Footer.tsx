@@ -10,9 +10,9 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="mb-4">
-              <Logo variant="light" className="h-7 w-auto" />
+              <span className="text-[22px] font-semibold tracking-wide text-white" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>Auriga</span>
+              <span className="text-[22px] font-light text-[#C8903A]" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>Ventures</span>
             </div>
-            <p className="text-white/25 text-sm italic mb-4 max-w-xs" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>Beyond Travel. We Curate Dreams.</p>
             <p className="text-white/20 text-xs leading-relaxed max-w-xs" style={{ fontFamily: "var(--font-inter),sans-serif" }}>Bespoke luxury journeys through Pakistan&apos;s northern mountains.</p>
           </div>
 

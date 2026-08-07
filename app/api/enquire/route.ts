@@ -97,7 +97,7 @@ export async function POST(request: Request) {
                 </td></tr>
 
                 <tr><td style="padding:24px 48px;border-top:1px solid #1a1a1a;">
-                  <p style="margin:0;font-family:Arial,sans-serif;font-size:10px;color:#333;">© 2026 Auriga Ventures · Beyond Travel. We Curate Dreams.</p>
+                  <p style="margin:0;font-family:Arial,sans-serif;font-size:10px;color:#333;">© 2026 Auriga Ventures. All rights reserved.</p>
                 </td></tr>
 
               </table>

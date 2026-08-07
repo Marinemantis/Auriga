@@ -41,7 +41,7 @@ export async function POST(request: Request) {
                   <a href="mailto:${email}?subject=Re%3A%20Your%20Enquiry%20-%20${encodeURIComponent(tourName)}" style="display:inline-block;padding:14px 32px;background:#C8903A;color:#080808;font-family:Arial,sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;text-decoration:none;font-weight:600;">Reply to ${name.split(" ")[0]}</a>
                 </td></tr>
                 <tr><td style="padding:24px 48px;border-top:1px solid #1a1a1a;">
-                  <p style="margin:0;font-family:Arial,sans-serif;font-size:10px;color:#333;">© 2026 Auriga Ventures · Beyond Travel. We Curate Dreams.</p>
+                  <p style="margin:0;font-family:Arial,sans-serif;font-size:10px;color:#333;">© 2026 Auriga Ventures. All rights reserved.</p>
                 </td></tr>
               </table>
             </td></tr>

@@ -235,15 +235,6 @@ export default function Hero() {
         </motion.div>
 
         {/* Tagline */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.7 }}
-          className="mt-16 pt-8 border-t border-[#1E1E1E] font-cormorant text-lg text-[#F5F0E8]/25 italic"
-          style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
-        >
-          &ldquo;Beyond Travel. We Curate Dreams.&rdquo;
-        </motion.p>
       </motion.div>
 
       {/* Scroll indicator */}

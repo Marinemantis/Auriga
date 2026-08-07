@@ -36,7 +36,7 @@ const TESTIMONIALS = [
 ];
 
 const WHY_US = [
-  { title: "Award-winning planners",  body: "Over a decade crafting journeys through Pakistan's north. Every itinerary built from experience, not templates." },
+  { title: "Built from experience, not templates", body: "Every itinerary is planned from first-hand knowledge of these valleys, never from a template." },
   { title: "No planning fees",        body: "Our expertise costs you nothing extra. You pay for the trip, not the consultation."                               },
   { title: "No obligation quotes",    body: "Tell us your dream. We'll map it out. No pressure, no commitment until you're ready."                            },
   { title: "24/7 on-ground support",  body: "Our team is in the field, not a call centre. Reachable wherever you are, whenever you need."                     },
@@ -88,7 +88,7 @@ function Hero() {
           initial={{ opacity:0, y:32 }} animate={ready?{opacity:1,y:0}:{}} transition={{ delay:0.3, duration:1, ease:[0.22,1,0.36,1] }}
           className="text-[56px] sm:text-[72px] md:text-[88px] lg:text-[100px] font-light text-white leading-[0.95] mb-6"
           style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}
-        >The luxury<br />travel experts</motion.h1>
+        >Tailor-made journeys<br />through Pakistan's north</motion.h1>
 
         <motion.p
           initial={{ opacity:0, y:16 }} animate={ready?{opacity:1,y:0}:{}} transition={{ delay:0.45, duration:0.8 }}
@@ -100,7 +100,7 @@ function Hero() {
           initial={{ opacity:0, y:16 }} animate={ready?{opacity:1,y:0}:{}} transition={{ delay:0.6, duration:0.8 }}
           className="text-white/65 text-base md:text-lg mb-10 max-w-md mx-auto"
           style={{ fontFamily:"var(--font-inter),sans-serif" }}
-        >Tailor-made journeys through Pakistan's north. Award-winning service.</motion.p>
+        >Hunza, Skardu, Chitral, Deosai — planned around you.</motion.p>
 
         <motion.div
           initial={{ opacity:0, y:14 }} animate={ready?{opacity:1,y:0}:{}} transition={{ delay:0.75, duration:0.8 }}
@@ -172,7 +172,7 @@ function Philosophy() {
               We don't believe in itineraries built from templates. Pakistan's north is too singular, too alive — too full of moments that can't be scheduled. We start with you: your pace, your curiosity, what you want to feel on the other side of the journey.
             </p>
             <p className="text-[#F5F0E8]/35 text-sm leading-relaxed mb-10" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
-              Over a decade of journeys through Hunza, Skardu, Chitral and beyond. No two alike. All extraordinary.
+              Journeys through Hunza, Skardu, Chitral and beyond. No two alike.
             </p>
             <a href="#contact" className="inline-flex items-center gap-3 text-[#F5F0E8] text-[11px] tracking-[0.2em] uppercase font-medium hover:text-[#C8903A] hover:gap-5 transition-all duration-300" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
               Get In Touch
@@ -375,10 +375,10 @@ function WhatWeDo() {
           className="flex flex-col justify-center px-10 md:px-16 lg:px-20 py-20"
         >
           <h2 className="text-[36px] md:text-[44px] font-bold text-[#F5F0E8] leading-tight mb-6 uppercase tracking-tight" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
-            WHAT WE DO<br />AND WHY WE DO IT
+            WHO WE ARE
           </h2>
           <p className="text-[#F5F0E8]/55 text-[15px] leading-relaxed max-w-sm" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
-            Since our founding in 2014, Auriga Ventures has always been about crafting remarkable, tailor-made trips for families, couples, and private groups through Pakistan's extraordinary north. Our founders know this better than anyone.
+            Auriga Ventures crafts remarkable, tailor-made trips for families, couples, and private groups through Pakistan's extraordinary north. Our founders know this better than anyone.
           </p>
         </motion.div>
 
@@ -428,13 +428,12 @@ function WhyUs() {
             </motion.div>
           ))}
         </div>
-        <div className="mt-20 pt-12 border-t border-[#1A1A1A] grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {[{n:"12+",l:"Routes mapped"},{n:"500+",l:"Journeys completed"},{n:"4,700m",l:"Highest camp"}].map(({n,l})=>(
-            <div key={l}>
-              <p className="text-[42px] font-light text-[#F5F0E8] leading-none mb-2" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>{n}</p>
-              <p className="text-[11px] tracking-[0.18em] uppercase text-[#F5F0E8]/30" style={{ fontFamily:"var(--font-inter),sans-serif" }}>{l}</p>
-            </div>
-          ))}
+        {/* Stats band — add verified stats here when available */}
+        <div className="mt-20 pt-12 border-t border-[#1A1A1A] flex justify-center text-center">
+          <div>
+            <p className="text-[42px] font-light text-[#F5F0E8] leading-none mb-2" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>4,700m</p>
+            <p className="text-[11px] tracking-[0.18em] uppercase text-[#F5F0E8]/30" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Highest camp</p>
+          </div>
         </div>
       </div>
     </section>
@@ -475,10 +474,6 @@ function GuideSection() {
             <p className="text-[#F5F0E8]/35 text-sm leading-relaxed mb-10" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
               Luxury in Pakistan is not what you find at a five-star city hotel. It's privacy. It's access. It's a guide who has spent his life learning a place so you can feel it fully in a week.
             </p>
-            <a href="#" className="inline-flex items-center gap-3 text-[#F5F0E8] text-[11px] tracking-[0.2em] uppercase font-medium hover:text-[#C8903A] hover:gap-5 transition-all duration-300" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
-              Continue reading
-              <svg width="20" height="8" viewBox="0 0 20 8" fill="none"><path d="M0 4h18M14 1l4 3-4 3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/></svg>
-            </a>
           </motion.div>
         </div>
       </div>

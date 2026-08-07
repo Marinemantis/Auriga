@@ -17,7 +17,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Auriga Ventures — Beyond Travel. We Curate Dreams.",
+  title: "Auriga Ventures — Tailor-made journeys through Pakistan's north",
   description:
     "Bespoke luxury travel experiences in Pakistan — designed around emotion, intention, and the places that stay with you forever.",
   keywords: "luxury travel Pakistan, Hunza, Skardu, Gilgit, bespoke tours",
