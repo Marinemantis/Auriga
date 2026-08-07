@@ -344,33 +344,6 @@ function DestCarousel() {
   );
 }
 
-/* ══════════════════════════════════════════
-   FULL BLEED
-══════════════════════════════════════════ */
-function FullBleed() {
-  const ref = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({ target:ref, offset:["start end","end start"] });
-  const y = useTransform(scrollYProgress, [0,1], ["-10%","10%"]);
-  return (
-    <section ref={ref} className="relative h-[75vh] overflow-hidden flex items-center justify-center">
-      <motion.div style={{ y }} className="absolute inset-[-10%] will-change-transform">
-        <video
-          autoPlay muted loop playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          src="/fullbleed-hero.mp4"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#080808]/50 via-black/15 to-[#080808]/70" />
-      </motion.div>
-      <div className="relative z-10 text-center px-6">
-        <p className="text-[11px] tracking-[0.5em] uppercase text-white/50 mb-6" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Their future is out there</p>
-        <h2 className="text-[56px] md:text-[80px] lg:text-[96px] font-light text-white leading-[0.95] mb-10" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>Find <em>it.</em></h2>
-        <Link href="/enquire" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-8 py-4 border border-[#C8903A] text-[#C8903A] text-[11px] tracking-[0.25em] uppercase hover:bg-[#C8903A] hover:text-[#080808] transition-all duration-300" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
-          Plan Your Journey
-        </Link>
-      </div>
-    </section>
-  );
-}
 
 /* ══════════════════════════════════════════
    WHAT WE DO — text left, image right, "Watch the film" CTA
@@ -676,7 +649,6 @@ export default function NewHomePage() {
       <Philosophy />
       <Testimonials />
       <DestCarousel />
-      <FullBleed />
       <WhatWeDo />
       <WhyUs />
       <GuideSection />
