@@ -634,10 +634,10 @@ export default function NewHomePage() {
       <Hero />
       <MarqueeStrip />
       <Philosophy />
-      <GuideSection />
       <Testimonials />
       <DestCarousel />
       <WhatWeDo />
+      <GuideSection />
       <WhyUs />
       <Contact />
       <FooterComponent />
