@@ -157,8 +157,8 @@ export default function ContactPage() {
                   {/* Email */}
                   <div className="py-6">
                     <p className="text-[10px] tracking-[0.25em] uppercase text-[#F5F0E8]/30 mb-2" style={{ fontFamily: "var(--font-inter),sans-serif" }}>Email</p>
-                    <a href="mailto:venturesauriga@gmail.com" className="text-[#F5F0E8]/80 hover:text-[#C8903A] transition-colors text-[15px]" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-                      venturesauriga@gmail.com
+                    <a href="mailto:hello@aurigaventure.com" className="text-[#F5F0E8]/80 hover:text-[#C8903A] transition-colors text-[15px]" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
+                      hello@aurigaventure.com
                     </a>
                   </div>
 

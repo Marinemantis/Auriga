@@ -464,7 +464,7 @@ export default function EnquirePage() {
                   {submitError && (
                     <p className="text-red-400/70 text-[11px] mb-4 tracking-wider"
                       style={{ fontFamily: "var(--font-inter), sans-serif" }}>
-                      Something went wrong. Please try again or email us at venturesauriga@gmail.com
+                      Something went wrong. Please try again or email us at hello@aurigaventure.com
                     </p>
                   )}
                   <button type="submit" disabled={submitting}

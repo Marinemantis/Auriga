@@ -38,7 +38,7 @@ export default function SustainabilityPage() {
         {
           heading: "A work in progress",
           body: [
-            "We are a young company and our sustainability practices will keep evolving. If you have feedback on how we can travel more responsibly through these mountains, we would genuinely like to hear it at venturesauriga@gmail.com.",
+            "We are a young company and our sustainability practices will keep evolving. If you have feedback on how we can travel more responsibly through these mountains, we would genuinely like to hear it at hello@aurigaventure.com.",
           ],
         },
       ]}

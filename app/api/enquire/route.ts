@@ -32,7 +32,7 @@ export async function POST(request: Request) {
   try {
     await resend.emails.send({
       from: "Auriga Ventures <onboarding@resend.dev>",
-      to:   "venturesauriga@gmail.com",
+      to:   "hello@aurigaventure.com",
       subject: `Journey Request — ${name}`,
       html: `
         <!DOCTYPE html>

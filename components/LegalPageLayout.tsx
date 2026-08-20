@@ -69,8 +69,8 @@ export default function LegalPageLayout({ eyebrow, title, updated, sections }: P
         <div className="mt-16 pt-8 border-t border-[#1a1a1a]">
           <p className="text-[#F5F0E8]/35 text-sm" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
             Questions about this page? Email us at{" "}
-            <a href="mailto:venturesauriga@gmail.com" className="text-[#C8903A] hover:underline">
-              venturesauriga@gmail.com
+            <a href="mailto:hello@aurigaventure.com" className="text-[#C8903A] hover:underline">
+              hello@aurigaventure.com
             </a>
           </p>
         </div>

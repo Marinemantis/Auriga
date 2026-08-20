@@ -62,7 +62,7 @@ export default function Contact() {
               {[
                 { label: "Address", value: "Hotel Reveria, Riverview Road, Gilgit, Pakistan" },
                 { label: "Phone", value: "+92 333 166 4550" },
-                { label: "Email", value: "venturesauriga@gmail.com" },
+                { label: "Email", value: "hello@aurigaventure.com" },
               ].map((item) => (
                 <div key={item.label}>
                   <p

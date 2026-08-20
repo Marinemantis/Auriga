@@ -45,7 +45,7 @@ export default function PrivacyPolicyPage() {
         {
           heading: "6. Your rights",
           body: [
-            "You may ask us at any time to access, correct, or delete the personal information we hold about you by emailing venturesauriga@gmail.com.",
+            "You may ask us at any time to access, correct, or delete the personal information we hold about you by emailing hello@aurigaventure.com.",
           ],
         },
         {
