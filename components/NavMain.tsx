@@ -43,12 +43,15 @@ export default function NavMain({ darkPage = false }: { darkPage?: boolean }) {
       <div className="max-w-[1320px] mx-auto px-6 lg:px-10 h-[72px] flex items-center justify-between">
 
         {/* Logo */}
-        <Link href="/" className="flex items-baseline gap-1 shrink-0">
-          <span
-            className={`text-[22px] font-semibold tracking-wide transition-colors duration-500 ${light ? "text-[#111]" : "text-white"}`}
-            style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
-          >Auriga</span>
-          <span className="text-[22px] font-light text-[#C8903A]" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>Ventures</span>
+        <Link href="/" className="flex items-center shrink-0" aria-label="Auriga Ventures home">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={light ? "/logo-header-dark.png" : "/logo-header-white.png"}
+            alt="Auriga Ventures"
+            width={1606}
+            height={253}
+            className="h-8 w-auto"
+          />
         </Link>
 
         {/* Desktop nav */}
