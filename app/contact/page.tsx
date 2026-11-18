@@ -182,7 +182,7 @@ export default function ContactPage() {
                     <p className="text-[#F5F0E8]/80 text-[15px] leading-relaxed" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
                       Auriga Ventures (Pvt) Limited<br />
                       River View Road, Chinar Bagh<br />
-                      Gilgit-Baltistan, Pakistan — 15100
+                      Gilgit-Baltistan, Pakistan, 15100
                     </p>
                   </div>
 

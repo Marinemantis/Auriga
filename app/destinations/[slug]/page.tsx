@@ -120,7 +120,7 @@ export default function DestinationPage({ params }: { params: Promise<{ slug: st
                 Must-Visit Valleys
               </p>
               <h2 className="text-[34px] md:text-[44px] font-light text-[#F5F0E8] leading-tight mb-12 max-w-2xl" style={{ fontFamily: "var(--font-cormorant),Georgia,serif" }}>
-                Skardu is not a single destination — it's a collection of breathtaking valleys.
+                Skardu is not a single destination, it's a collection of breathtaking valleys.
               </h2>
             </FadeUp>
             <div className="grid md:grid-cols-3 gap-8 lg:gap-10">

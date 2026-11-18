@@ -121,7 +121,7 @@ export default function About() {
                 className="text-[#F5F0E8]/55 text-lg leading-relaxed mb-10"
                 style={{ fontFamily: "var(--font-inter), sans-serif" }}
               >
-                Every itinerary we craft is built from scratch — around who you
+                Every itinerary we craft is built from scratch, around who you
                 are, how you travel, and what you want to feel. Not a template.
                 Not a shortcut. A conversation.
               </p>
@@ -132,7 +132,7 @@ export default function About() {
                 className="font-cormorant text-xl text-[#F5F0E8]/35 italic border-l-2 border-[#C8903A]/40 pl-6 mb-12"
                 style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}
               >
-                &ldquo;Travel, at its highest form, is more than movement — it
+                &ldquo;Travel, at its highest form, is more than movement, it
                 is emotion in motion.&rdquo;
               </blockquote>
             </FadeUp>

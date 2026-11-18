@@ -130,7 +130,7 @@ function PanelAbout() {
           It's a road trip.
         </h2>
         <p className="text-[#c8d8e8]/50 text-base leading-relaxed mb-4" style={{ fontFamily:"var(--font-dm-mono)" }}>
-          Auriga Ventures curates road journeys through Pakistan's northern mountains — Hunza, Skardu, Chitral, and beyond.
+          Auriga Ventures curates road journeys through Pakistan's northern mountains, Hunza, Skardu, Chitral, and beyond.
           We don't just book trips. We map the routes, time the light, and make sure the car doesn't break down on a pass at 4,700m.
         </p>
         <p className="text-[#c8d8e8]/30 text-sm" style={{ fontFamily:"var(--font-dm-mono)" }}>Small groups. Real roads. No compromises.</p>

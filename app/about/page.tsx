@@ -17,7 +17,7 @@ const TEAM = [
     initials: "SK",
     photo: "/team-sheryar.jpg",
     description:
-      "Raised in Gilgit and Nagar, Sheryar has been navigating the North long before it was on anyone's itinerary. If a road exists — or doesn't yet — he knows how to get you there. Speaks English, Urdu, Shina and Burushaski.",
+      "Raised in Gilgit and Nagar, Sheryar has been navigating the North long before it was on anyone's itinerary. If a road exists, or doesn't yet, he knows how to get you there. Speaks English, Urdu, Shina and Burushaski.",
   },
   {
     name: "Sidra Zeb",
@@ -26,7 +26,7 @@ const TEAM = [
     initials: "SZ",
     photo: "/team-sidra.jpg",
     description:
-      "Raised in the North, exploring it since childhood, Sidra turns first conversations into finished journeys. Whatever you're hoping for from a trip — even if you can't quite describe it yet — it's her job to hear it, and her craft to build it. If it's on your itinerary, she's thought it through. Speaks English, Urdu and Pashto.",
+      "Raised in the North, exploring it since childhood, Sidra turns first conversations into finished journeys. Whatever you're hoping for from a trip, even if you can't quite describe it yet, it's her job to hear it, and her craft to build it. If it's on your itinerary, she's thought it through. Speaks English, Urdu and Pashto.",
   },
   {
     name: "Faizan Khan",
@@ -35,7 +35,7 @@ const TEAM = [
     initials: "FK",
     photo: "/team-faizan.jpg",
     description:
-      "Creative and curious, Faizan translates Pakistan's beauty into narratives that resonate. He ensures the world sees what northern Pakistan truly is — not what it's assumed to be. Speaks English, Urdu, Burushaski and Shina.",
+      "Creative and curious, Faizan translates Pakistan's beauty into narratives that resonate. He ensures the world sees what northern Pakistan truly is, not what it's assumed to be. Speaks English, Urdu, Burushaski and Shina.",
   },
 ];
 
@@ -91,7 +91,7 @@ export default function AboutPage() {
 
           <FadeUp delay={0.7}>
             <p className="text-[#F5F0E8]/55 text-lg max-w-lg leading-relaxed" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-              Tailor-made journeys, designed by friends who&apos;ve been exploring these mountains since childhood.
+              Tailor made journeys, designed by friends who&apos;ve been exploring these mountains since childhood.
             </p>
           </FadeUp>
         </motion.div>
@@ -127,7 +127,7 @@ export default function AboutPage() {
 
               <FadeUp delay={0.3}>
                 <p className="text-[#F5F0E8]/55 text-lg leading-relaxed mb-5" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-                  Auriga Ventures wasn&apos;t born in a boardroom. It began as a group of childhood friends from Gilgit-Baltistan who spent every school holiday doing what we still do today — chasing lakes we&apos;d only heard about, crossing passes before the roads reached them, and coming home with stories nobody down-country would believe.
+                  Auriga Ventures wasn&apos;t born in a boardroom. It began as a group of childhood friends from Gilgit-Baltistan who spent every school holiday doing what we still do today, chasing lakes we&apos;d only heard about, crossing passes before the roads reached them, and coming home with stories nobody down-country would believe.
                 </p>
                 <p className="text-[#F5F0E8]/40 text-base leading-relaxed" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
                   Somewhere along the way, we realised the trips we were taking for ourselves were the trips travellers dream about. So we turned a lifelong habit into a promise: journeys through the North designed by the people who know it best, because we never had to learn it. We lived it.
@@ -196,7 +196,7 @@ export default function AboutPage() {
             </div>
             <FadeUp delay={0.35}>
               <p className="text-[#F5F0E8]/40 text-base leading-relaxed mt-5" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-                Auriga Ventures is powered by a team of people who grew up in these mountains — united by friendship, driven by a shared belief that the North deserves to be shown properly.
+                Auriga Ventures is powered by a team of people who grew up in these mountains, united by friendship, driven by a shared belief that the North deserves to be shown properly.
               </p>
             </FadeUp>
           </div>
@@ -313,7 +313,7 @@ export default function AboutPage() {
 
               <FadeUp delay={0.3}>
                 <p className="text-[#F5F0E8]/55 text-lg leading-relaxed mb-5" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-                  In Roman culture, an <em>auriga</em> was the charioteer — the one trusted with direction and control. It&apos;s also a constellation, home to one of the brightest stars in the northern sky. The same sky, incidentally, that blazes over Deosai on a clear night.
+                  In Roman culture, an <em>auriga</em> was the charioteer: the one trusted with direction and control. It&apos;s also a constellation, home to one of the brightest stars in the northern sky. The same sky, incidentally, that blazes over Deosai on a clear night.
                 </p>
                 <p className="text-[#F5F0E8]/40 text-base leading-relaxed" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
                   We chose the name for what it demands of us: steady hands, clear direction, and journeys guided by something brighter than a checklist.
@@ -399,7 +399,7 @@ export default function AboutPage() {
               &ldquo;Our mission is to create remarkable experiences that thoughtfully connect our clients to the world, inspiring them to explore it with curiosity, humility, and a sense of wonder.&rdquo;
             </p>
             <p className="text-[#F5F0E8]/40 text-base leading-relaxed max-w-xl mx-auto mb-12" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-              We show you our home the way we&apos;d show a friend — with candour about what&apos;s worth the detour, honesty about the rough patches, and genuine pride in what we know is extraordinary. If that&apos;s the kind of journey you&apos;re looking for, you&apos;re already in the right place.
+              We show you our home the way we&apos;d show a friend, with candour about what&apos;s worth the detour, honesty about the rough patches, and genuine pride in what we know is extraordinary. If that&apos;s the kind of journey you&apos;re looking for, you&apos;re already in the right place.
             </p>
           </FadeUp>
 
@@ -420,11 +420,11 @@ export default function AboutPage() {
           <FadeUp delay={0.15}>
             <div className="flex flex-wrap items-center justify-center gap-10 lg:gap-16">
               {[
-                { src: "/logos/secp.png",    alt: "SECP — Securities and Exchange Commission of Pakistan",  h: 56 },
-                { src: "/logos/fbr.png",     alt: "FBR — Federal Board of Revenue",                        h: 36 },
-                { src: "/logos/dots.png",    alt: "Department of Tourist Services — Government of Pakistan", h: 60 },
+                { src: "/logos/secp.png",    alt: "SECP: Securities and Exchange Commission of Pakistan",  h: 56 },
+                { src: "/logos/fbr.png",     alt: "FBR: Federal Board of Revenue",                        h: 36 },
+                { src: "/logos/dots.png",    alt: "Department of Tourist Services: Government of Pakistan", h: 60 },
                 { src: "/logos/visitgb.png", alt: "Visit Gilgit-Baltistan",                                 h: 60 },
-                { src: "/logos/pato.png",    alt: "PATO — Pakistan Association of Tour Operators",          h: 40 },
+                { src: "/logos/pato.png",    alt: "PATO: Pakistan Association of Tour Operators",          h: 40 },
               ].map((logo) => (
                 <img
                   key={logo.src}

@@ -8,7 +8,7 @@ import NavMain from "@/components/NavMain";
 const FAQS: { q: string; a: string }[] = [
   {
     q: "How far in advance should I book?",
-    a: "We recommend booking 2–3 months ahead, especially for travel between May and October when our boutique properties and camps fill quickly. Custom itineraries and last-minute trips can sometimes be arranged with shorter notice — just ask.",
+    a: "We recommend booking 2–3 months ahead, especially for travel between May and October when our boutique properties and camps fill quickly. Custom itineraries and last-minute trips can sometimes be arranged with shorter notice, just ask.",
   },
   {
     q: "What's included in the price?",
@@ -24,19 +24,19 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "What's the best time of year to travel?",
-    a: "Most of our trips run May through October, when mountain roads are clear and weather is most stable. Specific windows vary by trip — check the 'When' field on each tour page for guidance.",
+    a: "Most of our trips run May through October, when mountain roads are clear and weather is most stable. Specific windows vary by trip, check the 'When' field on each tour page for guidance.",
   },
   {
     q: "Can you design a custom itinerary?",
-    a: "Yes — every Auriga journey can be tailored around your dates, group size, pace, and interests. Reach out via the enquiry form on any trip page or our contact page and we'll start designing with you.",
+    a: "Yes, every Auriga journey can be tailored around your dates, group size, pace, and interests. Reach out via the enquiry form on any trip page or our contact page and we'll start designing with you.",
   },
   {
     q: "What is your cancellation policy?",
-    a: "Cancellation terms depend on the specific trip and how close to departure you cancel, since many properties and camps require non-refundable deposits. Full terms are shared with your itinerary agreement before booking — see our Terms & Conditions for an overview.",
+    a: "Cancellation terms depend on the specific trip and how close to departure you cancel, since many properties and camps require non-refundable deposits. Full terms are shared with your itinerary agreement before booking, see our Terms & Conditions for an overview.",
   },
   {
     q: "How do payments work?",
-    a: "Bookings are confirmed with a deposit, with the balance due before departure. We arrange payment directly with you via bank transfer — we do not process card payments on this website.",
+    a: "Bookings are confirmed with a deposit, with the balance due before departure. We arrange payment directly with you via bank transfer, we do not process card payments on this website.",
   },
   {
     q: "Do you arrange group trips or only private journeys?",

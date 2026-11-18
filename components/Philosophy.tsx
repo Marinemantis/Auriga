@@ -21,7 +21,7 @@ const pillars = [
   {
     number: "03",
     title: "Seamless from Start to End",
-    body: "Transfers, permits, guides, meals — every detail is handled before you land. You travel. We handle the rest.",
+    body: "Transfers, permits, guides, meals: every detail is handled before you land. You travel. We handle the rest.",
     image: "https://aurigaventure.com/wp-content/uploads/2014/10/DJI_0122-scaled.jpg",
   },
 ];

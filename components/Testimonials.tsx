@@ -13,7 +13,7 @@ const testimonials = [
   },
   {
     quote:
-      "Auriga Ventures understands that luxury travel is emotional. Every moment felt intentional — serene, exclusive, and effortless. We've traveled extensively, but this was different.",
+      "Auriga Ventures understands that luxury travel is emotional. Every moment felt intentional, serene, exclusive, and effortless. We've traveled extensively, but this was different.",
     name: "Sarah Ibrahim",
     title: "Developer",
   },

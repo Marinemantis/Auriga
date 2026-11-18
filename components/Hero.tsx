@@ -148,7 +148,7 @@ export default function Hero() {
                 {city}
               </span>
               {i < route.length - 1 && (
-                <span className="text-[#C8903A]/20 text-[8px]">—</span>
+                <span className="text-[#C8903A]/20 text-[8px]">·</span>
               )}
             </div>
           ))}
@@ -207,7 +207,7 @@ export default function Hero() {
           className="max-w-xl text-base lg:text-lg text-[#F5F0E8]/50 leading-relaxed mb-12"
           style={{ fontFamily: "var(--font-inter), sans-serif" }}
         >
-          Bespoke luxury travel experiences in Pakistan — designed around
+          Bespoke luxury travel experiences in Pakistan, designed around
           emotion, intention, and the places that stay with you forever.
         </motion.p>
 

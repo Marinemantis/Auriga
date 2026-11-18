@@ -10,7 +10,7 @@ const destinations = [
   "Rakaposhi Basecamp",
   "Chitral",
   "Astore Valley",
-  "Not sure yet — help me choose",
+  "Not sure yet, help me choose",
 ];
 
 export default function Contact() {
@@ -53,7 +53,7 @@ export default function Contact() {
               className="text-[#F5F0E8]/55 text-base leading-relaxed mb-12"
               style={{ fontFamily: "var(--font-inter), sans-serif" }}
             >
-              Tell us where you want to go — or tell us how you want to feel.
+              Tell us where you want to go, or tell us how you want to feel.
               We&apos;ll handle the rest.
             </p>
 
@@ -182,7 +182,7 @@ export default function Contact() {
                   <textarea
                     id="message"
                     rows={5}
-                    placeholder="Tell us about your ideal journey — when, how many people, what you're looking for…"
+                    placeholder="Tell us about your ideal journey, when, how many people, what you're looking for…"
                     className="w-full bg-[#0F0F0F] border border-[#222222] focus:border-[#C8903A]/50 text-[#F5F0E8] placeholder-[#F5F0E8]/20 px-4 py-3.5 text-sm outline-none transition-colors duration-300 resize-none"
                     style={{ fontFamily: "var(--font-inter), sans-serif" }}
                   />

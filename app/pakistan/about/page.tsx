@@ -9,7 +9,7 @@ import Logo from "@/components/Logo";
 const REGIONS = [
   {
     name: "Gilgit-Baltistan",
-    description: "Home to five of the world's fourteen 8,000-metre peaks — including K2, the savage mountain — and the confluence of three of Earth's greatest mountain ranges: the Karakoram, Himalayas, and Hindu Kush.",
+    description: "Home to five of the world's fourteen 8,000-metre peaks, including K2, the savage mountain, and the confluence of three of Earth's greatest mountain ranges: the Karakoram, Himalayas, and Hindu Kush.",
     highlights: ["K2 (8,611m)", "Hunza Valley", "Skardu", "Fairy Meadows"],
   },
   {
@@ -19,7 +19,7 @@ const REGIONS = [
   },
   {
     name: "Punjab",
-    description: "The heartland of Pakistan — a vast, fertile plain watered by five mighty rivers, home to Mughal masterpieces, Sufi shrines, and some of the world's most vibrant bazaars.",
+    description: "The heartland of Pakistan: a vast, fertile plain watered by five mighty rivers, home to Mughal masterpieces, Sufi shrines, and some of the world's most vibrant bazaars.",
     highlights: ["Lahore", "Badshahi Mosque", "Shalimar Gardens", "Mohenjo-daro"],
   },
   {
@@ -29,7 +29,7 @@ const REGIONS = [
   },
   {
     name: "Balochistan",
-    description: "Pakistan's largest and least explored province — a vast plateau of dramatic desert landscapes, ancient caravan routes, turquoise coastline, and proud tribal culture.",
+    description: "Pakistan's largest and least explored province, a vast plateau of dramatic desert landscapes, ancient caravan routes, turquoise coastline, and proud tribal culture.",
     highlights: ["Quetta", "Makran Coastal Highway", "Hingol National Park", "Gwadar"],
   },
   {
@@ -52,7 +52,7 @@ const SEASONS = [
   {
     season: "Spring",
     months: "March – May",
-    description: "Valleys burst into blossom. Cherry and apricot orchards flower across Hunza and Chitral. Temperatures are mild and skies are clear — ideal for cultural travel and moderate trekking.",
+    description: "Valleys burst into blossom. Cherry and apricot orchards flower across Hunza and Chitral. Temperatures are mild and skies are clear, ideal for cultural travel and moderate trekking.",
     rating: "Excellent",
   },
   {
@@ -64,13 +64,13 @@ const SEASONS = [
   {
     season: "Autumn",
     months: "September – November",
-    description: "Golden light floods the valleys as poplar trees turn amber and crimson. The finest photography season. Trails remain open and crowds thin — the connoisseur's choice.",
+    description: "Golden light floods the valleys as poplar trees turn amber and crimson. The finest photography season. Trails remain open and crowds thin, the connoisseur's choice.",
     rating: "Excellent",
   },
   {
     season: "Winter",
     months: "December – February",
-    description: "High passes close under snow. The south — Lahore, Karachi, Sindh — is at its most comfortable. Kalash winter festivals ignite Chitral with colour and ceremony.",
+    description: "High passes close under snow. The south, Lahore, Karachi, Sindh, is at its most comfortable. Kalash winter festivals ignite Chitral with colour and ceremony.",
     rating: "South only",
   },
 ];
@@ -127,7 +127,7 @@ export default function AboutPakistanPage() {
           </div>
           <motion.p initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8, duration: 0.7 }}
             className="text-[#F5F0E8]/50 text-base md:text-lg mt-6 max-w-xl" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-            Where ancient civilisations meet the world's greatest mountains — a destination unlike any other on Earth.
+            Where ancient civilisations meet the world's greatest mountains, a destination unlike any other on Earth.
           </motion.p>
         </div>
       </section>
@@ -156,10 +156,10 @@ export default function AboutPakistanPage() {
                 The world's last great<br /><em>travel secret.</em>
               </h2>
               <p className="text-[#F5F0E8]/55 text-[15px] leading-relaxed mb-5" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-                Pakistan is home to the greatest concentration of high mountains on Earth. Three of the world's most formidable mountain ranges — the Karakoram, the Himalayas, and the Hindu Kush — converge on its northern territories, creating landscapes of such scale and drama that they defy description.
+                Pakistan is home to the greatest concentration of high mountains on Earth. Three of the world's most formidable mountain ranges, the Karakoram, the Himalayas, and the Hindu Kush, converge on its northern territories, creating landscapes of such scale and drama that they defy description.
               </p>
               <p className="text-[#F5F0E8]/40 text-[14px] leading-relaxed mb-8" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-                Beyond the mountains, Pakistan holds 5,000 years of continuous civilisation — the ruins of Mohenjo-daro and Harappa among the oldest cities ever discovered. The Mughal Empire left its finest monuments here. The Silk Road passed through its valleys. Dozens of distinct cultures, languages, and traditions coexist across a land of breathtaking variety.
+                Beyond the mountains, Pakistan holds 5,000 years of continuous civilisation, the ruins of Mohenjo-daro and Harappa among the oldest cities ever discovered. The Mughal Empire left its finest monuments here. The Silk Road passed through its valleys. Dozens of distinct cultures, languages, and traditions coexist across a land of breathtaking variety.
               </p>
               <Link href="/enquire" target="_blank" rel="noopener noreferrer"
                 className="inline-block px-8 py-4 bg-[#C8903A] text-[#080808] text-[11px] tracking-[0.25em] uppercase font-semibold hover:bg-[#d4a34d] transition-colors duration-300"
@@ -235,10 +235,10 @@ export default function AboutPakistanPage() {
                 Among the world's<br /><em>most welcoming people.</em>
               </h2>
               <p className="text-[#F5F0E8]/55 text-[15px] leading-relaxed mb-5" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-                Pakistan's reputation for hospitality is not a travel cliché — it is a lived reality. Across all regions, guests are received with warmth, generosity, and genuine curiosity. The tradition of <em>mehmaan-nawazi</em> — the sacred duty of honouring one's guest — is woven into the fabric of daily life.
+                Pakistan's reputation for hospitality is not a travel cliché, it is a lived reality. Across all regions, guests are received with warmth, generosity, and genuine curiosity. The tradition of <em>mehmaan-nawazi</em>, the sacred duty of honouring one's guest, is woven into the fabric of daily life.
               </p>
               <p className="text-[#F5F0E8]/40 text-[14px] leading-relaxed mb-5" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-                Over 220 million people speak more than 70 languages across Pakistan, from Urdu and Punjabi to Burushaski — a language so ancient and so isolated it has no known relatives anywhere on Earth. The Kalash of Chitral preserve traditions that predate Islam by millennia. The Baloch, Pashtun, Sindhi, and Balti peoples each carry distinct identities, art forms, music, and culinary traditions.
+                Over 220 million people speak more than 70 languages across Pakistan, from Urdu and Punjabi to Burushaski, a language so ancient and so isolated it has no known relatives anywhere on Earth. The Kalash of Chitral preserve traditions that predate Islam by millennia. The Baloch, Pashtun, Sindhi, and Balti peoples each carry distinct identities, art forms, music, and culinary traditions.
               </p>
               <p className="text-[#F5F0E8]/40 text-[14px] leading-relaxed" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
                 Islam is the predominant faith, observed with quiet devotion across most of the country. The call to prayer five times daily is a constant, beautiful rhythm of life in every city and village.
@@ -265,7 +265,7 @@ export default function AboutPakistanPage() {
             Pakistan is waiting<br /><em>for you.</em>
           </h2>
           <p className="text-[#F5F0E8]/45 text-[15px] leading-relaxed mb-10 max-w-lg mx-auto" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-            Let Auriga Ventures design your journey — bespoke, unhurried, and unlike anything you have experienced before.
+            Let Auriga Ventures design your journey, bespoke, unhurried, and unlike anything you have experienced before.
           </p>
           <Link href="/enquire" target="_blank" rel="noopener noreferrer"
             className="inline-block px-10 py-4 bg-[#C8903A] text-[#080808] text-[11px] tracking-[0.3em] uppercase font-semibold hover:bg-[#d4a34d] transition-colors duration-300"

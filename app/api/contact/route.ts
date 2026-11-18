@@ -11,7 +11,7 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from:    "Auriga Ventures <onboarding@resend.dev>",
       to:      "hello@aurigaventure.com",
-      subject: `New Enquiry — ${firstName} ${lastName}`,
+      subject: `New Enquiry: ${firstName} ${lastName}`,
       html: `
         <!DOCTYPE html>
         <html>
@@ -70,7 +70,7 @@ export async function POST(request: Request) {
   await pushToGHL({
     name:             `${firstName} ${lastName}`.trim(),
     email,
-    opportunityTitle: `Website Enquiry — ${firstName} ${lastName}`.trim(),
+    opportunityTitle: `Website Enquiry: ${firstName} ${lastName}`.trim(),
     notes:            `Destination: ${destination || "Not specified"} | Message: ${message || "None"}`,
   });
 

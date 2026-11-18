@@ -18,7 +18,7 @@ const DESTINATIONS = [
     region: "Karakoram · Gilgit-Baltistan",
     image: "/dest-hunza.jpg",
     excerpt:
-      "Nestled among the majestic Karakoram peaks, Hunza represents harmony between nature and community. Crystal-clear lakes, royal forts, and the ancient Silk Road — every journey reflects the valley's vision of natural preservation and cultural pride.",
+      "Nestled among the majestic Karakoram peaks, Hunza represents harmony between nature and community. Crystal-clear lakes, royal forts, and the ancient Silk Road, every journey reflects the valley's vision of natural preservation and cultural pride.",
     highlights: ["Baltit & Altit Forts", "Attabad Lake", "Passu Cones", "Khunjerab Pass"],
     pillars: ["Curated Retreats", "Adventure with Elegance", "Cultural Immersion"],
   },
@@ -29,7 +29,7 @@ const DESTINATIONS = [
     region: "Ghizer Valley · Gilgit-Baltistan",
     image: "/dest-phunder.jpg",
     excerpt:
-      "One of northern Pakistan's most serene destinations, Ghizer Valley unfolds across emerald meadows, glacier rivers, and the legendary Phunder Lake — celebrated for its mirror-like reflections and breathtaking mountain backdrop.",
+      "One of northern Pakistan's most serene destinations, Ghizer Valley unfolds across emerald meadows, glacier rivers, and the legendary Phunder Lake, celebrated for its mirror-like reflections and breathtaking mountain backdrop.",
     highlights: ["Phunder Lake", "Shandur Pass", "Yasin Valley", "Khukush Lake"],
     pillars: ["Luxury Retreats", "Glamping & Kayaking", "Cultural Immersion"],
   },
@@ -40,7 +40,7 @@ const DESTINATIONS = [
     region: "Baltistan · Karakoram",
     image: "/dest-skardu.jpg",
     excerpt:
-      "Set between the Karakoram and Himalayan ranges, Skardu is the gateway to iconic peaks, pristine alpine lakes, and heritage valleys that feel frozen in time — adventurous and indulgent in equal measure.",
+      "Set between the Karakoram and Himalayan ranges, Skardu is the gateway to iconic peaks, pristine alpine lakes, and heritage valleys that feel frozen in time, adventurous and indulgent in equal measure.",
     highlights: ["Shigar Valley", "Khaplu Palace", "Kachura Lakes", "Cold Desert"],
     pillars: ["Heritage Stays", "Wilderness Exploration", "Royal Heritage"],
   },
@@ -51,7 +51,7 @@ const DESTINATIONS = [
     region: "Hindu Kush · Khyber Pakhtunkhwa",
     image: "/dest-chitral.jpg",
     excerpt:
-      "Framed by the towering Hindu Kush including Tirich Mir (7,708m), Chitral is home to the ancient Kalash civilisation — one of the world's most unique indigenous cultures — alongside natural hot springs and legendary polo grounds.",
+      "Framed by the towering Hindu Kush including Tirich Mir (7,708m), Chitral is home to the ancient Kalash civilisation, one of the world's most unique indigenous cultures, alongside natural hot springs and legendary polo grounds.",
     highlights: ["Kalash Valleys", "Shandur Polo Ground", "Garam Chashma", "Tirich Mir"],
     pillars: ["Curated Retreats", "Adventure with Elegance", "Cultural Immersion"],
   },
@@ -62,7 +62,7 @@ const DESTINATIONS = [
     region: "Himalaya · Gilgit-Baltistan",
     image: "/dest-astore.jpg",
     excerpt:
-      "Encircled by Nanga Parbat (8,126m), Astore Valley unfolds across alpine meadows, dense pine forests, and glacial rivers. From the iconic Rama Lake to the wildflower plateaus of Minimarg — this is northern Pakistan at its most raw.",
+      "Encircled by Nanga Parbat (8,126m), Astore Valley unfolds across alpine meadows, dense pine forests, and glacial rivers. From the iconic Rama Lake to the wildflower plateaus of Minimarg, this is northern Pakistan at its most raw.",
     highlights: ["Rama Lake", "Rupal Valley Face", "Minimarg Plateau", "Rakaposhi Trek"],
     pillars: ["Curated Retreats", "Alpine Trekking", "Wilderness Camps"],
   },
@@ -271,7 +271,7 @@ export default function DestinationsPage() {
                 className="text-[#F5F0E8]/45 text-[14px] max-w-md mx-auto leading-relaxed"
                 style={{ fontFamily: "var(--font-inter),sans-serif" }}
               >
-                A simple guide to Gilgit-Baltistan and Khyber Pakhtunkhwa — the mountain region where every Auriga journey unfolds.
+                A simple guide to Gilgit-Baltistan and Khyber Pakhtunkhwa, the mountain region where every Auriga journey unfolds.
               </p>
             </div>
           </FadeUp>
@@ -299,7 +299,7 @@ export default function DestinationsPage() {
                 className="text-[#F5F0E8]/55 text-[15px] leading-relaxed"
                 style={{ fontFamily: "var(--font-inter),sans-serif" }}
               >
-                Northern Pakistan is not one place — it is a collection of worlds. From the royal grandeur of Hunza to the raw wilderness of Astore, each destination carries its own identity, its own silence, its own way of changing you.
+                Northern Pakistan is not one place, it is a collection of worlds. From the royal grandeur of Hunza to the raw wilderness of Astore, each destination carries its own identity, its own silence, its own way of changing you.
               </p>
             </div>
           </div>
@@ -349,7 +349,7 @@ export default function DestinationsPage() {
               </h2>
               <p className="text-[12px] text-[#F5F0E8]/50 leading-relaxed mb-5 max-w-md"
                 style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-                Nestled among the Karakoram peaks, Hunza represents harmony between nature and community. Baltit Fort, Attabad Lake, Passu Cones — every hour delivers a new revelation.
+                Nestled among the Karakoram peaks, Hunza represents harmony between nature and community. Baltit Fort, Attabad Lake, Passu Cones, every hour delivers a new revelation.
               </p>
               <div className="flex flex-wrap gap-2 mb-5">
                 {["Baltit & Altit Forts", "Attabad Lake", "Passu Cones", "Khunjerab Pass (4,700m)"].map(h => (
@@ -405,7 +405,7 @@ export default function DestinationsPage() {
               </h2>
               <p className="text-[12px] text-[#F5F0E8]/50 leading-relaxed mb-5"
                 style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-                Crystal-clear Phunder Lake, Shandur Pass — the Roof of the World — and the hidden sanctuary of Khukush Lake.
+                Crystal-clear Phunder Lake, Shandur Pass, the Roof of the World, and the hidden sanctuary of Khukush Lake.
               </p>
               <div className="flex flex-wrap gap-2 mb-5">
                 {["Phunder Lake", "Shandur Pass 3,700m", "Yasin Valley"].map(h => (
@@ -434,7 +434,7 @@ export default function DestinationsPage() {
               region: "Baltistan · Karakoram",
               subtitle: "Heart of Gilgit-Baltistan",
               name: "Skardu Valley",
-              excerpt: "Gateway to iconic peaks and heritage valleys — adventurous and indulgent in equal measure.",
+              excerpt: "Gateway to iconic peaks and heritage valleys, adventurous and indulgent in equal measure.",
               tags: ["Shigar Valley", "Khaplu Palace", "Kachura Lakes"],
               label: "Discover Skardu",
             },
@@ -464,7 +464,7 @@ export default function DestinationsPage() {
               region: "Nagar · Karakoram",
               subtitle: "The Karakoram's Hidden Giant",
               name: "Nagar Valley",
-              excerpt: "Beneath Rakaposhi and Diran Peak — glacier treks, alpine basecamps, and Karakoram wilderness at its most raw.",
+              excerpt: "Beneath Rakaposhi and Diran Peak, glacier treks, alpine basecamps, and Karakoram wilderness at its most raw.",
               tags: ["Rakaposhi Basecamp", "Hoper Glacier", "Michar Kho Valley"],
               label: "Discover Nagar",
             },
@@ -551,7 +551,7 @@ export default function DestinationsPage() {
               {
                 number: "01",
                 title: "Curated Retreats",
-                body: "Handpicked boutique lodges and mountain resorts set against panoramic Karakoram views. Traditional character with elevated modern comfort — every stay chosen for setting, soul, and service.",
+                body: "Handpicked boutique lodges and mountain resorts set against panoramic Karakoram views. Traditional character with elevated modern comfort, every stay chosen for setting, soul, and service.",
               },
               {
                 number: "02",
@@ -600,7 +600,7 @@ export default function DestinationsPage() {
           <FadeUp delay={0.2}>
             <p className="text-[#F5F0E8]/40 text-[14px] mb-10 max-w-md mx-auto leading-relaxed"
               style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-              Tell us where you feel drawn. Our advisors will design a bespoke journey around it — tailored to your dates, pace, and idea of luxury.
+              Tell us where you feel drawn. Our advisors will design a bespoke journey around it, tailored to your dates, pace, and idea of luxury.
             </p>
           </FadeUp>
           <FadeUp delay={0.3}>

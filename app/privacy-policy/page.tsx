@@ -12,21 +12,21 @@ export default function PrivacyPolicyPage() {
         {
           heading: "1. Information we collect",
           body: [
-            "When you enquire about a journey, contact us, or fill in a booking form, we collect the information you provide directly — typically your name, email address, phone number, travel dates, and any details about your trip preferences.",
+            "When you enquire about a journey, contact us, or fill in a booking form, we collect the information you provide directly, typically your name, email address, phone number, travel dates, and any details about your trip preferences.",
             "We do not collect payment card details on this website. Any deposits or payments are arranged directly with our team via bank transfer or another method you agree to.",
           ],
         },
         {
           heading: "2. How we use your information",
           body: [
-            "We use the information you share to respond to enquiries, design and confirm itineraries, communicate about your booking, and — only with your consent — send occasional updates about new journeys.",
+            "We use the information you share to respond to enquiries, design and confirm itineraries, communicate about your booking, and, only with your consent, send occasional updates about new journeys.",
             "We never sell your personal information to third parties.",
           ],
         },
         {
           heading: "3. Sharing with third parties",
           body: [
-            "To deliver your trip, we may share relevant details (such as your name and travel dates) with trusted local partners — hotels, drivers, and guides — strictly for the purpose of fulfilling your booking.",
+            "To deliver your trip, we may share relevant details (such as your name and travel dates) with trusted local partners, hotels, drivers, and guides, strictly for the purpose of fulfilling your booking.",
             "We may also use third-party services such as WhatsApp Business and email providers to communicate with you, and analytics tools to understand how visitors use this website.",
           ],
         },

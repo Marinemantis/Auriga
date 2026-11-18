@@ -13,7 +13,7 @@ const FESTIVALS = [
     month: "May",
     location: "Kalash Valleys, Chitral",
     duration: "3 days",
-    description: "The most celebrated of the Kalash festivals, Chilam Joshi marks the arrival of spring with three days of dancing, music, ritual purification, and offerings of milk to the gods. Women in their spectacular hand-embroidered black robes and elaborate headdresses fill the valley with colour and song. This is one of the most extraordinary cultural spectacles anywhere in South Asia — and one of the rarest, preserved by a community of just a few thousand people.",
+    description: "The most celebrated of the Kalash festivals, Chilam Joshi marks the arrival of spring with three days of dancing, music, ritual purification, and offerings of milk to the gods. Women in their spectacular hand-embroidered black robes and elaborate headdresses fill the valley with colour and song. This is one of the most extraordinary cultural spectacles anywhere in South Asia, and one of the rarest, preserved by a community of just a few thousand people.",
     highlights: ["Traditional Kalash dance and music", "Ritual purification ceremonies", "Intricate traditional dress and jewellery", "Community feasting and offerings"],
     image: "/fest-chilam-joshi.jpg",
     tag: "Cultural",
@@ -24,8 +24,8 @@ const FESTIVALS = [
     month: "July",
     location: "Shandur Pass, Chitral / Ghizer",
     duration: "3 days",
-    description: "Every July, two teams from Gilgit and Chitral take to the world's highest polo ground at 3,734 metres, continuing a rivalry that stretches back centuries. This is polo in its original, untamed form — no helmets, no rules, just horsemanship at its rawest and most spectacular. The festival also features music, folk dancing, and the chance to experience one of Pakistan's most remote high plateaus alive with celebration.",
-    highlights: ["Free-style traditional polo matches", "Gilgit vs Chitral rivalry — centuries old", "Folk music and traditional dance", "3,734m — spectacular mountain setting"],
+    description: "Every July, two teams from Gilgit and Chitral take to the world's highest polo ground at 3,734 metres, continuing a rivalry that stretches back centuries. This is polo in its original, untamed form, no helmets, no rules, just horsemanship at its rawest and most spectacular. The festival also features music, folk dancing, and the chance to experience one of Pakistan's most remote high plateaus alive with celebration.",
+    highlights: ["Free-style traditional polo matches", "Gilgit vs Chitral rivalry: centuries old", "Folk music and traditional dance", "3,734m: spectacular mountain setting"],
     image: "/fest-shandur-polo.jpg",
     tag: "Sport & Culture",
   },
@@ -35,19 +35,19 @@ const FESTIVALS = [
     month: "March – April",
     location: "Hunza Valley, Gilgit-Baltistan",
     duration: "Multiple weeks",
-    description: "For a few magical weeks each spring, the entire Hunza Valley transforms into a canvas of pink and white as cherry, apricot, and peach orchards burst into blossom against the backdrop of snow-capped Karakoram peaks. Local festivals, cultural programmes, and guided blossom walks celebrate the season's arrival. This is one of the most photographed spectacles in Pakistan — and one of the most emotionally affecting.",
+    description: "For a few magical weeks each spring, the entire Hunza Valley transforms into a canvas of pink and white as cherry, apricot, and peach orchards burst into blossom against the backdrop of snow-capped Karakoram peaks. Local festivals, cultural programmes, and guided blossom walks celebrate the season's arrival. This is one of the most photographed spectacles in Pakistan, and one of the most emotionally affecting.",
     highlights: ["Cherry and apricot orchards in full bloom", "Cultural programmes and local music", "Guided orchard walks with local families", "Dramatic backdrop of Rakaposhi and Ultar Sar"],
     image: "/fest-hunza-blossom.jpg",
     tag: "Nature & Culture",
   },
   {
-    name: "Choimus — Kalash Winter Festival",
+    name: "Choimus: Kalash Winter Festival",
     subtitle: "The Longest Kalash Celebration",
     month: "December",
     location: "Kalash Valleys, Chitral",
     duration: "15 days",
-    description: "The grandest of all Kalash festivals, Choimus is a two-week winter celebration involving elaborate purification rituals, the slaughter of goats as offerings, ceremonial bonfires, dancing through the night, and the welcoming of ancestral spirits back into the community. It is a festival of extraordinary spiritual depth, celebrated by one of the world's most unique indigenous communities — and increasingly recognised as a precious piece of living human heritage.",
-    highlights: ["15-day festival — longest Kalash celebration", "Ceremonial bonfires and night dancing", "Ancestral spirit welcoming rituals", "Community feasting and sacrifice"],
+    description: "The grandest of all Kalash festivals, Choimus is a two-week winter celebration involving elaborate purification rituals, the slaughter of goats as offerings, ceremonial bonfires, dancing through the night, and the welcoming of ancestral spirits back into the community. It is a festival of extraordinary spiritual depth, celebrated by one of the world's most unique indigenous communities, and increasingly recognised as a precious piece of living human heritage.",
+    highlights: ["15-day festival: longest Kalash celebration", "Ceremonial bonfires and night dancing", "Ancestral spirit welcoming rituals", "Community feasting and sacrifice"],
     image: "/fest-choimus.jpg",
     tag: "Cultural",
   },
@@ -69,7 +69,7 @@ const FESTIVALS = [
     location: "Madaklasht, Chitral",
     duration: "3 days",
     description: "Set against the backdrop of the Hindu Kush in the remote Madaklasht Valley near Chitral, this winter festival celebrates the season's harshest months with ski competitions, snow sports, traditional music, and cultural programmes. It brings together the mountain communities of Chitral in one of the most scenically dramatic winter settings in Pakistan.",
-    highlights: ["Snow sports and ski competitions", "Traditional Chitrali music and dance", "Madaklasht Valley — dramatic Hindu Kush setting", "February — deep winter atmosphere"],
+    highlights: ["Snow sports and ski competitions", "Traditional Chitrali music and dance", "Madaklasht Valley: dramatic Hindu Kush setting", "February: deep winter atmosphere"],
     image: "/fest-hindukush.jpg",
     tag: "Sport & Culture",
   },
@@ -79,8 +79,8 @@ const FESTIVALS = [
     month: "October",
     location: "Shimshal Valley, Gilgit-Baltistan",
     duration: "2 days",
-    description: "One of Pakistan's most remote and authentic cultural festivals, the Shimshal Kuch celebrates the return of herders and their yaks from the high summer pastures. The valley erupts in music, dancing, and communal celebration as the animals are brought back down from some of the highest grazing grounds in the world. Reaching Shimshal requires a dedicated journey — which only adds to the festival's rare, unspoiled character.",
-    highlights: ["Return of yak herds from high-altitude pastures", "Traditional Wakhi music and dance", "Remote valley — genuine community festival", "One of Pakistan's most authentic cultural events"],
+    description: "One of Pakistan's most remote and authentic cultural festivals, the Shimshal Kuch celebrates the return of herders and their yaks from the high summer pastures. The valley erupts in music, dancing, and communal celebration as the animals are brought back down from some of the highest grazing grounds in the world. Reaching Shimshal requires a dedicated journey, which only adds to the festival's rare, unspoiled character.",
+    highlights: ["Return of yak herds from high-altitude pastures", "Traditional Wakhi music and dance", "Remote valley: genuine community festival", "One of Pakistan's most authentic cultural events"],
     image: "/fest-shimshal.jpg",
     tag: "Cultural",
   },
@@ -90,8 +90,8 @@ const FESTIVALS = [
     month: "October – November",
     location: "Islamabad",
     duration: "5 days",
-    description: "Pakistan's premier national folk festival, held annually in Islamabad, brings together artisans, musicians, dancers, and storytellers from every province and community. It is the most accessible and comprehensive window into Pakistan's extraordinary cultural diversity — a single location where the embroidery of Sindh, the woodcarving of Swat, the truck art of Punjab, and the music of Balochistan all exist in one glorious, loud, and joyful celebration.",
-    highlights: ["All-Pakistan cultural representation", "Traditional crafts, textiles, and food", "Music and dance from every province", "Accessible from Islamabad — ideal for new visitors"],
+    description: "Pakistan's premier national folk festival, held annually in Islamabad, brings together artisans, musicians, dancers, and storytellers from every province and community. It is the most accessible and comprehensive window into Pakistan's extraordinary cultural diversity, a single location where the embroidery of Sindh, the woodcarving of Swat, the truck art of Punjab, and the music of Balochistan all exist in one glorious, loud, and joyful celebration.",
+    highlights: ["All-Pakistan cultural representation", "Traditional crafts, textiles, and food", "Music and dance from every province", "Accessible from Islamabad: ideal for new visitors"],
     image: "/fest-lok-mela.jpg",
     tag: "National Festival",
   },
@@ -149,7 +149,7 @@ export default function FestivalsPage() {
           </div>
           <motion.p initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8 }}
             className="text-[#F5F0E8]/50 text-base md:text-lg mt-6 max-w-xl" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-            From ancient Kalash ceremonies to high-altitude polo on the world's greatest playing field — Pakistan's festivals are unlike anything else on Earth.
+            From ancient Kalash ceremonies to high-altitude polo on the world's greatest playing field, Pakistan's festivals are unlike anything else on Earth.
           </motion.p>
         </div>
       </section>
@@ -185,7 +185,7 @@ export default function FestivalsPage() {
                 viewport={{ once: true, margin: "-40px" }} transition={{ delay: i * 0.07, duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
                 className="bg-[#0e0e0e] border border-[#1a1a1a] overflow-hidden hover:border-[#C8903A]/30 transition-colors duration-500">
                 <div className="relative overflow-hidden" style={{ aspectRatio: "16/9" }}>
-                  <Image src={festival.image} alt={`${festival.name} — ${festival.location}`} fill className="object-cover transition-transform duration-700 hover:scale-[1.04]" sizes="(max-width: 768px) 100vw, 50vw" />
+                  <Image src={festival.image} alt={`${festival.name}: ${festival.location}`} fill className="object-cover transition-transform duration-700 hover:scale-[1.04]" sizes="(max-width: 768px) 100vw, 50vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0e0e0e]/90 via-[#0e0e0e]/20 to-transparent" />
                   <div className="absolute top-4 left-4 flex gap-2">
                     <span className="text-[8px] tracking-[0.3em] uppercase text-[#C8903A] bg-[#080808]/80 px-3 py-1.5" style={{ fontFamily: "var(--font-inter),sans-serif" }}>{festival.tag}</span>
@@ -227,7 +227,7 @@ export default function FestivalsPage() {
             Experience a festival<br /><em>with Auriga.</em>
           </h2>
           <p className="text-[#F5F0E8]/45 text-[15px] leading-relaxed mb-10 max-w-lg mx-auto" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-            We design bespoke journeys timed to coincide with Pakistan's most extraordinary cultural events — so you don't just visit a festival, you experience it from the inside.
+            We design bespoke journeys timed to coincide with Pakistan's most extraordinary cultural events, so you don't just visit a festival, you experience it from the inside.
           </p>
           <Link href="/enquire" target="_blank" rel="noopener noreferrer"
             className="inline-block px-10 py-4 bg-[#C8903A] text-[#080808] text-[11px] tracking-[0.3em] uppercase font-semibold hover:bg-[#d4a34d] transition-colors duration-300"

@@ -11,7 +11,7 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from:    "Auriga Ventures <onboarding@resend.dev>",
       to:      "hello@aurigaventure.com",
-      subject: `Contact: ${subject || "New Message"} — ${name}`,
+      subject: `Contact: ${subject || "New Message"}: ${name}`,
       html: `
         <!DOCTYPE html>
         <html>
@@ -61,7 +61,7 @@ export async function POST(request: Request) {
     name,
     email,
     phone,
-    opportunityTitle: `Contact — ${name}`,
+    opportunityTitle: `Contact: ${name}`,
     notes:            `Subject: ${subject || "General"} | Message: ${message}`,
   });
 

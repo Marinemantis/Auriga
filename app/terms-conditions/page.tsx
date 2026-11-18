@@ -19,7 +19,7 @@ export default function TermsConditionsPage() {
           heading: "2. Pricing",
           body: [
             "Prices shown on this website are starting prices per person and exclude international flights. Final pricing depends on group size, travel dates, property selection, and seasonal availability, and will be confirmed in writing before booking.",
-            "Prices displayed in currencies other than USD are estimates converted at live exchange rates for your convenience — your invoice will state the exact amount due.",
+            "Prices displayed in currencies other than USD are estimates converted at live exchange rates for your convenience, your invoice will state the exact amount due.",
           ],
         },
         {
@@ -39,7 +39,7 @@ export default function TermsConditionsPage() {
         {
           heading: "5. Changes to itineraries",
           body: [
-            "Northern Pakistan's mountain roads and weather can change quickly. We reserve the right to amend an itinerary — including routes, accommodation, or activities — where necessary for your safety, and will always seek an equivalent or better alternative.",
+            "Northern Pakistan's mountain roads and weather can change quickly. We reserve the right to amend an itinerary, including routes, accommodation, or activities, where necessary for your safety, and will always seek an equivalent or better alternative.",
           ],
         },
         {

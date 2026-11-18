@@ -25,14 +25,14 @@ export default function SustainabilityPage() {
         {
           heading: "Leave no trace",
           body: [
-            "Our camps and glamping setups are designed to be fully removed after each stay, with all waste packed out — including at remote sites like Khukush Lake and Deosai National Park.",
+            "Our camps and glamping setups are designed to be fully removed after each stay, with all waste packed out, including at remote sites like Khukush Lake and Deosai National Park.",
             "We brief every traveller on responsible behaviour around wildlife, water sources, and culturally sensitive sites before departure.",
           ],
         },
         {
           heading: "Preserving culture",
           body: [
-            "From the Kalash valleys of Chitral to the forts of Hunza and Skardu, we treat cultural encounters as exchanges, not performances — working with communities on their terms and ensuring fair compensation for any cultural experience included in your trip.",
+            "From the Kalash valleys of Chitral to the forts of Hunza and Skardu, we treat cultural encounters as exchanges, not performances, working with communities on their terms and ensuring fair compensation for any cultural experience included in your trip.",
           ],
         },
         {

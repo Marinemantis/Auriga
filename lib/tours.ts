@@ -29,7 +29,7 @@ export const TOURS: Tour[] = [
     slug: "last-paradise",
     name: "The Last Paradise",
     region: "Hunza & Skardu",
-    tagline: "Twelve days across Pakistan's most iconic mountain realms — Skardu, Deosai, Gilgit, and Hunza.",
+    tagline: "Twelve days across Pakistan's most iconic mountain realms, Skardu, Deosai, Gilgit, and Hunza.",
     heroImage: "/hunza-lady-finger.jpg",
     galleryImages: [
       "/lp-camping-deosai.jpg",
@@ -42,27 +42,27 @@ export const TOURS: Tour[] = [
     priceUSD: 3100,
     duration: "12 days",
     intro:
-      "This is our most iconic journey — a masterpiece of design, discovery, and emotion crafted for travellers who seek the world's last great frontiers without compromise. Over twelve extraordinary days, the expedition unfolds across Pakistan's most spellbinding mountain realms: the turquoise lakes and royal valleys of Skardu, the vast golden silence of Deosai, the ancient forts and shimmering horizons of Hunza. Every detail is considered. Every moment is earned.",
+      "This is our most iconic journey, a masterpiece of design, discovery, and emotion crafted for travellers who seek the world's last great frontiers without compromise. Over twelve extraordinary days, the expedition unfolds across Pakistan's most spellbinding mountain realms: the turquoise lakes and royal valleys of Skardu, the vast golden silence of Deosai, the ancient forts and shimmering horizons of Hunza. Every detail is considered. Every moment is earned.",
     sections: [
       {
-        heading: "Where the journey begins — Skardu",
+        heading: "Where the journey begins: Skardu",
         body:
-          "Your adventure opens in Skardu, the legendary gateway to the Karakoram. Over several immersive days, the valley reveals its many faces: the tranquil turquoise waters of Upper and Lower Kachura Lakes, the regal elegance of Shigar Valley and its restored fort, and the poetic beauty of Khaplu, where royal palaces rest beneath towering peaks. Every day brings a new revelation — hidden waterfalls, sweeping viewpoints, riverside picnics, and intimate cultural encounters woven together by your private guide.",
+          "Your adventure opens in Skardu, the legendary gateway to the Karakoram. Over several immersive days, the valley reveals its many faces: the tranquil turquoise waters of Upper and Lower Kachura Lakes, the regal elegance of Shigar Valley and its restored fort, and the poetic beauty of Khaplu, where royal palaces rest beneath towering peaks. Every day brings a new revelation, hidden waterfalls, sweeping viewpoints, riverside picnics, and intimate cultural encounters woven together by your private guide.",
       },
       {
-        heading: "Deosai — the land of giants",
+        heading: "Deosai: the land of giants",
         body:
-          "The journey ascends into Deosai National Park, where vast golden plains stretch endlessly toward distant snow-capped horizons, broken only by crystalline streams and wandering Himalayan wildlife. Crossing Deosai is a surreal experience — where silence becomes sound and scale reshapes perception. We camp on the plateau for one night, in a setup designed for comfort rather than endurance. From here, we descend gently into Gilgit, transitioning toward the next realm of wonder.",
+          "The journey ascends into Deosai National Park, where vast golden plains stretch endlessly toward distant snow-capped horizons, broken only by crystalline streams and wandering Himalayan wildlife. Crossing Deosai is a surreal experience, where silence becomes sound and scale reshapes perception. We camp on the plateau for one night, in a setup designed for comfort rather than endurance. From here, we descend gently into Gilgit, transitioning toward the next realm of wonder.",
       },
       {
-        heading: "The Kingdom of Light — Hunza",
+        heading: "The Kingdom of Light: Hunza",
         body:
-          "Beyond Gilgit, the road unfurls toward the mythical valley of Hunza, celebrated for its dramatic scenery, ancient heritage, and legendary hospitality. Explore the timeless grandeur of Altit and Baltit Forts, perched high above the valley, guarding centuries of Silk Road legacy. Journey onward into Upper Hunza, where landscapes grow even more dramatic — the luminous turquoise of Attabad Lake, the daring crossing of Hussaini Suspension Bridge, the serene stillness of Borith Lake, and the iconic spires of the Passu Cones rising sharply into the sky.",
+          "Beyond Gilgit, the road unfurls toward the mythical valley of Hunza, celebrated for its dramatic scenery, ancient heritage, and legendary hospitality. Explore the timeless grandeur of Altit and Baltit Forts, perched high above the valley, guarding centuries of Silk Road legacy. Journey onward into Upper Hunza, where landscapes grow even more dramatic, the luminous turquoise of Attabad Lake, the daring crossing of Hussaini Suspension Bridge, the serene stillness of Borith Lake, and the iconic spires of the Passu Cones rising sharply into the sky.",
       },
       {
-        heading: "Khunjerab Pass — the roof of the world",
+        heading: "Khunjerab Pass: the roof of the world",
         body:
-          "At the edge of the world, the road climbs toward the legendary Khunjerab Pass, the highest paved international border crossing on Earth. At nearly 4,700 metres, mountains, clouds, and silence converge, creating a moment of profound awe and reflection. Days in Hunza flow with gentle grace — scenic drives, guided village walks, curated dining experiences, and unhurried moments of contemplation. Nights unfold beneath star-laden skies, where the mountains glow silver and time seems to pause.",
+          "At the edge of the world, the road climbs toward the legendary Khunjerab Pass, the highest paved international border crossing on Earth. At nearly 4,700 metres, mountains, clouds, and silence converge, creating a moment of profound awe and reflection. Days in Hunza flow with gentle grace, scenic drives, guided village walks, curated dining experiences, and unhurried moments of contemplation. Nights unfold beneath star-laden skies, where the mountains glow silver and time seems to pause.",
       },
     ],
     highlights: [
@@ -94,7 +94,7 @@ export const TOURS: Tour[] = [
     slug: "nagar-valley",
     name: "Nagar Valley",
     region: "Nagar, Karakoram",
-    tagline: "Eight days into the Karakoram's hidden giant — trekking to glacier basecamps beneath Rakaposhi, Diran, and the Golden Peak.",
+    tagline: "Eight days into the Karakoram's hidden giant, trekking to glacier basecamps beneath Rakaposhi, Diran, and the Golden Peak.",
     heroImage: "/rakaposhi-moon.jpg",
     galleryImages: [
       "/rakaposhi-moon.jpg",
@@ -109,29 +109,29 @@ export const TOURS: Tour[] = [
     priceUSD: 2400,
     duration: "8 days",
     intro:
-      "Carved into the heart of the Karakoram and shadowed by some of the world's mightiest peaks, Nagar Valley is one of northern Pakistan's most spectacular and least-celebrated regions. While Hunza draws the crowds, Nagar — its ancient rival across the river — offers a rawer, more intimate encounter with the mountains. Over eight extraordinary days, this curated journey leads you beneath the colossal faces of Rakaposhi and Diran, along the vast white expanse of Hoper Glacier, deep into the secluded splendour of Michar Kho Valley, and to the high-altitude basecamps of legendary climbs. Every step reveals a landscape of breathtaking scale — and every evening returns you to the warmth of curated mountain hospitality.",
+      "Carved into the heart of the Karakoram and shadowed by some of the world's mightiest peaks, Nagar Valley is one of northern Pakistan's most spectacular and least-celebrated regions. While Hunza draws the crowds, Nagar, its ancient rival across the river, offers a rawer, more intimate encounter with the mountains. Over eight extraordinary days, this curated journey leads you beneath the colossal faces of Rakaposhi and Diran, along the vast white expanse of Hoper Glacier, deep into the secluded splendour of Michar Kho Valley, and to the high-altitude basecamps of legendary climbs. Every step reveals a landscape of breathtaking scale, and every evening returns you to the warmth of curated mountain hospitality.",
     sections: [
       {
         heading: "Rakaposhi & Diran Peak Basecamp Trek",
         body:
-          "The journey begins with one of the Karakoram's most iconic approaches — the trail to the Rakaposhi and Diran Peak basecamp. Rising to over 7,788 metres, Rakaposhi is among the most visually dominant mountains in Pakistan, its vast snow pyramid visible for hundreds of kilometres in every direction. The ascent to basecamp weaves through pine forest, alpine meadow, and moraine terrain, each hour revealing closer, more overwhelming views of the mountain's southern face. Diran Peak, its slightly smaller neighbour, adds another dimension of drama to a landscape that rewards those willing to look up.",
+          "The journey begins with one of the Karakoram's most iconic approaches, the trail to the Rakaposhi and Diran Peak basecamp. Rising to over 7,788 metres, Rakaposhi is among the most visually dominant mountains in Pakistan, its vast snow pyramid visible for hundreds of kilometres in every direction. The ascent to basecamp weaves through pine forest, alpine meadow, and moraine terrain, each hour revealing closer, more overwhelming views of the mountain's southern face. Diran Peak, its slightly smaller neighbour, adds another dimension of drama to a landscape that rewards those willing to look up.",
       },
       {
         heading: "Golden Peak Basecamp Trek",
         body:
-          "From Nagar, we push deeper into the Karakoram toward the basecamp of Spantik — known locally as Golden Peak — a stunning 7,027-metre pyramid of ice and rock that earned its name from the golden glow it radiates at sunset. The approach to its basecamp is a journey of progressive revelation: winding river valleys give way to open moraines, and the peak itself emerges dramatically above a glacier-carved landscape. This is among the region's finest high-altitude walks, combining genuine Karakoram wilderness with the quiet thrill of standing at the base of a serious expedition mountain.",
+          "From Nagar, we push deeper into the Karakoram toward the basecamp of Spantik, known locally as Golden Peak, a stunning 7,027-metre pyramid of ice and rock that earned its name from the golden glow it radiates at sunset. The approach to its basecamp is a journey of progressive revelation: winding river valleys give way to open moraines, and the peak itself emerges dramatically above a glacier-carved landscape. This is among the region's finest high-altitude walks, combining genuine Karakoram wilderness with the quiet thrill of standing at the base of a serious expedition mountain.",
       },
       {
         heading: "Hoper Glacier & Michar Kho Valley",
         body:
-          "The final chapters of the journey take you into two of Nagar's most treasured natural wonders. Hoper Glacier — one of the most accessible and visually striking glaciers in the Karakoram — is a vast river of ice that flows dramatically between towering valley walls. Walking its moraine-edged margin is an experience of raw, ancient scale. From here, the route ventures into the serene sanctuary of Michar Kho Valley, a hidden side valley of wildflower meadows, glacial streams, and towering rock walls where silence is absolute and the mountains feel impossibly close. These final days are an ode to pure wilderness — unhurried, uncrowded, and unforgettable.",
+          "The final chapters of the journey take you into two of Nagar's most treasured natural wonders. Hoper Glacier, one of the most accessible and visually striking glaciers in the Karakoram, is a vast river of ice that flows dramatically between towering valley walls. Walking its moraine-edged margin is an experience of raw, ancient scale. From here, the route ventures into the serene sanctuary of Michar Kho Valley, a hidden side valley of wildflower meadows, glacial streams, and towering rock walls where silence is absolute and the mountains feel impossibly close. These final days are an ode to pure wilderness, unhurried, uncrowded, and unforgettable.",
       },
     ],
     highlights: [
       "Rakaposhi & Diran Peak Basecamp Trek (7,788m)",
       "Golden Peak (Spantik) Basecamp Trek (7,027m)",
       "Hoper Glacier walk on the Karakoram ice",
-      "Michar Kho Valley — secluded alpine sanctuary",
+      "Michar Kho Valley: secluded alpine sanctuary",
       "Private expert guide fluent in Burushaski and English",
       "Hand-selected mountain lodges and wilderness camps",
       "Curated wilderness dining and open-fire evenings",
@@ -145,7 +145,7 @@ export const TOURS: Tour[] = [
       },
       {
         name: "Hoper Glacier Base Camp",
-        description: "Our private wilderness camp at the glacier edge — proper beds, gas heating, a camp cook, and one of the most dramatic overnight settings in all of Pakistan.",
+        description: "Our private wilderness camp at the glacier edge, proper beds, gas heating, a camp cook, and one of the most dramatic overnight settings in all of Pakistan.",
         image: "/rof-nanga-parbat-camp.jpg",
       },
     ],
@@ -156,7 +156,7 @@ export const TOURS: Tour[] = [
     slug: "mountains-meet-stars",
     name: "Where Mountains Meet the Stars",
     region: "Astore & Skardu Valley",
-    tagline: "Eight days through epic mountain landscapes, vast golden plateaus, and glacial valleys — the Auriga way.",
+    tagline: "Eight days through epic mountain landscapes, vast golden plateaus, and glacial valleys, the Auriga way.",
     heroImage: "/mms-katpana-lake-skardu.jpg",
     galleryImages: [
       "/mms-deosai-national-park.jpg",
@@ -171,27 +171,27 @@ export const TOURS: Tour[] = [
     priceUSD: 2100,
     duration: "8 days",
     intro:
-      "Designed for discerning travellers who seek immersive beauty, elevated comfort, and authentic adventure, this curated eight-day journey unfolds across the breathtaking realms of Astore, Deosai, and Skardu, revealing northern Pakistan at its most spectacular. Beginning in Gilgit, your expedition moves through lush sanctuaries, boundless high-altitude plateaus, and royal mountain valleys — each transition as cinematic as the last.",
+      "Designed for discerning travellers who seek immersive beauty, elevated comfort, and authentic adventure, this curated eight-day journey unfolds across the breathtaking realms of Astore, Deosai, and Skardu, revealing northern Pakistan at its most spectacular. Beginning in Gilgit, your expedition moves through lush sanctuaries, boundless high-altitude plateaus, and royal mountain valleys, each transition as cinematic as the last.",
     sections: [
       {
-        heading: "Astore Valley — sanctuary in the shadow of Nanga Parbat",
+        heading: "Astore Valley: sanctuary in the shadow of Nanga Parbat",
         body:
-          "Your expedition ascends into the lush sanctuary of Astore Valley, home to the enchanting Rama Lake and the dramatic Rupal Valley, framed by the colossal south face of Nanga Parbat. Wander through fragrant pine forests, explore rolling alpine meadows, and discover glacial streams that carve through pristine wilderness — each moment revealing landscapes that feel untouched by time.",
+          "Your expedition ascends into the lush sanctuary of Astore Valley, home to the enchanting Rama Lake and the dramatic Rupal Valley, framed by the colossal south face of Nanga Parbat. Wander through fragrant pine forests, explore rolling alpine meadows, and discover glacial streams that carve through pristine wilderness, each moment revealing landscapes that feel untouched by time.",
       },
       {
-        heading: "Deosai — boundless golden plains",
+        heading: "Deosai: boundless golden plains",
         body:
-          "The journey flows across the legendary Deosai National Park — the Land of Giants — where boundless golden plains stretch to the horizon, punctuated by crystal-clear rivers, wild Himalayan marmots, and an overwhelming sense of scale and stillness. Crossing through the scenic Chilim region, this passage offers one of the most surreal high-altitude drives on Earth.",
+          "The journey flows across the legendary Deosai National Park, the Land of Giants, where boundless golden plains stretch to the horizon, punctuated by crystal-clear rivers, wild Himalayan marmots, and an overwhelming sense of scale and stillness. Crossing through the scenic Chilim region, this passage offers one of the most surreal high-altitude drives on Earth.",
       },
       {
-        heading: "Skardu Valley — raw grandeur meets royal heritage",
+        heading: "Skardu Valley: raw grandeur meets royal heritage",
         body:
           "Descending into the majestic heart of Skardu Valley, you enter a world where raw mountain grandeur meets royal heritage. Discover the timeless beauty of Shigar Valley and Fort, the regal elegance of Khaplu Palace, the mirror-like turquoise waters of Upper and Lower Kachura Lakes, and the wild serenity of Basho Valley. Cultural encounters, scenic viewpoints, and curated wilderness dining weave together days of effortless exploration and refined leisure.",
       },
     ],
     highlights: [
       "Rama Lake at dawn through pine forest",
-      "Rupal Face viewpoint — world's highest mountain wall",
+      "Rupal Face viewpoint: world's highest mountain wall",
       "Overnight glamping on Deosai Plains",
       "Private visit to Khaplu Palace",
       "Shigar Valley and Fort exploration",
@@ -207,7 +207,7 @@ export const TOURS: Tour[] = [
       },
       {
         name: "Deosai Plains Camp",
-        description: "Our signature glamping setup on the plateau — canvas tents at 4,114m with proper beds, gas heaters, and a night sky that redefines darkness.",
+        description: "Our signature glamping setup on the plateau, canvas tents at 4,114m with proper beds, gas heaters, and a night sky that redefines darkness.",
         image: "https://aurigaventure.com/wp-content/uploads/2026/01/Glamping-at-Deosai-scaled-e1771302772481.jpg",
       },
     ],
@@ -231,22 +231,22 @@ export const TOURS: Tour[] = [
     priceUSD: 1850,
     duration: "7 days",
     intro:
-      "This immersive seven-day journey blends refined comfort with raw alpine exploration, guiding travellers through dramatic landscapes, hidden valleys, and pristine high-altitude wilderness. Beginning in Gilgit, we acclimatise gently at the turquoise oasis of Khalti Lake before moving deeper into the enchanting Phunder Valley — and finally ascending to the secluded sanctuary of Khukush Lake, where civilisation fades and nature commands complete attention.",
+      "This immersive seven-day journey blends refined comfort with raw alpine exploration, guiding travellers through dramatic landscapes, hidden valleys, and pristine high-altitude wilderness. Beginning in Gilgit, we acclimatise gently at the turquoise oasis of Khalti Lake before moving deeper into the enchanting Phunder Valley, and finally ascending to the secluded sanctuary of Khukush Lake, where civilisation fades and nature commands complete attention.",
     sections: [
       {
-        heading: "Days 1 & 2 — Khalti Lake and Phunder Valley",
+        heading: "Days 1 & 2: Khalti Lake and Phunder Valley",
         body:
-          "Your adventure begins in Gilgit, the gateway to the Karakoram. The first day is dedicated to gentle acclimatisation — travelling along scenic mountain roads toward the tranquil oasis of Khalti Lake, where fresh alpine air and a relaxed pace allow your body to adjust to increasing altitude. We continue onward to the enchanting Phunder Valley, famed for its turquoise lake, rolling meadows, and snow-capped summits, checking into your exclusive retreat as twilight settles over the water.",
+          "Your adventure begins in Gilgit, the gateway to the Karakoram. The first day is dedicated to gentle acclimatisation, travelling along scenic mountain roads toward the tranquil oasis of Khalti Lake, where fresh alpine air and a relaxed pace allow your body to adjust to increasing altitude. We continue onward to the enchanting Phunder Valley, famed for its turquoise lake, rolling meadows, and snow-capped summits, checking into your exclusive retreat as twilight settles over the water.",
       },
       {
-        heading: "Days 3 & 4 — Khukush Lake and luxury alpine camps",
+        heading: "Days 3 & 4: Khukush Lake and luxury alpine camps",
         body:
-          "The adventure deepens as you trek toward the secluded Khukush Lake, traversing wildflower-filled pastures, whispering pine forests, and crystal-clear mountain streams. Upon reaching the lake, settle into luxury alpine camps set beside its shimmering turquoise waters. For two magical nights, experience complete immersion in nature — guided walks, serene lakeside picnics, stargazing under crystal-clear skies, and moments of quiet reflection amid breathtaking alpine solitude.",
+          "The adventure deepens as you trek toward the secluded Khukush Lake, traversing wildflower-filled pastures, whispering pine forests, and crystal-clear mountain streams. Upon reaching the lake, settle into luxury alpine camps set beside its shimmering turquoise waters. For two magical nights, experience complete immersion in nature, guided walks, serene lakeside picnics, stargazing under crystal-clear skies, and moments of quiet reflection amid breathtaking alpine solitude.",
       },
       {
-        heading: "Days 5 – 7 — Return through Phunder to Gilgit",
+        heading: "Days 5 – 7: Return through Phunder to Gilgit",
         body:
-          "After a peaceful morning by the lake, retrace your steps back to Phunder Valley for a rejuvenating evening by the lakeside — stories around a crackling fire beneath a canopy of stars. The final days return to Gilgit, allowing time to explore local bazaars, cultural landmarks, and scenic viewpoints before departure. These closing hours offer the perfect balance of reflection and soft adventure before you leave the mountains behind.",
+          "After a peaceful morning by the lake, retrace your steps back to Phunder Valley for a rejuvenating evening by the lakeside, stories around a crackling fire beneath a canopy of stars. The final days return to Gilgit, allowing time to explore local bazaars, cultural landmarks, and scenic viewpoints before departure. These closing hours offer the perfect balance of reflection and soft adventure before you leave the mountains behind.",
       },
     ],
     highlights: [
@@ -262,12 +262,12 @@ export const TOURS: Tour[] = [
     hotels: [
       {
         name: "Phunder Lake Retreat",
-        description: "An exclusive lakeside retreat in Phunder Valley, designed to blend modern luxury with natural harmony — floor-to-ceiling mountain views, warm hospitality.",
+        description: "An exclusive lakeside retreat in Phunder Valley, designed to blend modern luxury with natural harmony, floor-to-ceiling mountain views, warm hospitality.",
         image: "https://aurigaventure.com/wp-content/uploads/2019/01/Dunsa-Valley-Tormik-scaled-e1772014273230-560x460.jpg",
       },
       {
         name: "Khukush Alpine Camp",
-        description: "Our private luxury camping setup at the lake edge — proper expedition tents, beds rated for altitude, and a camp cook who has fed trekkers in these mountains for decades.",
+        description: "Our private luxury camping setup at the lake edge, proper expedition tents, beds rated for altitude, and a camp cook who has fed trekkers in these mountains for decades.",
         image: "https://aurigaventure.com/wp-content/uploads/2026/01/Glamping-at-Deosai-scaled-e1771302772481.jpg",
       },
     ],
@@ -278,7 +278,7 @@ export const TOURS: Tour[] = [
     slug: "chitral-phunder",
     name: "Wilderness of Chitral & Phunder",
     region: "Chitral · Ghizer Valley",
-    tagline: "Twelve nights through Pakistan's most enchanting and least explored regions — the Auriga way.",
+    tagline: "Twelve nights through Pakistan's most enchanting and least explored regions, the Auriga way.",
     heroImage: "https://aurigaventure.com/wp-content/uploads/2026/01/org_364545bcd22687ac_1592367926000-2048x1536.jpg",
     galleryImages: [
       "https://aurigaventure.com/wp-content/uploads/2026/01/org_364545bcd22687ac_1592367926000-2048x1536.jpg",
@@ -291,28 +291,28 @@ export const TOURS: Tour[] = [
     priceUSD: 3100,
     duration: "12 nights",
     intro:
-      "This twelve-night tailored journey invites you into one of Pakistan's most enchanting and least explored regions — a land of towering peaks, emerald valleys, crystalline rivers, and timeless culture. From the cultural heart of Chitral Valley to the serene alpine beauty of Phunder, Ghizer, and Yaseen, this expedition is an ode to slow travel, indulgent living, and nature at its most pristine. Every detail has been thoughtfully designed to ensure you experience the region not as a visitor, but as a privileged guest.",
+      "This twelve-night tailored journey invites you into one of Pakistan's most enchanting and least explored regions, a land of towering peaks, emerald valleys, crystalline rivers, and timeless culture. From the cultural heart of Chitral Valley to the serene alpine beauty of Phunder, Ghizer, and Yaseen, this expedition is an ode to slow travel, indulgent living, and nature at its most pristine. Every detail has been thoughtfully designed to ensure you experience the region not as a visitor, but as a privileged guest.",
     sections: [
       {
-        heading: "Cultural gateway — Chitral Valley",
+        heading: "Cultural gateway: Chitral Valley",
         body:
           "Your adventure begins with a scenic arrival in Chitral, a valley steeped in legend, hospitality, and centuries-old tradition. Nestled among dramatic mountain ranges, Chitral is home to the fascinating Kalash culture, historic forts, and vibrant bazaars. Explore the grand Chitral Fort, wander through markets filled with intricate handicrafts and gemstones, and join an exclusive lunch experience with a Kalash family in the mystical valleys that have preserved their ancient way of life for millennia. Evenings unfold over candlelit dinners of organic mountain produce, lantern-lit and river-soft.",
       },
       {
-        heading: "Shandur Top — the roof of the world",
+        heading: "Shandur Top: the roof of the world",
         body:
-          "Leaving Chitral, the journey ascends to the iconic Shandur Top — famously known as the Roof of the World — offering breathtaking panoramic views at 3,734 metres. This is the world's highest polo ground, a high grassland above the clouds ringed by glaciated peaks. Even outside festival season, the plateau is extraordinary: a place of low light and enormous sky, where the silence is so complete you can hear your own heartbeat.",
+          "Leaving Chitral, the journey ascends to the iconic Shandur Top, famously known as the Roof of the World, offering breathtaking panoramic views at 3,734 metres. This is the world's highest polo ground, a high grassland above the clouds ringed by glaciated peaks. Even outside festival season, the plateau is extraordinary: a place of low light and enormous sky, where the silence is so complete you can hear your own heartbeat.",
       },
       {
-        heading: "Phunder and beyond — Yaseen, Gupis, and Gahkuch",
+        heading: "Phunder and beyond: Yaseen, Gupis, and Gahkuch",
         body:
-          "The journey descends toward the tranquil paradise of Phunder Valley, where each private chalet offers floor-to-ceiling views and nature becomes part of your living space. Glide across the mirror-like waters of Phunder Lake. Venture to breathtaking Yaseen Valley — a land of towering peaks, emerald fields, and vibrant mountain culture. Continue to the historic Gupis Fort, standing as a silent guardian of ancient trade routes, before exploring the serene beauty of Gahkuch Valley, where winding rivers, alpine meadows, and traditional villages offer a deeply immersive final chapter.",
+          "The journey descends toward the tranquil paradise of Phunder Valley, where each private chalet offers floor-to-ceiling views and nature becomes part of your living space. Glide across the mirror-like waters of Phunder Lake. Venture to breathtaking Yaseen Valley, a land of towering peaks, emerald fields, and vibrant mountain culture. Continue to the historic Gupis Fort, standing as a silent guardian of ancient trade routes, before exploring the serene beauty of Gahkuch Valley, where winding rivers, alpine meadows, and traditional villages offer a deeply immersive final chapter.",
       },
     ],
     highlights: [
       "Culturally sensitive guided visit to Kalash Valleys",
       "Exclusive family lunch experience in Bumburet",
-      "Shandur Pass (3,734m) — world's highest polo ground",
+      "Shandur Pass (3,734m): world's highest polo ground",
       "Gliding on the mirror-still Phunder Lake",
       "Yaseen Valley and Gupis Fort exploration",
       "Heritage lodge in Chitral with views of Tirich Mir",
@@ -338,7 +338,7 @@ export const TOURS: Tour[] = [
     slug: "realm-of-fairies",
     name: "The Realm of Fairies",
     region: "Fairy Meadows & Hunza",
-    tagline: "Ten days from the shadow of Nanga Parbat to the ancient kingdom of Hunza — where exploration becomes transformation.",
+    tagline: "Ten days from the shadow of Nanga Parbat to the ancient kingdom of Hunza, where exploration becomes transformation.",
     heroImage: "/rof-passu-cones.jpg",
     galleryImages: [
       "/rof-borith-lake.jpg",
@@ -353,12 +353,12 @@ export const TOURS: Tour[] = [
     priceUSD: 2600,
     duration: "10 days",
     intro:
-      "This extraordinary ten-day luxury expedition across Gilgit, Fairy Meadows, and Hunza is a masterfully curated journey through Pakistan's most spellbinding landscapes. Designed for travellers who seek rare beauty, elevated comfort, and profound emotional connection, the experience flows seamlessly from raw wilderness into refined mountain elegance — delivering moments of wonder that linger for a lifetime.",
+      "This extraordinary ten-day luxury expedition across Gilgit, Fairy Meadows, and Hunza is a masterfully curated journey through Pakistan's most spellbinding landscapes. Designed for travellers who seek rare beauty, elevated comfort, and profound emotional connection, the experience flows seamlessly from raw wilderness into refined mountain elegance, delivering moments of wonder that linger for a lifetime.",
     sections: [
       {
-        heading: "The Realm of Giants — Fairy Meadows",
+        heading: "The Realm of Giants: Fairy Meadows",
         body:
-          "Your journey begins in Gilgit, where adventure, culture, and grandeur converge. The expedition ascends into one of the most iconic landscapes on Earth: Fairy Meadows, a legendary alpine sanctuary resting in the shadow of Nanga Parbat — the ninth-highest mountain in the world. Reaching Fairy Meadows is an adventure in itself, a dramatic ascent along winding mountain roads followed by a gentle trek through pine forests and wildflower-filled clearings. As the meadow reveals itself, the scene feels almost unreal: emerald pastures, wooden cabins, whispering pines, and the colossal ice-clad face of Nanga Parbat towering above.",
+          "Your journey begins in Gilgit, where adventure, culture, and grandeur converge. The expedition ascends into one of the most iconic landscapes on Earth: Fairy Meadows, a legendary alpine sanctuary resting in the shadow of Nanga Parbat, the ninth-highest mountain in the world. Reaching Fairy Meadows is an adventure in itself, a dramatic ascent along winding mountain roads followed by a gentle trek through pine forests and wildflower-filled clearings. As the meadow reveals itself, the scene feels almost unreal: emerald pastures, wooden cabins, whispering pines, and the colossal ice-clad face of Nanga Parbat towering above.",
       },
       {
         heading: "Two nights in an ethereal world",
@@ -366,9 +366,9 @@ export const TOURS: Tour[] = [
           "Over two unforgettable days, immerse yourself in Fairy Meadows completely. Wander pristine alpine trails, explore forested ridges, and gaze upon glacier-fed streams flowing silently through the valley. Evenings unfold beneath skies ablaze with stars, where campfires flicker and silence becomes a sacred luxury. Here, time dissolves and nature commands full attention. After descending, return to Gilgit for a night of rest and reflection, preparing for the next realm of beauty.",
       },
       {
-        heading: "The Kingdom of Light — Hunza",
+        heading: "The Kingdom of Light: Hunza",
         body:
-          "Beyond Gilgit, the Karakoram Highway unfurls toward the mythical land of Hunza — a valley of radiant landscapes, ancient civilisations, and legendary longevity. Explore the iconic Altit and Baltit Forts, timeless guardians of the Silk Road. Venture into Upper Hunza, where nature reveals its most dramatic forms: the glowing turquoise of Attabad Lake, the heart-racing crossing of the Hussaini Suspension Bridge, the reflective calm of Borith Lake, and the razor-sharp silhouettes of the Passu Cones. The journey crescendos at Khunjerab Pass, where earth, sky, and silence merge into one overwhelming moment of awe.",
+          "Beyond Gilgit, the Karakoram Highway unfurls toward the mythical land of Hunza, a valley of radiant landscapes, ancient civilisations, and legendary longevity. Explore the iconic Altit and Baltit Forts, timeless guardians of the Silk Road. Venture into Upper Hunza, where nature reveals its most dramatic forms: the glowing turquoise of Attabad Lake, the heart-racing crossing of the Hussaini Suspension Bridge, the reflective calm of Borith Lake, and the razor-sharp silhouettes of the Passu Cones. The journey crescendos at Khunjerab Pass, where earth, sky, and silence merge into one overwhelming moment of awe.",
       },
     ],
     highlights: [
@@ -384,7 +384,7 @@ export const TOURS: Tour[] = [
     hotels: [
       {
         name: "Fairy Meadows Camp",
-        description: "Our curated camp at the meadow edge — comfortable tents with Nanga Parbat filling the entire horizon at dawn.",
+        description: "Our curated camp at the meadow edge, comfortable tents with Nanga Parbat filling the entire horizon at dawn.",
         image: "https://aurigaventure.com/wp-content/uploads/2014/10/DJI_0122-scaled.jpg",
       },
       {
@@ -400,7 +400,7 @@ export const TOURS: Tour[] = [
     slug: "nagma-valley",
     name: "Nagma Valley Trek",
     region: "Baltistan",
-    tagline: "Eight days into Pakistan's best-kept secret — a pristine sanctuary of silence and untouched alpine beauty.",
+    tagline: "Eight days into Pakistan's best-kept secret, a pristine sanctuary of silence and untouched alpine beauty.",
     heroImage: "https://aurigaventure.com/wp-content/uploads/2026/01/Glamping-at-Deosai-scaled-e1771302772481.jpg",
     galleryImages: [
       "https://aurigaventure.com/wp-content/uploads/2026/01/Glamping-at-Deosai-scaled-e1771302772481.jpg",
@@ -414,22 +414,22 @@ export const TOURS: Tour[] = [
     duration: "8 days",
     difficulty: "Moderate",
     intro:
-      "Hidden deep within the remote folds of Baltistan, Nagma Valley is our best-kept secret: a pristine sanctuary of silence, soaring peaks, and untouched natural beauty, far removed from conventional travel routes and crowded trails. We begin in Skardu before transitioning into the regal calm of Shigar Valley — two carefully paced days allowing space for acclimatisation and immersion — before venturing into the wilderness that few travellers ever witness.",
+      "Hidden deep within the remote folds of Baltistan, Nagma Valley is our best-kept secret: a pristine sanctuary of silence, soaring peaks, and untouched natural beauty, far removed from conventional travel routes and crowded trails. We begin in Skardu before transitioning into the regal calm of Shigar Valley, two carefully paced days allowing space for acclimatisation and immersion, before venturing into the wilderness that few travellers ever witness.",
     sections: [
       {
-        heading: "Skardu and Shigar — acclimatisation and immersion",
+        heading: "Skardu and Shigar: acclimatisation and immersion",
         body:
-          "We begin in Skardu, the cultural and adventure heart of northern Pakistan. Over two carefully paced days, we allow space for acclimatisation, exploration, and immersion — wandering ancient forts, strolling along glacial rivers, and soaking in panoramic mountain views that prepare you for the deeper wilderness ahead. Shigar Valley, with its restored Mughal-era fort and fruit orchards, offers a first taste of Baltistan's extraordinary heritage.",
+          "We begin in Skardu, the cultural and adventure heart of northern Pakistan. Over two carefully paced days, we allow space for acclimatisation, exploration, and immersion, wandering ancient forts, strolling along glacial rivers, and soaking in panoramic mountain views that prepare you for the deeper wilderness ahead. Shigar Valley, with its restored Mughal-era fort and fruit orchards, offers a first taste of Baltistan's extraordinary heritage.",
       },
       {
-        heading: "Into the wild — three days in Nagma Valley",
+        heading: "Into the wild: three days in Nagma Valley",
         body:
           "For three unforgettable days, we venture into the secluded realm of Nagma Valley, where civilisation fades and nature takes centre stage. Towering snow-draped peaks, whispering pine forests, cascading waterfalls, and crystal-clear alpine streams create a setting of absolute serenity. Guided explorations lead across rolling meadows and hidden mountain trails, revealing landscapes few travellers ever witness. Days are spent in curated wilderness picnics and unhurried exploration. Evenings unfold beneath vast starlit skies, where crackling fires and mountain silence deliver moments of deep stillness.",
       },
       {
-        heading: "Return to Skardu — leisure and reflection",
+        heading: "Return to Skardu: leisure and reflection",
         body:
-          "After the raw beauty of Nagma Valley, we return to Skardu for two days of gentle leisure and cultural immersion. Explore serene lakes, vibrant bazaars, and ancient landmarks — or simply unwind at your luxury retreat, allowing time to reflect and absorb the journey's emotional richness. These final days offer the perfect balance before departure, where the mountains leave their mark quietly and permanently.",
+          "After the raw beauty of Nagma Valley, we return to Skardu for two days of gentle leisure and cultural immersion. Explore serene lakes, vibrant bazaars, and ancient landmarks, or simply unwind at your luxury retreat, allowing time to reflect and absorb the journey's emotional richness. These final days offer the perfect balance before departure, where the mountains leave their mark quietly and permanently.",
       },
     ],
     highlights: [
@@ -440,7 +440,7 @@ export const TOURS: Tour[] = [
       "Stargazing from high-altitude wilderness camps",
       "Skardu town, lakes, and cultural landmarks",
       "Expert Balti-speaking local guide",
-      "Complete solitude — no tourist crowds",
+      "Complete solitude: no tourist crowds",
     ],
     hotels: [
       {
@@ -450,7 +450,7 @@ export const TOURS: Tour[] = [
       },
       {
         name: "Nagma Valley Camp",
-        description: "Our signature wilderness camp deep in Nagma Valley — luxury tents, proper beds, a camp cook, and absolute mountain solitude.",
+        description: "Our signature wilderness camp deep in Nagma Valley, luxury tents, proper beds, a camp cook, and absolute mountain solitude.",
         image: "https://aurigaventure.com/wp-content/uploads/2026/01/Glamp-Pakistan-at-Deosai-scaled-e1769679760930.jpg",
       },
     ],
@@ -479,22 +479,22 @@ export const TOURS: Tour[] = [
       {
         heading: "Gilgit and the ascent to Rama Lake",
         body:
-          "Your expedition commences in Gilgit, the vibrant gateway to the northern mountains. Day two takes you toward the enchanting Astore Valley, ascending through winding mountain roads to reach the iconic Rama Lake — a pristine alpine jewel nestled amid dense pine forests and towering snow-capped peaks. Guided nature walks, lakeside relaxation, and panoramic photography sessions are followed by an overnight stay surrounded by pure mountain serenity.",
+          "Your expedition commences in Gilgit, the vibrant gateway to the northern mountains. Day two takes you toward the enchanting Astore Valley, ascending through winding mountain roads to reach the iconic Rama Lake, a pristine alpine jewel nestled amid dense pine forests and towering snow-capped peaks. Guided nature walks, lakeside relaxation, and panoramic photography sessions are followed by an overnight stay surrounded by pure mountain serenity.",
       },
       {
-        heading: "Rupal Valley — the world's highest mountain wall",
+        heading: "Rupal Valley: the world's highest mountain wall",
         body:
-          "The journey continues into the dramatic landscapes of Rupal Valley, home to the majestic south face of Nanga Parbat, the world's ninth-highest mountain. Known as one of the most awe-inspiring mountain walls on Earth — 4,600 metres of near-vertical rock and ice — Rupal Valley offers sweeping meadows, glacial rivers, and breathtaking viewpoints. We drive here in the afternoon, when the face catches the last sun.",
+          "The journey continues into the dramatic landscapes of Rupal Valley, home to the majestic south face of Nanga Parbat, the world's ninth-highest mountain. Known as one of the most awe-inspiring mountain walls on Earth, 4,600 metres of near-vertical rock and ice, Rupal Valley offers sweeping meadows, glacial rivers, and breathtaking viewpoints. We drive here in the afternoon, when the face catches the last sun.",
       },
       {
-        heading: "Minimarg — wildflowers at the edge of the world",
+        heading: "Minimarg: wildflowers at the edge of the world",
         body:
           "Day four ascends toward the remote wonder of Minimarg, a hidden alpine paradise perched near the Line of Control. Renowned for its rolling grasslands, vibrant wildflower fields, and boundless horizons, Minimarg offers unparalleled tranquility and natural splendour. The journey itself unfolds as a visual masterpiece, revealing dramatic mountain landscapes at every turn. Spend the night immersed in vast open plains beneath towering Himalayan sentinels, before two final leisurely days in Gilgit to explore, reflect, and depart.",
       },
     ],
     highlights: [
       "Rama Lake at dawn in pine forest",
-      "Rupal Face viewpoint — world's highest vertical wall",
+      "Rupal Face viewpoint: world's highest vertical wall",
       "Overnight in Minimarg wildflower meadows",
       "Nanga Parbat (8,126m) from multiple vantage points",
       "Private vehicle and expert local guide throughout",
@@ -505,12 +505,12 @@ export const TOURS: Tour[] = [
     hotels: [
       {
         name: "Astore Mountain Lodge",
-        description: "A thoughtfully appointed lodge in Astore Valley with a garden terrace facing Nanga Parbat — perfectly positioned between Rama Lake and the Rupal Valley.",
+        description: "A thoughtfully appointed lodge in Astore Valley with a garden terrace facing Nanga Parbat, perfectly positioned between Rama Lake and the Rupal Valley.",
         image: "https://aurigaventure.com/wp-content/uploads/2026/01/Glamp-Pakistan-at-Deosai-scaled-e1769679760930.jpg",
       },
       {
         name: "Minimarg High Camp",
-        description: "Our private camp on the Minimarg plateau — canvas tents, proper beds, and a sky full of stars above one of Pakistan's most remote high-altitude meadows.",
+        description: "Our private camp on the Minimarg plateau, canvas tents, proper beds, and a sky full of stars above one of Pakistan's most remote high-altitude meadows.",
         image: "https://aurigaventure.com/wp-content/uploads/2026/01/Glamping-at-Deosai-scaled-e1771302772481.jpg",
       },
     ],

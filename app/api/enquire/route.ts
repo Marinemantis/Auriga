@@ -15,7 +15,7 @@ export async function POST(request: Request) {
   } = await request.json();
 
   const travellingAs = groupType === "Other (mention in other information)" && groupTypeOther
-    ? `Other — ${groupTypeOther}`
+    ? `Other: ${groupTypeOther}`
     : groupType || "Not specified";
 
   const row = (label: string, value: string) =>
@@ -33,7 +33,7 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from: "Auriga Ventures <onboarding@resend.dev>",
       to:   "hello@aurigaventure.com",
-      subject: `Journey Request — ${name}`,
+      subject: `Journey Request: ${name}`,
       html: `
         <!DOCTYPE html>
         <html>
@@ -115,7 +115,7 @@ export async function POST(request: Request) {
     name,
     email,
     phone,
-    opportunityTitle: `Journey Request — ${name}`,
+    opportunityTitle: `Journey Request: ${name}`,
     notes: [
       `Destination: ${destination}`,
       `Travel: ${departureDate} → ${returnDate}`,

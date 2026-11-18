@@ -27,11 +27,11 @@ const HERO_SLIDES = [
 ];
 
 const TESTIMONIALS = [
-  { quote: "Our trip was completely stress free. Everything was planned beautifully — we could just relax and enjoy the journey.", name: "Grace A.",        origin: "Lahore → Hunza"            },
+  { quote: "Our trip was completely stress free. Everything was planned beautifully, we could just relax and enjoy the journey.", name: "Grace A.",        origin: "Lahore → Hunza"            },
   { quote: "Few people truly understand that luxury travel is emotional. Every moment felt intentional, serene, exclusive, and effortless.", name: "Sarah Ibrahim",   origin: "Karachi → Skardu"          },
-  { quote: "This wasn't just a trip — it was a curated experience. Every detail reflected precision and passion.", name: "Zerish Zahra",    origin: "Dubai → Chitral"           },
+  { quote: "This wasn't just a trip, it was a curated experience. Every detail reflected precision and passion.", name: "Zerish Zahra",    origin: "Dubai → Chitral"           },
   { quote: "I've traveled all over the world but nothing prepared me for the raw beauty of Pakistan's north. Auriga showed me why.", name: "James Whitfield", origin: "London → Gilgit-Baltistan" },
-  { quote: "From our private glamping in Deosai to the sunrise over Nanga Parbat — every single moment was extraordinary.", name: "Amina Tariq",     origin: "Islamabad → Astore"        },
+  { quote: "From our private glamping in Deosai to the sunrise over Nanga Parbat, every single moment was extraordinary.", name: "Amina Tariq",     origin: "Islamabad → Astore"        },
   { quote: "The team's knowledge of the region is unmatched. We felt safe, looked after, and constantly amazed. We'll be back.", name: "Raza & Farah",    origin: "Karachi → Hunza"           },
 ];
 
@@ -45,7 +45,7 @@ const WHY_US = [
 
 
 /* ══════════════════════════════════════════
-   HERO  — centered text, crossfade slideshow bg
+   HERO, centered text, crossfade slideshow bg
 ══════════════════════════════════════════ */
 function Hero() {
   const ref = useRef<HTMLElement>(null);
@@ -100,7 +100,7 @@ function Hero() {
           initial={{ opacity:0, y:16 }} animate={ready?{opacity:1,y:0}:{}} transition={{ delay:0.6, duration:0.8 }}
           className="text-white/65 text-base md:text-lg mb-10 max-w-md mx-auto"
           style={{ fontFamily:"var(--font-inter),sans-serif" }}
-        >Tailor-made journeys through Pakistan's north.</motion.p>
+        >Tailor made journeys through Pakistan's north.</motion.p>
 
         <motion.div
           initial={{ opacity:0, y:14 }} animate={ready?{opacity:1,y:0}:{}} transition={{ delay:0.75, duration:0.8 }}
@@ -169,7 +169,7 @@ function Philosophy() {
               Every journey starts<br /><em>with a feeling.</em>
             </h2>
             <p className="text-[#F5F0E8]/55 text-[15px] leading-relaxed mb-5" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
-              We don't believe in itineraries built from templates. Pakistan's north is too singular, too alive — too full of moments that can't be scheduled. We start with you: your pace, your curiosity, what you want to feel on the other side of the journey.
+              We don't believe in itineraries built from templates. Pakistan's north is too singular, too alive, too full of moments that can't be scheduled. We start with you: your pace, your curiosity, what you want to feel on the other side of the journey.
             </p>
             <p className="text-[#F5F0E8]/35 text-sm leading-relaxed mb-10" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
               Journeys through Hunza, Skardu, Chitral and beyond. No two alike.
@@ -346,7 +346,7 @@ function DestCarousel() {
 
 
 /* ══════════════════════════════════════════
-   WHAT WE DO — text left, image right, "Watch the film" CTA
+   WHAT WE DO, text left, image right, "Watch the film" CTA
 ══════════════════════════════════════════ */
 function WhatWeDo() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -411,7 +411,7 @@ function WhyUs() {
       <div className="max-w-[1320px] mx-auto px-6 lg:px-10">
         <div className="text-center mb-16">
           <p className="text-[11px] tracking-[0.45em] uppercase text-[#C8903A] mb-4" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Why Auriga</p>
-          <p className="text-[#F5F0E8]/55 text-lg max-w-2xl mx-auto leading-relaxed" style={{ fontFamily:"var(--font-inter),sans-serif" }}>We've spent over a decade refining every part of the journey — so when you travel with us, everything simply works. Here's what sets us apart.</p>
+          <p className="text-[#F5F0E8]/55 text-lg max-w-2xl mx-auto leading-relaxed" style={{ fontFamily:"var(--font-inter),sans-serif" }}>We've spent over a decade refining every part of the journey, so when you travel with us, everything simply works. Here's what sets us apart.</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-16 text-center border-b border-[#1A1A1A] pb-16">
           <motion.div initial={{ opacity:0, y:24 }} whileInView={{ opacity:1, y:0 }} viewport={{ once:true, margin:"-40px" }} transition={{ delay:0, duration:0.6, ease:[0.22,1,0.36,1] }}>
@@ -478,7 +478,7 @@ function GuideSection() {
             <p className="text-[11px] tracking-[0.45em] uppercase text-[#C8903A] mb-6" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Our guide to luxury travel</p>
             <h2 className="text-[44px] md:text-[52px] font-light text-[#F5F0E8] leading-[1.06] mb-7" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>Luxury isn't a room.<br /><em>It's a feeling.</em></h2>
             <p className="text-[#F5F0E8]/55 text-[15px] leading-relaxed mb-5" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
-              Imagine waking to the sound of glacial rivers from a canvas tent perched above the Hunza Valley — or hiking in peaceful solitude through Deosai, the world's second-highest plateau, where brown bears roam and the horizon disappears into sky.
+              Imagine waking to the sound of glacial rivers from a canvas tent perched above the Hunza Valley, or hiking in peaceful solitude through Deosai, the world's second-highest plateau, where brown bears roam and the horizon disappears into sky.
             </p>
             <p className="text-[#F5F0E8]/35 text-sm leading-relaxed mb-10" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
               Luxury in Pakistan is not what you find at a five-star city hotel. It's privacy. It's access. It's a guide who has spent his life learning a place so you can feel it fully in a week.
@@ -532,7 +532,7 @@ function Contact() {
             <h2 className="text-[44px] md:text-[54px] font-light text-[#F5F0E8] leading-[1.06] mb-8" style={{ fontFamily:"var(--font-cormorant),Georgia,serif" }}>Tell us about<br /><em>your journey.</em></h2>
             <p className="text-[#F5F0E8]/50 text-[15px] leading-relaxed mb-12" style={{ fontFamily:"var(--font-inter),sans-serif" }}>No obligation. No planning fees. Just a conversation about where you want to go and how you want to feel when you get there.</p>
             <div className="flex flex-col gap-6">
-              {[{label:"Email",val:"hello@aurigaventure.com"},{label:"Phone",val:"+92 333 9555 682"},{label:"Address",val:"River View Road, Chinar Bagh, Gilgit-Baltistan, Pakistan — 15100"}].map(({label,val})=>(
+              {[{label:"Email",val:"hello@aurigaventure.com"},{label:"Phone",val:"+92 333 9555 682"},{label:"Address",val:"River View Road, Chinar Bagh, Gilgit-Baltistan, Pakistan, 15100"}].map(({label,val})=>(
                 <div key={label} className="flex items-start gap-4 pb-6 border-b border-[#1A1A1A]">
                   <p className="text-[10px] tracking-[0.25em] uppercase text-[#F5F0E8]/30 w-16 shrink-0 mt-0.5" style={{ fontFamily:"var(--font-inter),sans-serif" }}>{label}</p>
                   <p className="text-[#F5F0E8]/80 text-sm" style={{ fontFamily:"var(--font-inter),sans-serif" }}>{val}</p>
@@ -567,7 +567,7 @@ function Contact() {
                 <select value={destination} onChange={e=>setDestination(e.target.value)} className="w-full bg-[#0d0d0d] border border-[#2a2a2a] px-4 py-3 text-sm text-[#F5F0E8]/70 focus:outline-none focus:border-[#C8903A] transition-colors" style={{ fontFamily:"var(--font-inter),sans-serif" }}>
                   <option value="">Select a destination</option>
                   {DESTINATIONS.map(d=><option key={d.name}>{d.name}</option>)}
-                  <option value="unsure">Not sure yet — help me decide</option>
+                  <option value="unsure">Not sure yet, help me decide</option>
                 </select>
               </div>
               <div>
@@ -602,7 +602,7 @@ function Newsletter() {
           Sign up to our newsletter
         </span>
         {done ? (
-          <span className="text-[11px] tracking-[0.2em] uppercase text-[#C8903A]" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Thank you — you're signed up!</span>
+          <span className="text-[11px] tracking-[0.2em] uppercase text-[#C8903A]" style={{ fontFamily:"var(--font-inter),sans-serif" }}>Thank you, you're signed up!</span>
         ) : (
           <div className="flex gap-0 w-full sm:w-auto">
             <input

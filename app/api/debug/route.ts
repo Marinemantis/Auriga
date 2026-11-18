@@ -25,7 +25,7 @@ export async function GET() {
   let oStatus = null;
   let oBody: unknown = null;
   if (contactId) {
-    const oRes = await fetch(`${GHL}/opportunities/`, { method: "POST", headers: hdrs, body: JSON.stringify({ name: "DEBUG EXISTING — delete me", pipelineId: pipId, pipelineStageId: stageId, locationId: locId, contactId, status: "open", monetaryValue: 0 }) });
+    const oRes = await fetch(`${GHL}/opportunities/`, { method: "POST", headers: hdrs, body: JSON.stringify({ name: "DEBUG EXISTING: delete me", pipelineId: pipId, pipelineStageId: stageId, locationId: locId, contactId, status: "open", monetaryValue: 0 }) });
     oStatus = oRes.status;
     oBody   = await oRes.json();
   }

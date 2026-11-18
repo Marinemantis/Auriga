@@ -18,7 +18,7 @@ const VISA_TYPES = [
     title: "Visa on Arrival",
     duration: "30 days",
     tag: "Selected Nations",
-    description: "Citizens of certain countries may obtain a visa on arrival at major international airports — Islamabad, Lahore, and Karachi. Conditions and eligible nationalities are subject to change; always confirm before travel.",
+    description: "Citizens of certain countries may obtain a visa on arrival at major international airports, Islamabad, Lahore, and Karachi. Conditions and eligible nationalities are subject to change; always confirm before travel.",
     requirements: ["Valid passport", "Return ticket", "Proof of accommodation", "Sufficient funds", "Completed arrival form"],
   },
   {
@@ -62,11 +62,11 @@ const STEPS = [
 
 const TIPS = [
   { tip: "Apply at least 2–3 weeks before travel to allow processing time and any follow-up requests." },
-  { tip: "Use only the official NADRA portal (visa.nadra.gov.pk) — do not use third-party websites claiming to process Pakistani visas." },
+  { tip: "Use only the official NADRA portal (visa.nadra.gov.pk), do not use third-party websites claiming to process Pakistani visas." },
   { tip: "Ensure your passport has at least 6 months of validity beyond your planned departure date from Pakistan." },
   { tip: "Carry printed copies of your visa, hotel bookings, and tour operator details when entering Pakistan." },
   { tip: "If trekking in restricted zones (near borders or high-altitude permit areas), ensure your tour operator has secured all relevant NOCs before your arrival." },
-  { tip: "Pakistan is on the list of required registration countries — upon arrival, all foreign visitors must register with the local police within 24 hours if staying in a private residence." },
+  { tip: "Pakistan is on the list of required registration countries, upon arrival, all foreign visitors must register with the local police within 24 hours if staying in a private residence." },
 ];
 
 function Nav() {
@@ -230,7 +230,7 @@ export default function PakistanVisaPage() {
             Let Auriga take care<br /><em>of your visa.</em>
           </h2>
           <p className="text-[#F5F0E8]/40 text-[15px] leading-relaxed mb-10 max-w-md mx-auto" style={{ fontFamily: "var(--font-inter),sans-serif" }}>
-            When you book a journey with Auriga Ventures, our team assists with all visa documentation, invitation letters, and NOCs — so you focus on the adventure, not the paperwork.
+            When you book a journey with Auriga Ventures, our team assists with all visa documentation, invitation letters, and NOCs, so you focus on the adventure, not the paperwork.
           </p>
           <Link href="/enquire" target="_blank" rel="noopener noreferrer"
             className="inline-block px-10 py-4 bg-[#C8903A] text-[#080808] text-[11px] tracking-[0.3em] uppercase font-semibold hover:bg-[#d4a34d] transition-colors duration-300"
