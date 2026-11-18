@@ -15,12 +15,12 @@ const LoadingCurtain = dynamic(() => import("@/components/roadtrip/LoadingCurtai
 
 /* ─── Destinations data ─── */
 const DESTINATIONS = [
-  { name: "Hunza",            tagline: "Ancient forts, turquoise lakes, and a sky that never ends.",       price: "$1,300", drive: "18 hrs", image: "https://aurigaventure.com/wp-content/uploads/2026/01/Lower-Kachura-Lake-and-Shangrila-Resort-560x460.jpg" },
-  { name: "Skardu Valley",    tagline: "Where the Karakoram meets silence.",                               price: "$1,300", drive: "22 hrs", image: "https://aurigaventure.com/wp-content/uploads/2026/01/Nanga-Parbat-and-Sheosar-Lake-scaled.jpg" },
-  { name: "Ghizer Valley",    tagline: "Pakistan's most unspoiled valley. Still yours to discover.",       price: "$1,800", drive: "14 hrs", image: "https://aurigaventure.com/wp-content/uploads/2019/01/Dunsa-Valley-Tormik-scaled-e1772014273230-560x460.jpg" },
-  { name: "Rakaposhi",        tagline: "A trek to the foot of one of Pakistan's great mountains.",         price: "$1,350", drive: "16 hrs", image: "https://aurigaventure.com/wp-content/uploads/2014/10/IMG_9669-560x460.jpg" },
-  { name: "Chitral",          tagline: "Ancient kingdoms, mountain passes, and the Hindu Kush.",           price: "$1,900", drive: "10 hrs", image: "https://aurigaventure.com/wp-content/uploads/2026/01/org_364545bcd22687ac_1592367926000-2048x1536.jpg" },
-  { name: "Astore Valley",    tagline: "Remote. Serene. The kind of place you don't forget.",              price: "$1,400", drive: "20 hrs", image: "https://aurigaventure.com/wp-content/uploads/2026/01/Glamp-Pakistan-at-Deosai-scaled-e1769679760930.jpg" },
+  { name: "Hunza",            tagline: "Ancient forts, turquoise lakes, and a sky that never ends.",       price: "$1,300", drive: "18 hrs", image: "/shangri-la.jpg" },
+  { name: "Skardu Valley",    tagline: "Where the Karakoram meets silence.",                               price: "$1,300", drive: "22 hrs", image: "/slide-sheosar-lake.jpg" },
+  { name: "Ghizer Valley",    tagline: "Pakistan's most unspoiled valley. Still yours to discover.",       price: "$1,800", drive: "14 hrs", image: "/mms-dunsa-valley-tormik.jpg" },
+  { name: "Rakaposhi",        tagline: "A trek to the foot of one of Pakistan's great mountains.",         price: "$1,350", drive: "16 hrs", image: "/rakaposhi-moon.jpg" },
+  { name: "Chitral",          tagline: "Ancient kingdoms, mountain passes, and the Hindu Kush.",           price: "$1,900", drive: "10 hrs", image: "/dest-chitral.jpg" },
+  { name: "Astore Valley",    tagline: "Remote. Serene. The kind of place you don't forget.",              price: "$1,400", drive: "20 hrs", image: "/slide-deosai-glamping.jpg" },
 ];
 
 /* ─── Deterministic stars (no hydration mismatch) ─── */

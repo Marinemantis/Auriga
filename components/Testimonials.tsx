@@ -31,7 +31,7 @@ export default function Testimonials() {
       {/* Atmospheric background */}
       <div className="absolute inset-0">
         <Image
-          src="https://aurigaventure.com/wp-content/uploads/2026/01/DSC_3514-HDR-1024x683.jpg"
+          src="/fullbleed-golden-mountains.jpg"
           alt="Pakistan landscape"
           fill
           className="object-cover opacity-10"

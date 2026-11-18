@@ -43,7 +43,7 @@ export default function Hero() {
           poster="/hero-attabad.jpg"
         >
           <source
-            src="https://aurigaventure.com/wp-content/uploads/2014/10/Gilgit-Baltistan-copy-2.mov"
+            src="/gilgit-baltistan.mp4"
             type="video/mp4"
           />
         </motion.video>

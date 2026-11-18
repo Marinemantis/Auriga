@@ -10,19 +10,19 @@ const pillars = [
     number: "01",
     title: "Handpicked Properties",
     body: "Every hotel, lodge, and camp in our network is chosen personally. No algorithms. No commissions driving the choice.",
-    image: "https://aurigaventure.com/wp-content/uploads/2026/01/Glamping-at-Deosai-scaled-e1771302772481.jpg",
+    image: "/mms-glamping-deosai.jpg",
   },
   {
     number: "02",
     title: "Fully Tailored",
     body: "We start with a blank page for every client. Your itinerary is built around your pace, your interests, and the experiences only you'll have.",
-    image: "https://aurigaventure.com/wp-content/uploads/2026/01/DSC_3514-HDR-1024x683.jpg",
+    image: "/fullbleed-golden-mountains.jpg",
   },
   {
     number: "03",
     title: "Seamless from Start to End",
     body: "Transfers, permits, guides, meals: every detail is handled before you land. You travel. We handle the rest.",
-    image: "https://aurigaventure.com/wp-content/uploads/2014/10/DJI_0122-scaled.jpg",
+    image: "/fullbleed-hunza-aerial.jpg",
   },
 ];
 
@@ -41,7 +41,7 @@ export default function Philosophy() {
         className="absolute inset-[-6%] pointer-events-none will-change-transform"
       >
         <Image
-          src="https://aurigaventure.com/wp-content/uploads/2026/01/Nanga-Parbat-and-Sheosar-Lake-scaled.jpg"
+          src="/slide-sheosar-lake.jpg"
           alt=""
           fill
           className="object-cover opacity-[0.08]"

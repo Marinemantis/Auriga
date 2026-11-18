@@ -256,7 +256,6 @@ function DestCarousel() {
     if (!el) return;
     drag.current = { startX: e.clientX, startScrollLeft: el.scrollLeft, moved: false };
     setDragging(true);
-    el.setPointerCapture(e.pointerId);
   };
 
   const onPointerMove = (e: ReactPointerEvent<HTMLDivElement>) => {
@@ -264,13 +263,19 @@ function DestCarousel() {
     const el = scrollRef.current;
     if (!el) return;
     const dx = e.clientX - drag.current.startX;
-    if (Math.abs(dx) > 4) drag.current.moved = true;
+    // Only treat it as a drag (and capture the pointer) once it moves; a plain click must reach the card link
+    if (!drag.current.moved) {
+      if (Math.abs(dx) <= 6) return;
+      drag.current.moved = true;
+      el.setPointerCapture(e.pointerId);
+    }
     el.scrollLeft = drag.current.startScrollLeft - dx;
   };
 
   const endDrag = (e: ReactPointerEvent<HTMLDivElement>) => {
     setDragging(false);
-    scrollRef.current?.releasePointerCapture(e.pointerId);
+    const el = scrollRef.current;
+    if (el?.hasPointerCapture(e.pointerId)) el.releasePointerCapture(e.pointerId);
   };
 
   // Suppress the card's Link navigation if the pointer actually dragged
@@ -278,6 +283,7 @@ function DestCarousel() {
     if (drag.current.moved) {
       e.preventDefault();
       e.stopPropagation();
+      drag.current.moved = false;
     }
   };
 
@@ -307,6 +313,7 @@ function DestCarousel() {
       <div ref={scrollRef} onScroll={onScroll}
         onPointerDown={onPointerDown} onPointerMove={onPointerMove} onPointerUp={endDrag} onPointerLeave={endDrag}
         onClickCapture={onClickCapture}
+        onDragStart={(e) => e.preventDefault()}
         className={`flex gap-3 overflow-x-auto px-6 lg:px-10 pb-16 [&::-webkit-scrollbar]:hidden select-none ${dragging ? "cursor-grabbing snap-none" : "cursor-grab snap-x snap-mandatory"}`}
       >
         {[...DESTINATIONS].sort((a, b) => a.durationDays - b.durationDays).map((d, i) => (
@@ -318,7 +325,7 @@ function DestCarousel() {
             className="shrink-0 w-[280px] md:w-[320px] group cursor-pointer snap-start"
           >
             <Link href={`/tours/${d.slug}`} className="block relative overflow-hidden" style={{ aspectRatio:"3/4.2" }}>
-              <Image src={d.image} alt={d.name} fill className="object-cover transition-transform duration-700 group-hover:scale-[1.06] will-change-transform" sizes="(max-width: 768px) 80vw, 320px" />
+              <Image src={d.image} alt={d.name} fill className="object-cover transition-transform duration-700 group-hover:scale-[1.06] will-change-transform" sizes="(max-width: 768px) 760px, 900px" draggable={false} />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/10" />
 
               {/* Nights badge — top right */}

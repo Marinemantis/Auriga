@@ -31,7 +31,7 @@ export default function About() {
               <RevealPhoto delay={0.1}>
                 <div className="relative" style={{ aspectRatio: "3/4", maxHeight: 560 }}>
                   <Image
-                    src="https://aurigaventure.com/wp-content/uploads/2026/01/IMG_6386-scaled.jpeg"
+                    src="/fullbleed-sunset-road.jpg"
                     alt="Pakistan mountain journey"
                     fill
                     className="object-cover"
@@ -53,7 +53,7 @@ export default function About() {
                   style={{ aspectRatio: "4/3" }}
                 >
                   <Image
-                    src="https://aurigaventure.com/wp-content/uploads/2014/10/DJI_0122-scaled.jpg"
+                    src="/fullbleed-hunza-aerial.jpg"
                     alt="Aerial Gilgit-Baltistan"
                     fill
                     className="object-cover"

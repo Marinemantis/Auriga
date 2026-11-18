@@ -10,37 +10,37 @@ const destinations = [
     name: "Hunza",
     price: "$1,300",
     description: "Ancient forts, turquoise lakes, and a sky that never ends.",
-    image: "https://aurigaventure.com/wp-content/uploads/2026/01/Lower-Kachura-Lake-and-Shangrila-Resort-560x460.jpg",
+    image: "/shangri-la.jpg",
   },
   {
     name: "Skardu Valley",
     price: "$1,300",
     description: "Where the Karakoram meets silence.",
-    image: "https://aurigaventure.com/wp-content/uploads/2026/01/Nanga-Parbat-and-Sheosar-Lake-scaled.jpg",
+    image: "/slide-sheosar-lake.jpg",
   },
   {
     name: "Ghizer Valley",
     price: "$1,800",
     description: "Pakistan's most unspoiled valley. Still yours to discover.",
-    image: "https://aurigaventure.com/wp-content/uploads/2019/01/Dunsa-Valley-Tormik-scaled-e1772014273230-560x460.jpg",
+    image: "/mms-dunsa-valley-tormik.jpg",
   },
   {
     name: "Rakaposhi Basecamp",
     price: "$1,350",
     description: "A trek to the foot of one of Pakistan's great mountains.",
-    image: "https://aurigaventure.com/wp-content/uploads/2014/10/IMG_9669-560x460.jpg",
+    image: "/rakaposhi-moon.jpg",
   },
   {
     name: "Chitral",
     price: "$1,900",
     description: "Ancient kingdoms, mountain passes, and the Hindu Kush.",
-    image: "https://aurigaventure.com/wp-content/uploads/2026/01/org_364545bcd22687ac_1592367926000-2048x1536.jpg",
+    image: "/dest-chitral.jpg",
   },
   {
     name: "Astore Valley",
     price: "$1,400",
     description: "Remote. Serene. The kind of place you don't forget.",
-    image: "https://aurigaventure.com/wp-content/uploads/2026/01/Glamp-Pakistan-at-Deosai-scaled-e1769679760930.jpg",
+    image: "/slide-deosai-glamping.jpg",
   },
 ];
 

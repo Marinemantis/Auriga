@@ -1,19 +1,19 @@
 import Image from "next/image";
 
 const row1 = [
-  { src: "https://aurigaventure.com/wp-content/uploads/2026/01/Lower-Kachura-Lake-and-Shangrila-Resort-560x460.jpg", alt: "Kachura Lake" },
-  { src: "https://aurigaventure.com/wp-content/uploads/2026/01/Nanga-Parbat-and-Sheosar-Lake-scaled.jpg", alt: "Nanga Parbat" },
-  { src: "https://aurigaventure.com/wp-content/uploads/2014/10/DJI_0122-scaled.jpg", alt: "Aerial Gilgit" },
-  { src: "https://aurigaventure.com/wp-content/uploads/2026/01/Glamp-Pakistan-at-Deosai-scaled-e1769679760930.jpg", alt: "Deosai Plains" },
-  { src: "https://aurigaventure.com/wp-content/uploads/2026/01/DSC_3514-HDR-1024x683.jpg", alt: "Mountain Vista" },
+  { src: "/shangri-la.jpg", alt: "Kachura Lake" },
+  { src: "/slide-sheosar-lake.jpg", alt: "Nanga Parbat" },
+  { src: "/fullbleed-hunza-aerial.jpg", alt: "Aerial Gilgit" },
+  { src: "/slide-deosai-glamping.jpg", alt: "Deosai Plains" },
+  { src: "/fullbleed-golden-mountains.jpg", alt: "Mountain Vista" },
 ];
 
 const row2 = [
-  { src: "https://aurigaventure.com/wp-content/uploads/2019/01/Dunsa-Valley-Tormik-scaled-e1772014273230-560x460.jpg", alt: "Dunsa Valley" },
-  { src: "https://aurigaventure.com/wp-content/uploads/2026/01/org_364545bcd22687ac_1592367926000-2048x1536.jpg", alt: "Chitral" },
-  { src: "https://aurigaventure.com/wp-content/uploads/2026/01/IMG_6386-scaled.jpeg", alt: "Landscape" },
-  { src: "https://aurigaventure.com/wp-content/uploads/2014/10/IMG_9669-560x460.jpg", alt: "Rakaposhi" },
-  { src: "https://aurigaventure.com/wp-content/uploads/2026/01/Glamping-at-Deosai-scaled-e1771302772481.jpg", alt: "Glamping Deosai" },
+  { src: "/mms-dunsa-valley-tormik.jpg", alt: "Dunsa Valley" },
+  { src: "/dest-chitral.jpg", alt: "Chitral" },
+  { src: "/fullbleed-golden-mountains.jpg", alt: "Landscape" },
+  { src: "/rakaposhi-moon.jpg", alt: "Rakaposhi" },
+  { src: "/mms-glamping-deosai.jpg", alt: "Glamping Deosai" },
 ];
 
 function PhotoRow({ photos, reverse }: { photos: typeof row1; reverse?: boolean }) {
