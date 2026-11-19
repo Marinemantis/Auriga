@@ -62,10 +62,9 @@ Pages link to each other through `relatedPages`. A published page can't link to 
 - [ ] Whether any permit applies.
 - [ ] **Photo**: the hero is Rakaposhi. Replace with Rush Lake if you have one.
 
-### /destinations/phunder/phander-lake
+### /destinations/ghizer/phander-lake
 - [ ] Drive time from Gilgit and the lake's altitude.
 - [ ] Trout fishing, and that the road to Shandur closes in winter.
-- [ ] Moves to `/destinations/ghizer/phander-lake` if the phunder → ghizer rename goes ahead.
 
 ### /trekking/naltar-lakes
 - [ ] Drive time from Gilgit, lake names (Satrangi, Blue Lake), altitudes.
@@ -80,4 +79,8 @@ Pages link to each other through `relatedPages`. A published page can't link to 
 - **/tours/hunza, /tours/skardu, /tours/fairy-meadows, /tours/from-islamabad** (`lib/tour-collections.ts`)
   - The copy only uses facts from `lib/tours.ts`.
   - Check the FAQ answers about flights and driving.
+- **/tours/gilgit-baltistan, /tours/chitral, /tours/from-lahore, /tours/from-karachi** (added in Phase 2)
+  - Gilgit-Baltistan: the claim that every transfer, permit and porter is arranged.
+  - Lahore and Karachi: the claim that direct flights to Skardu "have operated at times". Remove it if you'd rather not mention it.
+  - Chitral: the Kalash spring festival and Shandur timing.
 - **Price mismatch (pre-existing)**: the `/tours` listing shows different "From" prices than `lib/tours.ts`. For example, The Last Paradise is $2,800 on the listing and $3,100 in the tour data. The new tour landing pages use the `lib/tours.ts` prices.

@@ -18,13 +18,14 @@ const PAKISTAN_LINKS = [
 ];
 
 const DESTINATION_LINKS = [
-  ["All Destinations & Tours", "/tours"                  ],
+  ["All Destinations",         "/destinations"           ],
+  ["All Tours",                "/tours"                  ],
   ["Hunza Valley",             "/destinations/hunza"     ],
   ["Skardu Valley",            "/destinations/skardu"    ],
   ["Gilgit",                   "/destinations/gilgit"    ],
   ["Fairy Meadows",            "/destinations/fairy-meadows"],
   ["Nagar Valley",             "/destinations/nagar"     ],
-  ["Phunder & Ghizer",         "/destinations/phunder"   ],
+  ["Phunder & Ghizer",         "/destinations/ghizer"    ],
   ["Astore Valley",            "/destinations/astore"    ],
   ["Chitral Valley",           "/destinations/chitral"   ],
 ];

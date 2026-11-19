@@ -117,7 +117,7 @@ function Nav() {
   );
 }
 
-export default function FestivalsPage() {
+export default function FestivalsPage({ guides }: { guides?: React.ReactNode }) {
   return (
     <div className="bg-[#080808] text-[#F5F0E8] min-h-screen">
       <Nav />
@@ -236,6 +236,8 @@ export default function FestivalsPage() {
           </Link>
         </div>
       </section>
+
+      {guides}
 
       <Footer />
     </div>

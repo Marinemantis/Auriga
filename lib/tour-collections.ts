@@ -195,6 +195,160 @@ export const TOUR_COLLECTIONS: TourCollection[] = [
       },
     ],
     relatedDestinationSlugs: ["hunza", "skardu", "gilgit", "fairy-meadows"],
+  },  {
+    slug: "gilgit-baltistan",
+    name: "Gilgit-Baltistan Tours",
+    eyebrow: "Northern Pakistan, tailor made",
+    heroImage: "/dest-hero-panorama.jpg",
+    keyword: "gilgit baltistan tour",
+    seoTitle: "Gilgit-Baltistan Tours: Private Northern Areas Tour Packages",
+    seoDescription:
+      "Private, tailor made tours of Gilgit-Baltistan and Pakistan's northern areas: Hunza, Skardu, Fairy Meadows, Nagar, Ghizer and Astore, from 7 to 12 days.",
+    intro: [
+      "Gilgit-Baltistan, still often called the Northern Areas, is where three of the world's great mountain ranges meet: the Karakoram, the Himalaya and the Hindu Kush. It holds K2 and Nanga Parbat, the old Silk Road valleys of Hunza and Nagar, the high plateau of Deosai, and the dunes and forts of Baltistan.",
+      "Our journeys through Gilgit-Baltistan are private and tailor made. Each one balances the famous places with quieter valleys, with hand-picked places to stay and every transfer, permit and porter arranged, so the time is spent in the mountains rather than organising them.",
+    ],
+    tourSlugs: [
+      "last-paradise", "realm-of-fairies", "mountains-meet-stars", "nagar-valley",
+      "khukush-lake-phunder", "nagma-valley", "himalayan-dream",
+    ],
+    sections: [
+      {
+        heading: "Choosing a route",
+        body: [
+          "For a first journey, The Last Paradise covers the great classics over twelve days: Skardu, Deosai, Gilgit and Hunza. The Realm of Fairies pairs Fairy Meadows and Nanga Parbat with Hunza. For something quieter, Khukush Lake & Phunder heads west into Ghizer, Seven Day Himalayan Dream explores Astore, Rama Lake and Minimarg, and the Nagma Valley Trek goes deep into Baltistan.",
+        ],
+      },
+      {
+        heading: "When to go",
+        body: [
+          "Most of our Gilgit-Baltistan journeys run between May and October, when the high roads and passes are open. Spring brings blossom to the valleys, summer opens Deosai and the treks, and autumn brings clear skies and golden colour.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Is Gilgit-Baltistan the same as the Northern Areas?",
+        a: "Yes. Gilgit-Baltistan was officially known as the Northern Areas until 2009, and many people still use the old name.",
+      },
+      {
+        q: "How many days do you need for a Gilgit-Baltistan tour?",
+        a: "At least a week for one region, such as Hunza or Skardu, and 10 to 14 days to combine two or more. Our journeys run from 7 to 12 days.",
+      },
+      {
+        q: "What is the best time to visit Gilgit-Baltistan?",
+        a: "May to October. Late spring for blossom, summer for high passes, Deosai and treks, and autumn for colour and clear weather.",
+      },
+    ],
+    relatedDestinationSlugs: ["hunza", "skardu", "gilgit", "fairy-meadows", "nagar", "astore"],
+  },
+  {
+    slug: "chitral",
+    name: "Chitral Tours",
+    eyebrow: "Kalash valleys, Shandur & the Hindu Kush",
+    heroImage: "/dest-chitral.jpg",
+    keyword: "chitral tours",
+    seoTitle: "Chitral Tours: Private Kalash Valley & Shandur Journeys",
+    seoDescription:
+      "Private Chitral tours through the Kalash valleys, Chitral Fort and the Shandur Pass, continuing to Phunder and the Ghizer valley. Twelve nights, tailor made.",
+    intro: [
+      "Chitral lies in the Hindu Kush, beneath Tirich Mir, the highest mountain of the range. It is home to the Kalash valleys of Bumburet, Rumbur and Birir, to the old royal fort of Chitral, and to one of the most beautiful mountain roads in Pakistan, over the Shandur Pass to Gilgit-Baltistan.",
+      "Our Chitral journey is private and tailor made, with culturally sensitive visits to the Kalash valleys, a heritage lodge with views of Tirich Mir, and the crossing of Shandur, the world's highest polo ground, into the Ghizer valley.",
+    ],
+    tourSlugs: ["chitral-phunder"],
+    sections: [
+      {
+        heading: "Wilderness of Chitral & Phunder",
+        body: [
+          "Over twelve nights, the journey begins in Chitral, with the fort, the bazaars and the Kalash valleys, then climbs to Shandur at 3,734 metres and descends into Ghizer for Phunder Lake, the Yasin valley and Gupis Fort. It runs from May to September and can be adapted to your dates.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "When is the best time for a Chitral tour?",
+        a: "May to September, when the Shandur Pass is open. Many travellers also time their visit to the Kalash spring festival or the Shandur Polo Festival in summer.",
+      },
+      {
+        q: "Can you visit the Kalash valleys on a Chitral tour?",
+        a: "Yes. Our Chitral journey includes guided, culturally sensitive visits to the Kalash valleys, including a family lunch in Bumburet.",
+      },
+    ],
+    relatedDestinationSlugs: ["chitral", "ghizer"],
+  },
+  {
+    slug: "from-lahore",
+    name: "Tours from Lahore",
+    eyebrow: "Northern Pakistan from Lahore",
+    heroImage: "/lp-indus-river.jpg",
+    keyword: "tours from lahore",
+    seoTitle: "Tours from Lahore to Hunza, Skardu & the Northern Areas",
+    seoDescription:
+      "Private tours from Lahore to Hunza, Skardu, Fairy Meadows and the rest of Gilgit-Baltistan. How the journey north works by air and road, and the itineraries to choose from.",
+    intro: [
+      "From Lahore, the mountains of the north are closer than they feel. Most journeys connect through Islamabad, a few hours away by motorway or a short flight, and continue north by air to Gilgit or Skardu, or overland along the Karakoram Highway.",
+      "Every Auriga journey is private and tailor made. Tell us when you are leaving Lahore and we will plan the connection north around your dates.",
+    ],
+    tourSlugs: [
+      "realm-of-fairies", "last-paradise", "mountains-meet-stars", "nagar-valley",
+      "khukush-lake-phunder", "chitral-phunder", "nagma-valley", "himalayan-dream",
+    ],
+    sections: [
+      {
+        heading: "Getting north from Lahore",
+        body: [
+          "The simplest route is via Islamabad, then a flight to Gilgit or Skardu, or the drive north. Direct flights between Lahore and Skardu have operated at times, so we check what is flying for your dates. Mountain flights depend on clear weather, so we always plan a margin around them.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How do you get from Lahore to Hunza?",
+        a: "Usually via Islamabad: fly or drive to Islamabad, then fly to Gilgit and continue by road to Hunza, or drive the whole way along the Karakoram Highway.",
+      },
+      {
+        q: "How do you get from Lahore to Skardu?",
+        a: "By flying, either direct when a route is operating or via Islamabad, or by road. We plan whichever suits your dates and the season.",
+      },
+    ],
+    relatedDestinationSlugs: ["hunza", "skardu", "gilgit"],
+  },
+  {
+    slug: "from-karachi",
+    name: "Tours from Karachi",
+    eyebrow: "Northern Pakistan from Karachi",
+    heroImage: "/fullbleed-golden-mountains.jpg",
+    keyword: "tours from karachi",
+    seoTitle: "Tours from Karachi to Hunza, Skardu & the Northern Areas",
+    seoDescription:
+      "Private tours from Karachi to Hunza, Skardu, Fairy Meadows and Gilgit-Baltistan, with flights north planned around your dates and tailor made itineraries.",
+    intro: [
+      "From Karachi, the quickest way into the mountains is by air: a flight north to Islamabad and on to Gilgit or Skardu, and within a day you can go from the Arabian Sea to the foot of the Karakoram.",
+      "Every Auriga journey is private and tailor made. Tell us your dates and we will plan the flights and connections north so the journey starts smoothly.",
+    ],
+    tourSlugs: [
+      "realm-of-fairies", "last-paradise", "mountains-meet-stars", "nagar-valley",
+      "khukush-lake-phunder", "chitral-phunder", "nagma-valley", "himalayan-dream",
+    ],
+    sections: [
+      {
+        heading: "Getting north from Karachi",
+        body: [
+          "Most travellers fly from Karachi to Islamabad and connect to Gilgit or Skardu. Direct flights between Karachi and Skardu have operated in some seasons, so we check what is flying for your dates. Because mountain flights depend on the weather, we build a margin into every itinerary.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How do you get from Karachi to Hunza?",
+        a: "Fly to Islamabad, then on to Gilgit, and continue by road to Hunza. We plan the connections and the transfer for you.",
+      },
+      {
+        q: "How do you get from Karachi to Skardu?",
+        a: "By air, either direct when a route is operating or via Islamabad. We check current flights for your dates.",
+      },
+    ],
+    relatedDestinationSlugs: ["hunza", "skardu", "gilgit", "fairy-meadows"],
   },
 ];
 

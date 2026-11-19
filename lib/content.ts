@@ -39,7 +39,7 @@ export interface SectionConfig {
 
 export const SECTIONS: Record<SectionKey, SectionConfig> = {
   destinations: {
-    label: "Destinations", base: "/destinations", hub: "existing", hubPath: "/tours",
+    label: "Destinations", base: "/destinations", hub: "existing", hubPath: "/destinations",
     hubTitle: "Destinations", hubDescription: "", hubImage: "/dest-hero-panorama.jpg",
   },
   trekking: {

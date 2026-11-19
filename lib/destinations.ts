@@ -52,8 +52,9 @@ export const DESTINATIONS: Destination[] = [
     relatedTourSlugs: ["realm-of-fairies", "last-paradise"],
   },
   {
-    slug: "phunder",
+    slug: "ghizer",
     name: "Phunder & Ghizer",
+    seoTitle: "Ghizer Valley Travel Guide: Phunder Lake, Yasin & Tours",
     subtitle: "The Calm of Phunder",
     region: "Ghizer Valley · Gilgit-Baltistan",
     heroImage: "/dest-phunder.jpg",

@@ -11,7 +11,7 @@ import NavMain from "@/components/NavMain";
 import { FadeUp, DrawLine, RevealPhoto } from "@/components/Reveal";
 import PriceDisplay from "@/components/PriceDisplay";
 
-export default function DestinationPage({ slug }: { slug: string }) {
+export default function DestinationPage({ slug, guides }: { slug: string; guides?: React.ReactNode }) {
   const dest = getDestination(slug);
   if (!dest) notFound();
 
@@ -195,6 +195,8 @@ export default function DestinationPage({ slug }: { slug: string }) {
           </div>
         </section>
       )}
+
+      {guides}
 
       {/* ── RELATED TOURS ── */}
       {relatedTours.length > 0 && (

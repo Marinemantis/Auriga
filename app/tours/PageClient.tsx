@@ -23,7 +23,7 @@ const DESTINATIONS = [
     pillars: ["Curated Retreats", "Adventure with Elegance", "Cultural Immersion"],
   },
   {
-    id: "phunder",
+    id: "ghizer",
     name: "Phunder & Ghizer",
     subtitle: "The Calm of Phunder",
     region: "Ghizer Valley · Gilgit-Baltistan",
@@ -368,7 +368,7 @@ export default function DestinationsPage() {
           </Link>
 
           {/* Phunder — tall portrait */}
-          <Link href="/destinations/phunder" id="phunder" className="relative overflow-hidden group bg-[#0D0D0D] block"
+          <Link href="/destinations/ghizer" id="ghizer" className="relative overflow-hidden group bg-[#0D0D0D] block"
             style={{ height: "clamp(320px, 45vw, 580px)" }}>
             <motion.div
               initial={{ opacity: 0, scale: 1.04 }}
