@@ -6,6 +6,8 @@ import matter from "gray-matter";
 import type { Faq } from "@/lib/faqs";
 import { DESTINATIONS, getDestination } from "@/lib/destinations";
 import { TOURS } from "@/lib/tours";
+import { TOUR_COLLECTIONS } from "@/lib/tour-collections";
+import { STATIC_PAGES } from "@/lib/site-pages";
 
 /**
  * Long-form guide pages live as MDX files in /content.
@@ -176,6 +178,10 @@ export function resolveInternalLink(href: string, from: string): { href: string;
   if (dest) return { href, title: `${dest.name} guide` };
   const tour = TOURS.find(t => `/tours/${t.slug}` === href);
   if (tour) return { href, title: tour.name };
+  const collection = TOUR_COLLECTIONS.find(c => `/tours/${c.slug}` === href);
+  if (collection) return { href, title: collection.name };
+  const page = STATIC_PAGES.find(p => p.path === href);
+  if (page) return { href, title: page.title };
   const hub = Object.values(SECTIONS).find(s => s.hubPath === href);
   if (hub) return { href, title: hub.hubTitle };
   throw new Error(`[content] ${from}: relatedPages link ${href} does not match any page`);
