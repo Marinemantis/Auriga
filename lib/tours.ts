@@ -22,6 +22,9 @@ export interface Tour {
   highlights: string[];
   hotels: Hotel[];
   relatedSlugs: string[];
+  /** Optional SEO overrides; defaults are generated from the fields above. */
+  seoTitle?: string;
+  seoDescription?: string;
 }
 
 export const TOURS: Tour[] = [

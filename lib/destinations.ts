@@ -16,6 +16,9 @@ export interface Destination {
     days: { title: string; meta?: string; body: string; overnight?: string; highlights?: string }[];
   };
   relatedTourSlugs: string[];
+  /** Optional SEO overrides; defaults are generated from the fields above. */
+  seoTitle?: string;
+  seoDescription?: string;
 }
 
 export const DESTINATIONS: Destination[] = [

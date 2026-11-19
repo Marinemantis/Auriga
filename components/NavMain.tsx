@@ -5,7 +5,6 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
 const NAV_LINKS = [
-  { label: "Destinations", href: "/tours"       },
   { label: "Experiences",  href: "/experiences"  },
   { label: "About",        href: "/about"        },
   { label: "Contact",      href: "/contact"      },
@@ -17,6 +16,57 @@ const PAKISTAN_LINKS = [
   ["Mountain Passes",       "/pakistan/mountain-passes"],
   ["Festivals of Pakistan", "/pakistan/festivals"      ],
 ];
+
+const DESTINATION_LINKS = [
+  ["All Destinations & Tours", "/tours"                  ],
+  ["Hunza Valley",             "/destinations/hunza"     ],
+  ["Skardu Valley",            "/destinations/skardu"    ],
+  ["Nagar Valley",             "/destinations/nagar"     ],
+  ["Phunder & Ghizer",         "/destinations/phunder"   ],
+  ["Astore Valley",            "/destinations/astore"    ],
+  ["Chitral Valley",           "/destinations/chitral"   ],
+];
+
+function NavDropdown({ label, links, light }: { label: string; links: string[][]; light: boolean }) {
+  return (
+    <div className="relative group">
+      <span
+        className={`flex items-center gap-1 cursor-default text-[11px] tracking-[0.12em] uppercase transition-colors duration-300 select-none ${light ? "text-[#333]/60 group-hover:text-[#111]" : "text-white/70 group-hover:text-white"}`}
+        style={{ fontFamily: "var(--font-inter), sans-serif" }}
+      >
+        {label}
+        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" className="transition-transform duration-200 group-hover:rotate-180">
+          <path d="M1 1l3 3 3-3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </span>
+      <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200 z-50">
+        <div className={`w-56 border shadow-xl py-1.5 ${light ? "bg-white border-[#e8e4de]" : "bg-[#0d0d0d] border-[#222]"}`}>
+          {links.map(([text, href]) => (
+            <Link key={href} href={href}
+              className={`block px-5 py-2.5 text-[10px] tracking-[0.15em] uppercase transition-colors duration-200 ${light ? "text-[#444] hover:text-[#C8903A] hover:bg-[#f9f7f5]" : "text-[#F5F0E8]/60 hover:text-[#C8903A] hover:bg-[#161616]"}`}
+              style={{ fontFamily: "var(--font-inter), sans-serif" }}
+            >{text}</Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function MobileGroup({ label, links, onNavigate }: { label: string; links: string[][]; onNavigate: () => void }) {
+  return (
+    <>
+      <p className="text-[10px] tracking-[0.3em] uppercase text-[#bbb]" style={{ fontFamily: "var(--font-inter), sans-serif" }}>{label}</p>
+      {links.map(([text, href]) => (
+        <Link key={href} href={href} onClick={onNavigate}
+          className="text-sm tracking-[0.12em] uppercase text-[#777] hover:text-[#C8903A] pl-3 border-l border-[#eee] transition-colors"
+          style={{ fontFamily: "var(--font-inter), sans-serif" }}
+        >{text}</Link>
+      ))}
+      <div className="h-px bg-[#eee]" />
+    </>
+  );
+}
 
 // darkPage=true  → solid bg becomes dark  (#080808) — tours, experiences, about
 // darkPage=false → solid bg becomes white            — homepage, tour detail
@@ -57,28 +107,8 @@ export default function NavMain({ darkPage = false }: { darkPage?: boolean }) {
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-5 xl:gap-7 whitespace-nowrap">
 
-          {/* Pakistan dropdown */}
-          <div className="relative group">
-            <span
-              className={`flex items-center gap-1 cursor-default text-[11px] tracking-[0.12em] uppercase transition-colors duration-300 select-none ${light ? "text-[#333]/60 group-hover:text-[#111]" : "text-white/70 group-hover:text-white"}`}
-              style={{ fontFamily: "var(--font-inter), sans-serif" }}
-            >
-              Pakistan
-              <svg width="8" height="5" viewBox="0 0 8 5" fill="none" className="transition-transform duration-200 group-hover:rotate-180">
-                <path d="M1 1l3 3 3-3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </span>
-            <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-              <div className={`w-52 border shadow-xl py-1.5 ${light ? "bg-white border-[#e8e4de]" : "bg-[#0d0d0d] border-[#222]"}`}>
-                {PAKISTAN_LINKS.map(([label, href]) => (
-                  <Link key={href} href={href}
-                    className={`block px-5 py-2.5 text-[10px] tracking-[0.15em] uppercase transition-colors duration-200 ${light ? "text-[#444] hover:text-[#C8903A] hover:bg-[#f9f7f5]" : "text-[#F5F0E8]/60 hover:text-[#C8903A] hover:bg-[#161616]"}`}
-                    style={{ fontFamily: "var(--font-inter), sans-serif" }}
-                  >{label}</Link>
-                ))}
-              </div>
-            </div>
-          </div>
+          <NavDropdown label="Destinations" links={DESTINATION_LINKS} light={light} />
+          <NavDropdown label="Pakistan" links={PAKISTAN_LINKS} light={light} />
 
           {NAV_LINKS.map((l) => (
             <Link key={l.href} href={l.href}
@@ -122,14 +152,8 @@ export default function NavMain({ darkPage = false }: { darkPage?: boolean }) {
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="lg:hidden bg-white border-t border-[#eee] px-6 pb-8 pt-6 flex flex-col gap-5 overflow-hidden"
           >
-            <p className="text-[10px] tracking-[0.3em] uppercase text-[#bbb]" style={{ fontFamily: "var(--font-inter), sans-serif" }}>Pakistan</p>
-            {PAKISTAN_LINKS.map(([label, href]) => (
-              <Link key={href} href={href} onClick={() => setMenuOpen(false)}
-                className="text-sm tracking-[0.12em] uppercase text-[#777] hover:text-[#C8903A] pl-3 border-l border-[#eee] transition-colors"
-                style={{ fontFamily: "var(--font-inter), sans-serif" }}
-              >{label}</Link>
-            ))}
-            <div className="h-px bg-[#eee]" />
+            <MobileGroup label="Destinations" links={DESTINATION_LINKS} onNavigate={() => setMenuOpen(false)} />
+            <MobileGroup label="Pakistan" links={PAKISTAN_LINKS} onNavigate={() => setMenuOpen(false)} />
             {NAV_LINKS.map((l) => (
               <Link key={l.href} href={l.href} onClick={() => setMenuOpen(false)}
                 className="text-sm tracking-[0.12em] uppercase text-[#333] hover:text-[#C8903A] transition-colors"
