@@ -71,6 +71,53 @@ Pages link to each other through `relatedPages`. A published page can't link to 
 - [ ] That jeeps are needed for the last section, and the Naltar Pass trek.
 - [ ] **Photo**: the hero is an Astore meadow. Replace with Naltar.
 
+## Phase 3 drafts (Hunza and Skardu)
+
+### /destinations/hunza/hotels
+- [ ] Hotel names exactly as they should appear (Serena Hunza, Eagle's Nest Hotel).
+- [ ] Any other properties you want to recommend.
+
+### /destinations/hunza/things-to-do
+- [ ] The list matches what you'd recommend. The water channel walks and Ultar meadow.
+
+### /destinations/hunza/eagles-nest
+- [ ] Drive time Karimabad → Duikar (about 30 min) and the peaks named (Rakaposhi, Ultar, Ladyfinger).
+
+### /destinations/hunza/attabad-lake
+- [ ] Landslide date (January 2010), the boat crossing and lakeside stays.
+- [ ] Whether parts of the lake freeze in winter.
+
+### /destinations/hunza/khunjerab-pass
+- [ ] Altitude (about 4,700 m) and the opening season (late spring to late autumn).
+- [ ] The national park entry fee, and the statement that no Chinese visa is needed for the Pakistani side.
+- [ ] Wildlife named (ibex, marmots, Marco Polo sheep, snow leopard).
+
+### /destinations/hunza/shimshal-valley
+- [ ] Road and drive time from Passu, places to stay.
+- [ ] Permit rules for the Pamir treks. Shimshal Kuch timing.
+- [ ] No Auriga tour includes Shimshal yet, so the page only offers a tailor made journey.
+
+### /destinations/skardu/shangrila-resort
+- [ ] Distance to Lower Kachura (about 30 min), the aircraft café, day-visitor access.
+- [ ] Wording comparing it with the Shigar Fort Residence.
+
+### /destinations/skardu/shigar-fort
+- [ ] Age (about 400 years, 17th century), the name "Fong-khar", the AKTC restoration.
+- [ ] Museum and tour arrangements. Drive time (about 1 h).
+
+### /destinations/skardu/things-to-do
+- [ ] The list and the day trips you actually run (Manthokha, Basho).
+
+### /destinations/skardu/khaplu
+- [ ] Palace build date (19th century), the AKTC restoration, the Chaqchan Mosque's 14th-century link.
+- [ ] Drive time (about 2.5–3 h).
+- [ ] **Photo**: the hero is the Indus. Replace with Khaplu Palace.
+
+### /destinations/skardu/deosai-plains
+- [ ] Average altitude (about 4,100 m; your camp data says 4,114 m) and the season (roughly June–September).
+- [ ] The national park entry fee.
+- [ ] Whether Nanga Parbat really is visible from parts of the plateau.
+
 ## Live on merge (not drafts): please also review
 
 - **/destinations/gilgit** and **/destinations/fairy-meadows** hubs (`lib/destinations.ts`)
