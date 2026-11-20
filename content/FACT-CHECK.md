@@ -238,6 +238,72 @@ Only the Rakaposhi Base Camp, Nanga Parbat Base Camp, Rupal Face and Spantik pag
 
 **Navigation**: the `/pakistan/mountains` hub appears once a mountain page is published. Consider adding it to the Pakistan menu at that point.
 
+## Phase 5 drafts (travel, activities, festivals, remaining destinations)
+
+The budget itinerary page was skipped; it's still waiting on your decision.
+
+### Travel
+- **Route pages** (`islamabad-to-hunza`, `lahore-to-hunza`, `islamabad-to-skardu`, `lahore-to-skardu`, `gilgit-to-skardu`):
+  - Distances (about 600 km to Hunza, 600–700 km to Skardu) and drive times.
+  - Where you break the road journey, and the Babusar season (about June–October).
+  - Whether direct Lahore–Gilgit or Lahore–Skardu flights run now.
+- **/travel/karakoram-highway**:
+  - Completed 1979, "hundreds" of workers died, Khunjerab about 4,700 m.
+  - The Chinese cemetery near Gilgit (Danyor).
+- **/travel/skardu-flights** and **/travel/gilgit-airport**: current airlines and routes, baggage limits, airport distances.
+- **/travel/what-to-pack**: align with the packing list you send guests. Do you supply sleeping bags or down jackets?
+- **/travel/best-time-to-visit** and **/travel/winter**:
+  - Pass opening seasons.
+  - Which hotels you use in winter.
+  - Whether you run winter journeys at all.
+- **/travel/food-guide**: dish names. Add a Gilgit dish.
+- **/travel/7-day-itinerary** and **/travel/14-day-itinerary**:
+  - Option 1 on each page is my sketch. Check it against how you would actually run it.
+  - The 14-day page says it "follows" The Last Paradise. Compare the table with the real day plan.
+
+### Experiences and festival
+- **/experiences/jeep-safari** and **/experiences/camping**: based on your tour and camp data. Confirm vehicle types and camp details.
+- **/experiences/skiing-naltar**: that the ski area is operated with the Pakistan Air Force, lift and hire arrangements, the season (about December–March).
+- **/experiences/paragliding**, **/experiences/river-rafting**, **/experiences/rock-climbing-trango** ⚠️:
+  - None of these is in your tours.
+  - Each page says you can arrange it through trusted operators, or (for Trango) provide expedition logistics.
+  - Confirm you want to offer each one and name the operators, or hold the page back.
+- **/pakistan/festivals/shandur-polo-festival**: usual dates (early July, about 3 days), accommodation on the pass, whether you run a festival departure.
+
+### Gilgit
+- **/destinations/gilgit/things-to-do**:
+  - The three-ranges viewpoint near Jaglot.
+  - The Danyor bridge and Chinese cemetery.
+  - Polo in Gilgit.
+  - Khalti Lake listed as a day trip.
+- **/destinations/gilgit/restaurants**: names no restaurants. Add the ones you recommend.
+- **/destinations/gilgit/hotels** ⚠️: names no hotels. It can't go live until you add the ones you use.
+- **/destinations/gilgit/naltar-valley**: drive times, lake names, where guests can stay.
+- **/destinations/gilgit/bagrot-valley**: road, drive time, villages and walks.
+- **/destinations/gilgit/kargah-buddha**: dating (about 7th century), the figure's size, drive time (about 20 min), the stupa and the Gilgit Manuscripts.
+- **/destinations/gilgit/haramosh-valley**: overlaps with `/trekking/kutwal-lake` on purpose. The valley page is the overview and links to the trek for detail.
+
+### Fairy Meadows
+- **/destinations/fairy-meadows/how-to-reach**: Gilgit → Raikot Bridge (about 2 h), jeep time to Tato, ponies, porters.
+- **/destinations/fairy-meadows/camping** and **/best-time-to-visit**: camp details and the season by month.
+
+### Ghizer
+- **/destinations/ghizer/gupis**: Gupis Fort details, Khalti Lake's location near Gupis, drive time from Gilgit.
+- **/destinations/ghizer/yasin-valley**: the history as a small kingdom, the languages (Burushaski, Khowar), the Lalak Jan reference.
+- **/destinations/ghizer/ishkoman-valley**:
+  - Villages (Chatorkhand, Imit) and communities (Wakhi, Khowar, Shina).
+  - Permit rules for the upper valley.
+  - **Photo**: replace the hero with Ishkoman.
+
+### Astore
+- **/destinations/astore/minimarg**: the route over the Burzil Pass, Rainbow Lake, permission rules near the Line of Control.
+- **/destinations/astore/rama-lake**: lake altitude, access from the meadows, the Astore Mountain Lodge.
+
+### Also changed
+- **/destinations/skardu/basho-valley** now says Basho is part of Where Mountains Meet the Stars, as your tour data says.
+
+**Photos**: most new destination and activity pages use stand-in photos. None exist yet for Kargah, Naltar, Bagrot, Gupis Fort, Yasin, Ishkoman, Rama Lake, Naltar skiing, paragliding or rafting.
+
 ## Live on merge (not drafts): please also review
 
 - **/destinations/gilgit** and **/destinations/fairy-meadows** hubs (`lib/destinations.ts`)
