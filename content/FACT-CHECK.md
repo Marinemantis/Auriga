@@ -118,6 +118,87 @@ Pages link to each other through `relatedPages`. A published page can't link to 
 - [ ] The national park entry fee.
 - [ ] Whether Nanga Parbat really is visible from parts of the plateau.
 
+## Phase 3 drafts, second batch (lower-search Hunza and Skardu)
+
+These pages lean more on general knowledge than on your tour data, so they need a closer check. Several use placeholder photos.
+
+### /destinations/hunza/best-time-to-visit
+- [ ] Season dates, and the Khunjerab opening season.
+
+### /destinations/hunza/food
+- [ ] Dish names and spellings (chapshoro, diram fitti, harissa) and the walnut cake in Karimabad cafés.
+- [ ] That you arrange meals with local families.
+
+### /destinations/hunza/in-winter
+- [ ] That the Khunjerab Pass closes in winter and many hotels close. The hotels you use in winter.
+- [ ] **Photo**: the hero is Rakaposhi by moonlight. Replace with a winter Hunza photo.
+
+### /destinations/hunza/in-autumn
+- [ ] Peak colour in the second half of October, starting in Upper Hunza.
+- [ ] **Photo**: confirm `/fullbleed-golden-mountains.jpg` shows autumn, or replace it.
+
+### /destinations/hunza/karimabad
+- [ ] That Karimabad was formerly called Baltit and was renamed in honour of the Aga Khan.
+
+### /destinations/hunza/altit-fort
+- [ ] Age (about 900+ years), the Shikari tower, the AKTC restoration, the Royal Garden.
+- [ ] Drive time from Karimabad (about 10 min) and visiting arrangements.
+
+### /destinations/hunza/borith-lake
+- [ ] Altitude (about 2,600 m), the road from Hussaini, the walk towards the Passu Glacier.
+- [ ] Whether you actually stop at Borith on your tours. The page says it is "an easy addition".
+
+### /destinations/hunza/gulmit
+- [ ] The old summer capital claim, the cultural museum, the carpet weavers.
+- [ ] **Photo**: the hero is the Passu Cones. Replace with Gulmit if you have one.
+
+### /destinations/hunza/chapursan-valley
+- [ ] Village names (Reshit, Zood Khun), the Baba Ghundi shrine, the road from Sost, permit rules.
+- [ ] No tour goes there, so the page only offers a tailor made journey.
+- [ ] **Photo**: the hero is a general Hunza village. Replace with Chapursan.
+
+### /destinations/skardu/weather
+- [ ] Figures are PMD normals from the Wikipedia Skardu weather box (checked against the page source, 20 Nov 2026). The box's "year" precipitation (172.7 mm) doesn't match the sum of its months (216.4 mm), so the page says "roughly 200 mm". Confirm with PMD if you can.
+- [ ] Elevation (about 2,230 m).
+
+### /destinations/skardu/hotels
+- [ ] That Khaplu Palace is bookable as a heritage hotel, and any Kachura or Skardu properties you use.
+
+### /destinations/skardu/restaurants
+- [ ] Balti dish names and descriptions (mamtu, balay, prapu, butter tea).
+- [ ] Restaurants in Skardu town you recommend. The page names none.
+- [ ] **Photo**: the hero is a general Skardu image.
+
+### /destinations/skardu/kachura-lake
+- [ ] Altitude (about 2,500 m), drive time (about 30 min), boating, the walk down to Upper Kachura.
+- [ ] Whether the lakes freeze in winter.
+
+### /destinations/skardu/satpara-lake
+- [ ] Drive time (about 20 min), the dam supplying water and power, the Manthal Buddha rock location.
+- [ ] That your Deosai crossing uses this road.
+- [ ] **Photo**: the hero is a Skardu cliff. Replace with Satpara.
+
+### /destinations/skardu/shigar-valley
+- [ ] The Amacha dynasty, the Amburiq Mosque age and its restoration, the road to Askole.
+- [ ] **Photo**: confirm `/guide-fort-portrait.jpg` shows Shigar, or replace it.
+
+### /destinations/skardu/basho-valley
+- [ ] Location (west of Skardu off the Gilgit road), the jeep track, drive time (about 1.5–2 h).
+- [ ] **Photo**: the hero is an Astore meadow. Replace with Basho.
+
+### /destinations/skardu/chunda-valley ⚠️ least certain
+- [ ] Where exactly Chunda is, how to get there, and what visitors come for. The page is deliberately vague.
+- [ ] **Photo**: the hero is the Indus. Replace with Chunda.
+- [ ] Consider holding this page back until you have first-hand detail.
+
+### /destinations/skardu/manthokha-waterfall
+- [ ] Location in Kharmang, drive time (about 2–3 h), and whether foreigners need a permit for Kharmang.
+- [ ] **Photo**: the hero is a different Baltistan valley. Replace with Manthokha.
+
+### /destinations/skardu/sheosar-lake
+- [ ] Altitude (about 4,100 m) and position at the western, Astore end of Deosai.
+- [ ] Whether your Deosai crossing stops at Sheosar.
+
 ## Live on merge (not drafts): please also review
 
 - **/destinations/gilgit** and **/destinations/fairy-meadows** hubs (`lib/destinations.ts`)
