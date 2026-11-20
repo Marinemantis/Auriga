@@ -199,6 +199,45 @@ These pages lean more on general knowledge than on your tour data, so they need 
 - [ ] Altitude (about 4,100 m) and position at the western, Astore end of Deosai.
 - [ ] Whether your Deosai crossing stops at Sheosar.
 
+## Phase 4 drafts (trekking and mountains)
+
+Only the Rakaposhi Base Camp, Nanga Parbat Base Camp, Rupal Face and Spantik pages rest on your own tour data. The rest use general mountaineering knowledge (heights, first ascents, routes), so check them carefully. Almost every hero is a placeholder: there are no photos of K2, the Baltoro, Hushe or the named peaks in `public/`.
+
+**Applies to every trek page:** permit and liaison-officer rules (Baltoro, Hushe, Snow Lake, Karambar), Central Karakoram National Park fees, and whether you want to offer the trek at all. Pages for treks you don't run end with a tailor made enquiry, not a tour.
+
+### Trekking
+- **/trekking/k2-base-camp**:
+  - Stage names (Askole, Jhola, Paiju, Urdukas, Goro, Concordia), 14–18 days, base camp about 5,000 m.
+  - The itinerary table.
+  - The statement that you run private treks, not fixed departures.
+  - There's no `/tours/k2-base-camp` page; this guide links to the enquiry form instead.
+- **/trekking/concordia**: altitude (about 4,600 m), the Galen Rowell "throne room" attribution.
+- **/trekking/gondogoro-la**: pass height (quoted as about 5,600 m), camp names (Ali Camp, Khuspang, Saicho), fixed ropes, the July–August season.
+- **/trekking/snow-lake**: distances (over 100 km of glacier), the Hispar La (about 5,100 m), 12–16 days, Conway naming Snow Lake.
+- **/trekking/nanga-parbat-base-camp**: base camp about 3,900 m, Beyal Camp, whether you take guests beyond Beyal.
+- **/trekking/rupal-face**: Tarishing, Herrligkoffer Base Camp (about 3,500 m), Latobo, the 1970 Messner climb, whether you walk guests to base camp.
+- **/trekking/rakaposhi-base-camp**: taken from the Nagar trek data in `lib/destinations.ts` (Minapin, Hapakun, Taghaphari). Confirm it's still accurate.
+- **/trekking/kutwal-lake**: start near Sassi, villages (Dassu, Iskere, Kutwal), lake about 3,300 m, 4–6 days.
+- **/trekking/laila-peak-base-camp**: Laila Peak height (6,096 m to over 6,200 m in sources), camps (Saicho, Dalsampa, Khuspang).
+- **/trekking/spantik-base-camp** ⚠️: your Nagar Valley tour says it approaches Golden Peak base camp from Nagar, but expeditions normally use Arandu and the Chogo Lungma Glacier. The page needs your actual route.
+- **/trekking/masherbrum-base-camp**: route, camps and base camp altitude.
+- **/trekking/hushe-valley**: village altitude (about 3,000 m), drive times (Khaplu → Hushe about 3 h).
+- **/trekking/karambar-lake**: altitude (about 4,300 m), the Broghil and Ishkoman (Imit) approaches, 7–12 days.
+
+### Mountains
+- **/pakistan/mountains/nanga-parbat**: 8,126 m, Diamer, the 1930s expeditions, Buhl 1953, Messner 1970.
+- **/pakistan/mountains/k2**: 8,611 m, Montgomerie 1856, the "Savage Mountain" origin (1953), Lacedelli and Compagnoni 1954, the Nepali winter ascent in 2021.
+- **/pakistan/mountains/broad-peak**: 8,051 m, Faichan Kangri, the 1957 Austrian team, Buhl's death on Chogolisa.
+- **/pakistan/mountains/gasherbrum**: GI 8,080 m (Schoening and Kauffman, 1958), GII 8,035 m (Austrian, 1956), GIV's "Shining Wall".
+- **/pakistan/mountains/laila-peak**: the height you want to quote.
+- **/pakistan/mountains/rakaposhi**: Banks and Patey 1958, the name Dumani, the viewpoint near Ghulmet, about 5,800 m of relief.
+- **/pakistan/mountains/masherbrum**: 7,821 m, K1, Bell and Unsoeld 1960.
+- **/pakistan/mountains/spantik**: German first ascent 1955, the Golden Pillar 1987.
+- **/pakistan/mountains/trango-towers**: heights, the 1976 British first ascent of the Nameless Tower.
+- **/pakistan/mountains/haramosh**: 7,409 m, the 1957 Oxford expedition, the 1958 Austrian first ascent.
+
+**Navigation**: the `/pakistan/mountains` hub appears once a mountain page is published. Consider adding it to the Pakistan menu at that point.
+
 ## Live on merge (not drafts): please also review
 
 - **/destinations/gilgit** and **/destinations/fairy-meadows** hubs (`lib/destinations.ts`)
