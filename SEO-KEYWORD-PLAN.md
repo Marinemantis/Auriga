@@ -61,8 +61,7 @@ The source lists some keywords twice. Each keyword gets one page only:
 | Skardu Tours | `/tours/skardu` | skardu tour packages | 1,000 | 21 | last-paradise, mountains-meet-stars, nagma-valley |
 | Fairy Meadows Tours | `/tours/fairy-meadows` | fairy meadows tour | 170 | 10 | realm-of-fairies |
 | K2 Base Camp Tours | `/tours/k2-base-camp` | k2 base camp tour | 880 | 40 | **No tour yet.** Needs a new itinerary or a bespoke enquiry page |
-| Northern Areas Tours | `/tours/northern-areas` | northern areas tour | 210 | 4 | All GB tours |
-| Gilgit-Baltistan Tours | `/tours/gilgit-baltistan` | gilgit baltistan tour | 90 | 6 | All GB tours |
+| Gilgit-Baltistan / Northern Areas Tours | `/tours/gilgit-baltistan` | gilgit baltistan tour + northern areas tour | 300 | 4–6 | All GB tours. **Merged** into one page (same search intent) |
 | Chitral Tours | `/tours/chitral` | chitral tours | 70 | 4 | chitral-phunder |
 | Tours from Islamabad | `/tours/from-islamabad` | tours from islamabad | 70 | 2 | All (every tour starts in Islamabad) |
 | Tours from Lahore | `/tours/from-lahore` | tours from lahore | 390 | 19 | All, plus Lahore pickup or flight details |
@@ -152,7 +151,7 @@ GB Guide hasn't published any of these yet.
 | Page | URL | Vol | KD | Notes |
 |---|---|---|---|---|
 | All Destinations / Hidden Valleys | `/destinations` | — | — | New index page with a "Hidden valleys" section |
-| Ghizer Valley | `/destinations/ghizer` | 720 | 25 | **Rename `/destinations/phunder` → `/destinations/ghizer`** with a 301 redirect ("ghizer valley" has the volume) |
+| Ghizer Valley | `/destinations/ghizer` | 720 | 25 | Renamed from `/destinations/phunder`, with a 301 redirect ("ghizer valley" has the volume). **Done** |
 | Phander Lake ⭐ | `/destinations/ghizer/phander-lake` | — | ~3 | Build first |
 | Gupis ⭐ | `/destinations/ghizer/gupis` | — | ~2 | |
 | Yasin Valley | `/destinations/ghizer/yasin-valley` | 590 | 31 | chitral-phunder tour goes through Yaseen |
@@ -273,7 +272,7 @@ Every guide ends with "Let Auriga handle this for you" and a link to the enquiry
 6. **Structured data:** `BreadcrumbList` everywhere, `FAQPage` where there are FAQs, `Article` on guides, `TouristTrip` on tours.
 7. **Internal links:** guide → hub → `/tours/[place]` → enquiry. Breadcrumbs on every page. "Related" blocks driven by frontmatter.
 8. **Navigation:** the "Destinations" menu item currently points to `/tours`. Split it into **Tours** (`/tours`) and a **Destinations** dropdown (`/destinations/*`). Rename the "Pakistan" dropdown to "Travel Guide" and add Trekking, Mountains, Travel and Permits.
-9. **Redirect** `/destinations/phunder` → `/destinations/ghizer` (301) in `next.config.ts`, if that rename is approved.
+9. **Redirect** `/destinations/phunder` → `/destinations/ghizer` (301) in `next.config.ts`. **Done**
 
 ---
 

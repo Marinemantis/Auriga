@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import JsonLd, { breadcrumbSchema } from "@/components/JsonLd";
 import { DESTINATIONS, getDestination } from "@/lib/destinations";
 import { pageMetadata } from "@/lib/seo";
+import { listEntries } from "@/lib/content";
+import GuideLinks from "@/components/guide/GuideLinks";
 import DestinationClient from "./DestinationClient";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -35,11 +37,19 @@ export default async function Page({ params }: Props) {
       <JsonLd
         data={breadcrumbSchema([
           { name: "Home", path: "/" },
-          { name: "Destinations", path: "/tours" },
+          { name: "Destinations", path: "/destinations" },
           { name: dest.name, path: `/destinations/${slug}` },
         ])}
       />
-      <DestinationClient slug={slug} />
+      <DestinationClient
+        slug={slug}
+        guides={
+          <GuideLinks
+            entries={listEntries("destinations").filter(e => e.slug.startsWith(`${slug}/`))}
+            heading={`${dest.name} travel guides`}
+          />
+        }
+      />
     </>
   );
 }

@@ -1,4 +1,6 @@
 import { pageMetadata } from "@/lib/seo";
+import GuideLinks from "@/components/guide/GuideLinks";
+import { listEntries } from "@/lib/content";
 import PageClient from "./PageClient";
 
 export const metadata = pageMetadata({
@@ -8,5 +10,5 @@ export const metadata = pageMetadata({
 });
 
 export default function Page() {
-  return <PageClient />;
+  return <PageClient guides={<GuideLinks entries={listEntries("festivals")} heading="Festival guides" />} />;
 }

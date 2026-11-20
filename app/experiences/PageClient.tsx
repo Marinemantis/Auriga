@@ -18,7 +18,7 @@ const EXPERIENCES = [
   { slug: "himalayan-dream",      name: "Seven Day Himalayan Dream",       region: "Astore to Minimarg",    duration: "7 days",    durationDays: 7,  price: "From $2,000", tagline: "Rama Lake, Rupal Valley & Minimarg",           image: "/mms-minimarg-astore.jpg"        },
 ];
 
-export default function ExperiencesPage() {
+export default function ExperiencesPage({ guides }: { guides?: React.ReactNode }) {
   const heroRef = useRef<HTMLElement>(null);
   const { scrollYProgress: heroScroll } = useScroll({
     target: heroRef,
@@ -267,6 +267,8 @@ export default function ExperiencesPage() {
           ))}
         </div>
       </section>
+
+      {guides}
 
       {/* ── CTA ── */}
       <section className="border-t border-[#1A1A1A] py-28">
