@@ -16,9 +16,6 @@ export interface Destination {
     days: { title: string; meta?: string; body: string; overnight?: string; highlights?: string }[];
   };
   relatedTourSlugs: string[];
-  /** Optional SEO overrides; defaults are generated from the fields above. */
-  seoTitle?: string;
-  seoDescription?: string;
 }
 
 export const DESTINATIONS: Destination[] = [
@@ -52,9 +49,8 @@ export const DESTINATIONS: Destination[] = [
     relatedTourSlugs: ["realm-of-fairies", "last-paradise"],
   },
   {
-    slug: "ghizer",
+    slug: "phunder",
     name: "Phunder & Ghizer",
-    seoTitle: "Ghizer Valley Travel Guide: Phunder Lake, Yasin & Tours",
     subtitle: "The Calm of Phunder",
     region: "Ghizer Valley · Gilgit-Baltistan",
     heroImage: "/dest-phunder.jpg",
@@ -239,62 +235,6 @@ export const DESTINATIONS: Destination[] = [
     ],
     highlights: ["Rakaposhi Basecamp", "Hoper Glacier", "Michar Kho Valley", "Diran Peak"],
     relatedTourSlugs: ["nagar-valley"],
-  },
-  {
-    slug: "gilgit",
-    name: "Gilgit",
-    subtitle: "Gateway to the Karakoram",
-    region: "Gilgit · Gilgit-Baltistan",
-    heroImage: "/rof-kkh-aerial.jpg",
-    tagline: "Where every northern journey begins.",
-    seoTitle: "Gilgit Travel Guide: Things to Do, Weather & Tours",
-    seoDescription:
-      "Gilgit is the capital of Gilgit-Baltistan and the gateway to Hunza, Fairy Meadows, Naltar and Ghizer. What to see, when to go, and how Auriga journeys pass through.",
-    intro: [
-      "Gilgit is the capital of Gilgit-Baltistan and the crossroads of the north. The Gilgit and Hunza rivers meet just outside the city, and the Karakoram Highway runs through it on its way to China, which makes Gilgit the natural starting point for journeys into Hunza, Nagar, Fairy Meadows, Naltar, Ghizer and Astore.",
-      "At around 1,500 metres it sits far lower than the valleys around it. Summers are hot and dry, with afternoons often above 35°C in July, while winters are cold but rarely snowbound in the city itself. The surrounding mountains, however, are another world entirely, and within an hour of the bazaar you can be walking beside glacier-fed streams.",
-      "Gilgit was an important stop on the ancient Silk Road and a centre of Buddhism, and that history is still carved into the landscape. The Kargah Buddha, cut into a cliff face just west of the city, is one of the most striking reminders. Most travellers treat Gilgit as a place to pass through. We prefer to give it a night, for the bazaar, the river and the first proper view of the mountains to come.",
-    ],
-    signature: [
-      {
-        title: "The Starting Point",
-        body: "Flights from Islamabad land in Gilgit, and the Karakoram Highway passes through it, so most of our northern journeys begin or end here. We use it as a calm first night to rest and acclimatise before heading higher, with private transfers onward to Hunza, Fairy Meadows or Ghizer.",
-      },
-      {
-        title: "Day Trips from the City",
-        body: "Gilgit puts some of the region's quieter corners within easy reach: the Kargah Buddha and the Kargah valley, the forests and lakes of Naltar, the terraced villages of Bagrot, and the long views towards Haramosh. Each can be built into a journey as a gentle first day out.",
-      },
-    ],
-    highlights: ["Kargah Buddha", "Naltar Valley", "Bagrot Valley", "Gilgit & Hunza river confluence"],
-    relatedTourSlugs: ["realm-of-fairies", "last-paradise", "khukush-lake-phunder", "himalayan-dream"],
-  },
-  {
-    slug: "fairy-meadows",
-    name: "Fairy Meadows",
-    subtitle: "In the Shadow of Nanga Parbat",
-    region: "Diamer · Gilgit-Baltistan",
-    heroImage: "/rof-fairy-meadows-huts.jpg",
-    tagline: "An alpine meadow at the foot of the ninth-highest mountain on Earth.",
-    seoTitle: "Fairy Meadows Guide: How to Get There, Best Time & Tours",
-    seoDescription:
-      "The complete guide to Fairy Meadows, the alpine meadow beneath Nanga Parbat: how to get there from Raikot Bridge, the hike in, where to stay, the best time to visit and tours.",
-    intro: [
-      "Fairy Meadows is a high alpine meadow at roughly 3,300 metres, ringed by pine forest and looking straight up at the Raikot Face of Nanga Parbat (8,126m), the ninth-highest mountain in the world. Few places on Earth put you this close to an 8,000-metre peak without serious mountaineering, and the first sight of it across the meadow stops almost everyone mid-step.",
-      "Getting there is part of the experience. From Raikot Bridge on the Karakoram Highway, a narrow jeep track climbs towards the village of Tato, and the last stretch is on foot: a walk of around three hours through forest and clearings until the meadow opens out in front of you. There are no roads into the meadow itself, which is a large part of why it still feels the way it does.",
-      "The season runs from late spring to early autumn, roughly May to October, when the track is open and the meadow is green. Nights are cold even in summer. Beyond the meadow, trails continue to Beyal Camp and on to Nanga Parbat Base Camp for those who want to walk further towards the mountain.",
-    ],
-    signature: [
-      {
-        title: "Two Nights, Not One",
-        body: "Most visitors arrive tired in the afternoon and leave the next morning. On our journeys you stay two nights, so you see Nanga Parbat at dawn, in full daylight and under the stars, with a full day to walk towards Beyal Camp or simply sit on the meadow edge and watch the mountain.",
-      },
-      {
-        title: "Handled From Start to Finish",
-        body: "We arrange the jeep from Raikot Bridge, the porters for your luggage, and a comfortable camp at the meadow edge, so the only thing you carry on the walk in is a day pack and a camera.",
-      },
-    ],
-    highlights: ["Nanga Parbat (8,126m)", "Raikot Face views", "Beyal Camp", "Nanga Parbat Base Camp trail"],
-    relatedTourSlugs: ["realm-of-fairies"],
   },
 ];
 
